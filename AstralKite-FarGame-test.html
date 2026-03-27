@@ -521,142 +521,135 @@ showControls: false</tw-passagedata><tw-passagedata pid="13" name="Credits" tags
 (set: $review to (either: $review1, $review2, $review3))
 (set: $transCounter to 0)
 
-(transition: &quot;dissolve&quot;)[Created and written by Addy Evans &amp; Jonathan Cohn]&lt;br&gt;
-|music)[(transition: &quot;dissolve&quot;)[Music by Susan Loquat]]&lt;br&gt;
-|art)[(transition: &quot;dissolve&quot;)[Art by Addy Evans]]&lt;br&gt;
-|playtest)[(transition: &quot;dissolve&quot;)[Playtesters: Isabelle Goldstein, Micalyn Rowe, and Lena Sadler]]&lt;br&gt;
-|studios)[(transition: &quot;dissolve&quot;)[A Lucky Rat Studios &amp; Starcoded Studios Production]]&lt;br&gt;
-|review)[&lt;br&gt;(transition: &quot;dissolve&quot;)[(text-color: &quot;LightCoral&quot;)[(either: $review)]]&lt;br&gt;&lt;br&gt;]
-|special)[(transition: &quot;dissolve&quot;)[Spectial thanks to...]]&lt;br&gt;
-|silvi)[(transition: &quot;dissolve&quot;)[Silvana Delgado Andrade]]&lt;br&gt;
-|heath)[(transition: &quot;dissolve&quot;)[Heath Redmond]]&lt;br&gt;
-|fergie)[(transition: &quot;dissolve&quot;)[Peter Ferguson]]&lt;br&gt;
-|gwen)[(transition: &quot;dissolve&quot;)[Guinevere Herron]]&lt;br&gt;
-|quinn)[(transition: &quot;dissolve&quot;)[Quinn Casey]]&lt;br&gt;
-|tful)[(transition: &quot;dissolve&quot;)[Thankful Cromartie]]&lt;br&gt;
-|carport)[(transition: &quot;dissolve&quot;)[the wonderful folks at Carport in College Station, TX]]&lt;br&gt;
-|player)[(transition: &quot;dissolve&quot;)[and you, the player]]&lt;br&gt;
-|thanks)[(transition: &quot;dissolve&quot;)[thank you for playing!!]]&lt;br&gt;
-|seeyou)[(transition: &quot;dissolve&quot;)[See you next time :)]]&lt;br&gt;
-|play)[(transition: &quot;dissolve&quot;)[[[Play Again-&gt;Welcome]]]]&lt;br&gt;
+(transition: "dissolve")[Created and written by Addy Evans & Jonathan Cohn]<br>
+|music)[(transition: "dissolve")[Music by Susan Loquat]]<br>
+|art)[(transition: "dissolve")[Art by Addy Evans]]<br>
+|playtest)[(transition: "dissolve")[Playtesters: Katrina Beitz, Peter Ferguson, Isabelle Goldstein, Micalyn Rowe, Lena Sadler, and Paul Zivick]]<br>
+|studios)[(transition: "dissolve")[A Lucky Rat Studios & Starcoded Studios Production]]<br>
+|review)[<br>(transition: "dissolve")[(text-color: "LightCoral")[(either: $review)]]<br><br>]
+|special)[(transition: "dissolve")[Spectial thanks to...]]<br>
+|silvi)[(transition: "dissolve")[Silvana Delgado Andrade]]<br>
+|heath)[(transition: "dissolve")[Heath Redmond]]<br>
+|gwen)[(transition: "dissolve")[Guinevere Herron]]<br>
+|quinn)[(transition: "dissolve")[Quinn Casey]]<br>
+|tful)[(transition: "dissolve")[Thankful Cromartie]]<br>
+|carport)[(transition: "dissolve")[the wonderful folks at Carport in College Station, TX]]<br>
+|player)[(transition: "dissolve")[and you, the player]]<br>
+|thanks)[(transition: "dissolve")[thank you for playing!!]]<br>
+|seeyou)[(transition: "dissolve")[See you next time :)]]<br>
+|play)[(transition: "dissolve")[[[Play Again->Welcome]]]]<br>
 }
 {
-(if: $regrets is not &quot;&quot; and $music is not &quot;&quot; and $food is not &quot;&quot;)[
-	(live: 3.5s)[
-		(set: $transCounter to it + 1)
+(if: $regrets is not "" and $music is not "" and $food is not "")[
+    (live: 3.5s)[
+        (set: $transCounter to it + 1)
 
-		(if: $transCounter is 1)[
-			(show: ?music)
-		]
-		(else-if: $transCounter is 2)[
-			(show: ?art)
-		]
-		(else-if: $transCounter is 3)[
-			(show: ?playtest)
-		]
-		(else-if: $transCounter is 4)[
-			(show: ?studios)
-         ]
-		(else-if: $transCounter is 5)[
-			(show: ?review)
-         ]
-		(else-if: $transCounter is 6)[
-			(show: ?special)
-         ]
-		(else-if: $transCounter is 7)[
-			(show: ?silvi)
-         ]
-		(else-if: $transCounter is 8)[
-			(show: ?heath)
-         ]
-		(else-if: $transCounter is 9)[
-			(show: ?fergie)
-         ]
-		(else-if: $transCounter is 10)[
-			(show: ?gwen)
-         ]
-		(else-if: $transCounter is 11)[
-			(show: ?quinn)
-         ]
-		(else-if: $transCounter is 12)[
-			(show: ?tful)
-         ]
-         (else-if: $transCounter is 13)[
-         	(show: ?carport)
+        (if: $transCounter is 1)[
+            (show: ?music)
         ]
-		(else-if: $transCounter is 14)[
-			(show: ?player)
-		]
-        (else-if: $transCounter is 15)[
-        	(show: ?thanks)
-		]
-        (else-if: $transCounter is 16)[
-	        (show: ?seeyou)
-            ]
-        (else-if: $transCounter is 17)[
-			(show: ?play)
-		]
-		(else:)[
-			(stop:)
-		]
-	]
-]
-(else:)[
-	(live: 3.5s)[
-		(set: $transCounter to it + 1)
-
-		(if: $transCounter is 1)[
-			(show: ?music)
-		]
-		(else-if: $transCounter is 2)[
-			(show: ?art)
-		]
-		(else-if: $transCounter is 3)[
-			(show: ?playtest)
-		]
-		(else-if: $transCounter is 4)[
-			(show: ?studios)
+        (else-if: $transCounter is 2)[
+            (show: ?art)
         ]
-		(else-if: $transCounter is 5)[
-			(show: ?special)
+        (else-if: $transCounter is 3)[
+            (show: ?playtest)
+        ]
+        (else-if: $transCounter is 4)[
+            (show: ?studios)
          ]
-		(else-if: $transCounter is 6)[
-			(show: ?silvi)
+        (else-if: $transCounter is 5)[
+            (show: ?review)
          ]
-		(else-if: $transCounter is 7)[
-			(show: ?heath)
+        (else-if: $transCounter is 6)[
+            (show: ?special)
          ]
-		(else-if: $transCounter is 8)[
-			(show: ?fergie)
+        (else-if: $transCounter is 7)[
+            (show: ?silvi)
          ]
-		(else-if: $transCounter is 9)[
-			(show: ?gwen)
+        (else-if: $transCounter is 8)[
+            (show: ?heath)
          ]
-		(else-if: $transCounter is 10)[
-			(show: ?quinn)
+        (else-if: $transCounter is 9)[
+            (show: ?gwen)
          ]
-		(else-if: $transCounter is 11)[
-			(show: ?tful)
+        (else-if: $transCounter is 10)[
+            (show: ?quinn)
+         ]
+        (else-if: $transCounter is 11)[
+            (show: ?tful)
          ]
          (else-if: $transCounter is 12)[
-         	(show: ?carport)
+             (show: ?carport)
         ]
-		(else-if: $transCounter is 13)[
-			(show: ?player)
-		]
+        (else-if: $transCounter is 13)[
+            (show: ?player)
+        ]
         (else-if: $transCounter is 14)[
-        	(show: ?thanks)
-		]
+            (show: ?thanks)
+        ]
         (else-if: $transCounter is 15)[
-	        (show: ?seeyou)
+            (show: ?seeyou)
             ]
         (else-if: $transCounter is 16)[
-			(show: ?play)
-		]
-		(else:)[
-			(stop:)
-		]
-	]
+            (show: ?play)
+        ]
+        (else:)[
+            (stop:)
+        ]
+    ]
+]
+(else:)[
+    (live: 3.5s)[
+        (set: $transCounter to it + 1)
+
+        (if: $transCounter is 1)[
+            (show: ?music)
+        ]
+        (else-if: $transCounter is 2)[
+            (show: ?art)
+        ]
+        (else-if: $transCounter is 3)[
+            (show: ?playtest)
+        ]
+        (else-if: $transCounter is 4)[
+            (show: ?studios)
+        ]
+        (else-if: $transCounter is 5)[
+            (show: ?special)
+         ]
+        (else-if: $transCounter is 6)[
+            (show: ?silvi)
+         ]
+        (else-if: $transCounter is 7)[
+            (show: ?heath)
+         ]
+        (else-if: $transCounter is 8)[
+            (show: ?gwen)
+         ]
+        (else-if: $transCounter is 9)[
+            (show: ?quinn)
+         ]
+        (else-if: $transCounter is 10)[
+            (show: ?tful)
+         ]
+         (else-if: $transCounter is 11)[
+             (show: ?carport)
+        ]
+        (else-if: $transCounter is 12)[
+            (show: ?player)
+        ]
+        (else-if: $transCounter is 13)[
+            (show: ?thanks)
+        ]
+        (else-if: $transCounter is 14)[
+            (show: ?seeyou)
+            ]
+        (else-if: $transCounter is 15)[
+            (show: ?play)
+        ]
+        (else:)[
+            (stop:)
+        ]
+    ]
 ]
 }
 
