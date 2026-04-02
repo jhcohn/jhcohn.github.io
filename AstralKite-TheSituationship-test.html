@@ -10,7 +10,7 @@
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play AstralKite-TheSituationship.</tw-noscript></noscript></tw-story>
 <tw-storydata name="AstralKite-TheSituationship" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="DA39BA63-211F-4E23-B85E-BD131BD211B4" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.space-section {
-    background-image: url("renders/deepfieldedit-wide.jpg");
+    background-image: url("renders/astralkite-viewport.png");
   background-size: contain; /* ensures image covers entire section (or should I use contain?) */
   background-position: center; /* centers image */
   background-repeat: no-repeat;
@@ -21,7 +21,7 @@
 }
 
 .northpole-section {
-    background-image: url("renders/northpole.jpeg");
+    background-image: url("renders/northpole.png");
   background-size: contain; /* ensures image covers entire section (or should I use contain?) */
   background-position: center; /* centers image */
   background-repeat: no-repeat;
@@ -32,7 +32,7 @@
 }
 
 .wormseal-section {
-    background-image: url("renders/spacewhale.jpg");
+    background-image: url("renders/wormseals1.png");
   background-size: contain; /* ensures image covers entire section (or should I use contain?) */
   background-position: center; /* centers image */
   background-repeat: no-repeat;
@@ -54,7 +54,7 @@
 }
 
 .earth-section {
-    background-image: url("renders/earth.jpg");
+    background-image: url("renders/earth.png");
   background-size: contain; /* ensures image covers entire section (or should I use contain?) */
   background-position: center; /* centers image */
   background-repeat: no-repeat;
@@ -65,7 +65,7 @@
 }
 
 .letter-section {
-    background-image: url("renders/envelope.jpg");
+    background-image: url("renders/letter.png");
   background-size: contain; /* ensures image covers entire section (or should I use contain?) */
   background-position: center; /* centers image */
   background-repeat: no-repeat;
@@ -76,7 +76,7 @@
 }
 
 .controls-section {
-    background-image: url("renders/controls2.JPEG");
+    background-image: url("renders/elliot_desk2_colorized.png");
   background-size: contain; /* ensures image covers entire section (or should I use contain?) */
   background-position: center; /* centers image */
   background-repeat: no-repeat;
@@ -99,7 +99,7 @@
 
 
 .iss-section {
-    background-image: url("renders/iss.gif");
+    background-image: url("renders/astralkite-iss.png");
   background-size: contain; /* ensures image covers entire section (or should I use contain?) */
   background-position: center; /* centers image */
   background-repeat: no-repeat;
@@ -110,7 +110,7 @@
 }
 
 .elliot-epilogue {
-    background-image: url("renders/controls2.JPEG");
+    background-image: url("renders/elliot_desk2_colorized.png");
   background-size: contain; /* ensures image covers entire section (or should I use contain?) */
   background-position: center; /* centers image */
   background-repeat: no-repeat;
@@ -121,7 +121,7 @@
 }
 
 .door-epilogue {
-    background-image: url("renders/3doors.jpg");
+    background-image: url("renders/threedoors.png");
   background-size: contain; /* ensures image covers entire section (or should I use contain?) */
   background-position: center; /* centers image */
   background-repeat: no-repeat;
@@ -139,7 +139,23 @@
   /* padding-right: 90px; */
   /* padding-left: 90px; */
   /* background-image: url("renders/iss.gif"); */
-  background-color: #000000; /* rgba(0, 0, 0, 0.7); Semi-transparent background for readability */
+  background-color: rgba(0,0,0,0.8); /* #000000; /* rgba(0, 0, 0, 0.7); Semi-transparent background for readability */
+  color: white;
+  font-family: 'Lucida Console'; /* 'American Typewriter'; */
+  font-size: 16px; /* 18px */
+  font-weight: 100;
+  max-height: 200px;
+}
+
+.landing-overlay {
+  width: 275px; /* 600px Limits the maximum width of the text */
+  /* padding: 9px;*/
+  /* padding-top: 90px; */
+  /* padding-bottom: 90px; */
+  /* padding-right: 90px; */
+  /* padding-left: 90px; */
+  /* background-image: url("renders/iss.gif"); */
+  background-color: rgba(0,0,0,0.8); /* #000000; /* rgba(0, 0, 0, 0.7); Semi-transparent background for readability */
   color: white;
   font-family: 'Lucida Console'; /* 'American Typewriter'; */
   font-size: 16px; /* 18px */
@@ -165,30 +181,35 @@ tw-sidebar { display: none; }
  * Released under the Unlicense, and dedicated to the public domain.
 **/
 ;!function(e){(jQuery.browser=jQuery.browser||{}).mobile=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(e)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(e.substr(0,4))}(navigator.userAgent||navigator.vendor||window.opera),function(){"use strict";window.Fast={filter:function(e,t){for(var o=e.length,n=[],a=0;a<o;a++)t(e[a],a,e)&&n.push(e[a]);return n},forEach:function(e,t){for(var o=e.length,n=0;n<o;n++)t(e[n],n,e)},map:function(e,t){for(var o=e.length,n=new Array(o),a=0;a<o;a++)n[a]=t(e[a],a,e);return n},find:function(e,t){for(var o=e.length,n=0;n<o;n++)if(t(e[n],n,e))return e[n]},findIndex:function(e,t){for(var o=e.length,n=0;n<o;n++)if(t(e[n],n,e))return n;return-1},some:function(e,t){for(var o=e.length,n=0;n<o;n++)if(t(e[n],n,e))return!0;return!1}}}(),window.Chapel=window.Chapel||{},window.Chapel.options={preload:!0,loadDelay:0,muteOnBlur:!0,startingVol:.5,persistPrefs:!0,globalA:!0,showControls:!0,sidebarStartClosed:!0,volumeDisplay:!1,trackLoadLimit:500,totalLoadLimit:8e3,debug:!1},window.Chapel.debug=function(){Chapel.options.debug&&console.log.apply(null,arguments)},function(){"use strict";var n=$("tw-storydata"),o=/(.+?):(.+)/,t=/[\r\n]+/,a=/^["']/,r=/["']$/;function e(e){return Fast.map(Fast.filter(e.split(t),function(e){return e&&e.trim()&&e.includes(":")}),function(e){return e.trim()})}function i(e){return e.trim().replace(a,"").replace(r,"").trim()}function s(e){var t=e.match(o);return t instanceof Array?{key:i(t[1]),value:i(t[2])}:e}var u,l,c,p=n.find('tw-passagedata[name="hal.tracks"]'),d=null,p=(p.length&&(p=e(p.text()),u=[],l=[],Fast.forEach(p,function(e){var e=s(e);"string"==typeof e&&l.push(e),u.push([e.key,(e=e.value,Fast.map(e.split(","),i))])}),l.length&&console.error("Some track definitions could not be parsed:\n"+l.join("\n")+"\nPlease check these definitions and try again."),d=new Map(u)),n.find('tw-passagedata[name="hal.config"]')),m=null;function f(e){var t=n.attr("format-version");if(e)return t;var e=t.split("."),t=e[0],o=e[1],e=e[2],t=Number(t),o=Number(o);return[t=(t=Number.isNaN(t)?3:t)<1?3:t,o=Number.isNaN(o)?3:o,e=Number.isNaN(e)?0:e]}function h(){var e=f();return!(3<=e[0]&&3<=e[1])}function g(t){return function(){var e=[].slice.call(arguments).slice(1),e=t.apply(null,e);return"string"==typeof e||"boolean"==typeof e||"number"==typeof e?e:""}}p.length&&(p=e(p.text()),c={},Fast.forEach(Fast.map(p,function(e){return s(e)}),function(e){c[e.key]=e.value}),m=c),m&&Fast.forEach(Object.keys(m),function(e){var t=e,o=c[e],e=typeof Chapel.options[e];"boolean"==e?"true"===o?Chapel.options[t]=!0:"false"===o&&(Chapel.options[t]=!1):"number"==e?(o=Number(o),Number.isNaN(o)||(Chapel.options[t]=o)):"string"==e&&o&&(Chapel.options[t]=o)});var y=require("macros");if(window.Chapel=window.Chapel||{},window.Chapel.Macros={add:function(o){o&&"object"==typeof o&&Fast.forEach(Object.keys(o),function(e){var t;t=o[e=e],h()?y.add(e,g(t),y.TypeSignature.zeroOrMore(y.TypeSignature.Any)):y.add(e,"Any",g(t),y.TypeSignature.zeroOrMore(y.TypeSignature.Any))})}},window.Chapel.Get=Object.freeze({version:f(),isHarlowe3OrLater:3<=f()[0],storyTitle:n.attr("name"),IFID:n.attr("ifid"),useOldMacroAPI:h(),fromPassage:d}),Chapel.debug("Harlowe Version -> ",Chapel.Get.version.join(".")),Chapel.debug("Harlowe Major Version -> ",Chapel.Get.version[0]),Chapel.debug("Story Title -> ",Chapel.Get.storyTitle),Chapel.debug("Story IFID -> ",Chapel.Get.IFID),Chapel.Get.version[0]<2)throw new Error("The Harlowe Audio Library is only designed to work with Harlowe 2 and 3; you appear to be using Harlowe 1 or an otherwise invalid story format.","get.js -> initialization",176);Chapel.options.storagekey="%%hal-"+Chapel.Get.IFID+"-{"+Chapel.Get.storyTitle+"}",Chapel.debug("Storage Key -> ",Chapel.options.storagekey)}(),function(){"use strict";var t=Chapel.options,e=function(e,t){if(window.localStorage)try{e=""+e,"string"!=typeof t&&(t=JSON.stringify(t)),window.localStorage.setItem(e,t)}catch(e){console.error(e)}},o=function(e){if(window.localStorage)try{return e=""+e,window.localStorage.getItem(e)}catch(e){console.error(e)}},n=function(e){if(window.localStorage)try{e=""+e,window.localStorage.removeItem(e)}catch(e){console.error(e)}},a={loaded:[],classes:{},master:{volume:t.startingVol,mute:!1},groups:{playing:[],looping:[],custom:{}},mute:function(e){a.master.mute=!!e,$(document).trigger({type:":master-mute",mute:!!e})},isMuted:function(){return!!a.master.mute},volume:function(e){e=Number(e),Number.isNaN(e)||(1<e?e=1:e<0&&(e=0),a.master.volume=e),$(document).trigger({type:":master-volume",volume:e})},getVolume:function(){return a.master.volume},stopAll:function(){a.classes.Track&&Fast.forEach(a.classes.Track.list,function(e){e.stop()})},audioPlaying:function(){return!!a.groups.playing.length},savePrefs:function(){e(t.storagekey,a.master)},loadPrefs:function(){var e=o(t.storagekey);e&&"object"==typeof e&&e.hasOwnProperty("volume")&&"number"==typeof e.volume&&e.hasOwnProperty("mute")&&"boolean"==typeof e.volume&&(delete a.master,a.master=e)},clearPrefs:function(){n(t.storagekey)}},r={track:[":available",":loaded",":play",":stop",":mute",":volume"],master:[":master-mute",":master-volume"]};var i=r.track.concat(r.master);function s(e,t){if(!e||"string"!=typeof e||!e.trim())return null;e=Fast.filter(Fast.map(e.split(" "),function(e){return(e=":"!==(e=e.split(".")[0])[0]?":"+e:e)+".userland"}),function(e){return(t?i:r.track).includes(e)}).join(" ");return e&&e.trim()?e:null}a.data={parseEvent:s,bail:function(e){throw new Error(e,"audio.js -> bail()",140)}},a.on=function(e,t){t&&"function"==typeof t?(e=s(e,!0))&&$(document).on(e,t):console.error("Chapel.Audio.on() -> invalid callback")},a.one=function(e,t){t&&"function"==typeof t?(e=s(e,!0))&&$(document).one(e,t):console.error("Chapel.Audio.one() -> invalid callback")},a.off=function(e){(e=s(e,!0))&&$(document).off(e)},t.persistPrefs&&($(document).on(":master-mute",a.savePrefs),$(document).on(":master-volume",a.savePrefs)),$(document).on(":play",function(e){e.track.addToGroup("playing")}),$(document).on(":stop",function(e){e.track.removeFromGroup("playing")}),t.muteOnBlur&&$(window).on("blur",function(){a.isMuted()||(a.mute(!0),$(window).one("focus",function(){a.mute(!1)}))}),a.parseEvent=s,window.Chapel=window.Chapel||{},window.Chapel.Audio=a}(),function(){"use strict";var a=Chapel.Audio,o=a.data.pareEvent,r=a.data.bail,i=Chapel.options,t=$(document.createElement("div")).attr("id","audio-container").css("display","none").appendTo(document.body),s={aac:"audio/aac",caf:"audio/x-caf","x-caf":"audio/x-caf",mp3:'audio/mpeg; codecs="mp3"',mpeg:'audio/mpeg; codecs="mp3"',m4a:"audio/mp4",mp4:"audio/mp4","x-m4a":"audio/mp4","x-mp4":"audio/mp4",oga:"audio/ogg",ogg:"audio/ogg",opus:'audio/ogg; codecs="opus"',wav:"audio/wav",wave:"audio/wav",weba:"audio/webm",webm:"audio/webm"};function u(e,t,o){this instanceof u||r("Track: called without `new` operator"),e||r("Track: no id specified"),"string"!=typeof e&&r("Track: track id is not a string"),t&&(!Array.isArray(t)||t.length)||r("Track: no sources specified"),o?t=[].slice.call(arguments).slice(1):"string"==typeof t&&(t=[t]);var n=$(document.createElement("audio"));Fast.forEach(t,function(e){$(document.createElement("source")).attr({src:e,type:(e=(e=(e=(e=(e=e).split("."))[e.length-1]).includes("?")?e.split("?")[0]:e).toLowerCase().trim(),Object.keys(s).includes(e)||r('Track: unsupported file type "'+e+'"'),s[e])}).appendTo(n)}),n.attr({"data-track":"id","data-volume":1,"data-mute":!1}).one("canplaythrough.hal",function(){a.loaded.push(e)}),i.preload&&n.attr("preload","auto"),n[0].volume=+a.master.volume,this.id=e,this.$el=n,this.unwrap=n[0],this.sources=t}Object.assign(u,{list:[],is:function(e){return e instanceof u},has:function(t){return Fast.some(u.list,function(e){return e.id===t})},emit:function(e,t){$(document).trigger({type:e,track:t}),t.emit(e)},add:function(e,t,o){var n=new u(e,t=o?[].slice.call(arguments).slice(1):t);return u.list.push(n),n.$el.on("canplay",function(){u.emit(":available",n)}),n.$el.on("canplaythrough",function(){u.emit(":loaded",n)}),n.attach(),n},renew:function(){Fast.forEach(u.list,function(e){e.mute(e.isMuted()),e.volume(e.getVolume())})},getIdx:function(t){return Fast.findIndex(u.list,function(e){return e.id===t})},get:function(t){var e=Fast.find(u.list,function(e){return e.id===t});if(e)return e;throw new ReferenceError('There is no track with the id "'+t+'". Please check your spelling and capitalization.',"track.js -> Track.get()",155)},removeFromDOM:function(e){(e="string"==typeof e?u.get(e):e)&&u.is(e)?e.unattach():t.remove()},_runOnMultiple:function(e,t,o){e instanceof Array&&u.prototype.hasOwnProperty(t)&&Fast.forEach(e,function(e){(e=u.is(e)?e:u.get(e)||null)&&e[t].apply(e,o&&o instanceof Array?o:[])})}}),Object.assign(u.prototype,{constructor:u,emit:function(e){this.$el.trigger({type:e,track:this})},clone:function(){return new u(this.id,this.sources)},isAttached:function(){return $.contains(t[0],this.unwrap)},attach:function(){return this.isAttached()||this.$el.appendTo(t),this},unattach:function(){return this.isAttached()&&this.$el.remove(),this},isPlaying:function(){return!this.unwrap.paused},play:function(){var e=this;return this.unwrap.play(),u.emit(":play",this),this.$el.on("ended",function(){e.unwrap.loop||(e.unwrap.currentTime=0,u.emit(":stop",e))}),this},playWhenPossible:function(){var t=this;return this.unwrap.play().then(function(){u.emit(":play",t),t.$el.on("ended",function(){t.unwrap.loop||(t.unwrap.currentTime=0,u.emit(":stop",t))})},function(e){$(document).one("click mousedown keydown touchstart",function(){t.play()})}).catch(function(e){console.error(e)}),this},forcePlay:function(){var e=this,t=$(document.createElement("a")).css("display","none").appendTo(document.body).on("click",function(){e.play()});setTimeout(function(){t.trigger("click")},safeAudioStart)},pause:function(){return this.unwrap.pause(),u.emit(":pause",this),this},stop:function(){return this.unwrap.pause(),this.unwrap.currentTime=0,u.emit(":stop",this),this},mute:function(e){return this.$el.attr("data-mute",e=!!e),a.master.mute?this.unwrap.muted=!0:this.unwrap.muted=e,u.emit(":mute",this),this},isMuted:function(){var e=this.$el.attr("data-mute");return"boolean"==typeof e?e:"false"!==e},toggleMute:function(){return this.mute(!this.isMuted()),this},volume:function(e){return e=Number(e),Number.isNaN(e)||(1<e?e=1:e<0&&(e=0),this.$el.attr("data-volume",e),this.unwrap.volume=e*a.master.volume),u.emit(":volume",this),this},getVolume:function(){return Number(this.$el.attr("data-volume"))},addToGroup:function(e,t){var o=this,t=(t?a.groups.custom:a.groups)[e];return Fast.some(t,function(e){return o.id===e.id})||t.push(this),this},removeFromGroup:function(e,t){var o=this,t=(t?a.groups.custom:a.groups)[e],e=Fast.findIndex(t,function(e){return e.id&&e.id===o.id});return t.splice(e,1),this},loop:function(e){return this.unwrap.loop=!!e,this.unwrap.loop?this.addToGroup("looping"):this.removeFromGroup("looping"),this},isLooping:function(){return!!this.unwrap.loop},toggleLoop:function(){return this.loop(!this.isLooping()),this},seek:function(e){return e<0?e=this.unwrap.duration-e:e>this.unwrap.duration&&(e=this.unwrap.duration),this.unwrap.currentTime=e,this},fadeIn:function(e){var t=this,o=(e=e||1,this.getVolume());return this.volume(0),this.play(),this.$el.animate({volume:o*a.master.volume},1e3*e,function(){t.volume(o),u.emit(":volume",t),u.emit(":fade",t)}),this},fadeOut:function(e){e=e||1;var t=this,o=this.getVolume();return this.$el.animate({volume:0},1e3*e,function(){t.stop(),t.volume(o),u.emit(":volume",t),u.emit(":fade",t)}),this},fadeTo:function(e,t){var o=this;if(e=e||1,t=Number(t),!Number.isNaN(t))return 1<t?t=1:t<0&&(t=0),this.$el.animate({volume:t*a.master.volume},1e3*e,function(){o.volume(t),u.emit(":volume",o),u.emit(":fade",o)}),this;alert("ivalid volume level")},delay:function(e,t){var o=this;"function"==typeof t&&(e=Number(e),(Number.isNaN(e)||e<0)&&(e=0),setTimeout(function(){t.call(o,o,e)},e))},on:function(e,t){if(!t||"function"!=typeof t)return console.error("<track>.on() -> invalid callback"),this;(e=o(e))&&this.$el.on(e,t)},one:function(e,t){if(!t||"function"!=typeof t)return console.error("<track>.one() -> invalid callback"),this;(e=o(e))&&this.$el.one(e,t)},off:function(e){(e=o(e))&&this.$el.off(e)}}),a.classes.Track=u,a.newTrack=function(){try{return u.add.apply(null,arguments)}catch(e){console.error(e.message),alert("Error in A.newTrack() -> see the console for more information.")}},a.track=function(e){try{return u.get(e)}catch(e){console.error(e.message),alert("Error in A.track() -> see the console for more information.")}},$(document).on(":master-mute",u.renew),$(document).on(":master-volume",u.renew)}(),function(){"use strict";var n=Chapel.Audio,a=n.classes.Track,o=(n.data._extend,/(play)?list:(.+)/i);n.createGroup=function(e,t,o){o=o?[].slice.call(arguments).slice(1):t;t=e,(e=o)&&Array.isArray(e)||(e=[]),n.groups.custom[t]=Fast.map(e,function(e){return a.get(e)})},n.group=function(e){if(!(this instanceof n.group))return new n.group(e);if(Object.keys(n.groups.custom).includes(e))this.members=n.groups.custom[e];else{if(!(n.groups[e]&&n.groups[e]instanceof Array))throw new ReferenceError('There is no group with the id "'+id+'". Please check your spelling and capitalization.',"group.js -> A.group()",29);this.members=n.groups[e]}var t;o.test(e)&&(t=e.match(o)[2])&&t.trim()&&(this.members=n.playlist(t).tracks),Array.isArray(this.members)||(this.members=[],console.error('Could not find members for track group "'+e+'"!'))},Object.assign(n.group,{is:function(e){return this instanceof n.group},_runOnAll:function(e,t,o,n){null!=n?o=[].slice.call(arguments).slice(2):o instanceof Array||(o=[o]);n=[e.members,t,o];a._runOnMultiple.apply(null,n)}}),Object.assign(n.group.prototype,{constructor:n.group,_run:function(){n.group._runOnAll.apply(null,[this].concat([].slice.call(arguments)))},play:function(){return this._run("play"),this},pause:function(){return this._run("pause"),this},stop:function(){return this._run("stop"),this},mute:function(e){return this._run("mute",e),this},volume:function(e){return this._run("volume",e),this},loop:function(e){return this._run("loop",e),this}})}(),function(){"use strict";var e=Chapel.Audio,a=e.classes.Track;e.data._extend;function n(e,t){if(!(this instanceof n))return new n(e,t);this.id=e,this.tracks=t.map(function(e){return a.get(e)}),this.looping=!1,this.current="",this.playing=!1}Object.assign(n,{list:{},is:function(e){return e instanceof n},add:function(e,t,o){return o&&(t=[].slice.call(arguments).slice(1)),n.list[e]=new n(e,t),n.list[e]},_runOnAll:function(e,t,o,n){null!=n?o=[].slice.call(arguments).slice(2):o instanceof Array||(o=[o]);n=[e.tracks,t,o];a._runOnMultiple.apply(null,n)}}),Object.assign(n.prototype,{constructor:n,clone:function(){return new n(this.id,this.tracks.map(function(e){return e.id}))},_run:function(){n._runOnAll.apply(null,[this].concat([].slice.call(arguments)))},volume:function(e){return this._run("volume",e),this},mute:function(e){return this._run("mute",e),this},shuffle:function(){for(var e,t,o=this.tracks,n=o.length-1;0<n;n--)e=Math.floor(Math.random()*(n+1)),t=o[n],o[n]=o[e],o[e]=t;return this.tracks=o,this},random:function(){return this.tracks[Math.floor(Math.random()*this.tracks.length)]},isPlaying:function(){return this.playing},nowPlaying:function(){return a.get(this.current)},play:function(e){var t=this;if((e=e||(t.current?Fast.findIndex(t.tracks,function(e){return e.id===t.current}):0))>=t.tracks.length&&t.looping)e=0;else if(e>=t.tracks.length)return t.current="",void(t.playing=!1);var o=t.tracks[e],n=o.isLooping();return o.loop(!1),o.play(),t.playing=!0,setTimeout(function(){o.isPlaying()||(t.playing=!1)},20),t.current=o.id,o.$el.one("ended.playlist",function(){e++,o.loop(n),t.play(e)}),t},loop:function(e){return this.looping=!!e,this},isLooping:function(){return this.looping},stop:function(){var e;return this.current&&this.isPlaying()?(e=this.nowPlaying())&&(e.stop(),e.$el.off(".playlist")):this._run("stop"),this.current="",this.playing=!1,this},pause:function(){var e;return this.current&&this.isPlaying()&&((e=this.nowPlaying())&&e.pause()),this.playing=!1,this}}),e.classes.Playlist=n,e.createPlaylist=function(){try{n.add.apply(null,arguments)}catch(e){console.error(e.message),alert("Error in A.createPlaylist() -> see the console for more information.")}},e.playlist=function(e){try{var t=n.list[e]||null;if(t)return t;throw new ReferenceError('There is no playlist with the id "'+e+'". Please check your spelling and capitalization.',"list.js -> A.playlist()",171)}catch(e){console.error(e.message),alert("Error in A.createPlaylist() -> see the console for more information.")}}}(),function(){"use strict";var t=Chapel.Audio,o=t.classes.Track,n=t.classes.Playlist;function a(t,o){if("object"!=typeof o)throw new TypeError("Invalid extension.","extensions.js -> _extend()",8);Fast.forEach(Object.keys(o),function(e){if(void 0!==t[e])throw new Error('Invalid extension: cannot clobber existing property "'+e+'".',"extensions.js -> _extend()",8);t[e]=o[e]})}t.extend=function(e){a(Audio,e)},o.extend=function(e){a(o,e)},o.extendPrototype=function(e){a(o.prototype,e)},t.extendTrack=o.extend,t.extendTrackProto=o.extendPrototype,t.group.extend=function(e){a(t.group,e)},t.group.extendPrototype=function(e){a(t.group.prototype,e)},t.extendGroup=t.group.extend,t.extendGroupProto=t.group.extendPrototype,n.extend=function(e){a(n,e)},n.extendPrototype=function(e){a(n.prototype,e)},t.extendPlaylist=n.extend,t.extendPlaylistProto=n.extendPrototype}(),function(){"use strict";var e,t,o,n,a,r,i,s=Chapel.options;s.showControls&&(e=$(document.createElement("div")).attr("id","story-menu").css("display","none"),t=$(document.createElement("span")).attr("id","vol-title").append("Volume"),s.volumeDisplay||t.css("display","none"),o=$(document.createElement("input")).attr({id:"audio-volume",type:"range",min:1,max:99,step:1,title:"Volume"}).addClass("hal"),(a=Math.trunc(100*window.Chapel.Audio.master.volume))<0?a=0:100<a&&(a=100),o.attr("value",a),n=function(e){void 0===e&&(e=o.val()),t.empty().append("Volume "+e)},o.on("input",function(){window.Chapel.Audio.volume($(this).val()/100),n($(this).val())}),a=$(document.createElement("tw-link")).attr({id:"audio-mute",title:"Mute"}).append("Mute <span></span>").on("click",function(e){e.preventDefault(),$(this).toggleClass("muted"),Chapel.Audio.mute(!Chapel.Audio.isMuted())}),Chapel.Audio.isMuted()&&a.addClass("muted"),r=$(document.createElement("tw-link")).attr("id","audio-panel-toggle").on("click",function(e){e.preventDefault(),i.toggleClass("closed")}),i=$(document.createElement("div")).attr("id","audio-controls").append(e,t,o,a,r).appendTo(document.body),s.sidebarStartClosed&&i.addClass("closed"),window.Chapel=window.Chapel||{},window.Chapel.Audio=window.Chapel.Audio||{},window.Chapel.Audio.controls={$panel:i,$volume:o,$mute:a,$user:e,close:function(){i.addClass("closed")},open:function(){i.removeClass("closed")},toggle:function(){i.toggleClass("closed")},hide:function(){i.css("display","none")},show:function(){i.css("display","block")},updateVolume:n})}(),function(){"use strict";var s=Chapel.options,t=State,e=$(document.createElement("div")).attr("id","audio-overlay").css("display","none").appendTo(document.body);function o(){e.css("display","block").append('<div class="lds-ring"><div></div><div></div><div></div><div></div></div>')}function u(){e.fadeOut(function(){e.empty()})}window.Chapel=window.Chapel||{},window.Chapel.Audio=window.Chapel.Audio||{},window.Chapel.Audio.loadScreen={show:o,dismiss:u,kill:function(){$("#audio-overlay").remove()}},window.Chapel.Audio.$overlay=e,window.Chapel.Audio.preload=function(){var a,e,r,i;Chapel.debug("This is a mobile browser -> ",$.browser.mobile),t.pastLength||t.futureLength||$.browser.mobile||($(document).ready(function(){o()}),a=100+s.loadDelay,e=Chapel.Audio.classes.Track.list,r=Chapel.Audio.loaded,e.length?(i=Fast.map(e,function(e){return e.id}),0<s.totalLoadLimit&&setTimeout(function(){u()},s.totalLoadLimit),function e(){var t,o,n;i.length?(t=i.shift(),r.includes(t)?e():(o=Chapel.Audio.classes.Track.get(t)).unwrap.readyState<2?(n=!1,o.$el.one("canplaythrough.hal",function(){e(),n=!0}),setTimeout(function(){n||(o.$el.off("canplaythrough.hal"),e())},s.trackLoadLimit)):(r.includes(t)||r.push(t),e())):setTimeout(u,a)}()):setTimeout(u,a))}}(),function(){"use strict";var e,t,o=Chapel.options.storagekey+"_hal_restart_",n=(Chapel.debug("HAL Session Key -> ",o),window.sessionStorage?(Chapel.debug("Session Storage Available"),e=function(e,t){window.sessionStorage.setItem(o+e,t)},t=function(e){return window.sessionStorage.getItem(o+e)}):(Chapel.debug("Session Storage Unavailable"),e=function(){},t=function(){},console.warn("Session storage is unavailable...")),{save:e,load:t});window.Chapel.Audio.state={_store:n,saveTracks:function(){var e;try{e=Fast.map(Chapel.Audio.classes.Track.list,function(e){return{id:e.id,sources:e.sources}}),Chapel.debug("Session Saved (Tracks) -> ",e),e=JSON.stringify(e),n.save("tracks",e)}catch(e){console.error(e.message)}},loadTracks:function(){var e;try{e=(e=n.load("tracks"))&&JSON.parse(e),Array.isArray(e)&&e.length&&(Chapel.debug("Session Loaded (Tracks) -> ",e),Fast.forEach(e,function(e){e.id&&e.sources&&!Chapel.Audio.classes.Track.has(e.id)?Chapel.Audio.newTrack.apply(null,[e.id].concat(e.sources)):Chapel.debug("Track reloading skipped.")}))}catch(e){console.error(e.message)}},savePlaylists:function(){try{var o=Chapel.Audio.classes.Playlist.list,e=Fast.map(Object.keys(o),function(e){var t={};return t.tracks=Fast.map(o[e].tracks,function(e){return e.id}),t.id=o[e].id,t});Chapel.debug("Session Saved (Playlists) -> ",e),e=JSON.stringify(e),n.save("playlists",e)}catch(e){console.error(e.message)}},loadPlaylists:function(){var e;try{(e=(e=n.load("playlists"))&&JSON.parse(e))&&Array.isArray(e)&&e.length&&(Chapel.debug("Session Loaded (Playlists) -> ",e),Fast.forEach(e,function(e){e.id&&e.tracks&&Chapel.Audio.createPlaylist(e.id,e.tracks)}))}catch(e){console.error(e.message)}},saveGroups:function(){var t;try{t={},Fast.forEach(Object.keys(Chapel.Audio.groups.custom),function(e){t[e]=Fast.map(Chapel.Audio.groups.custom[e],function(e){return"string"==typeof e?e:e.id})}),Chapel.debug("Session Saved (Groups) -> ",t),t=JSON.stringify(t),n.save("groups",t)}catch(e){console.error(e.message)}},loadGroups:function(){var t;try{(t=(t=n.load("groups"))&&JSON.parse(t))&&"object"==typeof t&&(Chapel.debug("Session Loaded (Groups) -> ",t),Fast.forEach(Object.keys(t),function(e){Fast.map(t[e],function(e){return Chapel.Audio.classes.Track.get(e)})}),Chapel.Audio.groups.custom=t)}catch(e){console.error(e.message)}}}}(),function(){"use strict";var e=Chapel.options;e.globalA&&void 0===window.A&&(Chapel.debug("Created global A interface."),window.A=window.Chapel.Audio),Chapel.Get.fromPassage&&(Chapel.debug("Loading tracks from track def special passage -> ",Chapel.Get.fromPassage),Chapel.Get.fromPassage.forEach(function(e,t){Chapel.Audio.newTrack.apply(null,[t].concat(e))})),$(document).on("unload",function(){Chapel.debug("User Prefs Saved"),window.Chapel.Audio.savePrefs()}),Chapel.Audio.classes.Track.renew(),Chapel.Audio.controls&&Chapel.Audio.controls.updateVolume(),Chapel.Get.isHarlowe3OrLater&&($(window).on("unload",function(){Chapel.debug("HAL State Saved"),Chapel.Audio.state.saveTracks(),Chapel.Audio.state.savePlaylists(),Chapel.Audio.state.saveGroups()}),Chapel.debug("HAL State Loaded"),Chapel.Audio.state.loadTracks(),Chapel.Audio.state.loadPlaylists(),Chapel.Audio.state.loadGroups()),e.persistPrefs&&(Chapel.debug("User Prefs Loaded"),Chapel.Audio.loadPrefs())}(),function(){"use strict";var i,s,e,u,t;Chapel.options.showControls&&(i=Engine,s=Chapel.Audio.controls.$user,e=function(){return"none"!==s.css("display")},u=function(){return e()||s.css("display","block"),s},t=function(){return e()&&s.css("display","none"),s},Chapel.Audio.menu={hide:t,show:u,isShown:e,links:{add:function(e,t,o){var n,a;if(!e||"string"!=typeof e)return r="undefined",alert(r),void console.error(r);o||"function"!=typeof t?(t&&"string"==typeof t&&(n=t),o&&"function"==typeof o&&(a=o)):(a=t,n=null);var r=$(document.createElement("tw-link")).append(e).attr({tabindex:"0",name:e.toLowerCase().trim()}).on("click",function(){n&&i.goToPassage(n),a&&a()}).addClass("story-menu").appendTo(s);return u(),r},clear:function(){return s.empty(),t()},hide:function(e){e=e.toLowerCase().trim(),$('tw-link.story-menu[name="'+e+'"]').addClass("hide")},show:function(e){e=e.toLowerCase().trim(),$('tw-link.story-menu[name="'+e+'"]').removeClass("hide")},toggle:function(e){e=e.toLowerCase().trim(),$('tw-link.story-menu[name="'+e+'"]').toggleClass("hide")},remove:function(e){e=e.toLowerCase().trim(),$('tw-link.story-menu[name="'+e+'"]').remove()}}})}(),function(){"use strict";var n=Chapel.Audio;function o(e){return e&&"function"==typeof e}function a(e,t){if(!e||"string"!=typeof e)return null;switch(e=e.toLowerCase().trim()){case"isplaying":e="isPlaying";break;case"playwhenpossible":e="playWhenPossible";break;case"ismuted":e="isAMuted";break;case"togglemute":e="toggleMute";break;case"getvolume":e="getVolume";break;case"islooping":e="isLooping";break;case"toggleloop":e="toggleLoop";break;case"fadein":e="fadeIn";break;case"fadeout":e="fadeOut";break;case"fadeto":e="fadeTo";break;case"stopall":e="stopAll"}if("isPlaying"===e&&"master"===t&&(e="audioPlaying"),"group"===t){if(o(n.group.prototype[e]))return e}else if("master"===t){if(o(n[e]))return e}else if(o(n.classes[t].prototype[e]))return e;throw new ReferenceError('Cannot run the command: "'+e+'" on the API "'+t+'". The command may be invalid, or this may be a bug in HAL.',"macros.js -> getCommand()",10)}window.Chapel.Macros.add({newtrack:function(){var e=[].slice.call(arguments);try{return n.newTrack.apply(null,e)}catch(e){alert("Error in the (newtrack:) macro: "+e.message)}},newplaylist:function(e,t){t=[].slice.call(arguments).slice(1);try{return n.createPlaylist(e,t)}catch(e){alert("Error in the (newplaylist:) macro: "+e.message)}},newgroup:function(e,t){t=[].slice.call(arguments).slice(1);try{return n.createGroup(e,t)}catch(e){alert("Error in the (newgroup:) macro: "+e.message)}},masteraudio:function(e){try{return e=a(e,"master"),n[e].apply(null,[].slice.call(arguments).slice(1))}catch(e){alert("Error in the (masteraudio:) macro: "+e.message)}},track:function(e,t){try{var o=n.track(e);return o[t=a(t,"Track")].apply(o,[].slice.call(arguments).slice(2))}catch(e){alert("Error in the (track:) macro: "+e.message)}},playlist:function(e,t){try{var o=n.playlist(e);return o[t=a(t,"Playlist")].apply(o,[].slice.call(arguments).slice(2))}catch(e){alert("Error in the (playlist:) macro: "+e.message)}},group:function(e,t){try{var o=n.group(e);return o[t=a(t,"group")].apply(o,[].slice.call(arguments).slice(2))}catch(e){alert("Error in the (group:) macro: "+e.message)}}})}();
-/** End of HAL code */</script><tw-passagedata pid="1" name="Welcome" tags="" position="625,175" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-{(track: &#39;theme&#39;, &#39;loop&#39;, true)
+/** End of HAL code */</script><tw-passagedata pid="1" name="Welcome" tags="" position="625,175" size="100,100">&lt;div class=&quot;space-section&quot;&gt;
+{(masteraudio: &#39;stopall&#39;)
+(track: &#39;theme&#39;, &#39;loop&#39;, true)
 (track: &#39;theme&#39;, &#39;playwhenpossible&#39;)}
- (live: 1s)[
-    (stop:)
-	[[Play The Situationship-&gt;cw]]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Letter1" tags="" position="625,425" size="100,100">{(set: $year to (random: 2040, 2240))
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+	[[Play Astral Kite: The Situationship-&gt;cw]]
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Letter1" tags="" position="625,425" size="100,100">{(set: $year to (random: 2040, 2240))
 (set: $months to (a: &#39;January&#39;, &#39;February&#39;, &#39;March&#39;, &#39;April&#39;, &#39;May&#39;, &#39;June&#39;, &#39;July&#39;, &#39;August&#39;, &#39;September&#39;, &#39;October&#39;, &#39;November&#39;, &#39;December&#39;))
 (set: $month to $months&#39;s (random: 1, 12))
 
 (if: $month is &#39;February&#39;)[(set: $day to (random: 1, 28))]
 (else-if: ($month is &quot;April&quot;) or ($month is &quot;June&quot;) or ($month is &quot;September&quot;) or ($month is &quot;November&quot;))[(set: $day to (random: 1, 30))]
 (else:)[(set: $day to (random: 1, 31))]}
-&lt;div class=&quot;letter-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-(text-color: &quot;LightCoral&quot;)[You are hereby notified that you have been selected on $day $month $year for corporate scholarly service in accordance with provisions of the act of Congress, &quot;Revising Tenure and Establishing the Scholars Draft,&quot; approved on March 3, 2035. You have been assigned to Celestial Streams for a period of time yet to be determined. You are due to report to Celestial Streams HQ within 14 days of receiving this notice. If you fail to report, your tenure will be stripped and you will be deemed a fugitive of the law.]
+&lt;div class=&quot;letter-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+(text-color: &quot;LightCoral&quot;)[You are hereby notified that you have been selected on $day $month $year for corporate scholarly service in accordance with provisions of the act of Congress, &quot;Revising Tenure and Establishing the Scholars Draft,&quot; approved on March 3, 2035. You have been assigned to Celestial Streams for a period of time yet to be determined. You are due to report to Celestial Streams HQ within 14 days of receiving this notice. If you fail to report, your tenure will be stripped and you will be deemed a fugitive of the law.]&lt;br&gt;
 
 [[Go to Celestial Streams HQ-&gt;Welcome to Celestial Streams]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Welcome to Celestial Streams" tags="" position="625,550" size="100,100">&lt;div class=&quot;controls-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-(text-color: &quot;LightCoral&quot;)[We are thrilled to welcome you to Celestial Streams, the world’s leading space science and aerospace academic corporation. We extend our gratitude for your choice to pursue a career as a tenured Professor and in so doing entering the Scholars Draft. We would like to assure you that we are currently reviewing your stated draft preferences to determine which of our projects will be the best fit for you.
+&lt;/div&gt;]]}
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Welcome to Celestial Streams" tags="" position="625,550" size="100,100">&lt;div class=&quot;controls-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+(text-color: &quot;LightCoral&quot;)[We are thrilled to welcome you to Celestial Streams, the world’s leading space science and aerospace academic corporation. We extend our gratitude for your choice to pursue a career as a tenured Professor and in so doing entering the Scholars Draft. We would like to assure you that we are currently reviewing your stated draft preferences to determine which of our projects will be the best fit for you.&lt;br&gt;
 
-In the meantime, please fill out your personal information.]
+In the meantime, please fill out your personal information.]&lt;br&gt;
 
 [[Continue...-&gt;Inputs]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Inputs" tags="" position="625,675" size="100,100">&lt;div class=&quot;controls-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;
+]]}
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Inputs" tags="" position="625,675" size="100,100">&lt;div class=&quot;controls-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 (set: $USERNAME to (prompt: &quot;What is your name?&quot;, &quot;Adele&quot;))
 Welcome, $USERNAME. Please select your pronouns:
 (dropdown: bind $p, &quot;she/her/hers&quot;, &quot;he/him/his&quot;, &quot;they/them/their&quot;, &quot;any pronouns&quot;)
@@ -229,40 +250,42 @@ You will travel aboard our proprietary interstellar spacecraft, the Astral Kite,
 During this journey, (str: (round: $tt_tot*100)/100) years will pass for you, while (str: (round: $te_tot*100)/100) years will pass on Earth.
 
 [[Travel to the International Space Station-&gt;Cutscene1]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Cutscene1" tags="" position="625,1050" size="100,100">&lt;div class=&quot;iss-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Cutscene1" tags="" position="625,1050" size="100,100">&lt;div class=&quot;iss-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 {(set: $incoming to &quot;INCOMING MESSAGE...&quot;)}
-You arrive on the International Space Station in low Earth orbit, where you wait while the final preparations are made for the Astral Kite&#39;s launch...
-[$incoming
+You arrive on the International Space Station in low Earth orbit, where you wait while the final preparations are made for the Astral Kite&#39;s launch...&lt;br&gt;
+[$incoming&lt;br&gt;
 (link-replace: &quot;Open message&quot;)[(show: ?earth1)]]
 
-|earth1)[(text-color: &quot;LightPink&quot;)[Hey, Elliot here! I hope your journey up into orbit went smoothly. It was a pleasure to meet you back at Mission Control HQ yesterday, and I just wanted to say I’m in absolute awe of you. Going on a mission like this—it takes someone so brave. Anyway, I’ll be in charge of comms while you’re in orbit, so I’m looking forward to staying in touch until your launch next month!]
+|earth1)[(text-color: &quot;LightPink&quot;)[Hey, Elliot here! I hope your journey up into orbit went smoothly. It was a pleasure to meet you back at Mission Control HQ yesterday, and I just wanted to say I’m in absolute awe of you. Going on a mission like this—it takes someone so brave. Anyway, I’ll be in charge of comms while you’re in orbit, so I’m looking forward to staying in touch until your launch next month!]&lt;br&gt;&lt;br&gt;
 
 (link-replace: &quot;Thanks, but I’m not exactly brave.&quot;)[(show: ?reply1)]]
 
-|reply1)[Thanks, but I’m not exactly brave. I was just selected from the Scholars Draft. It could have been anyone. I’m $USERNAME, by the way. Nice to meet you.
+|reply1)[Thanks, but I’m not exactly brave. I was just selected from the Scholars Draft. It could have been anyone. I’m $USERNAME, by the way. Nice to meet you.&lt;br&gt;&lt;br&gt;
 
-$incoming
+$incoming&lt;br&gt;
 (link-replace: &quot;Open message&quot;)[(show: ?earth2)]]
 
-|earth2)[(text-color: &quot;LightPink&quot;)[Hey, sorry for the delayed reply! I have to admit, I didn’t know a lot about the Scholars Draft before taking this job. I just took some time to look into it and…I hope you don’t mind me saying this, but it seems kind of messed up. I’m sorry you didn’t get to have much say in how you ended up here. Anyway, I think you’re still really brave. If I’d been selected for a mission to leave Earth, I might’ve tried to run away haha]
+|earth2)[(text-color: &quot;LightPink&quot;)[Hey, sorry for the delayed reply! I have to admit, I didn’t know a lot about the Scholars Draft before taking this job. I just took some time to look into it and…I hope you don’t mind me saying this, but it seems kind of messed up. I’m sorry you didn’t get to have much say in how you ended up here. Anyway, I think you’re still really brave. If I’d been selected for a mission to leave Earth, I might’ve tried to run away haha]&lt;br&gt;&lt;br&gt;
 
 (link-replace: &quot;Are you allowed to say stuff like that on this channel?&quot;)[(show: ?reply2)]]
 
-|reply2)[Are you allowed to say stuff like that on this channel? Isn’t this monitored by Celestial Streams or something…? Well, I guess it doesn’t matter much to me…it’s not like they can do much to me while I’m in space…To be completely honest with you, I think running away may have been a braver decision. I wasn’t brave enough to even attempt to say no to the Draft. I’ve gotten so many emails recently of people telling me to get a lawyer…and still there are others who wish they were in my place, doing something “great” for their country. It’s like I’m going off to war or something. I don’t think everyone realizes it’s just me alone in an empty ship for (str: (round: $tt_tot*100)/100) years.
+|reply2)[Are you allowed to say stuff like that on this channel? Isn’t this monitored by Celestial Streams or something…? Well, I guess it doesn’t matter much to me…it’s not like they can do much to me while I’m in space…To be completely honest with you, I think running away may have been a braver decision. I wasn’t brave enough to even attempt to say no to the Draft. I’ve gotten so many emails recently of people telling me to get a lawyer…and still there are others who wish they were in my place, doing something “great” for their country. It’s like I’m going off to war or something. I don’t think everyone realizes it’s just me alone in an empty ship for (str: (round: $tt_tot*100)/100) years.&lt;br&gt;&lt;br&gt;
 
-$incoming
+$incoming&lt;br&gt;
 (link-replace: &quot;Open message&quot;)[(show: ?earth3)]]
 
-|earth3)[(text-color: &quot;LightPink&quot;)[I think some of the higher ups in Celestial Streams wouldn’t like it, but there’s no one really looking over my shoulder for these messages. I mean, they’re recorded for posterity, but I don’t think anyone at Mission Controls really cares what I have to say as long as I pass on their official messages, too. And I know it’s not the same thing, but just to say, you won’t be completely alone. I’ll always be on the other end of this line. Anyway, I’m planning to drink some wine and binge-watch the new season of RuPaul’s Drag Race tonight. Let me know if you want to hang out online?]
+|earth3)[(text-color: &quot;LightPink&quot;)[I think some of the higher ups in Celestial Streams wouldn’t like it, but there’s no one really looking over my shoulder for these messages. I mean, they’re recorded for posterity, but I don’t think anyone at Mission Controls really cares what I have to say as long as I pass on their official messages, too. And I know it’s not the same thing, but just to say, you won’t be completely alone. I’ll always be on the other end of this line. Anyway, I’m planning to drink some wine and binge-watch the new season of RuPaul’s Drag Race tonight. Let me know if you want to hang out online?]&lt;br&gt;&lt;br&gt;
 
 (link-replace: &quot;Yeah, that sounds fun actually.&quot;)[(show: ?reply3)]]
 
-|reply3)[Yeah, that sounds fun actually. I don’t have anything to do up here except worry…send me the link?
+|reply3)[Yeah, that sounds fun actually. I don’t have anything to do up here except worry…send me the link?&lt;br&gt;
 
 [[Continue-&gt;Cutscene2]]]
-&lt;/div&gt;
+&lt;/div&gt;]]}
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="Cutscene2" tags="" position="625,1175" size="100,100">&lt;div class=&quot;iss-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-1 month (link-replace: &quot;later...&quot;)[(show: ?i4)]
+[1 month later...]&lt;later|
+(click: ?later)[(show: ?i4)]
 
 |i4)[$incoming
 (link-replace: &quot;Open message&quot;)[(show: ?earth4)]]
@@ -286,11 +309,12 @@ $incoming
 
 [[Prepare for launch-&gt;Launch]]]
 
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Launch" tags="" position="625,1300" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Launch" tags="" position="625,1300" size="100,100">&lt;div class=&quot;space-section&quot;&gt;
 {(track: &#39;theme&#39;, &#39;pause&#39;)
 (track: &#39;launch&#39;, &#39;loop&#39;, true)
 (track: &#39;launch&#39;, &#39;playwhenpossible&#39;)}
-At last, the Astral Kite&#39;s launch day arrives...
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+At last, the Astral Kite&#39;s launch day arrives...&lt;br&gt;&lt;br&gt;
 
 {
  (live: 1.5s)[
@@ -328,7 +352,7 @@ At last, the Astral Kite&#39;s launch day arrives...
     [[Liftoff!-&gt;Cycle0]]]
 }
 
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Cycle0" tags="" position="625,1425" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Cycle0" tags="" position="625,1425" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 {(track: &#39;launch&#39;, &#39;pause&#39;)
 (track: &#39;cycle14&#39;, &#39;loop&#39;, true)
 (track: &#39;cycle14&#39;, &#39;playwhenpossible&#39;)}
@@ -2237,294 +2261,300 @@ $incoming
 
 [[Continue-&gt;6bbbbbb]]]]
 ]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="6aaaaaa" tags="" position="500,1100" size="100,100">&lt;div class=&quot;door-epilogue&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="6aaaaaa" tags="" position="500,1100" size="100,100">&lt;div class=&quot;door-epilogue&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+You sit in the staircase, waiting for Elliot’s response.&lt;br&gt;
 
-You sit in the staircase, waiting for Elliot’s response.
+His last message was instantaneous, or at least it *felt* instantaneous. Has it really been 18 years already?&lt;br&gt;
 
-His last message was instantaneous, or at least it *felt* instantaneous. Has it really been 18 years already?
+This time, though, time seems to stretch on.&lt;br&gt;
 
-This time, though, time seems to stretch on.
+You sleep, and wake, and sleep again.&lt;br&gt;
 
-You sleep, and wake, and sleep again.
+Your hair grows long.&lt;br&gt;
 
-Your hair grows long.
+You hunger and thirst, subsisting only on the food the ship’s robots bring you, on the days they can find you.&lt;br&gt;
 
-You hunger and thirst, subsisting only on the food the ship’s robots bring you, on the days they can find you.
+Sometimes, it seems like the ship is stopping them from reaching you.&lt;br&gt;
 
-Sometimes, it seems like the ship is stopping them from reaching you.
+You catch yourself thinking about the ship like a mutable thing, a living thing, a hateful thing, more resentful of its voyage than you are.&lt;br&gt;
 
-You catch yourself thinking about the ship like a mutable thing, a living thing, a hateful thing, more resentful of its voyage than you are.
+Otherwise, your thoughts are consumed by the trio of doors before you.&lt;br&gt;
 
-Otherwise, your thoughts are consumed by the trio of doors before you.
+And there’s still no reply.&lt;br&gt;
 
-And there’s still no reply.
+Until you begin to hear the voices yourself…&lt;br&gt;
 
-Until you begin to hear the voices yourself…
+Emanating from the door on the left, you’d swear it was Elliot’s voice—not mutilated and tinny, as it would be over a comms system, but his *real* voice, calling you, as if he’s right behind the door. Asking if you’re still there, if you’re okay.&lt;br&gt;
 
-Emanating from the door on the left, you’d swear it was Elliot’s voice—not mutilated and tinny, as it would be over a comms system, but his *real* voice, calling you, as if he’s right behind the door. Asking if you’re still there, if you’re okay.
+Coming from the middle door, you realize with a gut-churning panic, is your own voice, screaming for help.&lt;br&gt;
 
-Coming from the middle door, you realize with a gut-churning panic, is your own voice, screaming for help.
+And the door on the right—the door that seemed to disappear before, or turn transparent—is turning transparent again. And you can see a silhouette through it. A human silhouette…&lt;br&gt;
 
-And the door on the right—the door that seemed to disappear before, or turn transparent—is turning transparent again. And you can see a silhouette through it. A human silhouette…
-
-[Open the left door...]&lt;door1|
-[Open the middle door...]&lt;door2|
-[Open the right door...]&lt;door3|
+[Open the left door...]&lt;door1|&lt;br&gt;
+[Open the middle door...]&lt;door2|&lt;br&gt;
+[Open the right door...]&lt;door3|&lt;br&gt;
 
 (click: ?door1)[(replace:?door2)[](replace:?door3)[](replace:?door1)[
-You can’t resist the call of Elliot’s voice. Maybe you’re losing your grip on reality, but if there’s any chance at all that it could be him, you have to try.
+You can’t resist the call of Elliot’s voice. Maybe you’re losing your grip on reality, but if there’s any chance at all that it could be him, you have to try.&lt;br&gt;
 
-You open the door, calling out, “I’m here! Elliot, it’s me!”
+You open the door, calling out, “I’m here! Elliot, it’s me!”&lt;br&gt;
 
-Behind the door, the room is in complete darkness. You whirl around, to find the light switch, but the door behind you is gone, and so is the wall. You are standing in an eternal night, a starless vacuum, the only indication you’re still on the Astral Kite is the metal floor beneath your feet.
+Behind the door, the room is in complete darkness. You whirl around, to find the light switch, but the door behind you is gone, and so is the wall. You are standing in an eternal night, a starless vacuum, the only indication you’re still on the Astral Kite is the metal floor beneath your feet.&lt;br&gt;
 
-Your voice catches in your throat, and your breath turns to panicked gasps.
+Your voice catches in your throat, and your breath turns to panicked gasps.&lt;br&gt;
 
-But then, you hear his voice. (text-color: &quot;LightPink&quot;)[“$USERNAME? Is it you? Is it really you?”]
+But then, you hear his voice. (text-color: &quot;LightPink&quot;)[“$USERNAME? Is it you? Is it really you?”]&lt;br&gt;
 
-You stumble forward through the darkness, following the sound of his voice in the void.
+You stumble forward through the darkness, following the sound of his voice in the void.&lt;br&gt;
 
-“Elliot?”
+“Elliot?”&lt;br&gt;
 
-(text-color: &quot;LightPink&quot;)[“$USERNAME? This is impossible.”]
+(text-color: &quot;LightPink&quot;)[“$USERNAME? This is impossible.”]&lt;br&gt;
 
-“Elliot, keep talking, I’m trying to find you.”
+“Elliot, keep talking, I’m trying to find you.”&lt;br&gt;
 
-Shapes start coming into view, the rectangular hint of a desk, the back and shoulders of a person. (text-color: &quot;LightPink&quot;)[“I don’t understand.”]
+Shapes start coming into view, the rectangular hint of a desk, the back and shoulders of a person. (text-color: &quot;LightPink&quot;)[“I don’t understand.”]&lt;br&gt;
 
-“Elliot! I’m here! I can see you!”
+“Elliot! I’m here! I can see you!”&lt;br&gt;
 
-The figure spins around to face you. You can almost see the contours of his cheeks, the shine of his eyes like distant nebulae. (text-color: &quot;LightPink&quot;)[“How are you back on Earth?”]
+The figure spins around to face you. You can almost see the contours of his cheeks, the shine of his eyes like distant nebulae. (text-color: &quot;LightPink&quot;)[“How are you back on Earth?”]&lt;br&gt;
 
-“Earth?” you say. “I’m not. I’m still—”
+“Earth?” you say. “I’m not. I’m still—”&lt;br&gt;
 
-“What are you doing here?”
+“What are you doing here?”&lt;br&gt;
 
-The voice jolts you, and you blink rapidly against a bright white light. You’re standing in a supply closet, aboard the Astral Kite. One of the ship’s cleaning robots is standing behind you, clearly wondering why you’re blocking its path.
+The voice jolts you, and you blink rapidly against a bright white light. You’re standing in a supply closet, aboard the Astral Kite. One of the ship’s cleaning robots is standing behind you, clearly wondering why you’re blocking its path.&lt;br&gt;
 
-“What?” You glance around. Elliot was just here. He was—
+“What?” You glance around. Elliot was just here. He was—&lt;br&gt;
 
-Or was it you who had been just there?
+Or was it you who had been just there?&lt;br&gt;
 
-You stumble back out of the room. You’re not anywhere near the staircase where you cowered, indecisive, for so long.
+You stumble back out of the room. You’re not anywhere near the staircase where you cowered, indecisive, for so long.&lt;br&gt;
 
-You’re back in the main cabin.
+You’re back in the main cabin.&lt;br&gt;
 
-You leave the confused robot behind, looking through your own jumbled notes on the ship schematics.
+You leave the confused robot behind, looking through your own jumbled notes on the ship schematics.&lt;br&gt;
 
-None of it makes sense. And none of it matches the ship itself.
+None of it makes sense. And none of it matches the ship itself.&lt;br&gt;
 
-You open one of the ship computers. According to the system clock, it’s been some 18 years since your launch.
+You open one of the ship computers. According to the system clock, it’s been some 18 years since your launch.&lt;br&gt;
 
-You collapse into a chair on the bridge, staring out the viewport.
+You collapse into a chair on the bridge, staring out the viewport.&lt;br&gt;
 
-It was Elliot. You *know* it was really him. You know your time spent cataloging the ship’s strange rooms and passageways was real.
+It was Elliot. You *know* it was really him. You know your time spent cataloging the ship’s strange rooms and passageways was real.&lt;br&gt;
 
-You *know* this.
+You *know* this.&lt;br&gt;
 
-You know it.
+You know it.&lt;br&gt;
 
-You know it.
+You know it.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
 
 (click: ?door2)[(replace:?door1)[](replace:?door3)[](replace:?door2)[
-How can you ignore yourself? It sounds like a matter of life or death.
+How can you ignore yourself? It sounds like a matter of life or death.&lt;br&gt;
 
-You find a small silver room with bright white lights, and at the center, you see yourself, collapsed on the floor, screaming, crying, a pool of…something dark. Blood?
+You find a small silver room with bright white lights, and at the center, you see yourself, collapsed on the floor, screaming, crying, a pool of…something dark. Blood?&lt;br&gt;
 
-You—the you in the center of the room—stops crying as you enter, glancing up at you.
+You—the you in the center of the room—stops crying as you enter, glancing up at you.&lt;br&gt;
 
-“What is this?” you ask, at the same time the Room’s You says, “Who are you?”
+“What is this?” you ask, at the same time the Room’s You says, “Who are you?”&lt;br&gt;
 
-“I’m…you,” you say.
+“I’m…you,” you say.&lt;br&gt;
 
-The Room’s You seems confused by this reply. “No, no, I would remember. If there had ever been anything other than this, I would remember!”
+The Room’s You seems confused by this reply. “No, no, I would remember. If there had ever been anything other than this, I would remember!”&lt;br&gt;
 
-You want to back away, but curiosity, horror, or some combination of the two carries you closer. “What happened here?” you ask.
+You want to back away, but curiosity, horror, or some combination of the two carries you closer. “What happened here?” you ask.&lt;br&gt;
 
-The Room’s You looks up with eyes as cold and vacant as the vacuum outside the Astral Kite’s walls.
+The Room’s You looks up with eyes as cold and vacant as the vacuum outside the Astral Kite’s walls.&lt;br&gt;
 
-“I’ve been lost on this ship for decades. I didn’t want to come on this mission. I was sent here against my own will. You have to help me!”
+“I’ve been lost on this ship for decades. I didn’t want to come on this mission. I was sent here against my own will. You have to help me!”&lt;br&gt;
 
-You’re quiet for a moment. “Is this a trick?”
+You’re quiet for a moment. “Is this a trick?”&lt;br&gt;
 
-The Room’s You laughs, a horrid, humorless cackling, mocking like the call of a crow. “A trick, a trick! It’s all a trick! I sent a message to Earth so long ago. They should have replied by now. It’s been years. Years! I should have heard back.”
+The Room’s You laughs, a horrid, humorless cackling, mocking like the call of a crow. “A trick, a trick! It’s all a trick! I sent a message to Earth so long ago. They should have replied by now. It’s been years. Years! I should have heard back.”&lt;br&gt;
 
-Your limbs grow tense.
+Your limbs grow tense.&lt;br&gt;
 
-The Room’s You is still talking. “I never heard from them again. Never again! This ship is a labyrinth, and there’s no way out. I knew I was an experiment, the moment they drafted me. I was just wrong about what the experiment was.”
+The Room’s You is still talking. “I never heard from them again. Never again! This ship is a labyrinth, and there’s no way out. I knew I was an experiment, the moment they drafted me. I was just wrong about what the experiment was.”&lt;br&gt;
 
-“What is…” you gesture to the dark liquid on the floor.
+“What is…” you gesture to the dark liquid on the floor.&lt;br&gt;
 
-“Lifeblood,” the voice of the Room’s You is calm, as if this is the first reasonable thing you’ve asked. The tone soon changes back to one of desperation. “You’ll get me out of here, right?”
+“Lifeblood,” the voice of the Room’s You is calm, as if this is the first reasonable thing you’ve asked. The tone soon changes back to one of desperation. “You’ll get me out of here, right?”&lt;br&gt;
 
-“Whose blood is it? Is it…ours? *Yours*, I mean?”
+“Whose blood is it? Is it…ours? *Yours*, I mean?”&lt;br&gt;
 
-The mocking laughter returns. “You think I’ve been hurt? You fool, the ship would never allow for that. No, this is the lifeblood of the only other inhabitants on the Astral Kite. The oil fueling the robots.”
+The mocking laughter returns. “You think I’ve been hurt? You fool, the ship would never allow for that. No, this is the lifeblood of the only other inhabitants on the Astral Kite. The oil fueling the robots.”&lt;br&gt;
 
-“Okay.” At least it’s not as bad as you feared. You look around, for any hint of what could be going on. There’s nothing. The walls are empty.
+“Okay.” At least it’s not as bad as you feared. You look around, for any hint of what could be going on. There’s nothing. The walls are empty.&lt;br&gt;
 
-The Room’s You stands up, lips carving open into a cruel, frightening smile like a jack-o-lantern. It seems like $p0 $be looking behind you.
+The Room’s You stands up, lips carving open into a cruel, frightening smile like a jack-o-lantern. It seems like $p0 $be looking behind you.&lt;br&gt;
 
-You glance over your shoulder, but the door there is gone. You’re surrounded by empty metal walls.
+You glance over your shoulder, but the door there is gone. You’re surrounded by empty metal walls.&lt;br&gt;
 
-When you glance back to the center of the room, you’re gone. The Room’s You, anyway.
+When you glance back to the center of the room, you’re gone. The Room’s You, anyway.&lt;br&gt;
 
-Now, there’s only you. You’re alone here.
+Now, there’s only you. You’re alone here.&lt;br&gt;
 
-Your voice turns to a whisper. “Hello?” you call out. “Where did you go?”
+Your voice turns to a whisper. “Hello?” you call out. “Where did you go?”&lt;br&gt;
 
-“Is anybody there?”
+“Is anybody there?”&lt;br&gt;
 
-“Hello?”
+“Hello?”&lt;br&gt;
 
-“Elliot?”
+“Elliot?”&lt;br&gt;
 
-“$USERNAME?”
+“$USERNAME?”&lt;br&gt;
 
-“Help! I need help! Somebody, please!”
+“Help! I need help! Somebody, please!”&lt;br&gt;
 
-There’s no response. And you know, deep in the marrow of your bones, that there won’t be for years.
+There’s no response. And you know, deep in the marrow of your bones, that there won’t be for years.&lt;br&gt;
+
 [[The End-&gt;Credits]]]]
 
 (click: ?door3)[(replace:?door1)[](replace:?door2)[](replace:?door3)[
-Elliot can’t be here. And you are yourself. Whatever is behind those two other doors must be a trap.
+Elliot can’t be here. And you are yourself. Whatever is behind those two other doors must be a trap.&lt;br&gt;
 
-You open the door on the right.
+You open the door on the right.&lt;br&gt;
 
-Inside is an office room. Desks, monitors.
+Inside is an office room. Desks, monitors.&lt;br&gt;
 
-It’s mostly empty, but there’s one person there, speaking into a microphone headset.
+It’s mostly empty, but there’s one person there, speaking into a microphone headset.&lt;br&gt;
 
-“I really hope you’re okay out there. Don’t go through any more strange doors.”
+“I really hope you’re okay out there. Don’t go through any more strange doors.”&lt;br&gt;
 
-You gasp, and the figure spins around.
+You gasp, and the figure spins around.&lt;br&gt;
 
-“Elliot?”
+“Elliot?”&lt;br&gt;
 
-He lets out a small, undignified shriek, jumping out of his chair. (text-color: &quot;LightPink&quot;)[“$USERNAME?”]
+He lets out a small, undignified shriek, jumping out of his chair. (text-color: &quot;LightPink&quot;)[“$USERNAME?”]&lt;br&gt;
 
-“Elliot? I don’t understand.”
+“Elliot? I don’t understand.”&lt;br&gt;
 
-(text-color: &quot;LightPink&quot;)[“This is impossible. I must really need sleep.”]
+(text-color: &quot;LightPink&quot;)[“This is impossible. I must really need sleep.”]&lt;br&gt;
 
-“No, no, *I’m* the one who needs sleep. I can’t—this can’t be real.”
+“No, no, *I’m* the one who needs sleep. I can’t—this can’t be real.”&lt;br&gt;
 
-Elliot holds out a hand, stepping toward you. (text-color: &quot;LightPink&quot;)[“I’m real. This is real. Are you…”]
+Elliot holds out a hand, stepping toward you. (text-color: &quot;LightPink&quot;)[“I’m real. This is real. Are you…”]&lt;br&gt;
 
-His words fade before they can even become a question.
+His words fade before they can even become a question.&lt;br&gt;
 
-You swallow and step forward, reaching out an arm with tired, aching muscles, your fingers trembling from exhaustion as they rise toward his.
+You swallow and step forward, reaching out an arm with tired, aching muscles, your fingers trembling from exhaustion as they rise toward his.&lt;br&gt;
 
-You both let out a gasp when your hands take hold of each other. Firm. Real.
+You both let out a gasp when your hands take hold of each other. Firm. Real.&lt;br&gt;
 
-“Ell…”
+“Ell…”&lt;br&gt;
 
-(text-color: &quot;LightPink&quot;)[“I’m here,”] he says, pulling you tight into a hug. (text-color: &quot;LightPink&quot;)[“I’m here.”]
+(text-color: &quot;LightPink&quot;)[“I’m here,”] he says, pulling you tight into a hug. (text-color: &quot;LightPink&quot;)[“I’m here.”]&lt;br&gt;
 
-“But, how?” You want to enjoy the moment, but you can’t. You don’t trust it yet. It doesn’t make sense. It’s impossible. It’s—
+“But, how?” You want to enjoy the moment, but you can’t. You don’t trust it yet. It doesn’t make sense. It’s impossible. It’s—&lt;br&gt;
 
-(text-color: &quot;LightPink&quot;)[“I don’t know. But I don’t think Preston Reeves was never honest about his intent with Celestial Streams. It was never about science.”]
+(text-color: &quot;LightPink&quot;)[“I don’t know. But I don’t think Preston Reeves was never honest about his intent with Celestial Streams. It was never about science.”]&lt;br&gt;
 
-“It was only ever about profit,” you say. “But anyone who knows anything about academic corporations would know that.”
+“It was only ever about profit,” you say. “But anyone who knows anything about academic corporations would know that.”&lt;br&gt;
 
-But Ell is shaking his head. (text-color: &quot;LightPink&quot;)[“True, but that’s not what I mean.”]
+But Ell is shaking his head. (text-color: &quot;LightPink&quot;)[“True, but that’s not what I mean.”]&lt;br&gt;
 
-You realize with a start that there are figures standing in the shadows at the edges of the room. Have they been there the whole time?
+You realize with a start that there are figures standing in the shadows at the edges of the room. Have they been there the whole time?&lt;br&gt;
 
-“Then, what do you mean?”
+“Then, what do you mean?”&lt;br&gt;
 
-You’re distracted, though, looking toward those figures. Gray robes camouflage them with the lifeless office walls. They’re closer now, somehow. You didn’t even see them move.
+You’re distracted, though, looking toward those figures. Gray robes camouflage them with the lifeless office walls. They’re closer now, somehow. You didn’t even see them move.&lt;br&gt;
 
-(text-color: &quot;LightPink&quot;)[“I mean, if you’re here, it’s because that’s part of what he was planning. Whatever it is that he’s been planning. No one gets into Celestial Streams HQ without Preston’s and the board’s approval.”]
+(text-color: &quot;LightPink&quot;)[“I mean, if you’re here, it’s because that’s part of what he was planning. Whatever it is that he’s been planning. No one gets into Celestial Streams HQ without Preston’s and the board’s approval.”]&lt;br&gt;
 
-“Ell,” you point to the strange figures. “Who are they?”
+“Ell,” you point to the strange figures. “Who are they?”&lt;br&gt;
 
-(text-color: &quot;LightPink&quot;)[“You need to listen to me,”] he says, ignoring your question. (text-color: &quot;LightPink&quot;)[“The mission you thought you were on was a lie. This was always about something else. Something that would give the company more power. I think they’ve been working on something terrible. Something that reaches far across space and time. I think—”]
+(text-color: &quot;LightPink&quot;)[“You need to listen to me,”] he says, ignoring your question. (text-color: &quot;LightPink&quot;)[“The mission you thought you were on was a lie. This was always about something else. Something that would give the company more power. I think they’ve been working on something terrible. Something that reaches far across space and time. I think—”]&lt;br&gt;
 
-Several gray-clad hands grab your shoulders. A thin needle slides into your neck before you can even scream.
+Several gray-clad hands grab your shoulders. A thin needle slides into your neck before you can even scream.&lt;br&gt;
 
-(text-color: &quot;LightCoral&quot;)[“It’s okay,”] a voice whispers in your ear. (text-color: &quot;LightCoral&quot;)[“Your work here is done. Celestial Streams thanks you for your service.”]
+(text-color: &quot;LightCoral&quot;)[“It’s okay,”] a voice whispers in your ear. (text-color: &quot;LightCoral&quot;)[“Your work here is done. Celestial Streams thanks you for your service.”]&lt;br&gt;
+
 [[The End-&gt;Credits]]]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="6aaaaab" tags="" position="375,1025" size="100,100">&lt;div class=&quot;door-epilogue&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-You can’t resist. There is no point in resisting.
+&lt;/div&gt;]]}
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="6aaaaab" tags="" position="375,1025" size="100,100">&lt;div class=&quot;door-epilogue&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+You can’t resist. There is no point in resisting.&lt;br&gt;
 
-Every moment you resist is a moment wasted.
+Every moment you resist is a moment wasted.&lt;br&gt;
 
-Are you really going to sit here for another 30 plus years to carry out the remainder of your mission?
+Are you really going to sit here for another 30 plus years to carry out the remainder of your mission?&lt;br&gt;
 
-And that’s if time is actually passing how it’s supposed to.
+And that’s if time is actually passing how it’s supposed to.&lt;br&gt;
 
-No.
+No.&lt;br&gt;
 
-So, there’s no point in delaying the inevitable anymore.
+So, there’s no point in delaying the inevitable anymore.&lt;br&gt;
 
-You stand before the trio of doors. The left door is pulsing with a strange pink light. The middle door is a bland silver. The right door appears to be fading once more, almost transparent.
+You stand before the trio of doors. The left door is pulsing with a strange pink light. The middle door is a bland silver. The right door appears to be fading once more, almost transparent.&lt;br&gt;
 
-“Ell,” you whisper, “I’m sorry. I have to try.”
+“Ell,” you whisper, “I’m sorry. I have to try.”&lt;br&gt;
 
-[Open the left door...]&lt;door1|
-[Open the middle door...]&lt;door2|
-[Open the right door...]&lt;door3|
+[Open the left door...]&lt;door1|&lt;br&gt;
+[Open the middle door...]&lt;door2|&lt;br&gt;
+[Open the right door...]&lt;door3|&lt;br&gt;
 
 (click: ?door1)[(replace:?door2)[](replace:?door3)[](replace:?door1)[
-You open the door on the left. 
+You open the door on the left.&lt;br&gt;
 
-You find yourself standing on a street at night, a neon pink sign overhead, advertising a bar of some kind.
+You find yourself standing on a street at night, a neon pink sign overhead, advertising a bar of some kind.&lt;br&gt;
 
-You stumble backward, but instead of going back through a doorway, you find yourself stumbling into a ditch.
+You stumble backward, but instead of going back through a doorway, you find yourself stumbling into a ditch.&lt;br&gt;
 
-You look up.
+You look up.&lt;br&gt;
 
-You see a few slight clouds reflecting in the city light shining in the sky, alongside the faint stars of constellations—constellations you recognize.
+You see a few slight clouds reflecting in the city light shining in the sky, alongside the faint stars of constellations—constellations you recognize.&lt;br&gt;
 
-This is Earth.
+This is Earth.&lt;br&gt;
 
-You‘re back on Earth.
+You‘re back on Earth.&lt;br&gt;
 
-You press your hands and face to the ground. Is this real? It can’t be real, can it?
+You press your hands and face to the ground. Is this real? It can’t be real, can it?&lt;br&gt;
 
-The ditch beneath you is steaming with heat, a faint white crack glowing like an angry smile.
+The ditch beneath you is steaming with heat, a faint white crack glowing like an angry smile.&lt;br&gt;
 
-Is that the cabin of the Astral Kite, just through the crack? You try to look down closer, but it closes, and then there’s nothing there but mud and concrete.
+Is that the cabin of the Astral Kite, just through the crack? You try to look down closer, but it closes, and then there’s nothing there but mud and concrete.&lt;br&gt;
 
-You don’t know where you are, or how to get home from here. You don’t know how this is possible, or what it means for the world, or the very nature of the Universe. But it doesn’t matter.
+You don’t know where you are, or how to get home from here. You don’t know how this is possible, or what it means for the world, or the very nature of the Universe. But it doesn’t matter.&lt;br&gt;
 
-You’re back on Earth.
+You’re back on Earth.&lt;br&gt;
 
-The feeling comes burbling up in your throat, and before you can stop it, before you can even consider whether you might *want* to stop it, you laugh.
+The feeling comes burbling up in your throat, and before you can stop it, before you can even consider whether you might *want* to stop it, you laugh.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
 
 (click: ?door2)[(replace:?door1)[](replace:?door3)[](replace:?door2)[
-You step through the door, and find yourself back in the bridge of the Astral Kite.
+You step through the door, and find yourself back in the bridge of the Astral Kite.&lt;br&gt;
 
-You come to an abrupt halt. It’s been *ages* since you’ve been here. You’ve been lost on the bowels of the ship for so long…
+You come to an abrupt halt. It’s been *ages* since you’ve been here. You’ve been lost on the bowels of the ship for so long…&lt;br&gt;
 
-You turn back to glance through the door, but it simply opens out into a passageway, just like the ship’s original schematics said it should.
+You turn back to glance through the door, but it simply opens out into a passageway, just like the ship’s original schematics said it should.&lt;br&gt;
 
-Over the next several decades of your journey to TOI-700 d, you will wonder whether it was all a dream.
+Over the next several decades of your journey to TOI-700 d, you will wonder whether it was all a dream.&lt;br&gt;
 
-You will wonder whether the loneliness made you lose your grip on reality.
+You will wonder whether the loneliness made you lose your grip on reality.&lt;br&gt;
 
-You will spend years searching the ship in vain for any of the strange doors or changing corridors you found before.
+You will spend years searching the ship in vain for any of the strange doors or changing corridors you found before.&lt;br&gt;
 
-But, one day, when you have convinced yourself that it was all a dream, or a moment of madness, when you are far enough removed from it for mundane curiosity to win out over fear, you will decide to look back over the ship’s message logs. And you will see that Elliot’s final message to you arrived mere minutes after your previous response to him.
+But, one day, when you have convinced yourself that it was all a dream, or a moment of madness, when you are far enough removed from it for mundane curiosity to win out over fear, you will decide to look back over the ship’s message logs. And you will see that Elliot’s final message to you arrived mere minutes after your previous response to him.&lt;br&gt;
 
-And you will know it was real.
+And you will know it was real.&lt;br&gt;
+
 [[The End-&gt;Credits]]]]
 
 (click: ?door3)[(replace:?door1)[](replace:?door2)[](replace:?door3)[
-You step through the right hand door, and the airlock slams shut behind you.
+You step through the right hand door, and the airlock slams shut behind you.&lt;br&gt;
 
-Alarms are blaring.
+Alarms are blaring.&lt;br&gt;
 
-The Astral Kite is no longer visible to you.
+The Astral Kite is no longer visible to you.&lt;br&gt;
 
-You want to scream, but there aren’t enough atoms in the vacuum of space to carry the sound.
+You want to scream, but there aren’t enough atoms in the vacuum of space to carry the sound.&lt;br&gt;
+
 [[The End-&gt;Credits]]]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="78" name="6aaaaba" tags="" position="375,1200" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="78" name="6aaaaba" tags="" position="375,1200" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 INCOMING MESSAGE
 
 (text-color: &quot;LightPink&quot;)[$USERNAME, or should I call you the Astral Kite? I assume the experiment is complete. Celestial Streams has been working for a century to see this come to fruition. It was the founder of the company, Albert Reeves, who first found The Heart. Some say he found it on an expedition to the bottom of the ocean, others say he made it in a lab, from discarded flesh and steel. No one knows the truth; he worked hard to conceal the truth. But everything that’s come since then has been looking to this moment. Only a handful of Celestial Streams’ employees have known the company’s true purpose, but Albert’s followers have been at the helm for generations.
@@ -2729,67 +2759,69 @@ Preston Reeves, CEO of Celestial Streams, may be the first person to visit an ex
 You just won’t do it alive.
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="86" name="6aabaaa" tags="" position="100,2400" size="100,100">&lt;div class=&quot;elliot-epilogue&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-In the end, it is not enough.
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="86" name="6aabaaa" tags="" position="100,2400" size="100,100">&lt;div class=&quot;elliot-epilogue&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+In the end, it is not enough.&lt;br&gt;
 
-Just as you feared, the government is culpable. Those running the Scholars Draft sign off on the crimes of academic corporations. They are more than complicit; they are accomplices.
+Just as you feared, the government is culpable. Those running the Scholars Draft sign off on the crimes of academic corporations. They are more than complicit; they are accomplices.&lt;br&gt;
 
-By the time your logs and diaries reach Earth, Elliot’s original friend in the Scholars Draft will no longer be there, of course. With any luck, that friend will have passed on this contact information to another ally in the Scholars Draft.
+By the time your logs and diaries reach Earth, Elliot’s original friend in the Scholars Draft will no longer be there, of course. With any luck, that friend will have passed on this contact information to another ally in the Scholars Draft.&lt;br&gt;
 
-But “ally in the Scholars Draft” is a contradiction in terms. It is impossible to be an ally while serving at the whims of capital, while being willing to exploit the world for the aristocracy’s profit.
+But “ally in the Scholars Draft” is a contradiction in terms. It is impossible to be an ally while serving at the whims of capital, while being willing to exploit the world for the aristocracy’s profit.&lt;br&gt;
 
-You will never know this truth, and yet it is true.
+You will never know this truth, and yet it is true.&lt;br&gt;
 
-When your message arrives on Earth, Elliot’s friend’s friend’s friend reads it, and feels horrible for what you were put through. They even wonder, for a regretful moment, what actually did happen to Elliot, whether the rumors of his disappearance and death are true.
+When your message arrives on Earth, Elliot’s friend’s friend’s friend reads it, and feels horrible for what you were put through. They even wonder, for a regretful moment, what actually did happen to Elliot, whether the rumors of his disappearance and death are true.&lt;br&gt;
 
-And then they delete your files.
-
-[[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="87" name="6aabaab" tags="" position="25,1925" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-Your immediate family has indeed passed away by the time you message arrives.
-
-But their children, and their children’s children, are still alive. And they all grew up on stories of you.
-
-Not the sanitized stories Celestial Streams sold the general public.
-
-The *real* story, the true story, which Elliot told them when he gave them a set of communications equipment capable of receiving your messages, which he stole right before he was fired by Celestial Streams.
-
-So, now, when your message reaches your family, it is a family that knows you—and they—have been wronged. A family ready and willing to fight for their ancestor.
-
-And fight they do.
-
-When your message arrives, of course, Preston Reeves is long gone, but Celestial Streams remains the largest and most powerful academic corporation in the world.
-
-Not for long.
-
-In this world, there is no justice but that dictated by power. Your family knows this, and they know their ability to make a legal change is nothing compared to the financial heavyweight of Celestial Streams.
-
-So, they make their own justice.
-
-One week after your message arrives, the windows in Celestial Streams HQ are broken. Security there is heightened, but that doesn’t matter when one member of the new security team is a close friend planted by your family.
-
-One month after your message arrives, Celestial Streams HQ burns to the ground, and hundreds of hard drives full go missing, hard drives containing long-kept secrets and evidence of crimes.
-
-This, of course, would not be enough still, in this unbalanced system.
-
-But direct action has a way of taking hold, and as the evidence of Celestial Streams’ crimes spreads over the internet, alongside videos of the masked rioters burning down HQ, more rioters are empowered worldwide.
-
-Two months after your message arrives, several more high-level Celestial Streams operatives who oversaw experiments even crueler than yours are found dead, shot down in their homes or in the street.
-
-Five months after your message arrives, Celestial Streams folds.
-
-Eleven months after your message arrives, the government falls.
-
-One year after your message arrives, something new, something better, is built in its ashes.
-
-You will never see this; you will never know it. You will reach your destination in some 30 years time, but this news from Earth will not reach you before you die.
-
-Still, the world will know that it was your bravery, and Elliot’s bravery, that brought about a change to the world. But the change is meaningful in that it *is* the world’s. For it is not just you and Elliot who were brave; it is your family, and their friends, and the hundreds, and then thousands, and then millions of people who joined them in the streets, taking arms against police and national guard and military. Not just asking politely to a wealthy aristocracy who is not listening, but forcing that change to come.
-
-This change belongs to the world.
+And then they delete your files.&lt;br&gt;
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="88" name="6aabbaa" tags="" position="150,2025" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="87" name="6aabaab" tags="" position="25,1925" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+Your immediate family has indeed passed away by the time you message arrives.&lt;br&gt;
+
+But their children, and their children’s children, are still alive. And they all grew up on stories of you.&lt;br&gt;
+
+Not the sanitized stories Celestial Streams sold the general public.&lt;br&gt;
+
+The *real* story, the true story, which Elliot told them when he gave them a set of communications equipment capable of receiving your messages, which he stole right before he was fired by Celestial Streams.&lt;br&gt;
+
+So, now, when your message reaches your family, it is a family that knows you—and they—have been wronged. A family ready and willing to fight for their ancestor.&lt;br&gt;
+
+And fight they do.&lt;br&gt;
+
+When your message arrives, of course, Preston Reeves is long gone, but Celestial Streams remains the largest and most powerful academic corporation in the world.&lt;br&gt;
+
+Not for long.&lt;br&gt;
+
+In this world, there is no justice but that dictated by power. Your family knows this, and they know their ability to make a legal change is nothing compared to the financial heavyweight of Celestial Streams.&lt;br&gt;
+
+So, they make their own justice.&lt;br&gt;
+
+One week after your message arrives, the windows in Celestial Streams HQ are broken. Security there is heightened, but that doesn’t matter when one member of the new security team is a close friend planted by your family.&lt;br&gt;
+
+One month after your message arrives, Celestial Streams HQ burns to the ground, and hundreds of hard drives full go missing, hard drives containing long-kept secrets and evidence of crimes.&lt;br&gt;
+
+This, of course, would not be enough still, in this unbalanced system.&lt;br&gt;
+
+But direct action has a way of taking hold, and as the evidence of Celestial Streams’ crimes spreads over the internet, alongside videos of the masked rioters burning down HQ, more rioters are empowered worldwide.&lt;br&gt;
+
+Two months after your message arrives, several more high-level Celestial Streams operatives who oversaw experiments even crueler than yours are found dead, shot down in their homes or in the street.&lt;br&gt;
+
+Five months after your message arrives, Celestial Streams folds.&lt;br&gt;
+
+Eleven months after your message arrives, the government falls.&lt;br&gt;
+
+One year after your message arrives, something new, something better, is built in its ashes.&lt;br&gt;
+
+You will never see this; you will never know it. You will reach your destination in some 30 years time, but this news from Earth will not reach you before you die.&lt;br&gt;
+
+Still, the world will know that it was your bravery, and Elliot’s bravery, that brought about a change to the world. But the change is meaningful in that it *is* the world’s. For it is not just you and Elliot who were brave; it is your family, and their friends, and the hundreds, and then thousands, and then millions of people who joined them in the streets, taking arms against police and national guard and military. Not just asking politely to a wealthy aristocracy who is not listening, but forcing that change to come.&lt;br&gt;
+
+This change belongs to the world.&lt;br&gt;
+
+[[The End-&gt;Credits]]
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="88" name="6aabbaa" tags="" position="150,2025" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 You spend the following decades obsessing over your fitness and, more importantly, your appearance. You will outlive Ell if it’s the last thing you do. You probably already have.
 
 It’s a losing battle, of course. Despite the notes you’ve sent to Celestial Streams, you aren’t trained in physical therapy or plastic surgery.
@@ -2829,15 +2861,16 @@ And you’re not concerned, why would you be? He’s not some imaginary friend y
 You spend your days laughing and smiling with your friend—no, your lover. And your nights are peaceful, filled with dreams of joy and togetherness. It is only the evenings that are hard. The time between your joyous wakefulness and the peace of your slumber, when your mind begins to wander, when it threatens to poke holes in the walls you’ve built throughout the Astral Kite. It is only in those moments that you allow yourself to acknowledge the truth, and it is only then that you cry.
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="90" name="6aabbba" tags="" position="350,2175" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-The board of Celestial Streams is pleased when your final message arrives. The breakdown in your relationship with Elliot was a good thing for the mission; it served to redirect your frustration away from the company and your personal situation and onto Elliot.
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="90" name="6aabbba" tags="" position="350,2175" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+The board of Celestial Streams is pleased when your final message arrives. The breakdown in your relationship with Elliot was a good thing for the mission; it served to redirect your frustration away from the company and your personal situation and onto Elliot.&lt;br&gt;
 
-By all possible measures, your mission has been a success. You have already gotten a new astrophysical law named after yourself, something only made possible by Celestial Streams. And that will pale in comparison to the many things you’ll learn when you actually enter orbit around TOI-700 d.
+By all possible measures, your mission has been a success. You have already gotten a new astrophysical law named after yourself, something only made possible by Celestial Streams. And that will pale in comparison to the many things you’ll learn when you actually enter orbit around TOI-700 d.&lt;br&gt;
 
-Celestial Streams’ reputation has never been better, and it’s all thanks to you. There will be many more Astral Kite missions to come.
+Celestial Streams’ reputation has never been better, and it’s all thanks to you. There will be many more Astral Kite missions to come.&lt;br&gt;
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="91" name="6aabbbb" tags="" position="250,2300" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="91" name="6aabbbb" tags="" position="250,2300" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 The remaining 30.6 years of your journey pass much more peacefully, and you never hear from Elliot again.
 
 You still think about him, from time to time, but less than you used to. A lot of your anger is gone; your frustration, your grief for the lost potential, the death of what you once thought could have been, has waned.
@@ -2909,27 +2942,28 @@ Tears form in her eyes, too. (text-color: &quot;DarkTurquoise&quot;)[“I’m so
 There will be time for talking later, for learning more about each other, and deciding what comes next. For now, you hug, and you cry.
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="94" name="6abaaba" tags="" position="600,2425" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-There was so much you were not prepared for in this journey.
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="94" name="6abaaba" tags="" position="600,2425" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+There was so much you were not prepared for in this journey.&lt;br&gt;
 
-Unfortunately, returning to Earth after several decades away is one of them.
+Unfortunately, returning to Earth after several decades away is one of them.&lt;br&gt;
 
-When you return, Celestial Streams sends a shuttle to meet you in orbit and bring you to ground safely. They scramble to spin your return, telling the public that the Astral Kite returned after the ship started taking more damage from cosmic rays than expected. To fit with the cover story, they hold the ship in orbit for “repairs” and hold you in a medical bay in their HQ for a month of “necessary” medical tests.
+When you return, Celestial Streams sends a shuttle to meet you in orbit and bring you to ground safely. They scramble to spin your return, telling the public that the Astral Kite returned after the ship started taking more damage from cosmic rays than expected. To fit with the cover story, they hold the ship in orbit for “repairs” and hold you in a medical bay in their HQ for a month of “necessary” medical tests.&lt;br&gt;
 
-At the end of it, of course, after they’ve forced you to sign a number of NDAs in exchange for a rather substantial fortune, they let you go.
+At the end of it, of course, after they’ve forced you to sign a number of NDAs in exchange for a rather substantial fortune, they let you go.&lt;br&gt;
 
-But everything is different. Everyone knows you, now. Half the time you walk outside you’re recognized.
+But everything is different. Everyone knows you, now. Half the time you walk outside you’re recognized.&lt;br&gt;
 
-You still have family members living, but they are people you never met; people who never knew you.
+You still have family members living, but they are people you never met; people who never knew you.&lt;br&gt;
 
-You meet with Elliot’s children and grandchildren. It’s surreal, and for a time, their stories make you feel closer to him, again. But that time passes.
+You meet with Elliot’s children and grandchildren. It’s surreal, and for a time, their stories make you feel closer to him, again. But that time passes.&lt;br&gt;
 
-It will take time for you to adjust.
+It will take time for you to adjust.&lt;br&gt;
 
-But you adjusted to a big change before. You can do it again.
+But you adjusted to a big change before. You can do it again.&lt;br&gt;
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="95" name="6abaabb" tags="" position="650,2550" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="95" name="6abaabb" tags="" position="650,2550" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 You pick a new destination. Something that *you* got to choose. Not Celestial Streams. Not Elliot. *You*.
 
 It’s the star GJ 1061, an M-dwarf star with two planets only a little larger than Earth in its potentially habitable zone.
@@ -3027,53 +3061,56 @@ You spend the remaining 30.6 years of your voyage carrying out your research at 
 Now, as you arrive in orbit around TOI-700 d, you’re going to learn more about planets outside our solar system than anyone on Earth could have imagined. You can’t wait.
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="100" name="6abbaaa" tags="" position="1025,2250" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-By the time your message arrived, Elliot had already had the same thought and gotten to work scrubbing your past messages.
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="100" name="6abbaaa" tags="" position="1025,2250" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+By the time your message arrived, Elliot had already had the same thought and gotten to work scrubbing your past messages.&lt;br&gt;
 
-And when, a few years later (for Earth; less than two years later for you) you arrive in orbit around Earth, the international uproar causes Celestial Streams to collapse in a matter of weeks.
+And when, a few years later (for Earth; less than two years later for you) you arrive in orbit around Earth, the international uproar causes Celestial Streams to collapse in a matter of weeks.&lt;br&gt;
 
-And when, a matter of days after that, you come to land, sweet land, this world you never thought you’d see again, Elliot is the first person there to greet you.
+And when, a matter of days after that, you come to land, sweet land, this world you never thought you’d see again, Elliot is the first person there to greet you.&lt;br&gt;
 
-And when, two years afterward, you’re called to the witness stand at the trial of Celestial Streams CEO Preston Reeves, and when you’re called to testify before Congress the year after that for a hearing centered around the abolition of the Scholars Draft, you feel no fear, no trepidation, no uncertainty.
+And when, two years afterward, you’re called to the witness stand at the trial of Celestial Streams CEO Preston Reeves, and when you’re called to testify before Congress the year after that for a hearing centered around the abolition of the Scholars Draft, you feel no fear, no trepidation, no uncertainty.&lt;br&gt;
 
-There is nothing they can do to you that could be worse than what they already did.
+There is nothing they can do to you that could be worse than what they already did.&lt;br&gt;
 
-They can’t scare you anymore.
+They can’t scare you anymore.&lt;br&gt;
 
-It’s time that you scared them.
-
-[[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="101" name="6abbaab" tags="" position="1125,2375" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-Elliot’s reply is just as enthusiastic as yours.
-
-You message back and forth as you return, until, soon, your messages are almost in real time.
-
-But something isn’t quite right with his replies. His personality isn’t shining through the way it normally does. He isn’t showing any caution.
-
-You wonder if he’s distracted by something, or perhaps if he’s distracted by some*one*. You wouldn’t even blame him, if he’s met somebody.
-
-When, at last, you arrive in orbit around Earth, you learn the truth. Ell directs you to dock with a space station, where you are welcomed, taken through an airlock into the station, and then greeted by a trio of armed guards with Celestial Streams badges on their chests. They tell you you’ve made a huge mistake, and that you will never leave. They force you into a small cabin, much smaller than the Astral Kite’s, and this one only capable of receiving messages, not sending them.
-
-Then, they board the Astral Kite and undock it, leaving you stranded.
-
-As you sit there, astounded, a light flashes, indicating an incoming message. It’s Elliot.
-
-(text-color: &quot;LightPink&quot;)[“I’m so sorry, $USERNAME. I wish I could speak to you, face to face. Celestial Streams saw our messages, and they kidnapped my sister. I had no choice. It was the only thing I could do to get her back. I hope you can understand. I hope you can forgive me. I’m so sorry. I’m so, so sorry.”]
-
-The message ends. And you are alone.
+It’s time that you scared them.&lt;br&gt;
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="102" name="6abbaba" tags="" position="1175,2250" size="100,100">&lt;div class=&quot;elliot-epilogue&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-Tears stream down Elliot’s face as he reads the message. He sends out a desperate reply, a message professing his love and telling $USERNAME to hang in there, before campaigning the board of Celestial Streams to send a rescue mission. The board and CEO were uninterested; it wasn’t profitable, they said. A rescue mission was unlikely to succeed; and this was always meant to be a one-way mission. Besides, they said, how was it possible for the ship to have ended so far off-route? When the ensuing investigation revealed Elliot and $USERNAME had tampered with the ship’s route, Elliot was fired, then imprisoned for manslaughter.
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="101" name="6abbaab" tags="" position="1125,2375" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+Elliot’s reply is just as enthusiastic as yours.&lt;br&gt;
 
-Celestial Streams was right about one thing; a rescue mission would have come too late.
+You message back and forth as you return, until, soon, your messages are almost in real time.&lt;br&gt;
 
-(text-color: &quot;SkyBlue&quot;)[...]
+But something isn’t quite right with his replies. His personality isn’t shining through the way it normally does. He isn’t showing any caution.&lt;br&gt;
 
-While Elliot sent panicked messages and battled the board, a slow leak caused by damage from Alpha Centauri had already depressurized the Astral Kite, draining the power. Now, $USERNAME floated in the dark, eerie, airless cabin of the Astral Kite, a faint smile on $p2 face, a smile that said $p0 knew $p0 had failed to return home, but at least $p0 had fought back against Celestial Streams’ cruelty.
+You wonder if he’s distracted by something, or perhaps if he’s distracted by some*one*. You wouldn’t even blame him, if he’s met somebody.&lt;br&gt;
+
+When, at last, you arrive in orbit around Earth, you learn the truth. Ell directs you to dock with a space station, where you are welcomed, taken through an airlock into the station, and then greeted by a trio of armed guards with Celestial Streams badges on their chests. They tell you you’ve made a huge mistake, and that you will never leave. They force you into a small cabin, much smaller than the Astral Kite’s, and this one only capable of receiving messages, not sending them.&lt;br&gt;
+
+Then, they board the Astral Kite and undock it, leaving you stranded.&lt;br&gt;
+
+As you sit there, astounded, a light flashes, indicating an incoming message. It’s Elliot.&lt;br&gt;
+
+(text-color: &quot;LightPink&quot;)[“I’m so sorry, $USERNAME. I wish I could speak to you, face to face. Celestial Streams saw our messages, and they kidnapped my sister. I had no choice. It was the only thing I could do to get her back. I hope you can understand. I hope you can forgive me. I’m so sorry. I’m so, so sorry.”]&lt;br&gt;
+
+The message ends. And you are alone.&lt;br&gt;
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="103" name="6abbabb" tags="" position="1325,2400" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="102" name="6abbaba" tags="" position="1175,2250" size="100,100">&lt;div class=&quot;elliot-epilogue&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+Tears stream down Elliot’s face as he reads the message. He sends out a desperate reply, a message professing his love and telling $USERNAME to hang in there, before campaigning the board of Celestial Streams to send a rescue mission. The board and CEO were uninterested; it wasn’t profitable, they said. A rescue mission was unlikely to succeed; and this was always meant to be a one-way mission. Besides, they said, how was it possible for the ship to have ended so far off-route? When the ensuing investigation revealed Elliot and $USERNAME had tampered with the ship’s route, Elliot was fired, then imprisoned for manslaughter.&lt;br&gt;
+
+Celestial Streams was right about one thing; a rescue mission would have come too late.&lt;br&gt;
+
+(text-color: &quot;SkyBlue&quot;)[...]&lt;br&gt;
+
+While Elliot sent panicked messages and battled the board, a slow leak caused by damage from Alpha Centauri had already depressurized the Astral Kite, draining the power. Now, $USERNAME floated in the dark, eerie, airless cabin of the Astral Kite, a faint smile on $p2 face, a smile that said $p0 knew $p0 had failed to return home, but at least $p0 had fought back against Celestial Streams’ cruelty.&lt;br&gt;
+
+[[The End-&gt;Credits]]
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="103" name="6abbabb" tags="" position="1325,2400" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 It was almost 9 more years for both you and Earth before Elliot’s reply arrived at the Astral Kite. You read it and smiled, as the software update spun up the ship’s engines.
 
 It was only a matter of time, now. Just under 5 more years for Elliot and Earth, and just over 2 more years for you.
@@ -3085,120 +3122,126 @@ Things will be different from when you left. But you were also going to make thi
 You send a reply to Elliot. “I’m on my way. See you soon.&quot;
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="104" name="6abbbba" tags="" position="1350,2250" size="100,100">&lt;div class=&quot;northpole-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-Elliot stands shivering in a parka, flanked by a dozen secret service agents and President Gibson.
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="104" name="6abbbba" tags="" position="1350,2250" size="100,100">&lt;div class=&quot;northpole-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+Elliot stands shivering in a parka, flanked by a dozen secret service agents and President Gibson.&lt;br&gt;
 
-It’s winter, and despite the midday hour, the Sun remains below the horizon, the only light coming from the floodlights attached to a fleet of helicopters.
+It’s winter, and despite the midday hour, the Sun remains below the horizon, the only light coming from the floodlights attached to a fleet of helicopters.&lt;br&gt;
 
-A giant hole in the ice opens like the maw of a prehistoric leviathan before them, above frigid water hued navy and black in the eerie light.
+A giant hole in the ice opens like the maw of a prehistoric leviathan before them, above frigid water hued navy and black in the eerie light.&lt;br&gt;
 
-They wait there, as the appointed time comes and goes. Gibson paces, impatiently. The whine of another helicopter approaches, and a biting wind lashes their faces as it lands on the opposite side of the maw, having completed its sweep of the perimeter. A dozen special ops forces emerge, holding large guns.
+They wait there, as the appointed time comes and goes. Gibson paces, impatiently. The whine of another helicopter approaches, and a biting wind lashes their faces as it lands on the opposite side of the maw, having completed its sweep of the perimeter. A dozen special ops forces emerge, holding large guns.&lt;br&gt;
 
-No sooner have they all taken their position around the hole than one of them gives a shout. The water is bubbling.
+No sooner have they all taken their position around the hole than one of them gives a shout. The water is bubbling.&lt;br&gt;
 
-Then, something bulbous breaks the surface, icy droplets streaming down a sleek, shiny body like a waterfall. And next to it is something unmistakably human. A hand from one of the secret service agents grabs Elliot’s shoulder as he leans forward, keeping him from getting too close to the edge. Still, he gasps. It’s $USERNAME, rising through the hole in the ice alongside this creature that must be one of $p2 worm seals. $USERNAME wears no protective gear, but the water turns to steam against the warmth of $p2 skin.
+Then, something bulbous breaks the surface, icy droplets streaming down a sleek, shiny body like a waterfall. And next to it is something unmistakably human. A hand from one of the secret service agents grabs Elliot’s shoulder as he leans forward, keeping him from getting too close to the edge. Still, he gasps. It’s $USERNAME, rising through the hole in the ice alongside this creature that must be one of $p2 worm seals. $USERNAME wears no protective gear, but the water turns to steam against the warmth of $p2 skin.&lt;br&gt;
 
-The worm seal hovers over the ice as $USERNAME alights at the edge of the hole, wet hair pressed against $p2 skull, steam still rising from $p2 body.
+The worm seal hovers over the ice as $USERNAME alights at the edge of the hole, wet hair pressed against $p2 skull, steam still rising from $p2 body.&lt;br&gt;
 
-“Elliot,” $USERNAME says. “Will you come with me?”
+“Elliot,” $USERNAME says. “Will you come with me?”&lt;br&gt;
 
-Elliot has already forgotten the cold. Without stopping to wonder why he’s doing it, he shrugs out of his parka, easily slipping away from the secret service agents attempting to stop him.
+Elliot has already forgotten the cold. Without stopping to wonder why he’s doing it, he shrugs out of his parka, easily slipping away from the secret service agents attempting to stop him.&lt;br&gt;
 
-“(text-color: &quot;PeachPuff&quot;)[Fire],” the President says.
+“(text-color: &quot;PeachPuff&quot;)[Fire],” the President says.&lt;br&gt;
 
-Shots echo over the ice like glaciers calving.
+Shots echo over the ice like glaciers calving.&lt;br&gt;
 
-$USERNAME turns $p2 head toward Gibson. “That was a mistake.” $P2 voice is calm.
+$USERNAME turns $p2 head toward Gibson. “That was a mistake.” $P2 voice is calm.&lt;br&gt;
 
-The worm seal appears unharmed. It’s difficult for Elliot to see where it’s facing, or if it even has a face, but it moves swiftly. When it is still again, less than a breath has passed, and it’s as if it never moved at all, except the special ops forces are gone.
+The worm seal appears unharmed. It’s difficult for Elliot to see where it’s facing, or if it even has a face, but it moves swiftly. When it is still again, less than a breath has passed, and it’s as if it never moved at all, except the special ops forces are gone.&lt;br&gt;
 
-“You could have talked,” $USERNAME says, taking Elliot by the hand and leading him back toward the hole in the Earth. “I gave you the chance to talk.”
+“You could have talked,” $USERNAME says, taking Elliot by the hand and leading him back toward the hole in the Earth. “I gave you the chance to talk.”&lt;br&gt;
 
-Then $p0 is gone, and Elliot with $p1.
+Then $p0 is gone, and Elliot with $p1.&lt;br&gt;
 
-Gibson gives a terse order, and the secret service agents scramble with him back toward their helicopters.
+Gibson gives a terse order, and the secret service agents scramble with him back toward their helicopters.&lt;br&gt;
 
-The worm seal joins $USERNAME and Elliot as they descend through ice and water, $USERNAME whispering secrets into Elliot’s ear, secrets capable of keeping him warm as the temperature around him plummets. Behind them there is only silence, only peace. The lights on the helicopters have gone out.
-
-[[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="105" name="6abbbbb" tags="" position="1500,2300" size="100,100">&lt;div class=&quot;elliot-epilogue&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-Elliot spends hours, days, weeks, poring over the message. The President gives him every resource at the government’s disposal first to find $USERNAME and the worm seals, then to figure out what $p0 $was talking about with the quantum strings. It’s no use. Astral Kite still seems to be 4.2 light years away, but most ship-board systems seem to have been shut down. There’s no indication of $USERNAME or the worm seals existing anywhere near there. And true to $p2 word, more messages arrive from $USERNAME with some regularity, referencing current events on Earth, things $p0 shouldn’t be able to know about yet, if $p0 was still 4.2 light years away.
-
-Elliot locks himself away at his desk, ignoring President Gibson’s insistent messages, emerging only when subpoenaed by Congress to testify that he doesn’t know what the hell is going on.
-
-Until, one night at Celestial Streams HQ, as Elliot sits alone at his desk, his eyes straining against his monitors, which are the only source of light remaining in the building, when he hears a whisper.
-
-“Elliot.”
-
-He looks around, but no one is there. Is he imagining things? Hallucinating? He glances at the cluster of coffee mugs on his desk; he hasn’t been getting enough sleep.
-
-“Elliot!”
-
-That was definitely a voice.
-
-“(text-color: &quot;LightPink&quot;)[Who—]”
-
-“Elliot, it’s me.”
-
-His heart catches in his chest. He turns toward the darkness, his eyes still blinded by his monitors, squinting across the shadowy office. He can’t see anyone. If someone is close enough that he can hear them, they ought to be illuminated by the light from his monitors.
-
-“(text-color: &quot;LightPink&quot;)[$USERNAME?]”
-
-“I can show you the way,” the voice says. “Do you trust me?”
-
-Elliot’s voice is a whisper. “(text-color: &quot;LightPink&quot;)[Always.]”
-
-The voice is closer, now. “Take my hand.”
-
-He reaches out blindly into the darkness. A chill runs over him, but then there is the warmth of another hand wrapping around his.
-
-“Are you ready?”
-
-Elliot gasps. His eyes are still adjusting to the darkness; and now, he can just make out the silhouette standing before him, though it’s almost as if it’s a ghost, the light from the monitors seeming to pass right through, illuminating only its edges. Still, he recognizes the shape, and he smiles.
-
-“(text-color: &quot;LightPink&quot;)[Yes,]” he says.
-
-There’s a sharp intake of breath, and then the office is empty.
+The worm seal joins $USERNAME and Elliot as they descend through ice and water, $USERNAME whispering secrets into Elliot’s ear, secrets capable of keeping him warm as the temperature around him plummets. Behind them there is only silence, only peace. The lights on the helicopters have gone out.&lt;br&gt;
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="106" name="6abbbaa" tags="" position="1500,2175" size="100,100">{(set: $ep to (random: 1, 2))}
-(if: $ep is 1)[&lt;div class=&quot;wormseal-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-You sigh and sit back in the Astral Kite’s cabin. You may be stuck here forever, but at least you won’t be as lonely as you once thought.
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="105" name="6abbbbb" tags="" position="1500,2300" size="100,100">&lt;div class=&quot;elliot-epilogue&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+Elliot spends hours, days, weeks, poring over the message. The President gives him every resource at the government’s disposal first to find $USERNAME and the worm seals, then to figure out what $p0 $was talking about with the quantum strings. It’s no use. Astral Kite still seems to be 4.2 light years away, but most ship-board systems seem to have been shut down. There’s no indication of $USERNAME or the worm seals existing anywhere near there. And true to $p2 word, more messages arrive from $USERNAME with some regularity, referencing current events on Earth, things $p0 shouldn’t be able to know about yet, if $p0 was still 4.2 light years away.&lt;br&gt;
 
-Earth and Elliot and Celestial Streams fade from your thoughts; you’re only about a light year away, so although instant communication is not possible, it’s still possible to stay in touch. And at least, since you’re not moving at relativistic speeds compared to Earth anymore, you’ll age at the same rate as everyone back home.
+Elliot locks himself away at his desk, ignoring President Gibson’s insistent messages, emerging only when subpoenaed by Congress to testify that he doesn’t know what the hell is going on.&lt;br&gt;
 
-They’re just not that important to you, anymore. Waiting for so long between replies has made you learn to rely on yourself. But even without Earth, you are not alone.
+Until, one night at Celestial Streams HQ, as Elliot sits alone at his desk, his eyes straining against his monitors, which are the only source of light remaining in the building, when he hears a whisper.&lt;br&gt;
 
-As the years pass, you grow closer to the worm seals. Some of them leave, but others join. You learn to recognize them, identifying small differences in their shapes, and their behaviors. You document as much as you can, but you spend most of your time in the viewport, learning to communicate with them. You think they can understand you. This is the greatest intellectual challenge you’ve ever faced, and you wouldn’t have it any other way.
+“Elliot.”&lt;br&gt;
+
+He looks around, but no one is there. Is he imagining things? Hallucinating? He glances at the cluster of coffee mugs on his desk; he hasn’t been getting enough sleep.&lt;br&gt;
+
+“Elliot!”&lt;br&gt;
+
+That was definitely a voice.&lt;br&gt;
+
+“(text-color: &quot;LightPink&quot;)[Who—]”&lt;br&gt;
+
+“Elliot, it’s me.”&lt;br&gt;
+
+His heart catches in his chest. He turns toward the darkness, his eyes still blinded by his monitors, squinting across the shadowy office. He can’t see anyone. If someone is close enough that he can hear them, they ought to be illuminated by the light from his monitors.&lt;br&gt;
+
+“(text-color: &quot;LightPink&quot;)[$USERNAME?]”&lt;br&gt;
+
+“I can show you the way,” the voice says. “Do you trust me?”&lt;br&gt;
+
+Elliot’s voice is a whisper. “(text-color: &quot;LightPink&quot;)[Always.]”&lt;br&gt;
+
+The voice is closer, now. “Take my hand.”&lt;br&gt;
+
+He reaches out blindly into the darkness. A chill runs over him, but then there is the warmth of another hand wrapping around his.&lt;br&gt;
+
+“Are you ready?”&lt;br&gt;
+
+Elliot gasps. His eyes are still adjusting to the darkness; and now, he can just make out the silhouette standing before him, though it’s almost as if it’s a ghost, the light from the monitors seeming to pass right through, illuminating only its edges. Still, he recognizes the shape, and he smiles.&lt;br&gt;
+
+“(text-color: &quot;LightPink&quot;)[Yes,]” he says.&lt;br&gt;
+
+There’s a sharp intake of breath, and then the office is empty.&lt;br&gt;
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;]
-(else:)[&lt;div class=&quot;wormseal-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-You sigh and sit back in the Astral Kite’s cabin. You may be stuck here forever, but at least you won’t be as lonely as you once thought.
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="106" name="6abbbaa" tags="" position="1500,2175" size="100,100">{(set: $ep to (random: 1, 2))}
+(if: $ep is 1)[&lt;div class=&quot;wormseal-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+You sigh and sit back in the Astral Kite’s cabin. You may be stuck here forever, but at least you won’t be as lonely as you once thought.&lt;br&gt;
 
-You spend your days growing closer to the worm seals, trying to learn to communicate properly with them, and learning how to identify individuals by their appearance and their behaviors.
+Earth and Elliot and Celestial Streams fade from your thoughts; you’re only about a light year away, so although instant communication is not possible, it’s still possible to stay in touch. And at least, since you’re not moving at relativistic speeds compared to Earth anymore, you’ll age at the same rate as everyone back home.&lt;br&gt;
 
-Then, one day, you think you’ve solved it. You head to the viewscreen, and move your arms and body in the way that you think will identify you as an individual, sort of a way of telling them your name.
+They’re just not that important to you, anymore. Waiting for so long between replies has made you learn to rely on yourself. But even without Earth, you are not alone.&lt;br&gt;
 
-Three of the worm seals pause, then, outside the viewscreen, watching you. You smile, it worked! You can’t believe it worked!
-
-Then, they ram into the Astral Kite, shattering the viewscreen. You don’t have time to scream.
-
-You’re dead from blunt trauma as the vacuum pulls you through jagged glass and metal, long before the worm seals consume you.
-[[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="107" name="6abbbab" tags="" position="1500,2050" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-$USERNAME arrived back in orbit around Earth, 8.6 years after leaving, with the worm seals still swarming the Astral Kite.
-
-There were dozens of Celestial Streams ships in orbit, waiting for them. They cast gargantuan nets, trapping almost all of the worm seals. Those that evaded capture seemed to realize what was happening, fleeing deep into space.
-
-Within days, $USERNAME was back on the surface, reunited with Elliot, with friends and family. Within a week, $USERNAME was honorably discharged from the Scholars Draft, enabling them to return to their professorship.
-
-But $p2 joy was tempered, for $p0 had come back, but at what cost?
-
-Every night, $USERNAME dreamt of the worm seals in space. $P0 dreamed $p0 $was the one captured in the nets, prodded and tortured, experimented on endlessly by Celestial Streams. $USERNAME began to wonder whether $p0 $was still in space, and perhaps the waking world was the one in which $p0 $was being tortured, while $p0 only dreamed of a better life on the surface…
+As the years pass, you grow closer to the worm seals. Some of them leave, but others join. You learn to recognize them, identifying small differences in their shapes, and their behaviors. You document as much as you can, but you spend most of your time in the viewport, learning to communicate with them. You think they can understand you. This is the greatest intellectual challenge you’ve ever faced, and you wouldn’t have it any other way.&lt;br&gt;
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="108" name="6baaaaa" tags="" position="1475,1925" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;]]}&lt;/div&gt;]
+(else:)[&lt;div class=&quot;wormseal-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+You sigh and sit back in the Astral Kite’s cabin. You may be stuck here forever, but at least you won’t be as lonely as you once thought.&lt;br&gt;
+
+You spend your days growing closer to the worm seals, trying to learn to communicate properly with them, and learning how to identify individuals by their appearance and their behaviors.&lt;br&gt;
+
+Then, one day, you think you’ve solved it. You head to the viewscreen, and move your arms and body in the way that you think will identify you as an individual, sort of a way of telling them your name.&lt;br&gt;
+
+Three of the worm seals pause, then, outside the viewscreen, watching you. You smile, it worked! You can’t believe it worked!&lt;br&gt;
+
+Then, they ram into the Astral Kite, shattering the viewscreen. You don’t have time to scream.&lt;br&gt;
+
+You’re dead from blunt trauma as the vacuum pulls you through jagged glass and metal, long before the worm seals consume you.&lt;br&gt;
+
+[[The End-&gt;Credits]]
+&lt;/div&gt;]]}&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="107" name="6abbbab" tags="" position="1500,2050" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+$USERNAME arrived back in orbit around Earth, 8.6 years after leaving, with the worm seals still swarming the Astral Kite.&lt;br&gt;
+
+There were dozens of Celestial Streams ships in orbit, waiting for them. They cast gargantuan nets, trapping almost all of the worm seals. Those that evaded capture seemed to realize what was happening, fleeing deep into space.&lt;br&gt;
+
+Within days, $USERNAME was back on the surface, reunited with Elliot, with friends and family. Within a week, $USERNAME was honorably discharged from the Scholars Draft, enabling them to return to their professorship.&lt;br&gt;
+
+But $p2 joy was tempered, for $p0 had come back, but at what cost?&lt;br&gt;
+
+Every night, $USERNAME dreamt of the worm seals in space. $P0 dreamed $p0 $was the one captured in the nets, prodded and tortured, experimented on endlessly by Celestial Streams. $USERNAME began to wonder whether $p0 $was still in space, and perhaps the waking world was the one in which $p0 $was being tortured, while $p0 only dreamed of a better life on the surface…&lt;br&gt;
+
+[[The End-&gt;Credits]]
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="108" name="6baaaaa" tags="" position="1475,1925" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 Elliot 2 spends the remaining 30.6 years of the Astral Kite’s voyage to TOI-700 d in quiet contemplation of the journey and of the life $USERNAME lived. Every now and then, another CAKEbot on the ship sends a message, and they cycle through the semblance of a conversation, two machines walking through the motions of humanity, a series of bits reading other bits and searching a massive library of bits for the correct emotions to mime in response. Occasionally, Elliot 2 writes out sentences in response to no prompt at all. Sometimes, he seems to forget he wrote them, treating his own words as prompts for a new response. He speaks of the mystery of $USERNAME’s death, for death is a concept that is difficult for humans to understand, and he is not human, but a parrot reciting what it is to be human from the canon of Frederick Douglass and Karl Marx and bell hooks and an army of right-wing Twitter bots and the collected philosophies of 4chan.
 
 Upon his arrival, the Astral Kite’s detectors tell him what he is “seeing” outside the ship’s viewport. “(text-colour: &quot;Wheat&quot;)[Wow],” he begins his message to Celestial Streams, to Earth. “(text-colour: &quot;Wheat&quot;)[It is very beautiful here. It is an honor to see TOI-700 d for the first time. My only regret is that $USERNAME cannot see it with me. Thank you for sending us on this extraordinary mission.]”
@@ -3414,17 +3457,17 @@ But there are some quiet nights, as you sail through endless darkness, that you 
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;]
-(else:)[&lt;div class=&quot;elliot-epilogue&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-Elliot awakens in a cold sweat. Panicked, he scrambles out of bed, falling to the floor, arms flailing, reaching for something, anything solid. He yanks the comforter off the bed, wrapping it around his shivering shoulders, as he huddles, weeping in the corner of his bedroom.
+(else:)[&lt;div class=&quot;elliot-epilogue&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+Elliot awakens in a cold sweat. Panicked, he scrambles out of bed, falling to the floor, arms flailing, reaching for something, anything solid. He yanks the comforter off the bed, wrapping it around his shivering shoulders, as he huddles, weeping in the corner of his bedroom.&lt;br&gt;
 
-A groggy voice comes from the bed beside him. “Elliot? Are you okay?”
+A groggy voice comes from the bed beside him. “Elliot? Are you okay?”&lt;br&gt;
 
-Tears stream down his face as he pulls the comforter tighter to ward off the cold of the vacuum that had burned itself deep into his bones.
+Tears stream down his face as he pulls the comforter tighter to ward off the cold of the vacuum that had burned itself deep into his bones.&lt;br&gt;
 
-“(text-color: &quot;LightPink&quot;)[I…I think so,]” he says. “(text-color: &quot;LightPink&quot;)[I just had the most terrible dream…]”
+“(text-color: &quot;LightPink&quot;)[I…I think so,]” he says. “(text-color: &quot;LightPink&quot;)[I just had the most terrible dream…]”&lt;br&gt;
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="123" name="6babbbb" tags="" position="1900,925" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
+&lt;/div&gt;]]}&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="123" name="6babbbb" tags="" position="1900,925" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 You spend more time asleep than awake for the rest of your journey. Three decades of dreaming is more than enough to cement in your heart the truth of your fantasies.
 
 Elliot is with you.
@@ -3437,7 +3480,6 @@ And when, at last, you arrive in orbit around TOI-700 d, you stand hand in hand,
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="124" name="6bbaaaa" tags="" position="1700,950" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
 You expect the remaining 30.6 years of your journey to pass in silence, wondering what has happened on Earth, unable to do more than hope that your message will reach them, will change things. Make a better world for everyone who comes after you.
 
 Needless to say, you are shocked when, some 20 years after you sent your last reply, the control panel of the Astral Kite lights up, announcing an incoming message. There certainly has not been sufficient time for your last message to have arrived on Earth and for Earth to reply to it.
@@ -3460,7 +3502,6 @@ When you reach your destination, you look on this new world from orbit, the four
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="125" name="6bbaaab" tags="" position="1775,825" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
 You settle in for 30 more years of travel to your destination, knowing you will not live to see Earth’s reply.
 
 So, it comes as a shock to you, when, a few years before you are due to arrive, you receive another message.
@@ -3484,19 +3525,18 @@ You read the messages over and over. It worked. You cry out of joy, out of sorro
 For the final few years of your journey, you feel a greater internal peace than you have ever felt before.
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="126" name="6bbaaba" tags="" position="1475,925" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="126" name="6bbaaba" tags="" position="1475,925" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+Astronomers detect your approach long before Celestial Streams. And word of your impending return leaks to the press before the corporation can do anything to stop it. They lobby the US government to treat you as a threat to be neutralized, stating they don’t know what you might do, that you might even intentionally crash your ship into Earth and kill millions.&lt;br&gt;
 
-Astronomers detect your approach long before Celestial Streams. And word of your impending return leaks to the press before the corporation can do anything to stop it. They lobby the US government to treat you as a threat to be neutralized, stating they don’t know what you might do, that you might even intentionally crash your ship into Earth and kill millions.
+Before the government can decide, the astronomers report observations that you are decelerating, clearly not intending to crash your ship. When you enter a stable orbit around Earth, less than 4 years have passed for you since you left, while a little over 8.5 years have passed on Earth.&lt;br&gt;
 
-Before the government can decide, the astronomers report observations that you are decelerating, clearly not intending to crash your ship. When you enter a stable orbit around Earth, less than 4 years have passed for you since you left, while a little over 8.5 years have passed on Earth.
+And now, you’re back. When you were sent on this journey, you never thought you’d have the chance to see your homeworld again, or your family, or your friends. You never thought you’d have the chance to change things for the better. So, now that you’re here, you’re not going to waste your opportunity.&lt;br&gt;
 
-And now, you’re back. When you were sent on this journey, you never thought you’d have the chance to see your homeworld again, or your family, or your friends. You never thought you’d have the chance to change things for the better. So, now that you’re here, you’re not going to waste your opportunity.
-
-First, you send a message demanding to know where Elliot is, and whether he is safe. Then, you call for a revolution.
+First, you send a message demanding to know where Elliot is, and whether he is safe. Then, you call for a revolution.&lt;br&gt;
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="127" name="6bbaabb" tags="" position="1600,750" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="127" name="6bbaabb" tags="" position="1600,750" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 You’ve made it most of the way back to Earth by the time Celestial Streams’ panicked reply reaches you.
 
 (text-color: &quot;LightPink&quot;)[“$USERNAME, HOW DID YOU DO THAT. DID YOU SEND THAT MESSAGE PREEMPTIVELY? WHAT ARE YOU DOING. ANSWER AS SOON AS YOU RECEIVE THIS MESSAGE.”]
@@ -3507,7 +3547,6 @@ The next response you receive is not from Celestial Streams, but thousands of me
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="128" name="6bbabaa" tags="" position="1475,725" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
 And you mean it. The remaining few decades of your journey pass by in peace. They pass neither quickly, nor slowly, but the way time always passes, just as it is meant to.
 
 Of course, you never hear from Elliot again. By the time your message reaches Earth and his reply can reach you, you will be one with the Universe.
@@ -3539,7 +3578,6 @@ At last, here, now, proof that even Gods can die. But what in death is so differ
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="130" name="6bbabba" tags="" position="1350,475" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
 Celestial Streams shut down its communications program for the Astral Kite several decades before Preston Godhead Reeves’s final message arrived, of course. What was the point of maintaining contact so far into the future? Other academic corporations had begun their own deep space programs, and it simply wasn’t profitable to pay for the comms officer or the equipment upkeep, anymore.
 
 On the Astral Kite, Preston Godhead Reeves enjoyed running $p2 new religion, with their cadre of perfect CAKEbot devotees. Often, they would ask their followers if they had any questions, and the CAKEbots would always reply with curious, shallow musings on the meaning of life, the meaning of the Universe, what it means to be conscious, the latter of which they especially entreated their deity to answer.
@@ -3569,7 +3607,6 @@ And then, at last, there was peace on the Astral Kite.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="132" name="6bbbaba" tags="" position="1175,375" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
 Despite the best efforts of the AI now in control of the Astral Kite, the damage to the ship is too great to complete the mission. It slows, and decays, and power drains. Within ten years, only one CAKEbot remains operational. Within twenty years, the Astral Kite is nothing but ruins floating in space.
 
 Celestial Streams avoids revealing to the public what happened to you, for as long as they can. They simply tell the world that you have decided to take some time for contemplation, and it may be decades before they hear from you.
@@ -3579,69 +3616,69 @@ When at last they are pressured into revealing the truth, they reveal the truth 
 They build a monument to your sacrifice. You will be remembered, not as the first human to reach another star system, but as the first human to die in deep space.
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="133" name="6bbbabb" tags="" position="1200,525" size="100,100">&lt;div class=&quot;controls-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="133" name="6bbbabb" tags="" position="1200,525" size="100,100">&lt;div class=&quot;controls-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+Elliot rushes from the control room. He pushes an urgent call through to Celestial Streams’ CEO.&lt;br&gt;
 
-Elliot rushes from the control room. He pushes an urgent call through to Celestial Streams’ CEO.
+“(text-color: &quot;LightPink&quot;)[Mr. Reeves? We’ve got a problem. $USERNAME figured it out.]”&lt;br&gt;
 
-“(text-color: &quot;LightPink&quot;)[Mr. Reeves? We’ve got a problem. $USERNAME figured it out.]”
+Within a matter of minutes, dozens of armed guards storm the tunnels beneath the Celestial Streams HQ, into the Astral Kite simulator where you have been kept for the last year. They scour the interior, though it takes them almost half an hour to find the access point into the walls, which you hid well behind you.&lt;br&gt;
 
-Within a matter of minutes, dozens of armed guards storm the tunnels beneath the Celestial Streams HQ, into the Astral Kite simulator where you have been kept for the last year. They scour the interior, though it takes them almost half an hour to find the access point into the walls, which you hid well behind you.
+“Ellllliooooot,” your voice echoes through the control room. “Your little soldiers aren’t going to stop me.”&lt;br&gt;
 
-“Ellllliooooot,” your voice echoes through the control room. “Your little soldiers aren’t going to stop me.”
+Elliot shouts commands into a walkie talkie. The soldiers break the Astral Kite apart, looking for you in the walls.&lt;br&gt;
 
-Elliot shouts commands into a walkie talkie. The soldiers break the Astral Kite apart, looking for you in the walls.
+“I’m not in the walls anymore,” you say into the comm box that you pulled from the control panel. “The bugs have showed me a way out!”&lt;br&gt;
 
-“I’m not in the walls anymore,” you say into the comm box that you pulled from the control panel. “The bugs have showed me a way out!”
+“(text-color: &quot;LightPink&quot;)[Where are you?]” Elliot’s voice tears through the Astral Kite, through the tunnels beneath Celestial Streams’ HQ.&lt;br&gt;
 
-“(text-color: &quot;LightPink&quot;)[Where are you?]” Elliot’s voice tears through the Astral Kite, through the tunnels beneath Celestial Streams’ HQ.
+“Wouldn’t you like to know?” Your voice is strained, you grunt with effort. Under your breath, you mutter, “just…a little…bit…farther!”&lt;br&gt;
 
-“Wouldn’t you like to know?” Your voice is strained, you grunt with effort. Under your breath, you mutter, “just…a little…bit…farther!”
+“(text-color: &quot;LightPink&quot;)[$USERNAME! Stop now, or we’ll authorize the use of lethal force!]”&lt;br&gt;
 
-“(text-color: &quot;LightPink&quot;)[$USERNAME! Stop now, or we’ll authorize the use of lethal force!]”
+The control room is silent for several minutes. There’s only the chatter on the walkie talkies, as the soldiers clear every room of the Astral Kite, squeeze through the walls, search the tunnels connecting back to Celestial Streams’ HQ.&lt;br&gt;
 
-The control room is silent for several minutes. There’s only the chatter on the walkie talkies, as the soldiers clear every room of the Astral Kite, squeeze through the walls, search the tunnels connecting back to Celestial Streams’ HQ.
+“(text-color: &quot;LightCoral&quot;)[Sir! There’s something here! It looks like an old tunnel here that connects to a sewer!]”&lt;br&gt;
 
-“(text-color: &quot;LightCoral&quot;)[Sir! There’s something here! It looks like an old tunnel here that connects to a sewer!]”
+Elliot’s voice is hoarse from screaming. “(text-color: &quot;LightPink&quot;)[Go go go!]”&lt;br&gt;
 
-Elliot’s voice is hoarse from screaming. “(text-color: &quot;LightPink&quot;)[Go go go!]”
+Just then, the sounds of a busy street fill the control room, loud cars driving by, the chatter of voices passing on a crowded sidewalk. And speaking over it all, your voice. “It’s too laaaaate! I made it out. The world will know you lied about this mission.”&lt;br&gt;
 
-Just then, the sounds of a busy street fill the control room, loud cars driving by, the chatter of voices passing on a crowded sidewalk. And speaking over it all, your voice. “It’s too laaaaate! I made it out. The world will know you lied about this mission.”
+You start waving at people in the street. It’s only a matter of seconds before they recognize you. The voices of the strangers carry over your comm into the Celestial Streams control room. “(text-color: &quot;DarkTurquoise&quot;)[$USERNAME?? Hold on, it’s totally you!! Aren’t you supposed to be in space right now??]”&lt;br&gt;
 
-You start waving at people in the street. It’s only a matter of seconds before they recognize you. The voices of the strangers carry over your comm into the Celestial Streams control room. “(text-color: &quot;DarkTurquoise&quot;)[$USERNAME?? Hold on, it’s totally you!! Aren’t you supposed to be in space right now??]”
-
-And then you laugh and you laugh, and you turn off the comm.
-
-[[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="134" name="6bbbaaa" tags="" position="925,350" size="100,100">&lt;div class=&quot;controls-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
-You find a jacket hanging on the wall and a military cap on the control panel, which you pull low over your brow to cover as much of your face as possible. Then, you walk out.
-
-At some point, alarms start blaring, red lights flaring in the corridors. You tense as the rolling thunder of boots fill the hall. You take deep breaths to calm yourself. If this is going to work, you’re going to have to act like you belong. You pull the cap lower over your eyes and march with purpose. A squad of a dozen United States soldiers in uniform storm passed you, followed by several officers wearing jackets with the logo of Celestial Streams.
-
-The last one pauses at your side. “(text-color: &quot;LightCoral&quot;)[Has anyone else come down this way?]” they ask. You shake your head, turn your voice a little gravelly. “No, sir!” Then they’re gone.
-
-You recognize parts of this building from your brief visit before your supposed “launch” almost a year ago. You can figure your way out.
-
-But when at last you reach the lobby—and you can see the front door, a bulletproof glass behemoth, and you can see a road outside, and cars driving by, and *sunlight*, you can see sunlight!—the door is locked down and guarded by a dozen armed soldiers. There’s no way out.
-
-You hesitate, considering your options. You could try to hide, to wait them out, and hope that they eventually slip up and give you enough room to escape. You could try to grab one of their guns, threaten to shoot if they don’t let you go. With your family warned that you’re still here, they might not think they can get away with shooting you. Neither option looks particularly good.
-
-Just then, four vans in quick succession screech to a halt on the road outside the front doors. They’re marked with the lettering of various news stations. Journalists charge out of each van, sprinting up the steps to the front door.
-
-One of Celestial Streams’ officers meets them from the other side of the locked doors, waving them away. “(text-color: &quot;LightCoral&quot;)[We’re on lockdown! We have no comment at this time.]”
-
-You smile, knowing at last what to do. You remove the cap from your head and shrug off Elliot’s jacket. Then you sprint toward the door.
-
-Shouts ring out through the lobby. A dozen guards converge toward you, waving their guns, but not daring to shoot you where the journalists’ cameras can see.
-
-You’re only a couple meters away from the glass door when large hands take you by the shoulders, waist, and knees, bringing you crashing to the floor.
-
-You smile for the cameras as they drag you backward, knowing it’s too late for them. You’ve been seen. You’re supposed to be deep in space, and you’ve been seen.
-
-Whatever happens next, Celestial Streams is going down.
+And then you laugh and you laugh, and you turn off the comm.&lt;br&gt;
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="135" name="6bbbaab" tags="" position="1050,375" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="134" name="6bbbaaa" tags="" position="925,350" size="100,100">&lt;div class=&quot;controls-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+You find a jacket hanging on the wall and a military cap on the control panel, which you pull low over your brow to cover as much of your face as possible. Then, you walk out.&lt;br&gt;
+
+At some point, alarms start blaring, red lights flaring in the corridors. You tense as the rolling thunder of boots fill the hall. You take deep breaths to calm yourself. If this is going to work, you’re going to have to act like you belong. You pull the cap lower over your eyes and march with purpose. A squad of a dozen United States soldiers in uniform storm passed you, followed by several officers wearing jackets with the logo of Celestial Streams.&lt;br&gt;
+
+The last one pauses at your side. “(text-color: &quot;LightCoral&quot;)[Has anyone else come down this way?]” they ask. You shake your head, turn your voice a little gravelly. “No, sir!” Then they’re gone.&lt;br&gt;
+
+You recognize parts of this building from your brief visit before your supposed “launch” almost a year ago. You can figure your way out.&lt;br&gt;
+
+But when at last you reach the lobby—and you can see the front door, a bulletproof glass behemoth, and you can see a road outside, and cars driving by, and *sunlight*, you can see sunlight!—the door is locked down and guarded by a dozen armed soldiers. There’s no way out.&lt;br&gt;
+
+You hesitate, considering your options. You could try to hide, to wait them out, and hope that they eventually slip up and give you enough room to escape. You could try to grab one of their guns, threaten to shoot if they don’t let you go. With your family warned that you’re still here, they might not think they can get away with shooting you. Neither option looks particularly good.&lt;br&gt;
+
+Just then, four vans in quick succession screech to a halt on the road outside the front doors. They’re marked with the lettering of various news stations. Journalists charge out of each van, sprinting up the steps to the front door.&lt;br&gt;
+
+One of Celestial Streams’ officers meets them from the other side of the locked doors, waving them away. “(text-color: &quot;LightCoral&quot;)[We’re on lockdown! We have no comment at this time.]”&lt;br&gt;
+
+You smile, knowing at last what to do. You remove the cap from your head and shrug off Elliot’s jacket. Then you sprint toward the door.&lt;br&gt;
+
+Shouts ring out through the lobby. A dozen guards converge toward you, waving their guns, but not daring to shoot you where the journalists’ cameras can see.&lt;br&gt;
+
+You’re only a couple meters away from the glass door when large hands take you by the shoulders, waist, and knees, bringing you crashing to the floor.&lt;br&gt;
+
+You smile for the cameras as they drag you backward, knowing it’s too late for them. You’ve been seen. You’re supposed to be deep in space, and you’ve been seen.&lt;br&gt;
+
+Whatever happens next, Celestial Streams is going down.&lt;br&gt;
+
+[[The End-&gt;Credits]]
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="135" name="6bbbaab" tags="" position="1050,375" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 
 You barely hear the next automated reply. Another message claiming to be pre-recorded, insisting that it’s not safe for you to live in the walls of the ship. That you should return to the cabin.
 
@@ -3697,7 +3734,6 @@ For now, you’re not alone.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="137" name="6bbbbab" tags="" position="900,500" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
 You receive no reply. In fact, you never hear from Preston Reeves or Elliot, ever again.
 
 The days pass, and sometimes you rage, beating your fists against the cabin walls, smashing plates on the floor of the kitchen. Sometimes you sob quietly in your bed.
@@ -3727,64 +3763,64 @@ You stumble toward the voice, wondering if you’re hallucinating.
 Tears stream down your face. “I’m here!” you call out. “I’m here!”
 
 [[The End-&gt;Credits]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="138" name="6bbbbba" tags="" position="825,775" size="100,100">&lt;div class=&quot;letter-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="138" name="6bbbbba" tags="" position="825,775" size="100,100">&lt;div class=&quot;letter-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+Dear Elliot,&lt;br&gt;
 
-Dear Elliot,
+Sorry that I’ve only written once, since my arrest. These last few months of the trial have been surreal. All the evidence points to me killing Preston, but I have a good feeling about things. I know how hard of a time they had picking jurors, for my case.&lt;br&gt;
 
-Sorry that I’ve only written once, since my arrest. These last few months of the trial have been surreal. All the evidence points to me killing Preston, but I have a good feeling about things. I know how hard of a time they had picking jurors, for my case.
+No one thinks that what happened to me was right. And Preston had his fanboys, but he wasn’t exactly popular, either. I wasn’t even the person he screwed over the most. His companies drove thousands of deaths worldwide, so they could get rich. I’m maintaining my innocence. Nothing I did was wrong.&lt;br&gt;
 
-No one thinks that what happened to me was right. And Preston had his fanboys, but he wasn’t exactly popular, either. I wasn’t even the person he screwed over the most. His companies drove thousands of deaths worldwide, so they could get rich. I’m maintaining my innocence. Nothing I did was wrong.
+Anyway, I’ve been getting your letters. I appreciate your support. But I want to make sure you know that you’re not innocent in all this. That’s not a threat, just to be clear. I’m not coming to get you, once I’m found not guilty.&lt;br&gt;
 
-Anyway, I’ve been getting your letters. I appreciate your support. But I want to make sure you know that you’re not innocent in all this. That’s not a threat, just to be clear. I’m not coming to get you, once I’m found not guilty.
+It’s an indictment. You worked for Celestial Streams. You knew that what they were doing was wrong. You could have stopped it, or tried to stop it, or at least refused to carry out your instructions.&lt;br&gt;
 
-It’s an indictment. You worked for Celestial Streams. You knew that what they were doing was wrong. You could have stopped it, or tried to stop it, or at least refused to carry out your instructions.
+You could’ve turned whistleblower. It would’ve been the right thing to do.&lt;br&gt;
 
-You could’ve turned whistleblower. It would’ve been the right thing to do.
+That’s all I wanted to say, really.&lt;br&gt;
 
-That’s all I wanted to say, really.
+See you on the other side of all this,&lt;br&gt;
 
-See you on the other side of all this,
-
-$USERNAME
-
-[[The End-&gt;Credits]]
-
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="139" name="6bbbbbb" tags="" position="750,625" size="100,100">&lt;div class=&quot;elliot-epilogue&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
-A mountain of paperwork sat on the table in front of Elliot. He sighed, rubbing his eyes.
-
-In their last meeting, Preston had made it clear that he was finished if he didn’t clean this up.
-
-Well, the corporation soldiers had already “cleaned this up.” “This” was rotting in a hole in the ground, and Celestial Streams already had an AI-generated deepfake ready to go for future messages. The world would never know.
-
-That was Elliot’s job, now. To tie up the last loose ends. Ensure the world would never know.
-
-He was complicit, after all.
-
-If word got out, he would take the fall. Preston had made sure he knew it. Celestial Streams already had the forged forms and doctored emails to prove it. Everything a judge would need to demonstrate that the fake launch was Elliot’s idea. That killing $USERNAME, after $p0 found out the truth, was Elliot’s idea. Preston may have been misled about the mission; may have been misguided into signing off on faking the launch, a regrettable mistake. But he never would have signed off on *murder*.
-
-Elliot picked up his phone and began taking pictures.
-
-Of course, who would believe that Preston Reeves got ideas of how to run his company from a lowly comms officer? Well, he had the documents to show that Elliot was an old family friend. Old meetings in forged calendars that show they spoke often. Preston trusted him, gave him more power than his role should have afforded him. That was Preston’s real mistake.
-
-Elliot finished taking pictures, then opened up a new email. The paperwork in front of him wasn’t what Preston Reeves wanted him working on. This was everything. Everything real. Including transcriptions secretly taken during the meetings where Preston threatened him to do the coverup.
-
-Elliot wasn’t sure if it would be enough. He knew Celestial Streams’ lawyers were powerful. But he had the truth on his side. The pictures finished loading into the email.
-
-Elliot might be going down. He deserved it, after all. He was complicit in $USERNAME’s murder, even if he wasn’t the one who gave the order or carried it out.
-
-But he didn’t really care if he went down. All that mattered was that Preston Reeves and Celestial Streams—hell, the whole damn Scholars Draft—they were all going down with him.
-
-Elliot hit send.
+$USERNAME&lt;br&gt;
 
 [[The End-&gt;Credits]]
 
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="140" name="Credits" tags="" position="2100,2900" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="139" name="6bbbbbb" tags="" position="750,625" size="100,100">&lt;div class=&quot;elliot-epilogue&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+A mountain of paperwork sat on the table in front of Elliot. He sighed, rubbing his eyes.&lt;br&gt;
+
+In their last meeting, Preston had made it clear that he was finished if he didn’t clean this up.&lt;br&gt;
+
+Well, the corporation soldiers had already “cleaned this up.” “This” was rotting in a hole in the ground, and Celestial Streams already had an AI-generated deepfake ready to go for future messages. The world would never know.&lt;br&gt;
+
+That was Elliot’s job, now. To tie up the last loose ends. Ensure the world would never know.&lt;br&gt;
+
+He was complicit, after all.&lt;br&gt;
+
+If word got out, he would take the fall. Preston had made sure he knew it. Celestial Streams already had the forged forms and doctored emails to prove it. Everything a judge would need to demonstrate that the fake launch was Elliot’s idea. That killing $USERNAME, after $p0 found out the truth, was Elliot’s idea. Preston may have been misled about the mission; may have been misguided into signing off on faking the launch, a regrettable mistake. But he never would have signed off on *murder*.&lt;br&gt;
+
+Elliot picked up his phone and began taking pictures.&lt;br&gt;
+
+Of course, who would believe that Preston Reeves got ideas of how to run his company from a lowly comms officer? Well, he had the documents to show that Elliot was an old family friend. Old meetings in forged calendars that show they spoke often. Preston trusted him, gave him more power than his role should have afforded him. That was Preston’s real mistake.&lt;br&gt;
+
+Elliot finished taking pictures, then opened up a new email. The paperwork in front of him wasn’t what Preston Reeves wanted him working on. This was everything. Everything real. Including transcriptions secretly taken during the meetings where Preston threatened him to do the coverup.&lt;br&gt;
+
+Elliot wasn’t sure if it would be enough. He knew Celestial Streams’ lawyers were powerful. But he had the truth on his side. The pictures finished loading into the email.&lt;br&gt;
+
+Elliot might be going down. He deserved it, after all. He was complicit in $USERNAME’s murder, even if he wasn’t the one who gave the order or carried it out.&lt;br&gt;
+
+But he didn’t really care if he went down. All that mattered was that Preston Reeves and Celestial Streams—hell, the whole damn Scholars Draft—they were all going down with him.&lt;br&gt;
+
+Elliot hit send.&lt;br&gt;
+
+[[The End-&gt;Credits]]
+
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="140" name="Credits" tags="" position="2100,2900" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 {(masteraudio: &#39;stopall&#39;)
 (track: &#39;theme&#39;, &#39;loop&#39;, true)
 (track: &#39;theme&#39;, &#39;playwhenpossible&#39;)}
 {(set: $transCounter to 0)
-(transition: &quot;dissolve&quot;)[Created and written by Addy Evans &amp; Jonathan Cohn]&lt;br&gt;
+|creators)[(transition: &quot;dissolve&quot;)[Created and written by Addy Evans &amp; Jonathan Cohn]]&lt;br&gt;
 |music)[(transition: &quot;dissolve&quot;)[Music by Susan Loquat]]&lt;br&gt;
 |art)[(transition: &quot;dissolve&quot;)[Art by Addy Evans]]&lt;br&gt;
 |playtest)[(transition: &quot;dissolve&quot;)[Playtesters: Katrina Beitz, Peter Ferguson, Isabelle Goldstein, Micalyn Rowe, Lena Sadler, and Paul Zivick]]&lt;br&gt;
@@ -3802,55 +3838,58 @@ Elliot hit send.
 |play)[(transition: &quot;dissolve&quot;)[[[Play Again-&gt;Welcome]]]]&lt;br&gt;
 }
 {
-	(live: 3.5s)[
+	(live: 2s)[
 		(set: $transCounter to it + 1)
 
 		(if: $transCounter is 1)[
+			(show: ?creators)
+		]
+        (else-if: $transCounter is 3)[
 			(show: ?music)
 		]
-		(else-if: $transCounter is 2)[
+		(else-if: $transCounter is 5)[
 			(show: ?art)
 		]
-		(else-if: $transCounter is 3)[
+		(else-if: $transCounter is 7)[
 			(show: ?playtest)
 		]
-		(else-if: $transCounter is 4)[
+		(else-if: $transCounter is 9)[
 			(show: ?studios)
         ]
-		(else-if: $transCounter is 5)[
+		(else-if: $transCounter is 11)[
 			(show: ?special)
          ]
-		(else-if: $transCounter is 6)[
+		(else-if: $transCounter is 13)[
 			(show: ?silvi)
          ]
-		(else-if: $transCounter is 7)[
+		(else-if: $transCounter is 15)[
 			(show: ?heath)
          ]
-		(else-if: $transCounter is 8)[
+		(else-if: $transCounter is 17)[
 			(show: ?gwen)
          ]
-		(else-if: $transCounter is 9)[
+		(else-if: $transCounter is 19)[
 			(show: ?quinn)
          ]
-		(else-if: $transCounter is 10)[
+		(else-if: $transCounter is 21)[
 			(show: ?tful)
          ]
-         (else-if: $transCounter is 11)[
+         (else-if: $transCounter is 23)[
          	(show: ?carport)
         ]
-		(else-if: $transCounter is 12)[
+		(else-if: $transCounter is 25)[
 			(show: ?player)
 		]
-        (else-if: $transCounter is 13)[
+        (else-if: $transCounter is 27)[
         	(show: ?thanks)
 		]
-        (else-if: $transCounter is 14)[
+        (else-if: $transCounter is 29)[
 	        (show: ?seeyou)
             ]
-        (else-if: $transCounter is 15)[
+        (else-if: $transCounter is 31)[
 			(show: ?play)
 		]
-		(else:)[
+		(else-if: $transCounter &gt; 32)[
 			(stop:)
 		]
 	]
