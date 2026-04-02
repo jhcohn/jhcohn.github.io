@@ -523,9 +523,9 @@ showControls: false</tw-passagedata><tw-passagedata pid="13" name="Credits" tags
 (track: &#39;chill-sad&#39;, &#39;playwhenpossible&#39;)
 }
 {
-(set: $review1 to  &quot;Celestial Streams Productions&#39; &#39;&#39;The first of &quot; + (string: $p2) + &quot; kind: Dr. &quot; + (string: $USERNAME) + &quot;&#39;s Incredible Journey to &quot; + (string: $dest) + &quot;&#39;&#39; was an extraordinary documentary. The personal touches throughout the film, like &quot; + (string: $p2) + &quot;favorite food being &quot; + (string: $food) + &quot;, really brought the project to life and made it feel personal.&quot;)
-(set: $review2 to &quot;The documentary film &#39;&#39;From Earth to &quot; + (string: $dest) + &quot;: A Celestial Story&#39;&#39; was a masterclass in educational storytelling. This one is sure to be shown in classrooms for generations to come. Also, I loved that they included so much of Dr. &quot; + (string: $USERNAME) + &quot;&#39;s favorite music, &quot; + (string: $music) + &quot;.&quot;)
-(set: $review3 to &quot;&#39;&#39;The Long, Lonely Flight to &quot; + (string: $dest) + &quot;&#39;&#39; is a powerful, moving film that explores both the beauty of Dr. &quot; + (string: $USERNAME) + &quot;&#39;s voyage into deep space and the painful solitude that it entails. Hearing &quot; + (string: $USERNAME) + &quot; speak so openly about &quot; + (string: $p2) + &quot; regrets was especially poignant. I suspect that the words, &#39;&#39;&quot; + (string: $regrets) + &quot;&#39;&#39; will live on forever.&quot;)
+(set: $review1 to  &quot;Celestial Streams Productions&#39;&quot; + &#39;&quot;The first of &#39; + (string: $p2) + &quot; kind: Dr. &quot; + (string: $USERNAME) + &quot;&#39;s Incredible Journey to &quot; + (string: $dest) + &#39;&quot; was an extraordinary documentary. The personal touches throughout the film, like &#39; + (string: $p2) + &quot; favorite food being &quot; + (string: $food) + &quot;, really brought the project to life and made it feel personal.&quot;)
+(set: $review2 to &#39;The documentary film &quot;From Earth to &#39; + (string: $dest) + &#39;: A Celestial Story&quot; was a masterclass in educational storytelling. This one is sure to be shown in classrooms for generations to come. Also, I loved that they included so much of Dr. &#39; + (string: $USERNAME) + &quot;&#39;s favorite music, &quot; + (string: $music) + &quot;.&quot;)
+(set: $review3 to &quot;&#39;&#39;The Long, Lonely Flight to &quot; + (string: $dest) + &quot;&#39;&#39; is a powerful, moving film that explores both the beauty of Dr. &quot; + (string: $USERNAME) + &quot;&#39;s voyage into deep space and the painful solitude that it entails. Hearing &quot; + (string: $USERNAME) + &quot; speak so openly about &quot; + (string: $p2) + &#39; regrets was especially poignant. I suspect that the words, &quot;&#39; + (string: $regrets) + &#39;&quot; will live on forever.&#39;)
 (set: $review to (either: $review1, $review2, $review3))
 (set: $transCounter to 0)
 
@@ -976,7 +976,7 @@ You decide to send a drawing of your own and a message back to the “kids”. Y
 
 To finish off your letter, you add a drawing. &lt;br&gt;
 
-You draw:
+You draw:&lt;br&gt;
 (dropdown: bind $drawing, &quot;a star&quot;, &quot;an astronaut&quot;, &quot;an alien&quot;)&lt;br&gt;
 [[Continue-&gt;Putter1]]
 ]
@@ -9294,6 +9294,13 @@ You come to enjoy your life on this ship more than you ever did before.&lt;br&gt
 (if: $alive &lt; 3)[(go-to: &quot;Dead&quot;)]]
 (else-if:$ttyri+$age &gt;70)[(set: $alive to (random: 1, 10))
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
+
+(if: $alone is &quot;True&quot;)[(set: $aloneline to &quot;, alone.&quot;)(set: $aloneline2 to &quot;&quot;)(set: $aloneline3 to &quot;&quot;)]
+(else:)[(set: $aloneline to &quot;, so far from everyone you knew. At least you won&#39;t be alone.&quot;)(set: $aloneline2 to &quot;At least you won&#39;t be alone, here.&quot;)(set: $aloneline3 to &quot;And you won&#39;t have to face it alone.&quot;)]
+(if: $ttyr9 &lt; 5)[(set: $agemsg to &quot;In the grand scheme of things, this journey did not take very long for you. But this was planned as a one-way journey, and even if you were to return to Earth, things will have changed so much since you’ve gone. Now, you’re forced to ponder the reality of spending the rest of your life out here&quot;) + $aloneline]
+(else-if: $ttyr9 &lt; 15)[(set: $agemsg to &quot;Though much less time has passed for you than everyone back home, it has still been years since you set out on your journey. Perhaps it’s the solitude, but you feel much older. You wonder how things would have gone for you if you&#39;d never joined the Scholars Draft. &quot; + $aloneline2)]
+(else-if: $ttyr9 &lt; 30)[(set: $agemsg to &quot;You’ve been traveling for many years, and the extended time in space has taken its toll on your body. You feel older and much more tired. You wonder how much of it is normal wear and tear on your body. Would you feel this way if you had stayed on Earth, if you&#39;d never joined the Scholars draft? You’ll never know. &quot; + $aloneline2)]
+(else:)[(set: $agemsg to &quot;You’ve been traveling for decades. It feels strange, now, to have reached your destination, like you didn’t quite believe you’d ever make it. Stranger, though, is the realization that you don’t entirely remember what Earth was like. Not really. Of course, this was planned as a one-way journey, but you doubt you would live long enough to survive the journey back, anyway. And things have changed so much. Earth could never really be a home to you, anymore. You look back outside the viewport. This seems like a fine place to pass the remainder of your time. &quot; + $aloneline3)]
 }
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 (if: &quot;6B&quot; is in $received)[$t9 have passed on Earth since your departure. $tt9 have passed on the Astral Kite since your departure.&lt;br&gt;
@@ -9311,14 +9318,6 @@ This message was sent from Earth $me_sent9 after launch, and it has reached the 
 
 (link-replace: &quot;Look out the viewport&quot;)[(show: ?ending)]
 ]]
-{
-(if: $alone is &quot;True&quot;)[(set: $aloneline to &quot;, alone.&quot;)(set: $aloneline2 to &quot;&quot;)(set: $aloneline3 to &quot;&quot;)]
-(else:)[(set: $aloneline to &quot;, so far from everyone you knew. At least you won&#39;t be alone.&quot;)(set: $aloneline2 to &quot;At least you won&#39;t be alone, here.&quot;)(set: $aloneline3 to &quot;And you won&#39;t have to face it alone.&quot;)]
-(if: $ttyr9 &lt; 5)[(set: $agemsg to &quot;In the grand scheme of things, this journey did not take very long for you. But this was planned as a one-way journey, and even if you were to return to Earth, things will have changed so much since you’ve gone. Now, you’re forced to ponder the reality of spending the rest of your life out here&quot;) + $aloneline]
-(else-if: $ttyr9 &lt; 15)[(set: $agemsg to &quot;Though much less time has passed for you than everyone back home, it has still been years since you set out on your journey. Perhaps it’s the solitude, but you feel much older. You wonder how things would have gone for you if you&#39;d never joined the Scholars Draft. &quot; + $aloneline2)]
-(else-if: $ttyr9 &lt; 30)[(set: $agemsg to &quot;You’ve been traveling for many years, and the extended time in space has taken its toll on your body. You feel older and much more tired. You wonder how much of it is normal wear and tear on your body. Would you feel this way if you had stayed on Earth, if you&#39;d never joined the Scholars draft? You’ll never know. &quot; + $aloneline2)]
-(else:)[(set: $agemsg to &quot;You’ve been traveling for decades. It feels strange, now, to have reached your destination, like you didn’t quite believe you’d ever make it. Stranger, though, is the realization that you don’t entirely remember what Earth was like. Not really. Of course, this was planned as a one-way journey, but you doubt you would live long enough to survive the journey back, anyway. And things have changed so much. Earth could never really be a home to you, anymore. You look back outside the viewport. This seems like a fine place to pass the remainder of your time. &quot; + $aloneline3)]
-}
 |ending)[
 (if: $DESTINATION contains &quot;M57&quot;)[Your spacecraft comes to a stop about a quarter of a light year from the planetary nebula known as M57, or the Ring Nebula. The name “planetary nebula,” of course, is an old misnomer; it has nothing to do with planets. When stars less than 8 times the mass of the Sun run out of Hydrogen to fuse into Helium, they no longer radiate enough energy to support their incredible mass, causing their cores to contract into dense white dwarfs while their atmosphere is ejected into space. The beautiful shells of ionized gas fill the sky before you in the shape of an eye, stretching more than 2 light years across, a little less bright than a full moon. The outer edges are flared in fiery crimson tendrils extending from a sharp, bright, tangerine ring. The clouds fades through yellow and sclera-like white to a pale aloe green that surrounds a brilliant azure blue iris. Dark knots of dense gas speckle the nebula. And at the very center of it all is small, bright, white dwarf star, the remains of the star that produced the planetary nebula. It’s beautiful.&lt;br&gt;
 
@@ -9342,7 +9341,6 @@ $agemsg&lt;br&gt;]
 {(masteraudio: &#39;stopall&#39;)
 (track: &#39;chill-sad&#39;, &#39;loop&#39;, true)
 (track: &#39;chill-sad&#39;, &#39;playwhenpossible&#39;)}
-$ttyri, $age, $ttyr1, $alive
 $tti have passed for you since you set out on your journey.
 
 Unfortunately, you did not choose your velocity and destination wisely. You have grown old, and your health is failing you. Despite the best efforts of the medical bots on the Astral Kite, you&#39;re out of time, and you know it.
