@@ -3132,7 +3132,7 @@ You make your way to the Astral Kiteâ€™s libraries to start studying how to admi
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-(if: &quot;6B&quot; is in $received)[$tt3 have passed for you on this ship, while $t3 have passed on Earth since your launch.&lt;br&gt;
+(if: &quot;6B&quot; is in $received)[$tt5 have passed for you on this ship, while $t5 have passed on Earth since your launch.&lt;br&gt;
 
 With Celestial Streams gone, you see no point in checking for any new messages from Earth.&lt;br&gt;
 
@@ -3148,7 +3148,7 @@ With Celestial Streams gone, you see no point in checking for any new messages f
 (else-if: $putter1 is &quot;chatbot&quot;)[[[Continue-&gt;Chatbot3]]]]
 (else:)[$incoming&lt;br&gt;
 
-This message was sent from Earth $me_sent3 after launch, and it has reached the ship $t3 after launch. Only $tt3 have passed for you on this ship. &lt;br&gt;
+This message was sent from Earth $me_sent5 after launch, and it has reached the ship $t5 after launch. Only $tt5 have passed for you on this ship. &lt;br&gt;
 
 (link-replace: &quot;Open message&quot;)[(show: ?earth1)]
 
@@ -5194,7 +5194,7 @@ This cycle goes on for a long time, until, finally, after you tell CAKEbot sheâ€
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-(if: &quot;6B&quot; is in $received)[$tt3 have passed for you on this ship, while $t3 have passed on Earth since your launch.&lt;br&gt;
+(if: &quot;6B&quot; is in $received)[$tt7 have passed for you on this ship, while $t7 have passed on Earth since your launch.&lt;br&gt;
 
 With Celestial Streams gone, you see no point in checking for any new messages from Earth.&lt;br&gt;
 
@@ -5210,7 +5210,7 @@ With Celestial Streams gone, you see no point in checking for any new messages f
 (else-if: $putter1 is &quot;chatbot&quot;)[[[Continue-&gt;Chatbot4]]]]
 (else:)[$incoming&lt;br&gt;
 
-This message was sent from Earth $me_sent3 after launch, and it has reached the ship $t3 after launch. Only $tt3 have passed for you on this ship. &lt;br&gt;
+This message was sent from Earth $me_sent7 after launch, and it has reached the ship $t7 after launch. Only $tt7 have passed for you on this ship. &lt;br&gt;
 
 (link-replace: &quot;Open message&quot;)[(show: ?earth1)]
 
@@ -9305,10 +9305,12 @@ Your spacecraft decelerates as it approaches your destination.&lt;br&gt;
 
 This message was sent from Earth $me_sent9 after launch, and it has reached the ship $t9 after launch. Only $tt9 have passed for you on this ship.&lt;br&gt;
 
-(text-color: &quot;LightPink&quot;)[Professor $USERNAME, this is our final message to you on your journey. If we have timed this correctly, you should be receiving this message as you arrive at your destination. It has been our honor to serve as your stewards on this groundbreaking voyage.]&lt;br&gt;
+(link-replace: &quot;Open message&quot;)[(show: ?earth1)]
+
+|earth1)[(text-color: &quot;LightPink&quot;)[Professor $USERNAME, this is our final message to you on your journey. If we have timed this correctly, you should be receiving this message as you arrive at your destination. It has been our honor to serve as your stewards on this groundbreaking voyage.]&lt;br&gt;
 
 (link-replace: &quot;Look out the viewport&quot;)[(show: ?ending)]
-]
+]]
 {
 (if: $alone is &quot;True&quot;)[(set: $aloneline to &quot;, alone.&quot;)(set: $aloneline2 to &quot;&quot;)(set: $aloneline3 to &quot;&quot;)]
 (else:)[(set: $aloneline to &quot;, so far from everyone you knew. At least you won&#39;t be alone.&quot;)(set: $aloneline2 to &quot;At least you won&#39;t be alone, here.&quot;)(set: $aloneline3 to &quot;And you won&#39;t have to face it alone.&quot;)]
