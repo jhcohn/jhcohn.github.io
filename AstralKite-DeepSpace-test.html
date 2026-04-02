@@ -731,6 +731,7 @@ May the remainder of your journey pass in peace.&quot;, &quot;8B&quot;, &quot;We
 &lt;!-- select message key based on earth time! --!&gt;
 (set: $di to $d1)
 (set: $ttyri to $ttyr1)
+(set: $tti to $tt1)
 (set: $tyri to $tyr1)
 (if: $tyr1 - $d1 &lt; 1/12)[(set: $usearray to $m12)] &lt;!-- me sent[yr] = tyr[yr] - d[ly] --!&gt;
 (else-if: $tyr1 - $d1 &lt; 1/6)[(set: $usearray to $m123)]
@@ -754,7 +755,6 @@ May the remainder of your journey pass in peace.&quot;, &quot;8B&quot;, &quot;We
 (for: each _temp, ...$m678)[(if: $usekey is _temp)[(set: $m678 to it - (a:$usekey))]]
 (for: each _temp, ...$m789)[(if: $usekey is _temp)[(set: $m789 to it - (a:$usekey))]]
 (for: each _temp, ...$m89)[(if: $usekey is _temp)[(set: $m89 to it - (a:$usekey))]]
-(set: $received to it + (a: $usekey))
 (set: $message to $allmessage&#39;s $usekey)
 &lt;!-- /* TO DO: Check about messages that prevent future messages (e.g. 6D) and remove future keys as needed! */ --!&gt;
 &lt;!--/* TO DO: CHECK IF 4B WORKED WITH IMAGES FROM INSPIRED KIDS! */--!&gt;
@@ -771,7 +771,7 @@ May the remainder of your journey pass in peace.&quot;, &quot;8B&quot;, &quot;We
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-(if: &quot;6B&quot; is in $received)[$tt1 have passed for you on this ship, while $t1 have passed on Earth since your launch.&lt;br&gt;
+(if: &quot;6D&quot; is in $received or &quot;8A&quot; is in $received)[$tt1 have passed for you on this ship, while $t1 have passed on Earth since your launch.&lt;br&gt;
 
 With Celestial Streams gone, you see no point in checking for any new messages from Earth.&lt;br&gt;
 
@@ -935,10 +935,10 @@ You could go on, but you know it won’t matter to Celestial Streams. Your only 
 You turn back around to the computer screen and scroll to see the survey selections:&lt;br&gt;
 
 (text-color: &quot;LightPink&quot;)[On a scale of 1-5, rate your feelings of loneliness:
-(dropdown: bind $loneliness, 1, 2, 3, 4, 5)
+(dropdown: bind $loneliness, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;)&lt;br&gt;
 
 On a scale of 1-5, rate your feelings of impending doom:
-(dropdown: bind $doom, 1, 2, 3, 4, 5)]
+(dropdown: bind $doom, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;)&lt;br&gt;]
 
 *Damn, okay then…*&lt;br&gt;
 
@@ -1285,14 +1285,15 @@ Choose one of the below activities to pass the time on your journey:
 
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="Message2" tags="" position="625,2175" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 {
-{(masteraudio: &#39;stopall&#39;)
+(masteraudio: &#39;stopall&#39;)
 (track: &#39;cycle14&#39;, &#39;loop&#39;, true)
 (track: &#39;cycle14&#39;, &#39;playwhenpossible&#39;)
-}
 &lt;!-- DON&#39;T REBUILD MESSAGE BANKS! --!&gt;
 &lt;!-- select message key based on earth time! --!&gt;
+(set: $received to it + (a: $usekey))
 (set: $di to $d3)
 (set: $ttyri to $ttyr3)
+(set: $tti to $tt3)
 (set: $tyri to $tyr3)
 (if: $tyri - $di &lt; 1/12)[(set: $usearray to $m12)] &lt;!-- me sent[yr] = tyr[yr] - d[ly] --!&gt;
 (else-if: $tyri - $di &lt; 1/6)[(set: $usearray to $m123)]
@@ -1316,7 +1317,6 @@ Choose one of the below activities to pass the time on your journey:
 (for: each _temp, ...$m678)[(if: $usekey is _temp)[(set: $m678 to it - (a:$usekey))]]
 (for: each _temp, ...$m789)[(if: $usekey is _temp)[(set: $m789 to it - (a:$usekey))]]
 (for: each _temp, ...$m89)[(if: $usekey is _temp)[(set: $m89 to it - (a:$usekey))]]
-(set: $received to it + (a: $usekey))
 (set: $message to $allmessage&#39;s $usekey)
 &lt;!-- /* TO DO: Check about messages that prevent future messages (e.g. 6D) and remove future keys as needed! */ --!&gt;
 &lt;!-- /* TO DO: CHECK IF 4B WORKED WITH IMAGES FROM INSPIRED KIDS! */ --!&gt;
@@ -1331,7 +1331,7 @@ Choose one of the below activities to pass the time on your journey:
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-(if: &quot;6B&quot; is in $received)[$tt3 have passed for you on this ship, while $t3 have passed on Earth since your launch.&lt;br&gt;
+(if: &quot;6D&quot; is in $received or &quot;8A&quot; is in $received)[$tt3 have passed for you on this ship, while $t3 have passed on Earth since your launch.&lt;br&gt;
 
 With Celestial Streams gone, you see no point in checking for any new messages from Earth.&lt;br&gt;
 
@@ -1670,11 +1670,11 @@ You could go on, but you know it won’t matter to Celestial Streams. Your only 
 
 You turn back around to the computer screen and scroll to see the survey selections:&lt;br&gt;
 
-(text-color: &quot;LightPink&quot;)[On a scale of 1-5, rate your feelings of loneliness:&lt;br&gt;
-(dropdown: bind $loneliness, 1, 2, 3, 4, 5)
+(text-color: &quot;LightPink&quot;)[On a scale of 1-5, rate your feelings of loneliness:
+(dropdown: bind $loneliness, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;)&lt;br&gt;
 
-On a scale of 1-5, rate your feelings of impending doom:&lt;br&gt;
-(dropdown: bind $doom, 1, 2, 3, 4, 5)]
+On a scale of 1-5, rate your feelings of impending doom:
+(dropdown: bind $doom, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;)&lt;br&gt;]
 
 *Damn, okay then…*&lt;br&gt;
 
@@ -1740,7 +1740,7 @@ You decide to send a drawing of your own and a message back to the “kids”. Y
 To finish off your letter, you add a drawing. &lt;br&gt;
 
 You draw:&lt;br&gt;
-(dropdown: bind $drawing, &quot;a star&quot;, &quot;an astronaut&quot;, &quot;an alien&quot;)
+(dropdown: bind $drawing, &quot;a star&quot;, &quot;an astronaut&quot;, &quot;an alien&quot;)&lt;br&gt;
 (if: $putter1 is &quot;coffee&quot;)[[[Continue-&gt;Coffee2]]]
 (else-if: $putter1 is &quot;broadcast&quot;)[[[Continue-&gt;Broadcast2]]]
 (else-if: $putter1 is &quot;social&quot;)[[[Continue-&gt;Social2]]]
@@ -2594,7 +2594,7 @@ $tempwords $relaxwords. There’s been something bothering you, a lingering ques
 
 [[Continue-&gt;Message3]]]
 }
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="Broadcast2" tags="" position="187.5,2300" size="100,100">&lt;div class=&quot;broadcast-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="Broadcast2" tags="" position="175,2300" size="100,100">&lt;div class=&quot;broadcast-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 {(track: &#39;cycle14&#39;, &#39;pause&#39;)
 (track: &#39;social-media&#39;, &#39;loop&#39;, true)
 (track: &#39;social-media&#39;, &#39;playwhenpossible&#39;)
@@ -3087,13 +3087,15 @@ You make your way to the Astral Kite’s libraries to start studying how to admi
 }
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="Message3" tags="" position="625,2425" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 {
-{(masteraudio: &#39;stopall&#39;)
+(masteraudio: &#39;stopall&#39;)
 (track: &#39;cycle14&#39;, &#39;loop&#39;, true)
-(track: &#39;cycle14&#39;, &#39;playwhenpossible&#39;)}
+(track: &#39;cycle14&#39;, &#39;playwhenpossible&#39;)
 &lt;!-- DON&#39;T REBUILD MESSAGE BANKS! --!&gt;
 &lt;!-- select message key based on earth time! --!&gt;
+(set: $received to it + (a: $usekey))
 (set: $di to $d5)
 (set: $ttyri to $ttyr5)
+(set: $tti to $tt5)
 (set: $tyri to $tyr5)
 (if: $tyri - $di &lt; 1/12)[(set: $usearray to $m12)] &lt;!-- me sent[yr] = tyr[yr] - d[ly] --!&gt;
 (else-if: $tyri - $di &lt; 1/6)[(set: $usearray to $m123)]
@@ -3117,7 +3119,6 @@ You make your way to the Astral Kite’s libraries to start studying how to admi
 (for: each _temp, ...$m678)[(if: $usekey is _temp)[(set: $m678 to it - (a:$usekey))]]
 (for: each _temp, ...$m789)[(if: $usekey is _temp)[(set: $m789 to it - (a:$usekey))]]
 (for: each _temp, ...$m89)[(if: $usekey is _temp)[(set: $m89 to it - (a:$usekey))]]
-(set: $received to it + (a: $usekey))
 (set: $message to $allmessage&#39;s $usekey)
 &lt;!-- /* TO DO: Check about messages that prevent future messages (e.g. 6D) and remove future keys as needed! */ --!&gt;
 &lt;!-- /* TO DO: CHECK IF 4B WORKED WITH IMAGES FROM INSPIRED KIDS! */ --!&gt;
@@ -3132,7 +3133,7 @@ You make your way to the Astral Kite’s libraries to start studying how to admi
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-(if: &quot;6B&quot; is in $received)[$tt5 have passed for you on this ship, while $t5 have passed on Earth since your launch.&lt;br&gt;
+(if: &quot;6D&quot; is in $received or &quot;8A&quot; is in $received)[$tt5 have passed for you on this ship, while $t5 have passed on Earth since your launch.&lt;br&gt;
 
 With Celestial Streams gone, you see no point in checking for any new messages from Earth.&lt;br&gt;
 
@@ -3471,11 +3472,11 @@ You could go on, but you know it won’t matter to Celestial Streams. Your only 
 
 You turn back around to the computer screen and scroll to see the survey selections:&lt;br&gt;
 
-(text-color: &quot;LightPink&quot;)[On a scale of 1-5, rate your feelings of loneliness:&lt;br&gt;
-(dropdown: bind $loneliness, 1, 2, 3, 4, 5)
+(text-color: &quot;LightPink&quot;)[On a scale of 1-5, rate your feelings of loneliness:
+(dropdown: bind $loneliness, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;)&lt;br&gt;
 
-On a scale of 1-5, rate your feelings of impending doom:&lt;br&gt;
-(dropdown: bind $doom, 1, 2, 3, 4, 5)]
+On a scale of 1-5, rate your feelings of impending doom:
+(dropdown: bind $doom, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;)&lt;br&gt;]
 
 *Damn, okay then…*&lt;br&gt;
 
@@ -3541,7 +3542,7 @@ You decide to send a drawing of your own and a message back to the “kids”. Y
 To finish off your letter, you add a drawing. &lt;br&gt;
 
 You draw:&lt;br&gt;
-(dropdown: bind $drawing, &quot;a star&quot;, &quot;an astronaut&quot;, &quot;an alien&quot;)
+(dropdown: bind $drawing, &quot;a star&quot;, &quot;an astronaut&quot;, &quot;an alien&quot;)&lt;br&gt;
 (if: $putter1 is &quot;coffee&quot;)[[[Continue-&gt;Coffee3]]]
 (else-if: $putter1 is &quot;broadcast&quot;)[[[Continue-&gt;Broadcast3]]]
 (else-if: $putter1 is &quot;social&quot;)[[[Continue-&gt;Social3]]]
@@ -5148,14 +5149,15 @@ This cycle goes on for a long time, until, finally, after you tell CAKEbot she�
 
 ]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="Message4" tags="" position="625,2675" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-{
 {(masteraudio: &#39;stopall&#39;)
 (track: &#39;cycle14&#39;, &#39;loop&#39;, true)
-(track: &#39;cycle14&#39;, &#39;playwhenpossible&#39;)}
+(track: &#39;cycle14&#39;, &#39;playwhenpossible&#39;)
 &lt;!-- DON&#39;T REBUILD MESSAGE BANKS! --!&gt;
 &lt;!-- select message key based on earth time! --!&gt;
+(set: $received to it + (a: $usekey))
 (set: $di to $d7)
 (set: $ttyri to $ttyr7)
+(set: $tti to $tt7)
 (set: $tyri to $tyr7)
 (if: $tyri - $di &lt; 1/12)[(set: $usearray to $m12)] &lt;!-- me sent[yr] = tyr[yr] - d[ly] --!&gt;
 (else-if: $tyri - $di &lt; 1/6)[(set: $usearray to $m123)]
@@ -5179,7 +5181,6 @@ This cycle goes on for a long time, until, finally, after you tell CAKEbot she�
 (for: each _temp, ...$m678)[(if: $usekey is _temp)[(set: $m678 to it - (a:$usekey))]]
 (for: each _temp, ...$m789)[(if: $usekey is _temp)[(set: $m789 to it - (a:$usekey))]]
 (for: each _temp, ...$m89)[(if: $usekey is _temp)[(set: $m89 to it - (a:$usekey))]]
-(set: $received to it + (a: $usekey))
 (set: $message to $allmessage&#39;s $usekey)
 &lt;!-- /* TO DO: Check about messages that prevent future messages (e.g. 6D) and remove future keys as needed! */ --!&gt;
 &lt;!-- /* TO DO: CHECK IF 4B WORKED WITH IMAGES FROM INSPIRED KIDS! */ --!&gt;
@@ -5194,7 +5195,7 @@ This cycle goes on for a long time, until, finally, after you tell CAKEbot she�
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-(if: &quot;6B&quot; is in $received)[$tt7 have passed for you on this ship, while $t7 have passed on Earth since your launch.&lt;br&gt;
+(if: &quot;6D&quot; is in $received or &quot;8A&quot; is in $received)[$tt7 have passed for you on this ship, while $t7 have passed on Earth since your launch.&lt;br&gt;
 
 With Celestial Streams gone, you see no point in checking for any new messages from Earth.&lt;br&gt;
 
@@ -5533,11 +5534,11 @@ You could go on, but you know it won’t matter to Celestial Streams. Your only 
 
 You turn back around to the computer screen and scroll to see the survey selections:&lt;br&gt;
 
-(text-color: &quot;LightPink&quot;)[On a scale of 1-5, rate your feelings of loneliness:&lt;br&gt;
-(dropdown: bind $loneliness, 1, 2, 3, 4, 5)
+(text-color: &quot;LightPink&quot;)[On a scale of 1-5, rate your feelings of loneliness:
+(dropdown: bind $loneliness, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;)&lt;br&gt;
 
-On a scale of 1-5, rate your feelings of impending doom:&lt;br&gt;
-(dropdown: bind $doom, 1, 2, 3, 4, 5)]
+On a scale of 1-5, rate your feelings of impending doom:
+(dropdown: bind $doom, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;)&lt;br&gt;]
 
 *Damn, okay then…*&lt;br&gt;
 
@@ -5602,7 +5603,7 @@ You decide to send a drawing of your own and a message back to the “kids”. Y
 To finish off your letter, you add a drawing. &lt;br&gt;
 
 You draw:&lt;br&gt;
-(dropdown: bind $drawing, &quot;a star&quot;, &quot;an astronaut&quot;, &quot;an alien&quot;)
+(dropdown: bind $drawing, &quot;a star&quot;, &quot;an astronaut&quot;, &quot;an alien&quot;)&lt;br&gt;
 (if: $putter1 is &quot;coffee&quot;)[[[Continue-&gt;Coffee4]]]
 (else-if: $putter1 is &quot;broadcast&quot;)[[[Continue-&gt;Broadcast4]]]
 (else-if: $putter1 is &quot;social&quot;)[[[Continue-&gt;Social4]]]
@@ -9284,7 +9285,9 @@ You come to enjoy your life on this ship more than you ever did before.&lt;br&gt
 {(masteraudio: &#39;stopall&#39;)
 (track: &#39;chill-sad&#39;, &#39;loop&#39;, true)
 (track: &#39;chill-sad&#39;, &#39;playwhenpossible&#39;)
+(set: $received to it + (a: $usekey))
 (set: $ttyri to $ttyr9)
+(set: $tti to $tt9)
 (if: $ttyri+$age &gt;130)[(go-to: &quot;Dead&quot;)]
 (else-if:$ttyri+$age &gt;100)[(set: $alive to (random: 1, 10))
 (if: $alive &lt; 10)[(go-to: &quot;Dead&quot;)]]
@@ -9303,7 +9306,7 @@ You come to enjoy your life on this ship more than you ever did before.&lt;br&gt
 (else:)[(set: $agemsg to &quot;You’ve been traveling for decades. It feels strange, now, to have reached your destination, like you didn’t quite believe you’d ever make it. Stranger, though, is the realization that you don’t entirely remember what Earth was like. Not really. Of course, this was planned as a one-way journey, but you doubt you would live long enough to survive the journey back, anyway. And things have changed so much. Earth could never really be a home to you, anymore. You look back outside the viewport. This seems like a fine place to pass the remainder of your time. &quot; + $aloneline3)]
 }
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
-(if: &quot;6B&quot; is in $received)[$t9 have passed on Earth since your departure. $tt9 have passed on the Astral Kite since your departure.&lt;br&gt;
+(if: &quot;6D&quot; is in $received or &quot;8A&quot; is in $received)[$t9 have passed on Earth since your departure. $tt9 have passed on the Astral Kite since your departure.&lt;br&gt;
 
 Your spacecraft decelerates as it approaches your destination.&lt;br&gt;
 
