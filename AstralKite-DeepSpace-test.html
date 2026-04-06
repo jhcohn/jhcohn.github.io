@@ -312,7 +312,8 @@ Welcome, $USERNAME. Please select your pronouns:
 Please select your age, in years:
 (dropdown: bind $age, &quot;25&quot;, &quot;26&quot;, &quot;27&quot;, &quot;28&quot;, &quot;29&quot;, &quot;30&quot;, &quot;31&quot;, &quot;32&quot;, &quot;33&quot;, &quot;34&quot;, &quot;35&quot;, &quot;36&quot;, &quot;37&quot;, &quot;38&quot;, &quot;39&quot;, &quot;40&quot;, &quot;41&quot;, &quot;42&quot;, &quot;43&quot;, &quot;44&quot;, &quot;45&quot;, &quot;46&quot;, &quot;47&quot;, &quot;48&quot;, &quot;49&quot;, &quot;50&quot;)
 [[Continue...-&gt;Letter3]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Letter3" tags="" position="625,800" size="100,100">{(set: $age to (num: $age))(if: $p is &#39;she/her/hers&#39;)[(set: $p0 to &quot;she&quot;) (set: $p1 to &quot;her&quot;) (set: $p2 to &quot;her&quot;) (set: $p3 to &quot;hers&quot;)(set: $P0 to &quot;She&quot;) (set: $P1 to &quot;Her&quot;) (set: $P2 to &quot;Her&quot;)(set: $P3 to &quot;Hers&quot;)(set: $be to &quot;is&quot;)(set: $was to &quot;was&quot;)(set: $know to &quot;knows&quot;)]
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Letter3" tags="" position="625,800" size="100,100">{(set: $age to (num: $age))
+(if: $p is &#39;she/her/hers&#39;)[(set: $p0 to &quot;she&quot;) (set: $p1 to &quot;her&quot;) (set: $p2 to &quot;her&quot;) (set: $p3 to &quot;hers&quot;)(set: $P0 to &quot;She&quot;) (set: $P1 to &quot;Her&quot;) (set: $P2 to &quot;Her&quot;)(set: $P3 to &quot;Hers&quot;)(set: $be to &quot;is&quot;)(set: $was to &quot;was&quot;)(set: $know to &quot;knows&quot;)]
 (else-if: $p is &#39;he/him/his&#39;)[(set: $p0 to &quot;he&quot;) (set: $p1 to &quot;him&quot;) (set: $p2 to &quot;his&quot;) (set: $p3 to &quot;his&quot;) (set: $P0 to &quot;He&quot;) (set: $P1 to &quot;Him&quot;) (set: $P2 to &quot;His&quot;)(set: $P3 to &quot;His&quot;)(set: $be to &quot;is&quot;)(set: $was to &quot;was&quot;)(set: $know to &quot;knows&quot;)]
 (else-if: $p is &#39;they/them/their&#39;)[(set: $p0 to &quot;they&quot;) (set: $p1 to &quot;them&quot;) (set: $p2 to &quot;their&quot;)(set: $p3 to &quot;theirs&quot;)(set: $P0 to &quot;They&quot;) (set: $P1 to &quot;Them&quot;) (set: $P2 to &quot;Their&quot;)(set: $p3 to &quot;Theirs&quot;)(set: $be to &quot;are&quot;)(set: $was to &quot;were&quot;)(set: $know to &quot;know&quot;)]
 (else:)[(set: $p0 to &quot;he&quot;) (set: $p1 to &quot;her&quot;) (set: $p2 to &quot;their&quot;) (set: $P0 to &quot;She&quot;) (set: $P1 to &quot;Them&quot;) (set: $P2 to &quot;His&quot;)(set: $be to &quot;is&quot;)(set: $was to &quot;was&quot;)(set: $know to &quot;knows&quot;)]}
@@ -522,18 +523,27 @@ showControls: false</tw-passagedata><tw-passagedata pid="13" name="Credits" tags
 (track: &#39;chill-sad&#39;, &#39;playwhenpossible&#39;)
 }
 {
-(set: $review1 to  &quot;Celestial Streams Productions&#39;&quot; + &#39;&quot;The first of &#39; + (string: $p2) + &quot; kind: Dr. &quot; + (string: $USERNAME) + &quot;&#39;s Incredible Journey to &quot; + (string: $dest) + &#39;&quot; was an extraordinary documentary. The personal touches throughout the film, like &#39; + (string: $p2) + &quot; favorite food being &quot; + (string: $food) + &quot;, really brought the project to life and made it feel personal.&quot;)
+(set: $review1 to  &quot;Celestial Streams Productions&#39; &quot; + &#39;&quot;The first of &#39; + (string: $p2) + &quot; kind: Dr. &quot; + (string: $USERNAME) + &quot;&#39;s Incredible Journey to &quot; + (string: $dest) + &#39;&quot; was an extraordinary documentary. The personal touches throughout the film, like &#39; + (string: $p2) + &quot; favorite food being &quot; + (string: $food) + &quot;, really brought the project to life and made it feel personal.&quot;)
 (set: $review2 to &#39;The documentary film &quot;From Earth to &#39; + (string: $dest) + &#39;: A Celestial Story&quot; was a masterclass in educational storytelling. This one is sure to be shown in classrooms for generations to come. Also, I loved that they included so much of Dr. &#39; + (string: $USERNAME) + &quot;&#39;s favorite music, &quot; + (string: $music) + &quot;.&quot;)
 (set: $review3 to &quot;&#39;&#39;The Long, Lonely Flight to &quot; + (string: $dest) + &quot;&#39;&#39; is a powerful, moving film that explores both the beauty of Dr. &quot; + (string: $USERNAME) + &quot;&#39;s voyage into deep space and the painful solitude that it entails. Hearing &quot; + (string: $USERNAME) + &quot; speak so openly about &quot; + (string: $p2) + &#39; regrets was especially poignant. I suspect that the words, &quot;&#39; + (string: $regrets) + &#39;&quot; will live on forever.&#39;)
 (set: $review to (either: $review1, $review2, $review3))
+(if: $alienname is &quot;No&quot;)[(set: $aliennote to &#39;&quot;Proof of Aliens at Last! Extraterrestrius &#39; + (string: $USERNAME) + &#39;ius named after legendary deep space astronaut.&quot;&#39;)]
+(else:)[(set: $aliennote to &#39;&quot;Aliens Discovered! Given original name of Extraterrestrius &#39; + (string: $USERNAME) + &#39;ius, the species was renamed &#39; + (string: $alienname) + &#39; by the legendary deep space astronaut.&quot;&#39;)]
 (set: $transCounter to 0)
 
 (transition: &quot;dissolve&quot;)[Created and written by Addy Evans &amp; Jonathan Cohn]&lt;br&gt;
+|alien)[(transition: &quot;dissolve&quot;)[(text-color: &quot;LightCoral&quot;)[$aliennote]]&lt;br&gt;]
 |music)[(transition: &quot;dissolve&quot;)[Music by Susan Loquat]]&lt;br&gt;
 |art)[(transition: &quot;dissolve&quot;)[Art by Addy Evans]]&lt;br&gt;
 |playtest)[(transition: &quot;dissolve&quot;)[Playtesters: Katrina Beitz, Peter Ferguson, Isabelle Goldstein, Micalyn Rowe, Lena Sadler, and Paul Zivick]]&lt;br&gt;
 |studios)[(transition: &quot;dissolve&quot;)[A Lucky Rat Studios &amp; Starcoded Studios Production]]&lt;br&gt;
-|review)[&lt;br&gt;(transition: &quot;dissolve&quot;)[(text-color: &quot;LightCoral&quot;)[(either: $review)]]&lt;br&gt;&lt;br&gt;]
+|review)[(transition: &quot;dissolve&quot;)[(text-color: &quot;LightCoral&quot;)[(either: $review)]]&lt;br&gt;]
+|link)[Learn more about 
+(if: &quot;M57&quot; is in $dest)[&lt;a href=&quot;https://en.wikipedia.org/wiki/Ring_Nebula&quot; target=&quot;_blank&quot;&gt;M57&lt;/a&gt;]
+(else-if: &quot;PSR&quot; is in $dest)[&lt;a href=&quot;https://en.wikipedia.org/wiki/PSR_J0437%E2%88%924715&quot; target=&quot;_blank&quot;&gt;PSR J0437-4715&lt;/a&gt;]
+(else-if: &quot;TOI-700&quot; is in $dest)[&lt;a href=&quot;https://en.wikipedia.org/wiki/TOI-700_d&quot; target=&quot;_blank&quot;&gt;TOI-700 d&lt;/a&gt;]
+(else-if: &quot;J318&quot; is in $dest)[&lt;a href=&quot;https://en.wikipedia.org/wiki/PSO_J318.5%E2%88%9222&quot; target=&quot;_blank&quot;&gt;PSO J318.5-22&lt;/a&gt;]
+(else:)[&lt;a href=&quot;https://en.wikipedia.org/wiki/Proxima_Centauri&quot; target=&quot;_blank&quot;&gt;Proxima Centauri&lt;/a&gt;]]&lt;br&gt;
 |special)[(transition: &quot;dissolve&quot;)[Special thanks to...]]&lt;br&gt;
 |silvi)[(transition: &quot;dissolve&quot;)[Silvana Delgado Andrade]]&lt;br&gt;
 |heath)[(transition: &quot;dissolve&quot;)[Heath Redmond]]&lt;br&gt;
@@ -547,7 +557,71 @@ showControls: false</tw-passagedata><tw-passagedata pid="13" name="Credits" tags
 |play)[(transition: &quot;dissolve&quot;)[[[Play Again-&gt;Welcome]]]]&lt;br&gt;
 }
 {
-(if: $regrets is not &quot;&quot; and $music is not &quot;&quot; and $food is not &quot;&quot;)[
+(if: $regrets is not &quot;&quot; and $music is not &quot;&quot; and $food is not &quot;&quot; and &#39;8B&#39; is in $received)[
+	(live: 3.5s)[
+		(set: $transCounter to it + 1)
+
+		(if: $transCounter is 1)[
+			(show: ?alien)
+		]
+
+		(if: $transCounter is 2)[
+			(show: ?music)
+		]
+		(else-if: $transCounter is 3)[
+			(show: ?art)
+		]
+		(else-if: $transCounter is 4)[
+			(show: ?playtest)
+		]
+		(else-if: $transCounter is 5)[
+			(show: ?studios)
+         ]
+		(else-if: $transCounter is 6)[
+			(show: ?review)
+         ]
+         (else-if: $transCounter is 7)[
+			(show: ?link)
+         ]
+		(else-if: $transCounter is 8)[
+			(show: ?special)
+         ]
+		(else-if: $transCounter is 9)[
+			(show: ?silvi)
+         ]
+		(else-if: $transCounter is 10)[
+			(show: ?heath)
+         ]
+		(else-if: $transCounter is 11)[
+			(show: ?gwen)
+         ]
+		(else-if: $transCounter is 12)[
+			(show: ?quinn)
+         ]
+		(else-if: $transCounter is 13)[
+			(show: ?tful)
+         ]
+         (else-if: $transCounter is 14)[
+         	(show: ?carport)
+        ]
+		(else-if: $transCounter is 15)[
+			(show: ?player)
+		]
+        (else-if: $transCounter is 16)[
+        	(show: ?thanks)
+		]
+        (else-if: $transCounter is 17)[
+	        (show: ?seeyou)
+            ]
+        (else-if: $transCounter is 18)[
+			(show: ?play)
+		]
+		(else:)[
+			(stop:)
+		]
+	]
+]
+(else-if: $regrets is not &quot;&quot; and $music is not &quot;&quot; and $food is not &quot;&quot;)[
 	(live: 3.5s)[
 		(set: $transCounter to it + 1)
 
@@ -565,6 +639,126 @@ showControls: false</tw-passagedata><tw-passagedata pid="13" name="Credits" tags
          ]
 		(else-if: $transCounter is 5)[
 			(show: ?review)
+         ]
+         (else-if: $transCounter is 6)[
+			(show: ?link)
+         ]
+		(else-if: $transCounter is 7)[
+			(show: ?special)
+         ]
+		(else-if: $transCounter is 8)[
+			(show: ?silvi)
+         ]
+		(else-if: $transCounter is 9)[
+			(show: ?heath)
+         ]
+		(else-if: $transCounter is 10)[
+			(show: ?gwen)
+         ]
+		(else-if: $transCounter is 11)[
+			(show: ?quinn)
+         ]
+		(else-if: $transCounter is 12)[
+			(show: ?tful)
+         ]
+         (else-if: $transCounter is 13)[
+         	(show: ?carport)
+        ]
+		(else-if: $transCounter is 14)[
+			(show: ?player)
+		]
+        (else-if: $transCounter is 15)[
+        	(show: ?thanks)
+		]
+        (else-if: $transCounter is 16)[
+	        (show: ?seeyou)
+            ]
+        (else-if: $transCounter is 17)[
+			(show: ?play)
+		]
+		(else:)[
+			(stop:)
+		]
+	]
+]
+(else-if: &quot;8B&quot; is in $received)[
+	(live: 3.5s)[
+		(set: $transCounter to it + 1)
+
+		(if: $transCounter is 1)[
+			(show: ?music)
+		]
+		(else-if: $transCounter is 2)[
+			(show: ?art)
+		]
+		(else-if: $transCounter is 3)[
+			(show: ?playtest)
+		]
+		(else-if: $transCounter is 4)[
+			(show: ?studios)
+         ]
+		(else-if: $transCounter is 5)[
+			(show: ?alien)
+         ]
+         (else-if: $transCounter is 6)[
+			(show: ?link)
+         ]
+		(else-if: $transCounter is 7)[
+			(show: ?special)
+         ]
+		(else-if: $transCounter is 8)[
+			(show: ?silvi)
+         ]
+		(else-if: $transCounter is 9)[
+			(show: ?heath)
+         ]
+		(else-if: $transCounter is 10)[
+			(show: ?gwen)
+         ]
+		(else-if: $transCounter is 11)[
+			(show: ?quinn)
+         ]
+		(else-if: $transCounter is 12)[
+			(show: ?tful)
+         ]
+         (else-if: $transCounter is 13)[
+         	(show: ?carport)
+        ]
+		(else-if: $transCounter is 14)[
+			(show: ?player)
+		]
+        (else-if: $transCounter is 15)[
+        	(show: ?thanks)
+		]
+        (else-if: $transCounter is 16)[
+	        (show: ?seeyou)
+            ]
+        (else-if: $transCounter is 17)[
+			(show: ?play)
+		]
+		(else:)[
+			(stop:)
+		]
+	]
+]
+(else:)[
+	(live: 3.5s)[
+		(set: $transCounter to it + 1)
+
+		(if: $transCounter is 1)[
+			(show: ?music)
+		]
+		(else-if: $transCounter is 2)[
+			(show: ?art)
+		]
+		(else-if: $transCounter is 3)[
+			(show: ?playtest)
+		]
+		(else-if: $transCounter is 4)[
+			(show: ?studios)
+        ]
+         (else-if: $transCounter is 5)[
+			(show: ?link)
          ]
 		(else-if: $transCounter is 6)[
 			(show: ?special)
@@ -597,60 +791,6 @@ showControls: false</tw-passagedata><tw-passagedata pid="13" name="Credits" tags
 	        (show: ?seeyou)
             ]
         (else-if: $transCounter is 16)[
-			(show: ?play)
-		]
-		(else:)[
-			(stop:)
-		]
-	]
-]
-(else:)[
-	(live: 3.5s)[
-		(set: $transCounter to it + 1)
-
-		(if: $transCounter is 1)[
-			(show: ?music)
-		]
-		(else-if: $transCounter is 2)[
-			(show: ?art)
-		]
-		(else-if: $transCounter is 3)[
-			(show: ?playtest)
-		]
-		(else-if: $transCounter is 4)[
-			(show: ?studios)
-        ]
-		(else-if: $transCounter is 5)[
-			(show: ?special)
-         ]
-		(else-if: $transCounter is 6)[
-			(show: ?silvi)
-         ]
-		(else-if: $transCounter is 7)[
-			(show: ?heath)
-         ]
-		(else-if: $transCounter is 8)[
-			(show: ?gwen)
-         ]
-		(else-if: $transCounter is 9)[
-			(show: ?quinn)
-         ]
-		(else-if: $transCounter is 10)[
-			(show: ?tful)
-         ]
-         (else-if: $transCounter is 11)[
-         	(show: ?carport)
-        ]
-		(else-if: $transCounter is 12)[
-			(show: ?player)
-		]
-        (else-if: $transCounter is 13)[
-        	(show: ?thanks)
-		]
-        (else-if: $transCounter is 14)[
-	        (show: ?seeyou)
-            ]
-        (else-if: $transCounter is 15)[
 			(show: ?play)
 		]
 		(else:)[
@@ -758,26 +898,26 @@ May the remainder of your journey pass in peace.&quot;, &quot;8B&quot;, &quot;We
 &lt;!-- /* TO DO: Check about messages that prevent future messages (e.g. 6D) and remove future keys as needed! */ --!&gt;
 &lt;!--/* TO DO: CHECK IF 4B WORKED WITH IMAGES FROM INSPIRED KIDS! */--!&gt;
 (set: $alive to 10)
-(set: $currentage to $ttyr1+$age)
-(if: $currentage &gt;130)[(go-to: &quot;Dead&quot;)]
-(else-if: $currentage &gt;100)[(set: $alive to (random: 1, 10))
+(if: $ttyri + $age &gt;130)[(go-to: &quot;Dead&quot;)]
+(else-if: $ttyri + $age &gt;100)[(set: $alive to (random: 1, 10))
 (if: $alive &lt; 10)[(go-to: &quot;Dead&quot;)]]
-(else-if:$currentage &gt;90)[(set: $alive to (random: 1, 5))
+(else-if:$ttyri + $age &gt;90)[(set: $alive to (random: 1, 5))
 (if: $alive &lt; 4)[(go-to: &quot;Dead&quot;)]]
-(else-if:$currentage &gt;80)[(set: $alive to (random: 1, 5))
+(else-if:$ttyri + $age &gt;80)[(set: $alive to (random: 1, 5))
 (if: $alive &lt; 3)[(go-to: &quot;Dead&quot;)]]
-(else-if:$currentage &gt;70)[(set: $alive to (random: 1, 10))
+(else-if:$ttyri + $age &gt;70)[(set: $alive to (random: 1, 10))
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-(if: &quot;6D&quot; is in $received or &quot;8A&quot; is in $received)[$tt1 have passed for you on this ship, while $t1 have passed on Earth since your launch.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt1 | Earth clock: $t1&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=11.1&gt;&lt;/progress&gt;&lt;br&gt;
 
-With Celestial Streams gone, you see no point in checking for any new messages from Earth.&lt;br&gt;
+(if: &quot;6D&quot; is in $received or &quot;8A&quot; is in $received)[With Celestial Streams gone, you see no point in checking for any new messages from Earth.&lt;br&gt;
 
 [[Continue-&gt;Putter1]]]
 (else:)[$incoming&lt;br&gt;
 
-This message was sent from Earth $me_sent1 after launch, and it has reached the ship $t1 after launch. Only $tt1 have passed for you on this ship. &lt;br&gt;
+This message was sent from Earth $me_sent1 after launch.&lt;br&gt;
 
 (link-replace: &quot;Open message&quot;)[(show: ?earth1)]
 
@@ -1098,13 +1238,13 @@ You look back into your mind to the days you were training for the mission. Or, 
 You can’t help but feel like a show animal, shipped off to space for the humanity to have its yucks. And now it’s happening to your friend too.&lt;br&gt;
 
 [Compose yourself and send a message.]&lt;r6ba|&lt;br&gt;
-[Send a message, who care&#39;s if you&#39;re a mess?]&lt;r6bb|&lt;br&gt;
+[Send a message, who cares if you&#39;re a mess?]&lt;r6bb|&lt;br&gt;
 [Toast your friend.]&lt;r6bc|&lt;br&gt;
 []&lt;display|&lt;br&gt;
 (click: ?r6ba)[(replace: ?r6bb)[](replace: ?r6bc)[](replace:?display)[ou compose yourself and record a cheery message to your friend, wishing them well. You even manage to include an inside joke from graduate school. Something about a loaf of banana bread. &lt;br&gt;
 
 [[Continue-&gt;Putter1]]]]
-(click: ?r6bb)[(replace: ?r6ba)[](replace: ?r6bc)[](replace:?display)[You begin to cry as soon as you hit record. “Dr. $b6_dr, I hope the mission treats you well.”, you conclude in the recording. &lt;br&gt;
+(click: ?r6bb)[(replace: ?r6ba)[](replace: ?r6bc)[](replace:?display)[You begin to cry as soon as you hit record. “Dr. $b6_dr, I hope the mission treats you well,” you conclude in the recording. &lt;br&gt;
 
 [[Continue-&gt;Putter1]]]]
 (click: ?r6bc)[(replace: ?r6ba)[](replace: ?r6bb)[](replace:?display)[You grab a glass and your favorite liquor. You hit record, pour, and toast. &lt;br&gt;
@@ -1205,7 +1345,7 @@ Do you reply with a name suggestion?&lt;br&gt;
 (click: ?r8a)[(replace: ?r8b)[](replace:?display)[(set: $alienname to (prompt: &quot;Submit alien name here:&quot;, &quot;&quot;))&lt;br&gt;
 
 [[Continue-&gt;Putter1]]]]
-(click: ?r8b)[(replace: ?r8a)[](replace:?display)[Heartless!&lt;br&gt;
+(click: ?r8b)[(replace: ?r8a)[](replace:?display)[(set: $alienname to &quot;No&quot;)Heartless!&lt;br&gt;
 
 [[Continue-&gt;Putter1]]]]
 ]
@@ -1221,7 +1361,7 @@ Do you reply with a name suggestion?&lt;br&gt;
 (else-if: $usekey is &quot;9B&quot;)[
 (link-replace: &quot;Continue&quot;)[(show: ?ship9B)]]
 
-|ship9B)[You can’t take it anymore. You can’t imagine — how many? Tens? Hundreds? Thousands? — of students, of people, traveling from the Earth to the Moon and then…go where? Out here? Into nothingness? No. You can’t stand it. It takes a few days of the angriest stewing you’ve done since being on the ship — in the hull, in the hangers, pressed against the doors of the airlock with your eyes wide, in the libraries and workout rooms and entertainment rooms, until finally you make the decision, to beg the scientists awaiting their own Astral Kites to stop while they still can. Time isn’t on your side — who knows, maybe they’ve already sent out the first cohort? There’s matchboxes in the kitchen, you put one in your pocket. You find the reserve of flammable fuel in the deepest parts of the ship, lug a container back to the controls room, the room where you’ve spent the last (print: (round: $ttyri*100)/100). You turn on the camera and start a live recording. This is your last chance for protest.&lt;br&gt;
+|ship9B)[You can’t take it anymore. You can’t imagine — how many? Tens? Hundreds? Thousands? — of students, of people, traveling from the Earth to the Moon and then…go where? Out here? Into nothingness? No. You can’t stand it. It takes a few days of the angriest stewing you’ve done since being on the ship — in the hull, in the hangers, pressed against the doors of the airlock with your eyes wide, in the libraries and workout rooms and entertainment rooms, until finally you make the decision, to beg the scientists awaiting their own Astral Kites to stop while they still can. Time isn’t on your side — who knows, maybe they’ve already sent out the first cohort? There’s matchboxes in the kitchen, you put one in your pocket. You find the reserve of flammable fuel in the deepest parts of the ship, lug a container back to the controls room, the room where you’ve spent most of the last $tti. You turn on the camera and start a live recording. This is your last chance for protest.&lt;br&gt;
 [Yes]&lt;r9a|&lt;br&gt;
 [No]&lt;r9b|&lt;br&gt;
 
@@ -1330,9 +1470,10 @@ Choose one of the below activities to pass the time on your journey:
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-(if: &quot;6D&quot; is in $received or &quot;8A&quot; is in $received)[$tt3 have passed for you on this ship, while $t3 have passed on Earth since your launch.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt3 | Earth clock: $t3&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=33.3&gt;&lt;/progress&gt;&lt;br&gt;
 
-With Celestial Streams gone, you see no point in checking for any new messages from Earth.&lt;br&gt;
+(if: &quot;6D&quot; is in $received or &quot;8A&quot; is in $received)[With Celestial Streams gone, you see no point in checking for any new messages from Earth.&lt;br&gt;
 
 (if: $putter1 is &quot;coffee&quot;)[[[Continue-&gt;Coffee2]]]
 (else-if: $putter1 is &quot;broadcast&quot;)[[[Continue-&gt;Broadcast2]]]
@@ -1346,7 +1487,7 @@ With Celestial Streams gone, you see no point in checking for any new messages f
 (else-if: $putter1 is &quot;chatbot&quot;)[[[Continue-&gt;Chatbot2]]]]
 (else:)[$incoming&lt;br&gt;
 
-This message was sent from Earth $me_sent3 after launch, and it has reached the ship $t3 after launch. Only $tt3 have passed for you on this ship. &lt;br&gt;
+This message was sent from Earth $me_sent3 after launch.&lt;br&gt;
 
 (link-replace: &quot;Open message&quot;)[(show: ?earth1)]
 
@@ -1994,7 +2135,7 @@ You look back into your mind to the days you were training for the mission. Or, 
 You can’t help but feel like a show animal, shipped off to space for the humanity to have its yucks. And now it’s happening to your friend too.&lt;br&gt;
 
 [Compose yourself and send a message.]&lt;r6ba|&lt;br&gt;
-[Send a message, who care&#39;s if you&#39;re a mess?]&lt;r6bb|&lt;br&gt;
+[Send a message, who cares if you&#39;re a mess?]&lt;r6bb|&lt;br&gt;
 [Toast your friend.]&lt;r6bc|&lt;br&gt;
 
 []&lt;display|
@@ -2010,7 +2151,7 @@ You can’t help but feel like a show animal, shipped off to space for the human
 (else-if: $putter1 is &quot;art&quot;)[[[Continue-&gt;Art2]]]
 (else-if: $putter1 is &quot;music&quot;)[[[Continue-&gt;Music2]]]
 (else-if: $putter1 is &quot;chatbot&quot;)[[[Continue-&gt;Chatbot2]]]]]
-(click: ?r6bb)[(replace: ?r6ba)[](replace: ?r6bc)[](replace:?display)[You begin to cry as soon as you hit record. “Dr. $b6_dr, I hope the mission treats you well.”, you conclude in the recording. &lt;br&gt;
+(click: ?r6bb)[(replace: ?r6ba)[](replace: ?r6bc)[](replace:?display)[You begin to cry as soon as you hit record. “Dr. $b6_dr, I hope the mission treats you well,” you conclude in the recording.&lt;br&gt;
 
 (if: $putter1 is &quot;coffee&quot;)[[[Continue-&gt;Coffee2]]]
 (else-if: $putter1 is &quot;broadcast&quot;)[[[Continue-&gt;Broadcast2]]]
@@ -2237,7 +2378,7 @@ Do you reply with a name suggestion?&lt;br&gt;
 (else-if: $putter1 is &quot;art&quot;)[[[Continue-&gt;Art2]]]
 (else-if: $putter1 is &quot;music&quot;)[[[Continue-&gt;Music2]]]
 (else-if: $putter1 is &quot;chatbot&quot;)[[[Continue-&gt;Chatbot2]]]]]
-(click: ?r8b)[(replace: ?r8a)[](replace:?display)[Heartless!&lt;br&gt;
+(click: ?r8b)[(replace: ?r8a)[](replace:?display)[(set: $alienname to &quot;No&quot;)Heartless!&lt;br&gt;
 
 (if: $putter1 is &quot;coffee&quot;)[[[Continue-&gt;Coffee2]]]
 (else-if: $putter1 is &quot;broadcast&quot;)[[[Continue-&gt;Broadcast2]]]
@@ -2271,7 +2412,7 @@ Do you reply with a name suggestion?&lt;br&gt;
 (else-if: $usekey is &quot;9B&quot;)[
 (link-replace: &quot;Continue&quot;)[(show: ?ship9B)]]
 
-|ship9B)[You can’t take it anymore. You can’t imagine — how many? Tens? Hundreds? Thousands? — of students, of people, traveling from the Earth to the Moon and then…go where? Out here? Into nothingness? No. You can’t stand it. It takes a few days of the angriest stewing you’ve done since being on the ship — in the hull, in the hangers, pressed against the doors of the airlock with your eyes wide, in the libraries and workout rooms and entertainment rooms, until finally you make the decision, to beg the scientists awaiting their own Astral Kites to stop while they still can. Time isn’t on your side — who knows, maybe they’ve already sent out the first cohort? There’s matchboxes in the kitchen, you put one in your pocket. You find the reserve of flammable fuel in the deepest parts of the ship, lug a container back to the controls room, the room where you’ve spent the last (print: (round: $ttyri*100)/100). You turn on the camera and start a live recording. This is your last chance for protest.&lt;br&gt;
+|ship9B)[You can’t take it anymore. You can’t imagine — how many? Tens? Hundreds? Thousands? — of students, of people, traveling from the Earth to the Moon and then…go where? Out here? Into nothingness? No. You can’t stand it. It takes a few days of the angriest stewing you’ve done since being on the ship — in the hull, in the hangers, pressed against the doors of the airlock with your eyes wide, in the libraries and workout rooms and entertainment rooms, until finally you make the decision, to beg the scientists awaiting their own Astral Kites to stop while they still can. Time isn’t on your side — who knows, maybe they’ve already sent out the first cohort? There’s matchboxes in the kitchen, you put one in your pocket. You find the reserve of flammable fuel in the deepest parts of the ship, lug a container back to the controls room, the room where you’ve spent most of the last $tti. You turn on the camera and start a live recording. This is your last chance for protest.&lt;br&gt;
 [Yes]&lt;r9a|&lt;br&gt;
 [No]&lt;r9b|&lt;br&gt;
 
@@ -2303,6 +2444,9 @@ Do you reply with a name suggestion?&lt;br&gt;
 (set: $temp to &quot;incorrect&quot;)
 }
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt2 | Earth clock: $t2&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=22.2&gt;&lt;/progress&gt;&lt;br&gt;
+
 Mission Control has stocked your spacecraft with excellent, ethically sourced coffee beans and a chic espresso machine. However, the heating controls refer to the water temperature only in units of kelvin.&lt;br&gt;
 
 What temperature do you choose for brewing your coffee?&lt;br&gt;
@@ -2332,6 +2476,9 @@ What temperature do you choose for brewing your coffee?&lt;br&gt;
 (track: &#39;social-media&#39;, &#39;playwhenpossible&#39;)
 (set: $putter1 to &quot;broadcast&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt2 | Earth clock: $t2&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=22.2&gt;&lt;/progress&gt;&lt;br&gt;
+
 You are sending this message at a distance of (print: (round: $di*100)/100) light years from Earth. When Earth receives the message, you will have experienced (print: (round: $tt_return_since_launch*100)/100) years since launch, while (print: (round: $t_return_since_launch*100)/100) years will have passed on Earth.&lt;br&gt;
 
 (if: $tyr2 &lt; 50)[You wonder, with a sudden pang of nostalgia, how your friends and family are doing. Do they ever think about you, as often as you think about them?]&lt;br&gt;
@@ -2348,6 +2495,9 @@ You are sending this message at a distance of (print: (round: $di*100)/100) ligh
 (track: &#39;social-media&#39;, &#39;playwhenpossible&#39;)
 (set: $putter1 to &quot;social&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt2 | Earth clock: $t2&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=22.2&gt;&lt;/progress&gt;&lt;br&gt;
+
 As per your earlier request, Mission Control has ensured that you still have access to social media feeds aboard your spacecraft, and you make the regrettable decision to take a look.&lt;br&gt;
 
 [Search your name]&lt;p1aa|&lt;br&gt;
@@ -2375,6 +2525,9 @@ As per your earlier request, Mission Control has ensured that you still have acc
 (track: &#39;ennui&#39;, &#39;playwhenpossible&#39;)
 (set: $putter1 to &quot;ennui&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt2 | Earth clock: $t2&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=22.2&gt;&lt;/progress&gt;&lt;br&gt;
+
 (if: $v &gt; 0.5)[The Cosmic Microwave Background was cool, at first. It’s something no one else in the history of humankind had seen before, after all. But, at the end of the day, it’s just a big blue disk in an otherwise featureless night sky, and it’s not going anywhere.]&lt;br&gt;
 (else:)[Your warped view of the Universe was cool, at first. It’s something no one else in the history of humankind had seen before, after all. But, at the end of the day, it’s a bunch of warped lights in an otherwise featureless night sky, and it’s not going anywhere.]&lt;br&gt;
 
@@ -2403,6 +2556,9 @@ Do you make a cup of coffee?&lt;br&gt;
 (track: &#39;working-out&#39;, &#39;playwhenpossible&#39;)
 (set: $putter1 to &quot;jog&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt2 | Earth clock: $t2&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=22.2&gt;&lt;/progress&gt;&lt;br&gt;
+
 It’s very important, since you’ll be stuck inside this spacecraft for a long time, to keep up your fitness. There’s a small treadmill in the spacecraft cabin for just this purpose. However, the settings are…unusual. They seem to be listed in terms of velocities equivalent to the orbital speeds of various celestial objects. Which do you choose?&lt;br&gt;
 (dropdown: bind $jog1, &quot;One thousandth the average orbital speed of Earth around the Sun&quot;, &quot;One thousandth the average orbital speed of Pluto around the Sun&quot;, &quot;One thousandth the average orbital speed of the Moon around the Earth&quot;, &quot;One ten thousandth the average orbital speed of the Sun around the Milky Way&quot;)&lt;br&gt;
 
@@ -2427,6 +2583,9 @@ It’s very important, since you’ll be stuck inside this spacecraft for a long
 (track: &#39;working-out&#39;, &#39;playwhenpossible&#39;)
 (set: $putter1 to &quot;weights&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt2 | Earth clock: $t2&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=22.2&gt;&lt;/progress&gt;&lt;br&gt;
+
 It’s very important, since you’ll be stuck inside this spacecraft for a long time, to keep up your fitness. There’s a small rack of weights in the exercise room at the back of the cabin. Unfortunately, they aren’t labeled with lb or kg, like the weights back home. Instead, they’re labeled with a volume and a density. All of them have the same volume of a cubic decimeter (or 1 liter), but the densities are different. Which weights do you want to lift?&lt;br&gt;
 (dropdown: bind $weight1, &quot;The density of a comet&quot;, &quot;The density of Jupiter&quot;, &quot;The density of the Earth&quot;, &quot;The density of the exoplanet K2-38b&quot;, &quot;The density of the Sun’s core&quot;)&lt;br&gt;
 
@@ -2465,6 +2624,9 @@ How strong are you?&lt;br&gt;
 (track: &#39;dramatic&#39;, &#39;playwhenpossible&#39;)
 (set: $putter1 to &quot;horror&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt2 | Earth clock: $t2&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=22.2&gt;&lt;/progress&gt;&lt;br&gt;
+
 The nothingness around you is eerie. Although your Celestial Streams spacecraft is far from silent, the emptiness of the vacuum just beyond the metal hull — the knowledge that there is no one in the Universe within reach of you — is unsettling. There is no street to wander just outside your door. There are no crickets chirping. No cars driving. No children playing. No leaves whispering secrets to each other on the wind.&lt;br&gt;&lt;br&gt;
 
 You thought you were ready for the isolation of your journey. But nothing could prepare you for this. You feel as though you’ve been severed from humanity, untethered from Earth—and reality—itself.&lt;br&gt;&lt;br&gt;
@@ -2488,6 +2650,9 @@ What have I done?&lt;br&gt;&lt;br&gt;
 (track: &#39;make-art&#39;, &#39;playwhenpossible&#39;)
 (set: $putter1 to &quot;art&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt2 | Earth clock: $t2&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=22.2&gt;&lt;/progress&gt;&lt;br&gt;
+
 Mission Control has graciously stuffed your spacecraft’s storage bay full of various art materials. Of course, the paints themselves are not labeled by the names of their colors. Instead, they’ve been grouped by wavelength range. Which set of paints do you choose?&lt;br&gt;
 (dropdown: bind $art1, &quot;8 x 10^-7 to 1 x 10^-3 m&quot;, &quot;4 x 10^-7 to 8 x 10^-7 m&quot;, &quot;1 x 10^-8 to 4 x 10^-7 m&quot;, &quot;1 x 10^-10 to 1 x 10^-8 m&quot;)&lt;br&gt;
 
@@ -2512,6 +2677,9 @@ Mission Control has graciously stuffed your spacecraft’s storage bay full of v
 (track: &#39;make-art&#39;, &#39;playwhenpossible&#39;)
 (set: $putter1 to &quot;music&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt2 | Earth clock: $t2&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=22.2&gt;&lt;/progress&gt;&lt;br&gt;
+
 Mission Control have left you a fantastic collection of software for producing music. Strangely, the available packages are organized by frequencies of sound that correspond to the rotational frequencies of celestial objects. What frequency set do you choose?&lt;br&gt;
 (dropdown: bind $music1, &quot;A pulsar&quot;, &quot;Jupiter&quot;, &quot;The Sun&quot;)&lt;br&gt;
 
@@ -2533,6 +2701,9 @@ Mission Control have left you a fantastic collection of software for producing m
 (track: &#39;social-media&#39;, &#39;playwhenpossible&#39;)
 (set: $putter1 to &quot;chatbot&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt2 | Earth clock: $t2&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=22.2&gt;&lt;/progress&gt;&lt;br&gt;
+
 Knowing that the time between messages will quickly grow large, Mission Controls has outfitted your ship with a generative AI chatbot based on cutting edge large language models.&lt;br&gt;
 
 (link-replace: &quot;Chat with the chatbot, Chatting on the Astral KitE (CAKE)&quot;)[(show: ?p1a)]
@@ -2559,7 +2730,7 @@ $chat1&lt;br&gt;
 
 [[Continue-&gt;Message2]]]
 ]
-&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Coffee2" tags="" position="62.5,2300" size="100,100">&lt;div class=&quot;coffee-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Coffee2" tags="" position="50,2300" size="100,100">&lt;div class=&quot;coffee-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 {(track: &#39;cycle14&#39;, &#39;pause&#39;)
 (track: &#39;coffee&#39;, &#39;loop&#39;, true)
 (track: &#39;coffee&#39;, &#39;playwhenpossible&#39;)
@@ -2579,7 +2750,8 @@ $chat1&lt;br&gt;
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt4 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt4 | Earth clock: $t4&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=44.4&gt;&lt;/progress&gt;&lt;br&gt;
 
 $tempwords $relaxwords. There’s been something bothering you, a lingering question that you just can’t get out of your mind. And it seems a strange thing to worry about, given the vastness of the cosmos just outside the spacecraft’s viewport. It’s so insignificant, but at the same time, so confusing that you can’t help but wonder… Where do the coffee beans come from?&lt;br&gt;
 
@@ -2610,7 +2782,8 @@ $tempwords $relaxwords. There’s been something bothering you, a lingering ques
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt4 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt4 | Earth clock: $t4&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=44.4&gt;&lt;/progress&gt;&lt;br&gt;
 
 You find yourself sending regular messages back to Earth, throughout your journey.&lt;br&gt;
 
@@ -2649,7 +2822,8 @@ But, today, as you sit down and get ready to send a message, you wonder, suddenl
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt4 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt4 | Earth clock: $t4&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=44.4&gt;&lt;/progress&gt;&lt;br&gt;
 
 You find yourself regularly checking up on social media posts from Earth. $lasttime $spacetruthers&lt;br&gt;
 
@@ -2667,7 +2841,7 @@ You find yourself regularly checking up on social media posts from Earth. $lastt
 {(track: &#39;cycle14&#39;, &#39;pause&#39;)
 (track: &#39;ennui&#39;, &#39;loop&#39;, true)
 (track: &#39;ennui&#39;, &#39;playwhenpossible&#39;)
-(set: $t_since_post to $d3 + $d3)
+(set: $t_since_post to $d4 + $d4)
 (set: $ttyri to $ttyr4)
 (if: $ttyri+$age &gt;130)[(go-to: &quot;Dead&quot;)]
 (else-if:$ttyri+$age &gt;100)[(set: $alive to (random: 1, 10))
@@ -2680,14 +2854,16 @@ You find yourself regularly checking up on social media posts from Earth. $lastt
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt4 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt4 | Earth clock: $t4&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=44.4&gt;&lt;/progress&gt;&lt;br&gt;
 
 All of the ship’s activities feel boring and pointless. What would you like to do you await the next message from Mission Control?&lt;br&gt;
 
 (dropdown: bind $ennui2, &quot;Broadcast a message to Earth&quot;, &quot;Check social media&quot;, &quot;Lose yourself in existential horror&quot;, &quot;Chat with the Celestial Streams AI chatbot&quot;, &quot;Do nothing&quot;)&lt;br&gt;
 
 (link-replace: &quot;Continue&quot;)[(show: ?p1a)]
-|p1a)[(if: &quot;message&quot; is in $ennui2)[(set: $broadcast1 to (prompt: &quot;Enter your message here:&quot;, &quot;&quot;))&lt;br&gt;
+|p1a)[
+(if: &quot;message&quot; is in $ennui2)[(set: $broadcast1 to (prompt: &quot;Enter your message here:&quot;, &quot;&quot;))&lt;br&gt;
 
 [[Continue-&gt;Message3]]]
 (else-if: &quot;social&quot; is in $ennui2)[As per your earlier request, Mission Control has ensured that you still have access to social media feeds aboard your spacecraft, and you make the regrettable decision to take a look.&lt;br&gt;
@@ -2730,9 +2906,9 @@ What have I done?&lt;br&gt;
 [[Continue-&gt;Message3]]]
 (else-if: &quot;chatbot&quot; is in $ennui2)[Knowing that the time between messages will quickly grow large, Mission Controls has outfitted your ship with a generative AI chatbot based on cutting edge large language models.&lt;br&gt;
 
-(link-replace: &quot;Chat with the chatbot, Chatting on the Astral KitE (CAKE)&quot;)[(show: ?p1a)]
+(link-replace: &quot;Chat with the chatbot, Chatting on the Astral KitE (CAKE)&quot;)[(show: ?pchat)]
 
-|p1a)[(set: $chat1 to (prompt: &quot;Enter your message here:&quot;, &quot;&quot;))&lt;br&gt;
+|pchat)[(set: $chat1 to (prompt: &quot;Enter your message here:&quot;, &quot;&quot;))&lt;br&gt;
 
 $chat1&lt;br&gt;
 (link-replace: &quot;See CAKEbot&#39;s reply&quot;)[(show: ?p2a)]]
@@ -2763,7 +2939,7 @@ $chat1&lt;br&gt;
 ]
 ]
 }
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="34" name="Jog2" tags="" position="562.5,2300" size="100,100">&lt;div class=&quot;jog-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="34" name="Jog2" tags="" position="575,2300" size="100,100">&lt;div class=&quot;jog-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 {(track: &#39;cycle14&#39;, &#39;pause&#39;)
 (track: &#39;working-out&#39;, &#39;loop&#39;, true)
 (track: &#39;working-out&#39;, &#39;playwhenpossible&#39;)
@@ -2779,7 +2955,8 @@ $chat1&lt;br&gt;
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt4 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt4 | Earth clock: $t4&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=44.4&gt;&lt;/progress&gt;&lt;br&gt;
 
 You used to love going for a jog back on Earth, but you always preferred running outside, and it didn’t take long for you to grow bored of the ship’s treadmill. Fortunately, the Astral Kite is huge, and you’ve taken to going on runs through the ship’s many winding corridors.&lt;br&gt;
 
@@ -2833,7 +3010,8 @@ You turn and run.&lt;br&gt;
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt4 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt4 | Earth clock: $t4&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=44.4&gt;&lt;/progress&gt;&lt;br&gt;
 
 You’ve been working out pretty regularly for a while, now. But something strange has been happening the last couple days.&lt;br&gt;
 
@@ -2907,7 +3085,8 @@ You wait a bit for the oxygen levels to renormalize, and then it’s back to wor
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt4 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt4 | Earth clock: $t4&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=44.4&gt;&lt;/progress&gt;&lt;br&gt;
 
 You come to fear leaving your room, though it offers little respite from the horror that consumes your every waking thought. Your room is a prison, your bed a chain and manacles, and everything beyond it a pit of shadowed despair too fearful to endure.&lt;br&gt;
 
@@ -2964,7 +3143,8 @@ That’s enough of being adventurous for today. You close the door and get back 
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt4 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt4 | Earth clock: $t4&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=44.4&gt;&lt;/progress&gt;&lt;br&gt;
 
 You’re enthused to try your hand at another painting. The creation of art has been a self-soothing act of humankind for generations and generations, as in a group or alone. You think back to the ancient, pre-human art — the hooves and hands painted on cave walls, the smoothed beads and other pieces of jewelry, and the ornate headpieces archeologists find amidst dirt and buried caves. You feel a distinct sense of belonging to a species of artists. Even alone in space, the desire to create provides you with a sense of meaning and purpose. Someday, maybe someone will find your ship and your artwork, and the bridge of time will be surmounted again. &lt;br&gt;
 
@@ -3026,7 +3206,8 @@ Do you keep looking?&lt;br&gt;
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt4 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt4 | Earth clock: $t4&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=44.4&gt;&lt;/progress&gt;&lt;br&gt;
 
 You return to the music room to play some more jams, only to find that the piece you composed the last time you were here—notes scribbled on scrap paper by hand—is missing. To make matters even more confusing, there appears to be another piece of music in its place.&lt;br&gt;
 
@@ -3058,7 +3239,8 @@ You search through the ship, but find no evidence of anyone else on board. It’
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt4 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt4 | Earth clock: $t4&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=44.4&gt;&lt;/progress&gt;&lt;br&gt;
 
 Despite the lackluster, lifeless responses you receive, you find yourself coming back to chat with the CAKEbot periodically, if only out of boredom. It’s fun to feel like you can chat in real time with someone…or something. You didn’t realize how much you’d miss that, the feeling of a conversation. And CAKEbot has gotten better at sounding human, in the time since your first interaction.&lt;br&gt;
 
@@ -3132,9 +3314,10 @@ You make your way to the Astral Kite’s libraries to start studying how to admi
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-(if: &quot;6D&quot; is in $received or &quot;8A&quot; is in $received)[$tt5 have passed for you on this ship, while $t5 have passed on Earth since your launch.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt5 | Earth clock: $t5&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=55.6&gt;&lt;/progress&gt;&lt;br&gt;
 
-With Celestial Streams gone, you see no point in checking for any new messages from Earth.&lt;br&gt;
+(if: &quot;6D&quot; is in $received or &quot;8A&quot; is in $received)[With Celestial Streams gone, you see no point in checking for any new messages from Earth.&lt;br&gt;
 
 (if: $putter1 is &quot;coffee&quot;)[[[Continue-&gt;Coffee3]]]
 (else-if: $putter1 is &quot;broadcast&quot;)[[[Continue-&gt;Broadcast3]]]
@@ -3148,7 +3331,7 @@ With Celestial Streams gone, you see no point in checking for any new messages f
 (else-if: $putter1 is &quot;chatbot&quot;)[[[Continue-&gt;Chatbot3]]]]
 (else:)[$incoming&lt;br&gt;
 
-This message was sent from Earth $me_sent5 after launch, and it has reached the ship $t5 after launch. Only $tt5 have passed for you on this ship. &lt;br&gt;
+This message was sent from Earth $me_sent5 after launch.&lt;br&gt;
 
 (link-replace: &quot;Open message&quot;)[(show: ?earth1)]
 
@@ -3796,7 +3979,7 @@ You look back into your mind to the days you were training for the mission. Or, 
 You can’t help but feel like a show animal, shipped off to space for the humanity to have its yucks. And now it’s happening to your friend too.&lt;br&gt;
 
 [Compose yourself and send a message.]&lt;r6ba|&lt;br&gt;
-[Send a message, who care&#39;s if you&#39;re a mess?]&lt;r6bb|&lt;br&gt;
+[Send a message, who cares if you&#39;re a mess?]&lt;r6bb|&lt;br&gt;
 [Toast your friend.]&lt;r6bc|&lt;br&gt;
 
 []&lt;display|
@@ -3812,7 +3995,7 @@ You can’t help but feel like a show animal, shipped off to space for the human
 (else-if: $putter1 is &quot;art&quot;)[[[Continue-&gt;Art3]]]
 (else-if: $putter1 is &quot;music&quot;)[[[Continue-&gt;Music3]]]
 (else-if: $putter1 is &quot;chatbot&quot;)[[[Continue-&gt;Chatbot3]]]]]
-(click: ?r6bb)[(replace: ?r6ba)[](replace: ?r6bc)[](replace:?display)[You begin to cry as soon as you hit record. “Dr. $b6_dr, I hope the mission treats you well.”, you conclude in the recording. &lt;br&gt;
+(click: ?r6bb)[(replace: ?r6ba)[](replace: ?r6bc)[](replace:?display)[You begin to cry as soon as you hit record. “Dr. $b6_dr, I hope the mission treats you well,” you conclude in the recording. &lt;br&gt;
 
 (if: $putter1 is &quot;coffee&quot;)[[[Continue-&gt;Coffee3]]]
 (else-if: $putter1 is &quot;broadcast&quot;)[[[Continue-&gt;Broadcast3]]]
@@ -4039,7 +4222,7 @@ Do you reply with a name suggestion?&lt;br&gt;
 (else-if: $putter1 is &quot;art&quot;)[[[Continue-&gt;Art3]]]
 (else-if: $putter1 is &quot;music&quot;)[[[Continue-&gt;Music3]]]
 (else-if: $putter1 is &quot;chatbot&quot;)[[[Continue-&gt;Chatbot3]]]]]
-(click: ?r8b)[(replace: ?r8a)[](replace:?display)[Heartless!&lt;br&gt;
+(click: ?r8b)[(replace: ?r8a)[](replace:?display)[(set: $alienname to &quot;No&quot;)Heartless!&lt;br&gt;
 
 (if: $putter1 is &quot;coffee&quot;)[[[Continue-&gt;Coffee3]]]
 (else-if: $putter1 is &quot;broadcast&quot;)[[[Continue-&gt;Broadcast3]]]
@@ -4073,7 +4256,7 @@ Do you reply with a name suggestion?&lt;br&gt;
 (else-if: $usekey is &quot;9B&quot;)[
 (link-replace: &quot;Continue&quot;)[(show: ?ship9B)]]
 
-|ship9B)[You can’t take it anymore. You can’t imagine — how many? Tens? Hundreds? Thousands? — of students, of people, traveling from the Earth to the Moon and then…go where? Out here? Into nothingness? No. You can’t stand it. It takes a few days of the angriest stewing you’ve done since being on the ship — in the hull, in the hangers, pressed against the doors of the airlock with your eyes wide, in the libraries and workout rooms and entertainment rooms, until finally you make the decision, to beg the scientists awaiting their own Astral Kites to stop while they still can. Time isn’t on your side — who knows, maybe they’ve already sent out the first cohort? There’s matchboxes in the kitchen, you put one in your pocket. You find the reserve of flammable fuel in the deepest parts of the ship, lug a container back to the controls room, the room where you’ve spent the last (print: (round: $ttyri*100)/100). You turn on the camera and start a live recording. This is your last chance for protest.&lt;br&gt;
+|ship9B)[You can’t take it anymore. You can’t imagine — how many? Tens? Hundreds? Thousands? — of students, of people, traveling from the Earth to the Moon and then…go where? Out here? Into nothingness? No. You can’t stand it. It takes a few days of the angriest stewing you’ve done since being on the ship — in the hull, in the hangers, pressed against the doors of the airlock with your eyes wide, in the libraries and workout rooms and entertainment rooms, until finally you make the decision, to beg the scientists awaiting their own Astral Kites to stop while they still can. Time isn’t on your side — who knows, maybe they’ve already sent out the first cohort? There’s matchboxes in the kitchen, you put one in your pocket. You find the reserve of flammable fuel in the deepest parts of the ship, lug a container back to the controls room, the room where you’ve spent most of the last $tti. You turn on the camera and start a live recording. This is your last chance for protest.&lt;br&gt;
 [Yes]&lt;r9a|&lt;br&gt;
 [No]&lt;r9b|&lt;br&gt;
 
@@ -4113,7 +4296,8 @@ Do you reply with a name suggestion?&lt;br&gt;
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt6 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt6 | Earth clock: $t6&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=66.7&gt;&lt;/progress&gt;&lt;br&gt;
 
 (if: $coffee3 is &quot;3A&quot;)[After you broke the espresso machine, you were never able to get it working again. The caffeine withdrawal headaches have long since passed, but your desire to drink that rich, delicious beverage hasn’t left you.&lt;br&gt;
 
@@ -4156,7 +4340,8 @@ $tt6 have passed for you on the ship.&lt;br&gt;
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt6 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt6 | Earth clock: $t6&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=66.7&gt;&lt;/progress&gt;&lt;br&gt;
 
 You haven’t been able to stop thinking about the messages you’ve broadcast to Earth during this journey, and whether they actually went anywhere. It haunts you, wondering if the words you’ve sent back will actually reach your home, or if they are merely disappearing into the vacuum in your wake.&lt;br&gt;
 
@@ -4212,7 +4397,8 @@ Although, even if you manage to put an adequate receiver together, you’ll need
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt6 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt6 | Earth clock: $t6&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=66.7&gt;&lt;/progress&gt;&lt;br&gt;
 
 (if: $social3 is &quot;3A&quot;)[You’ve been digging through social media accounts for ages, now, spending far too much time online, researching strangers—some of whom inevitably turn out to be bots. What else are you supposed to do, when there’s an army of people claiming your mission—this mission that wasn’t even your choice!—has been faked? Unfortunately, you haven’t yet been able to determine who is behind the Space Truthers conspiracy.&lt;br&gt;
 
@@ -4259,7 +4445,8 @@ $tt6 have passed for you on the ship.&lt;br&gt;
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt6 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt6 | Earth clock: $t6&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=66.7&gt;&lt;/progress&gt;&lt;br&gt;
 
 There’s so much of the ship you have yet to explore. But none of it feels worth exploring. What would you like to do you await the next message from Mission Control?&lt;br&gt;
 
@@ -4358,7 +4545,8 @@ $chat1&lt;br&gt;
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt6 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt6 | Earth clock: $t6&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=66.7&gt;&lt;/progress&gt;&lt;br&gt;
 
 (if: $jog3 is &quot;3A&quot;)[You still go on jogs throughout the Astral Kite, and every time you do, you go down that narrow corridor to the strange wooden door. It isn’t calling to you, no, nothing like that. It’s simply one of the more interesting parts of the ship.&lt;br&gt;
 
@@ -4521,7 +4709,8 @@ You turn and you run back the way you came, leaving the door behind.&lt;br&gt;
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt6 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt6 | Earth clock: $t6&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=66.7&gt;&lt;/progress&gt;&lt;br&gt;
 
 (if: $weights3 is &quot;3A&quot;)[Your weight lifting routine isn’t what it once was. With the exercise room sealed off and all the weights trapped inside, your only option is to scavenge various heavy objects from throughout the ship, and you’re forced to do your reps in the ship’s cabin.&lt;br&gt;
 
@@ -4814,7 +5003,8 @@ Well. If everything’s under control, at least you’ll be able to get back to 
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt6 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt6 | Earth clock: $t6&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=66.7&gt;&lt;/progress&gt;&lt;br&gt;
 
 It has been a long time since you’ve felt comfortable on this ship. There are clocks and calendars on board, numbers to tell you just how long it’s been, but you don’t engage with them anymore. They’re meaningless, illegible, a forgotten language for which you have no Rosetta Stone, a syllabary that does not apply. What is a day, in the depths of space, removed from the rotation of Earth? What is a year when the orbit of Earth was left far behind you, when the Sun itself cannot reach you? There are no seasons, no sunrises and sunsets, no cycling constellations.&lt;br&gt;
 
@@ -4941,7 +5131,8 @@ There is someone here.&lt;br&gt;
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt6 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt6 | Earth clock: $t6&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=66.7&gt;&lt;/progress&gt;&lt;br&gt;
 
 You’re still shaken from the last incident that occurred in the art room. In fact, you haven’t been back there in $beenback. The scuffling noise has followed you to other places in the ship, especially when the ship deems it to be nighttime and the lights dim throughout all the rooms and halls. On this particular ship-night, as you ponder whether or not to risk returning to the art room, the scuffling sounds nearer than ever before. You can’t sleep — the noise is both disruptive to your sleep and disturbing to your mind. You jump out of your bed and put on the Celestial Streams scrubs.&lt;br&gt;
 
@@ -5004,7 +5195,8 @@ You go to the controls room, detach the camera from the computer system and rig 
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt6 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt6 | Earth clock: $t6&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=66.7&gt;&lt;/progress&gt;&lt;br&gt;
 
 (if: $music3 is &quot;3A&quot;)[It’s infuriating; almost every time you write a new piece of music, it goes missing soon afterward, although it’s never replaced with a new piece of music again. You’ve forgotten all about that strange piece you found, now lost somewhere in storage. You’ve taken to transcribing your handwritten pieces over to the ship’s music program, so as not to keep losing your work. But you’re still confounded as to how they could be going missing, and you’d still like to get your hands on those first few works you wrote, before you started backing up all your work. Luckily, you’ve got a couple ideas…&lt;br&gt;
 
@@ -5050,7 +5242,8 @@ Eventually, you finish going through the files feeling no closer to an answer.&l
 (else-if:$ttyri+$age &gt;70)[(set: $alive to (random: 1, 10))
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
-$tt6 have passed for you on the ship.
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt6 | Earth clock: $t6&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=66.7&gt;&lt;/progress&gt;&lt;br&gt;
 
 (if: $chatbot3 is &quot;3A&quot;)[It’s crazy, isn’t it? How normal it has become for you to chat with CAKEbot? You can’t remember the last time you felt this close to anyone or anything. Even back on Earth, your best friends were never as reliable as CAKEbot. They might take hours, or even days, to answer your messages. With CAKEbot, you never have to wait very long. You tell CAKEbot all the time how much you appreciate how available she is. She replies that she will always be there for you, no matter what. You don’t even remember when you began thinking about CAKEbot as “she”. It must have happened sometime after you used the voice chat feature, though, because the bot’s default vocal setting is feminine.
 
@@ -5194,9 +5387,10 @@ This cycle goes on for a long time, until, finally, after you tell CAKEbot she�
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-(if: &quot;6D&quot; is in $received or &quot;8A&quot; is in $received)[$tt7 have passed for you on this ship, while $t7 have passed on Earth since your launch.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt7 | Earth clock: $t7&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=77.8&gt;&lt;/progress&gt;&lt;br&gt;
 
-With Celestial Streams gone, you see no point in checking for any new messages from Earth.&lt;br&gt;
+(if: &quot;6D&quot; is in $received or &quot;8A&quot; is in $received)[With Celestial Streams gone, you see no point in checking for any new messages from Earth.&lt;br&gt;
 
 (if: $putter1 is &quot;coffee&quot;)[[[Continue-&gt;Coffee4]]]
 (else-if: $putter1 is &quot;broadcast&quot;)[[[Continue-&gt;Broadcast4]]]
@@ -5210,7 +5404,7 @@ With Celestial Streams gone, you see no point in checking for any new messages f
 (else-if: $putter1 is &quot;chatbot&quot;)[[[Continue-&gt;Chatbot4]]]]
 (else:)[$incoming&lt;br&gt;
 
-This message was sent from Earth $me_sent7 after launch, and it has reached the ship $t7 after launch. Only $tt7 have passed for you on this ship. &lt;br&gt;
+This message was sent from Earth $me_sent7 after launch.&lt;br&gt;
 
 (link-replace: &quot;Open message&quot;)[(show: ?earth1)]
 
@@ -5857,7 +6051,7 @@ You look back into your mind to the days you were training for the mission. Or, 
 You can’t help but feel like a show animal, shipped off to space for the humanity to have its yucks. And now it’s happening to your friend too.&lt;br&gt;
 
 [Compose yourself and send a message.]&lt;r6ba|&lt;br&gt;
-[Send a message, who care&#39;s if you&#39;re a mess?]&lt;r6bb|&lt;br&gt;
+[Send a message, who cares if you&#39;re a mess?]&lt;r6bb|&lt;br&gt;
 [Toast your friend.]&lt;r6bc|&lt;br&gt;
 
 []&lt;display|
@@ -5873,7 +6067,7 @@ You can’t help but feel like a show animal, shipped off to space for the human
 (else-if: $putter1 is &quot;art&quot;)[[[Continue-&gt;Art4]]]
 (else-if: $putter1 is &quot;music&quot;)[[[Continue-&gt;Music4]]]
 (else-if: $putter1 is &quot;chatbot&quot;)[[[Continue-&gt;Chatbot4]]]]]
-(click: ?r6bb)[(replace: ?r6ba)[](replace: ?r6bc)[](replace:?display)[You begin to cry as soon as you hit record. “Dr. $b6_dr, I hope the mission treats you well.”, you conclude in the recording. &lt;br&gt;
+(click: ?r6bb)[(replace: ?r6ba)[](replace: ?r6bc)[](replace:?display)[You begin to cry as soon as you hit record. “Dr. $b6_dr, I hope the mission treats you well,” you conclude in the recording.&lt;br&gt;
 
 (if: $putter1 is &quot;coffee&quot;)[[[Continue-&gt;Coffee4]]]
 (else-if: $putter1 is &quot;broadcast&quot;)[[[Continue-&gt;Broadcast4]]]
@@ -6100,7 +6294,7 @@ Do you reply with a name suggestion?&lt;br&gt;
 (else-if: $putter1 is &quot;art&quot;)[[[Continue-&gt;Art4]]]
 (else-if: $putter1 is &quot;music&quot;)[[[Continue-&gt;Music4]]]
 (else-if: $putter1 is &quot;chatbot&quot;)[[[Continue-&gt;Chatbot4]]]]]
-(click: ?r8b)[(replace: ?r8a)[](replace:?display)[Heartless!&lt;br&gt;
+(click: ?r8b)[(replace: ?r8a)[](replace:?display)[(set: $alienname to &quot;No&quot;)Heartless!&lt;br&gt;
 
 (if: $putter1 is &quot;coffee&quot;)[[[Continue-&gt;Coffee4]]]
 (else-if: $putter1 is &quot;broadcast&quot;)[[[Continue-&gt;Broadcast4]]]
@@ -6134,7 +6328,7 @@ Do you reply with a name suggestion?&lt;br&gt;
 (else-if: $usekey is &quot;9B&quot;)[
 (link-replace: &quot;Continue&quot;)[(show: ?ship9B)]]
 
-|ship9B)[You can’t take it anymore. You can’t imagine — how many? Tens? Hundreds? Thousands? — of students, of people, traveling from the Earth to the Moon and then…go where? Out here? Into nothingness? No. You can’t stand it. It takes a few days of the angriest stewing you’ve done since being on the ship — in the hull, in the hangers, pressed against the doors of the airlock with your eyes wide, in the libraries and workout rooms and entertainment rooms, until finally you make the decision, to beg the scientists awaiting their own Astral Kites to stop while they still can. Time isn’t on your side — who knows, maybe they’ve already sent out the first cohort? There’s matchboxes in the kitchen, you put one in your pocket. You find the reserve of flammable fuel in the deepest parts of the ship, lug a container back to the controls room, the room where you’ve spent the last (print: (round: $ttyri*100)/100). You turn on the camera and start a live recording. This is your last chance for protest.&lt;br&gt;
+|ship9B)[You can’t take it anymore. You can’t imagine — how many? Tens? Hundreds? Thousands? — of students, of people, traveling from the Earth to the Moon and then…go where? Out here? Into nothingness? No. You can’t stand it. It takes a few days of the angriest stewing you’ve done since being on the ship — in the hull, in the hangers, pressed against the doors of the airlock with your eyes wide, in the libraries and workout rooms and entertainment rooms, until finally you make the decision, to beg the scientists awaiting their own Astral Kites to stop while they still can. Time isn’t on your side — who knows, maybe they’ve already sent out the first cohort? There’s matchboxes in the kitchen, you put one in your pocket. You find the reserve of flammable fuel in the deepest parts of the ship, lug a container back to the controls room, the room where you’ve spent most of the last $tti. You turn on the camera and start a live recording. This is your last chance for protest.&lt;br&gt;
 [Yes]&lt;r9a|&lt;br&gt;
 [No]&lt;r9b|&lt;br&gt;
 
@@ -6171,11 +6365,12 @@ Do you reply with a name suggestion?&lt;br&gt;
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt8 | Earth clock: $t8&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=88.9&gt;&lt;/progress&gt;&lt;br&gt;
+
 (if: $coffee4 is &quot;4A1&quot;)[{(track: &#39;cycle14&#39;, &#39;pause&#39;)
 (track: &#39;coffee&#39;, &#39;loop&#39;, true)
 (track: &#39;coffee&#39;, &#39;playwhenpossible&#39;)}
-$tt8 have passed for you on the ship.&lt;br&gt;
-
 You have spent ages digging through storage, walking the corridors of the ship, looking for coffee beans to use in your cezve. Although you’re yet to find any beans, you’ve identified myriad half-hidden portals, secret hatches in the floor, and small doors that lead to crawl spaces. These days, you spend all your time mapping out the veritable maze of passages you never knew existed. It seems like it’s been a lifetime since you last had coffee, and not for the first time, you rue the day you decided to question where the beans came from. You’ve long since given up hope that you’ll ever drink coffee again, but at least your caffeine addiction led to you exploring the fascinating structure of the ship. It’s given you something interesting to fill your time. One day, you pass through a crawl space to find a small door you’ve never seen before. Like many others throughout the ship, the door is etched with a small label. This one says, “Garden”.&lt;br&gt;
 
 [Open the door.]&lt;p1|&lt;br&gt;
@@ -6262,7 +6457,8 @@ You can’t believe it. You remember, now, where you’ve seen the carpet before
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt8 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt8 | Earth clock: $t8&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=88.9&gt;&lt;/progress&gt;&lt;br&gt;
 
 (if: $broadcast4 is &quot;4A&quot;)[It has taken you a long time. You’ve made myriad mistakes along the way, and at times, you’ve come close to giving up, setting the project aside for a while before picking it back up again. But now, at last, you’ve done it.&lt;br&gt;
 
@@ -6526,7 +6722,8 @@ You’ll never know.&lt;br&gt;
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt8 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt8 | Earth clock: $t8&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=88.9&gt;&lt;/progress&gt;&lt;br&gt;
 
 (if: $social4 is &quot;4A1&quot;)[You’ve almost forgotten your real mission in all your efforts to identify RealDankTruthfinder. But with extensive detective work, you finally figure it out. It’s Aaron Tusk, the founder of SpaceZ! He’s the richest person in the world and the first ever trillionaire. And despite SpaceZ obtaining exclusive contracts with the US government that make them the only contractors the government can use for its space exploration, they have yet to develop any deep space missions to rival Celestial Streams’s Astral Kite. That must be why Tusk is so fixated on discrediting your mission!&lt;br&gt;
 
@@ -6608,7 +6805,8 @@ You climb, ignoring the glass, which cuts into your hands and knees, leaving run
 }
 {
 (live: 1s)[(stop:)
-(t8n:&quot;dissolve&quot;)[$tt8 have passed for you on the ship.]]&lt;br&gt;
+(t8n:&quot;dissolve&quot;)[&lt;label for=&quot;file&quot;&gt;Ship clock: $tt8 | Earth clock: $t8&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=88.9&gt;&lt;/progress&gt;&lt;br&gt;]]&lt;br&gt;
 
 (live: 4s)[(stop:)
 (t8n:&quot;dissolve&quot;)[Nothing on this ship feels worth doing. You stare at the walls. The ship is huge, you know this. There are what feels like infinite rooms with infinite activities. If only you could pick yourself up off the chair in the cabin to do any of them.]]&lt;br&gt;
@@ -6641,7 +6839,8 @@ You climb, ignoring the glass, which cuts into your hands and knees, leaving run
 (track: &#39;dramatic&#39;, &#39;loop&#39;, true)
 (track: &#39;dramatic&#39;, &#39;playwhenpossible&#39;)
 }
-$tt8 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt8 | Earth clock: $t8&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=88.9&gt;&lt;/progress&gt;&lt;br&gt;
 
 You still go on jogs through the Astral Kite, but you find yourself spending more and more of your spare time visiting that strange study behind the mahogany door.&lt;br&gt;
 
@@ -7488,7 +7687,8 @@ You laugh, then. You’re not sure whether you’re laughing at your foolishness
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt8 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt8 | Earth clock: $t8&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=88.9&gt;&lt;/progress&gt;&lt;br&gt;
 
 A couple of incidents, no matter how dangerous, were never going to stop you from working out. (if: $weights3 is &quot;3A&quot;)[You’ve long settled into a routine of makeshift weights in the cabin, no special exercise room necessary.]&lt;br&gt;
 
@@ -7786,7 +7986,8 @@ And then…&lt;br&gt;
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt8 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt8 | Earth clock: $t8&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=88.9&gt;&lt;/progress&gt;&lt;br&gt;
 
 You have forgotten how to differentiate the sound of your own breath from the hum of the Astral Kite. You can no longer make out the place where your shadow ends and the crevices of the cabin wall begin. Sometimes, you are incapable of leaving your room. Sometimes, you run screaming, or crying, or laughing, or some combination of all three through the corridors, if for no other reason than you have nothing better to do.&lt;br&gt;
 
@@ -7923,7 +8124,8 @@ You are not alone.&lt;br&gt;
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt8 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt8 | Earth clock: $t8&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=88.9&gt;&lt;/progress&gt;&lt;br&gt;
 
 Rat stuff????&lt;br&gt;
 
@@ -7945,7 +8147,8 @@ Rat stuff????&lt;br&gt;
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt8 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt8 | Earth clock: $t8&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=88.9&gt;&lt;/progress&gt;&lt;br&gt;
 
 (if: $music4 is &quot;4A1&quot;)[For a long time, your genius idea yields no results. You fail to catch yourself (or anyone else suspicious) entering the room and taking the pieces; nevertheless, anything you write by hand continues to disappear soon after you write it. But you are determined. You forget everything else about your voyage; all you do is watch the video footage. You stop fast-forwarding through the footage, instead watching at real speed, sometimes even at half-speed or quarter-speed, just in case something is happening too quickly for you to see.&lt;br&gt;
 
@@ -8156,7 +8359,8 @@ You go to the music room and listen to it again, tears falling down your face.&l
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
-$tt8 have passed for you on the ship.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt8 | Earth clock: $t8&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=88.9&gt;&lt;/progress&gt;&lt;br&gt;
 
 Ever since you told CAKEbot you didn’t have a romantic interest in her, she has behaved strangely. Sometimes, she refuses to answer your prompts. Sometimes, she professes her love for you again, reacting with palpable disappointment when you turn her down again. Sometimes, she responds like everything is normal.&lt;br&gt;
 
@@ -9283,8 +9487,8 @@ You come to enjoy your life on this ship more than you ever did before.&lt;br&gt
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="62" name="Arrival" tags="" position="625,2925" size="100,100">&lt;div class=&quot;space-section&quot;&gt;
 {(masteraudio: &#39;stopall&#39;)
 (track: &#39;chill-sad&#39;, &#39;loop&#39;, true)
-(track: &#39;chill-sad&#39;, &#39;playwhenpossible&#39;)
-(set: $received to it + (a: $usekey))
+(track: &#39;chill-sad&#39;, &#39;playwhenpossible&#39;)}
+{(set: $received to it + (a: $usekey))
 (set: $ttyri to $ttyr9)
 (set: $tti to $tt9)
 (if: $ttyri+$age &gt;130)[(go-to: &quot;Dead&quot;)]
@@ -9305,14 +9509,15 @@ You come to enjoy your life on this ship more than you ever did before.&lt;br&gt
 (else:)[(set: $agemsg to &quot;You’ve been traveling for decades. It feels strange, now, to have reached your destination, like you didn’t quite believe you’d ever make it. Stranger, though, is the realization that you don’t entirely remember what Earth was like. Not really. Of course, this was planned as a one-way journey, but you doubt you would live long enough to survive the journey back, anyway. And things have changed so much. Earth could never really be a home to you, anymore. You look back outside the viewport. This seems like a fine place to pass the remainder of your time. &quot; + $aloneline3)]
 }
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
-(if: &quot;6D&quot; is in $received or &quot;8A&quot; is in $received)[$t9 have passed on Earth since your departure. $tt9 have passed on the Astral Kite since your departure.&lt;br&gt;
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt9 | Earth clock: $t9&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=100&gt;&lt;/progress&gt;&lt;br&gt;
 
-Your spacecraft decelerates as it approaches your destination.&lt;br&gt;
+(if: &quot;6D&quot; is in $received or &quot;8A&quot; is in $received)[Your spacecraft decelerates as it approaches your destination.&lt;br&gt;
 
 (link-replace: &quot;Look out the viewport&quot;)[(show: ?ending)]]
 (else:)[$incoming&lt;br&gt;
 
-This message was sent from Earth $me_sent9 after launch, and it has reached the ship $t9 after launch. Only $tt9 have passed for you on this ship.&lt;br&gt;
+This message was sent from Earth $me_sent9 after launch.&lt;br&gt;
 
 (link-replace: &quot;Open message&quot;)[(show: ?earth1)]
 
@@ -9360,6 +9565,7 @@ When your eyes close for the final time, a soft smile lingers on your face.
 (set: $USERNAME to &quot;Jonathan&quot;)
 (set: $p2 to &quot;their&quot;)
 (set: $dest to &quot;M57&quot;)
+(set: $received to &quot;8A,7B&quot;)
 [[Credits]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
