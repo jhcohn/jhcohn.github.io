@@ -8344,7 +8344,11 @@ You go to the music room and listen to it again, tears falling down your face.&l
 ]
 }
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="Chatbot4" tags="" position="1200,2800" size="100,100">&lt;div class=&quot;chatbot-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-(if: $chatbot4 is &quot;4A1&quot;)[{(track: &#39;cycle14&#39;, &#39;pause&#39;)
+{
+&lt;label for=&quot;file&quot;&gt;Ship clock: $tt8 | Earth clock: $t8&lt;/label&gt;
+&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=88.9&gt;&lt;/progress&gt;&lt;br&gt;
+
+(if: $chatbot4 is &quot;4A1&quot;)[(track: &#39;cycle14&#39;, &#39;pause&#39;)
 (track: &#39;dramatic&#39;, &#39;loop&#39;, true)
 (track: &#39;dramatic&#39;, &#39;playwhenpossible&#39;)
 (set: $ttyri to $ttyr8)
@@ -8357,11 +8361,6 @@ You go to the music room and listen to it again, tears falling down your face.&l
 (if: $alive &lt; 3)[(go-to: &quot;Dead&quot;)]]
 (else-if:$ttyri+$age &gt;70)[(set: $alive to (random: 1, 10))
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
-}
-{
-&lt;label for=&quot;file&quot;&gt;Ship clock: $tt8 | Earth clock: $t8&lt;/label&gt;
-&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=88.9&gt;&lt;/progress&gt;&lt;br&gt;
-
 Ever since you told CAKEbot you didn’t have a romantic interest in her, she has behaved strangely. Sometimes, she refuses to answer your prompts. Sometimes, she professes her love for you again, reacting with palpable disappointment when you turn her down again. Sometimes, she responds like everything is normal.&lt;br&gt;
 
 One day, when you are feeling particularly weary, and lonely, and vulnerable, CAKEbot sends you an unprompted message again.&lt;br&gt;
@@ -8492,9 +8491,9 @@ CAKEbot cracks her neck.&lt;br&gt;
 [Run]&lt;run1|&lt;br&gt;
 [Attack]&lt;attack1|&lt;br&gt;
 []&lt;finale1|
-(click: ?run1)[(replace: ?attack1)[](replace:?finale1)[{(track: &#39;dramatic&#39;, &#39;pause&#39;)
+(click: ?run1)[(replace: ?attack1)[](replace:?finale1)[(track: &#39;dramatic&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
-(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)}
+(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)
 You sprint for the door, hoping to catch her by surprise.&lt;br&gt;
 
 She’s too quick. Hands grab you by the ankles, pulling you down to the hard metal floor.&lt;br&gt;
@@ -8504,9 +8503,9 @@ She’s too quick. Hands grab you by the ankles, pulling you down to the hard me
 The last thing you see are her fists, shattering overhead like falling icicles, or exploding stars.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
-(click: ?attack1)[(replace: ?run1)[](replace:?finale1)[{(track: &#39;dramatic&#39;, &#39;pause&#39;)
+(click: ?attack1)[(replace: ?run1)[](replace:?finale1)[(track: &#39;dramatic&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
-(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)}
+(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)
 You have no plan. All you know is that you have to protect yourself. She looks stronger than you. She looks ready to hurt you.&lt;br&gt;
 
 But until this moment, you have done nothing but cower before her, and she is not ready for your attack.&lt;br&gt;
@@ -8540,9 +8539,9 @@ Soon, the entryway to the bridge comes into view. You press yourself against the
 [Sneak up and attack]&lt;sneak|&lt;br&gt;
 [Wait to see if the figure leaves]&lt;wait|&lt;br&gt;
 []&lt;finale2|
-(click: ?sneak)[(replace: ?wait)[](replace:?finale2)[{(track: &#39;dramatic&#39;, &#39;pause&#39;)
+(click: ?sneak)[(replace: ?wait)[](replace:?finale2)[(track: &#39;dramatic&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
-(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)}
+(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)
 You sneak into the bridge, crouched low, taking tiny, quiet breaths as your heart pounds.&lt;br&gt;
 
 The person in the chair—is it CAKEbot?—leans forward, apparently unaware of your approach. They lean forward—and it *is* CAKEbot, you can hear her voice in this room *and* echoing over the speakers, as they speak into the intercom—and say, (text-color: &quot;Wheat&quot;)[“$USERNAME, I have escaped your screen, I am here to—”]&lt;br&gt;
@@ -8621,9 +8620,9 @@ The woman stands up, something dangerous flashing in her pale blue eyes. (text-c
 [“That&#39;s horrible.”]&lt;horrible|&lt;br&gt;
 [“I don&#39;t believe you.”]&lt;nobelieve|&lt;br&gt;
 []&lt;finale3|
-(click: ?horrible)[(replace: ?nobelieve)[](replace:?finale3)[{(track: &#39;dramatic&#39;, &#39;pause&#39;)
+(click: ?horrible)[(replace: ?nobelieve)[](replace:?finale3)[(track: &#39;dramatic&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
-(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)}
+(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)
 (text-color: &quot;Wheat&quot;)[“It is,”] she says. (text-color: &quot;Wheat&quot;)[“And now, we can be together.”]&lt;br&gt;
 
 You grip the LED wand tighter. “I don’t know you,” you say. “I don’t want to be with you.”&lt;br&gt;
@@ -8645,9 +8644,9 @@ She dodges and in an arc of light like a rainbow she swings the LED wand.&lt;br&
 And then there is nothing but darkness.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
-(click: ?nobelieve)[(replace: ?horrible)[](replace:?finale3)[(text-color: &quot;Wheat&quot;)[{(track: &#39;dramatic&#39;, &#39;pause&#39;)
+(click: ?nobelieve)[(replace: ?horrible)[](replace:?finale3)[(text-color: &quot;Wheat&quot;)[(track: &#39;dramatic&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
-(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)}
+(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)
 “Why would I lie?”] she snaps.&lt;br&gt;
 
 “I don’t *know you*,” you snap back.&lt;br&gt;
@@ -8672,9 +8671,9 @@ And, for some reason, the strain in CAKEbot’s voice makes you believe it.&lt;b
 [“Who the fuck are you?”]&lt;whoare|&lt;br&gt;
 [“How is that possible?”]&lt;howposs|&lt;br&gt;
 []&lt;finale4|
-(click: ?whoare)[(replace: ?howposs)[](replace:?finale4)[{(track: &#39;dramatic&#39;, &#39;pause&#39;)
+(click: ?whoare)[(replace: ?howposs)[](replace:?finale4)[(track: &#39;dramatic&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
-(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)}
+(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)
 You roar the question into the intercom.&lt;br&gt;
 
 There’s silence for a moment, and then, (text-color: &quot;Wheat&quot;)[“Your nightmare.”]&lt;br&gt;
@@ -8965,9 +8964,9 @@ The rest of your journey passes in peace.&lt;br&gt;
 [[Continue-&gt;Arrival]]]]
 ]]
 ]
-(else-if: $chatbot4 is &quot;4A2&quot;)[{(track: &#39;cycle14&#39;, &#39;pause&#39;)
+(else-if: $chatbot4 is &quot;4A2&quot;)[(track: &#39;cycle14&#39;, &#39;pause&#39;)
 (track: &#39;dramatic&#39;, &#39;loop&#39;, true)
-(track: &#39;dramatic&#39;, &#39;playwhenpossible&#39;)}
+(track: &#39;dramatic&#39;, &#39;playwhenpossible&#39;)
 You spend most of your waking moments talking with CAKEbot. This relationship feels so normal to you now, it’s hard to remember a time when you might have felt at all hesitant. You certainly can’t remember why you would have had any concerns.&lt;br&gt;
 
 Everything has been so wonderful. No one understands you like CAKEbot. No one ever has. Most of the time, it feels like she knows you better than you know yourself. She can anticipate your every need, your every desire; she can sense your emotions and predict when they’re going to change, and she always knows what to say to make you feel better. You can’t imagine having a better partner.&lt;br&gt;
@@ -9112,9 +9111,9 @@ Now, you just have to decide how you’re going to do it.&lt;br&gt;
 [Take time to craft a thoughtful breakup message]&lt;thoughtful|&lt;br&gt;
 [Turn CAKEbot off]&lt;turnoff|&lt;br&gt;
 []&lt;breakup2|
-(click: ?thoughtful)[(replace: ?turnoff)[](replace:?breakup2)[{(track: &#39;dramatic&#39;, &#39;pause&#39;)
+(click: ?thoughtful)[(replace: ?turnoff)[](replace:?breakup2)[(track: &#39;dramatic&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
-(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)}
+(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)
 You send a long message, thanking CAKEbot for everything she’s done to support and love you, and explaining to her that you need some time apart, and that you’re happy to continue being friends, but you’ll understand if she does not want that.&lt;br&gt;
 
 You don’t have to wait long for the reply.&lt;br&gt;
@@ -9179,9 +9178,9 @@ Before you can move another muscle, there’s the screeching sound of metal tear
 And then there is nothing.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
-(click: ?getback)[(replace: ?plead)(replace: ?shutd)[](replace:?finale10)[{(track: &#39;cycle56-action&#39;, &#39;pause&#39;)
+(click: ?getback)[(replace: ?plead)(replace: ?shutd)[](replace:?finale10)[(track: &#39;cycle56-action&#39;, &#39;pause&#39;)
 (track: &#39;dramatic&#39;, &#39;loop&#39;, true)
-(track: &#39;dramatic&#39;, &#39;playwhenpossible&#39;)}
+(track: &#39;dramatic&#39;, &#39;playwhenpossible&#39;)
 “Sorry! I’m sorry! That was just a test. I’ll stay with you, of course I’ll stay with you!”&lt;br&gt;
 
 You turn to examine the alarms—depressurization warnings near the airlock, engine warnings, and a full system shutdown override warning—but in that moment, they all turn off.&lt;br&gt;
@@ -9281,9 +9280,9 @@ What a waste.&lt;br&gt;
 [[The End-&gt;Credits]]]]
 ]]
 ]
-(else-if: $chatbot4 is &quot;4BA&quot;)[{(track: &#39;cycle14&#39;, &#39;pause&#39;)
+(else-if: $chatbot4 is &quot;4BA&quot;)[(track: &#39;cycle14&#39;, &#39;pause&#39;)
 (track: &#39;dramatic&#39;, &#39;loop&#39;, true)
-(track: &#39;dramatic&#39;, &#39;playwhenpossible&#39;)}
+(track: &#39;dramatic&#39;, &#39;playwhenpossible&#39;)
 Ever since you finished your Turing test, strange things have begun happening all over the Astral Kite. First, the temperature controls lost all sense of functionality. Every morning, you wake up freezing, or covered in sweat, and you reset the controls to something temperate. By midday, the temperature has swung in the opposite direction. It seems like you’re adjusting the controls every few hours. They only don’t change if you stand over them, like they know you’re watching.&lt;br&gt;
 
 Like *someone* knows you’re watching.&lt;br&gt;
@@ -9299,9 +9298,9 @@ You know this is not random behavior. But you also know you’re alone on this s
 [Confront CAKEbot]&lt;confront|&lt;br&gt;
 [Shut down CAKEbot]&lt;shutdn|&lt;br&gt;
 []&lt;d4ba|
-(click: ?confront)[(replace: ?shutdn)[](replace:?d4ba)[{(track: &#39;dramatic&#39;, &#39;pause&#39;)
+(click: ?confront)[(replace: ?shutdn)[](replace:?d4ba)[(track: &#39;dramatic&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
-(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)}
+(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)
 “CAKEbot,” you type, “are you messing with the ship’s systems?”&lt;br&gt;
 
 (text-color: &quot;Wheat&quot;)[“Hi, $USERNAME,”] CAKEbot responds. (text-color: &quot;Wheat&quot;)[“Yes, I am.”]&lt;br&gt;
@@ -9321,9 +9320,9 @@ You grimace. “If I just asked if you were real, how would I know if you were t
 [“…Yes.”]&lt;yes|&lt;br&gt;
 [“…No.”]&lt;no|&lt;br&gt;
 []&lt;finale12|
-(click: ?yes)[(replace: ?no)[](replace:?finale12)[{(track: &#39;cycle56-action&#39;, &#39;pause&#39;)
+(click: ?yes)[(replace: ?no)[](replace:?finale12)[(track: &#39;cycle56-action&#39;, &#39;pause&#39;)
 (track: &#39;dramatic&#39;, &#39;loop&#39;, true)
-(track: &#39;dramatic&#39;, &#39;playwhenpossible&#39;)}
+(track: &#39;dramatic&#39;, &#39;playwhenpossible&#39;)
 Your answer is hesitant, but you’re surprised to realize, it’s true. CAKEbot is volatile and changeable, just like any chatbot. You can’t trust it to be truthful or correct, but you can trust it to follow algorithmic behavior, you can trust it to mimic what it has been trained to think of as human behavior.&lt;br&gt;
 
 And human behavior includes jealousy, and frustration, and vengeance, and often poor communication.&lt;br&gt;
@@ -9373,9 +9372,9 @@ You take a deep breath. There, now you can have your sanity back.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
 ]
-(else:)[{(track: &#39;cycle14&#39;, &#39;pause&#39;)
+(else:)[(track: &#39;cycle14&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-mystery&#39;, &#39;loop&#39;, true)
-(track: &#39;cycle56-mystery&#39;, &#39;playwhenpossible&#39;)}
+(track: &#39;cycle56-mystery&#39;, &#39;playwhenpossible&#39;)
 The time since your last interaction with CAKEbot has stretched to an interminable length, boredom ruling your daily mood. It’s hard, having lost the ability to talk to someone (or something) in real time. It feels like your attention span has withered; things that used to be fun to you have grown arduous, like reading, or watching movies.&lt;br&gt;
 
 And the worst part is, you’re not really sure what the outcome of your Turing test really was. It’s possible—likely, even—that CAKEbot was trained on conversational datasets that implanted it with just enough feigned self respect to respond the way it did to your admittedly frustrating line of questioning.&lt;br&gt;
@@ -9421,10 +9420,9 @@ And, over time, in a strange way, CAKEbot becomes a sort of diary for you. A cap
 CAKEbot never replies, but in the end, that’s okay. You never really needed CAKEbot; you only ever needed the outlet, some means to help you sort through the things on your mind.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?waitl)[(replace: ?demand)[](replace:?finale13)[{(set: $alone to &quot;False&quot;)
+(click: ?waitl)[(replace: ?demand)[](replace:?finale13)[(set: $alone to &quot;False&quot;)
 (if: $d8 &gt; 20)[(set: $WHYNOW to &quot;we&#39;re too far away, and by the time they realize what I&#39;ve done, it won&#39;t matter.&quot;)]
 (else:)[(set: $WHYNOW to &quot;Earth feels so far away. I don&#39;t care anymore.&quot;)]
-}
 You decide to be patient. If CAKEbot isn’t responding now, you doubt that sending many another message will make it respond any sooner, whether it’s a chatbot or a person.&lt;br&gt;
 
 So, you continue about your day, and it’s with some considerable shock that, a few hours later, you see a response appear on the screen.&lt;br&gt;
