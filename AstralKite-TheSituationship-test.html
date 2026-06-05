@@ -198,7 +198,8 @@ tw-sidebar { display: none; }
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 (text-color: &quot;LightCoral&quot;)[You are hereby notified that you have been selected on $day $month $year for corporate scholarly service in accordance with provisions of the act of Congress, &quot;Revising Tenure and Establishing the Scholars Draft,&quot; approved on March 3, 2035. You have been assigned to Celestial Streams for a period of time yet to be determined. You are due to report to Celestial Streams HQ within 14 days of receiving this notice. If you fail to report, your tenure will be stripped and you will be deemed a fugitive of the law.]&lt;br&gt;
 
-[[Go to Celestial Streams HQ-&gt;Welcome to Celestial Streams]]
+[[Go to Celestial Streams HQ-&gt;Welcome to Celestial Streams]]&lt;br&gt;
+[[Go on the run-&gt;On the Run]]
 &lt;/div&gt;]]}
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Welcome to Celestial Streams" tags="" position="625,550" size="100,100">&lt;div class=&quot;controls-section&quot;&gt;
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
@@ -212,11 +213,13 @@ In the meantime, please fill out your personal information.]&lt;br&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Inputs" tags="" position="625,675" size="100,100">&lt;div class=&quot;controls-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 (set: $USERNAME to (prompt: &quot;What is your name?&quot;, &quot;Adele&quot;))
 Welcome, $USERNAME. Please select your pronouns:
-(dropdown: bind $p, &quot;she/her/hers&quot;, &quot;he/him/his&quot;, &quot;they/them/their&quot;, &quot;any pronouns&quot;)
+(dropdown: bind $p, &quot;she/her/hers&quot;, &quot;he/him/his&quot;, &quot;they/them/their&quot;, &quot;she/they&quot;, &quot;he/they&quot;, &quot;any pronouns&quot;)
 Please select your age, in years:
 (dropdown: bind $age, &quot;25&quot;, &quot;26&quot;, &quot;27&quot;, &quot;28&quot;, &quot;29&quot;, &quot;30&quot;, &quot;31&quot;, &quot;32&quot;, &quot;33&quot;, &quot;34&quot;, &quot;35&quot;, &quot;36&quot;, &quot;37&quot;, &quot;38&quot;, &quot;39&quot;, &quot;40&quot;, &quot;41&quot;, &quot;42&quot;, &quot;43&quot;, &quot;44&quot;, &quot;45&quot;, &quot;46&quot;, &quot;47&quot;, &quot;48&quot;, &quot;49&quot;, &quot;50&quot;)
 [[Continue...-&gt;Letter3]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Letter3" tags="" position="625,800" size="100,100">{(if: $p is &#39;she/her/hers&#39;)[(set: $p0 to &quot;she&quot;) (set: $p1 to &quot;her&quot;) (set: $p2 to &quot;her&quot;) (set: $p3 to &quot;hers&quot;)(set: $P0 to &quot;She&quot;) (set: $P1 to &quot;Her&quot;) (set: $P2 to &quot;Her&quot;)(set: $P3 to &quot;Hers&quot;)(set: $be to &quot;is&quot;)(set: $was to &quot;was&quot;)(set: $know to &quot;knows&quot;)]
+(else-if: $p is &#39;she/they&#39;)[(set: $p0 to &quot;she&quot;) (set: $p1 to &quot;them&quot;) (set: $p2 to &quot;her&quot;) (set: $p3 to &quot;theirs&quot;)(set: $P0 to &quot;She&quot;) (set: $P1 to &quot;Them&quot;) (set: $P2 to &quot;Her&quot;)(set: $P3 to &quot;Theirs&quot;)(set: $be to &quot;is&quot;)(set: $was to &quot;was&quot;)(set: $know to &quot;knows&quot;)]
+(else-if: $p is &#39;he/they&#39;)[(set: $p0 to &quot;he&quot;) (set: $p1 to &quot;them&quot;) (set: $p2 to &quot;his&quot;) (set: $p3 to &quot;theirs&quot;)(set: $P0 to &quot;He&quot;) (set: $P1 to &quot;Them&quot;) (set: $P2 to &quot;His&quot;)(set: $P3 to &quot;Theirs&quot;)(set: $be to &quot;is&quot;)(set: $was to &quot;was&quot;)(set: $know to &quot;knows&quot;)]
 (else-if: $p is &#39;he/him/his&#39;)[(set: $p0 to &quot;he&quot;) (set: $p1 to &quot;him&quot;) (set: $p2 to &quot;his&quot;) (set: $p3 to &quot;his&quot;) (set: $P0 to &quot;He&quot;) (set: $P1 to &quot;Him&quot;) (set: $P2 to &quot;His&quot;)(set: $P3 to &quot;His&quot;)(set: $be to &quot;is&quot;)(set: $was to &quot;was&quot;)(set: $know to &quot;knows&quot;)]
 (else-if: $p is &#39;they/them/their&#39;)[(set: $p0 to &quot;they&quot;) (set: $p1 to &quot;them&quot;) (set: $p2 to &quot;their&quot;)(set: $p3 to &quot;theirs&quot;)(set: $P0 to &quot;They&quot;) (set: $P1 to &quot;Them&quot;) (set: $P2 to &quot;Their&quot;)(set: $p3 to &quot;Theirs&quot;)(set: $be to &quot;are&quot;)(set: $was to &quot;were&quot;)(set: $know to &quot;know&quot;)]
 (else:)[(set: $p0 to &quot;he&quot;) (set: $p1 to &quot;her&quot;) (set: $p2 to &quot;their&quot;) (set: $P0 to &quot;She&quot;) (set: $P1 to &quot;Them&quot;) (set: $P2 to &quot;His&quot;)(set: $be to &quot;is&quot;)(set: $was to &quot;was&quot;)(set: $know to &quot;knows&quot;)]}
@@ -4026,7 +4029,347 @@ Elliot hit send.&lt;br&gt;
 		]
 	]
 }
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata></tw-storydata>
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="141" name="On the Run" tags="" position="500,550" size="100,100">{(masteraudio: &#39;stopall&#39;)
+(track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
+(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)}
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+You never thought it would happen. You never thought *you* would get selected for the Scholars Draft.&lt;br&gt;
+
+You love your science, but you&#39;ve heard horror stories about the things that Academic Corporations make their drafted scientists do. Horrific tests on human subjects, development of weapons, algorithms to maximize profits and wage theft.&lt;br&gt;
+
+You only ever signed up because it was your only chance at getting tenure, and the chances of getting drafted were low.&lt;br&gt;
+
+Well, it happened. And you don&#39;t care if it means breaking the law. You&#39;re *not* going to comply. You know what you&#39;re going to do instead.&lt;br&gt;
+
+[Forge a new identity for yourself and move to a small town]&lt;town|&lt;br&gt;
+[Steal a passport and flee the country]&lt;country|&lt;br&gt;
+[Flee deep into the woods and build a shelter]&lt;woods|&lt;br&gt;
+[Go to your friend&#39;s house and hide away in their attic]&lt;friend|&lt;br&gt;
+
+(click: ?town)[(replace:?country)[](replace:?woods)[](replace:?friend)[](replace:?town)[You have two weeks. You don&#39;t need to rush things. Your professor life hasn&#39;t paid you as much as your doctoral peers who work for hedge funds, insurance companies, or weapons manufacturers, but you&#39;ve still managed to save quite a bit of money. So, you withdraw as much as you can from your accounts, and then you start to plan.&lt;br&gt;
+
+You buy a set of fake IDs for yourself. You spend a day driving out to a national park and leave your phone in a random trash bin there. You host a yard sale to raise even more cash, under the pretense that you&#39;re planning to donate the funds raised to the public education and outreach arm of Celestial Streams. You pack as much as you can into a backpack and a duffel bag: a couple weeks&#39; worth of clothing, some toiletries, some shelf-stable food. You visit a local library and, on one of their public computers, look up information about various small towns across the country.&lt;br&gt;
+
+At last, a week before you&#39;re supposed to report to Celestial Streams HQ, you take a series of buses to the town of Commerce, Texas. There, you spend the first night in a hotel, where you cut and dye your hair. The cut doesn&#39;t look great, but it should make it harder for you to be recognized. The next day, you sign the lease for a tiny, one-bedroom apartment. You&#39;ve actually got enough money to buy a small house, but that process is going to take a while, and you need a place to stay in the meantime.&lt;br&gt;
+
+Next, you need to find a job in town.&lt;br&gt;
+
+[Become a barista]&lt;barista|&lt;br&gt;
+[Become a construction worker]&lt;construction|&lt;br&gt;
+
+(click: ?barista)[(replace:?construction)[](replace:?barista)[You get a job at a small coffee shop in town. It doesn&#39;t pay great, but it&#39;s good enough for now.&lt;br&gt;
+
+The day that you&#39;re supposed to have reported to Celestial Streams HQ comes and goes. Soon, your name and face are being shown in the news, and your status as a fugitive is broadcast to the whole country. You begin to fear it is only a matter of time before you are recognized.&lt;br&gt;
+
+But, as each day passes without police or government agents showing up at your door, you begin to dare to hope that you&#39;ve succeeded.&lt;br&gt;
+
+You never thought you could be happy in any job outside of science, but there is something grounding about making coffee, preparing a beverage for people to enjoy. It may be a small impact on people&#39;s lives, but every single day, you help to craft something with your own hands that other people enjoy. And there is both an art and a science to preparing coffee well. It&#39;s a good job, and you find yourself enjoying it.&lt;br&gt;
+
+You start caring about things that you never cared about before, ensuring that your interests and hobbies are very different from those you had in your past life. You watch reality TV shows, and you take up cycling, and you love wine and hate liquor, and you enjoy cooking fancy meals that require significant prep (a pastime you never had time for, as a professor).&lt;br&gt;
+
+You make new friends in town, telling them the backstory that you have prepared for yourself. You were raised in Dallas, Texas. You skipped out on college and took a series of odd jobs around the city, but your parents died just last year and you needed a change of pace. You needed cleaner air and some peace and quiet. But they left you with a decent inheritance, which you&#39;re hoping to use to buy a house soon.&lt;br&gt;
+
+It takes almost half a year, but you manage to buy that house. And even if everything you tell them about yourself is a lie, you grow closer to your friends. And before long, you realize that you rather like your life. You don&#39;t miss the science, the pressure of the production-focused profit-or-perish lifestyle. This life is good, too.&lt;br&gt;
+
+And then, one day, almost a year after you received that fateful letter, it happens.&lt;br&gt;
+
+There&#39;s a knock on your door. One of your friends is supposed to be coming over for dinner, soon, so you think they must just be early.&lt;br&gt;
+
+Instead, there are four men in suits at the door, flanked by a SWAT team with guns raised. They order you to drop to the ground with your hands on your head. You comply, but they kick you a few times anyway before throwing you into the van. As you&#39;re driven away from your new life, your last chance at freedom, you wonder who it was that betrayed you and turned you in.&lt;br&gt;
+
+Your trial passes quickly, though it is televised widely. It turns out that no one betrayed you. The prosecution calls only witnesses from your past life, to confirm who you are. They call no witnesses from Commerce, Texas. No, they found you only through accident. Someone in the coffee shop where you worked had posted a series of photos on social media, and your face happened to be in the background. A long time ago, every social media company in the nation made a deal with the Department of Justice to allow all of their data to be scraped to help solve criminal cases. You had done everything you could to hide yourself, but an algorithm was still capable of recognizing your face.&lt;br&gt;
+
+You are found guilty of every count brought against you. Breaking your contract with the Scholars Draft, obstructing justice, forgery. The judge sentences you to life in prison.&lt;br&gt;
+
+Strangely, you don&#39;t even regret it. You refused to serve the corporations destroying academia, you refused to exploit other people, you refused to partake in the consumption of human lives.&lt;br&gt;
+
+And, for a time, you lived freely. More freely than you ever did before.&lt;br&gt;
+
+So, no. You don&#39;t regret anything at all.&lt;br&gt;
+
+[[The End-&gt;Credits]]]]
+(click: ?construction)[(replace:?barista)[](replace:?construction)[You get a job working for a construction company. It doesn&#39;t pay well, and the labor is hard work, but it&#39;s a job.&lt;br&gt;
+
+The day that you&#39;re supposed to have reported to Celestial Streams HQ comes and goes. Soon, your name and face are being shown in the news, and your status as a fugitive is broadcast to the whole country. You begin to fear it is only a matter of time before you are recognized.&lt;br&gt;
+
+But, as each day passes without police or government agents showing up at your door, you begin to dare to hope that you&#39;ve succeeded.&lt;br&gt;
+
+You never thought you could be happy in any job outside of science, but there is something grounding about your work. When you were an astrophysicist, you were so far removed from everything you worked on. You love space, the beauty of planets and stars and nebulae and galaxies, and the wonder they inspired in you, are what got you to pursue astrophysics in the first place. But in your typical workday as a scientist, you weren&#39;t looking at those beautiful celestial objects. You were writing and debugging tedious code, and writing grants begging for funding, and writing telescope proposals begging for observing time, and serving on university committees, and attending meeting after meeting where very little was every done or decided.&lt;br&gt;
+
+With your work now, though, you can physically see the progress, and its impact on people&#39;s lives. Every single day, you help to craft something with your own hands that will help someone. It&#39;s a hard job, physically, but you find yourself enjoying it.&lt;br&gt;
+
+You start caring about things that you never cared about before, ensuring that your interests and hobbies are very different from those you had in your past life. You become a dedicated soccer fan, and you start reading romantasy books, and you don&#39;t drink alcohol, and you learn to crochet.&lt;br&gt;
+
+You make new friends in town, telling them the backstory that you have prepared for yourself. You were raised in Houston, Texas. You enrolled one semester in college but ended up dropping out and working various gigs around the city. After your parents died last year, you needed a change of scenery, and you wanted to get out of the city, so you moved to Commerce. But they left you with a decent inheritance, which you&#39;re hoping to use to buy a house soon.&lt;br&gt;
+
+It takes almost half a year, but you manage to buy that house. And even if everything you tell them about yourself is a lie, you grow closer to your friends. And before long, you realize that you rather like your life. You don&#39;t miss the science at all, anymore, or the needless urgency of the production-focused profit-or-perish lifestyle. This life is good.&lt;br&gt;
+
+And then, one day, almost a year after you received that fateful letter, it happens.&lt;br&gt;
+
+You&#39;re about to head home from your job, when you get a message from Sofía, a co-worker who was coming over tonight to watch the FC Dallas-Houston Dynamo game. (text-color:&quot;LightCoral&quot;)[&quot;Hey, there are some suits crawling around your place. What&#39;s going on?&quot;]&lt;br&gt;
+
+Your chest grows tight. You send a quick reply. &quot;Pub.&quot; Then, panicking, you throw your phone away. If they&#39;re here, it&#39;s only a matter of time before they&#39;ll be tracking your new phone, too. You can only hope Sofía knows what to do with your message.&lt;br&gt;
+
+The persona you&#39;ve built for yourself here doesn&#39;t drink. What if she doesn&#39;t remember? Or what if she just doesn&#39;t understand? She might not remember how you joked about the restaurant where you first hung out, with some other workers, one evening. When you first told her you didn&#39;t drink, and she joked that you shouldn&#39;t have come to the pub, because everyone drank here.&lt;br&gt;
+
+When you walk up to the parking lot, she&#39;s there, waiting for you. You don&#39;t even give her time to ask. You tell her everything.&lt;br&gt;
+
+By the time you finish, she&#39;s grabbing you by the arm and pulling you down the street, toward her place. (text-color:&quot;LightCoral&quot;)[&quot;Don&#39;t worry,&quot;] she says. (text-color:&quot;LightCoral&quot;)[&quot;I&#39;ve got you. They&#39;re not going to take you.&quot;]&lt;br&gt;
+
+She takes you to her home, where she cooks you a meal, while her wife puts on the soccer game for you to watch. (text-color:&quot;LightCoral&quot;)[&quot;Don&#39;t worry,&quot;] Sofía says again. (text-color:&quot;LightCoral&quot;)[&quot;If they come here, I&#39;ll tell them what I know. You&#39;re a coworker, but I don&#39;t know you very well. We&#39;ve hung out a few times. But you were always pretty secretive about yourself. That&#39;s all I&#39;ll say.&quot;]&lt;br&gt;
+
+No one comes knocking until early the next morning. Sofía guides you to a closet to hide, while her wife answers the door. You can hear faint echoes of their voices through the house. Eventually, you hear the door close.&lt;br&gt;
+
+Sofía comes to find you. (text-color:&quot;LightCoral&quot;)[&quot;All they did was ask questions. They have no reason to believe you&#39;re here. It&#39;s going to be okay.&quot;]&lt;br&gt;
+
+&quot;How long?&quot; Your words are halting. &quot;How long do you think I&#39;ll have to hide here?&quot; //How long will you// let //me hide here//? You&#39;re really asking.&lt;br&gt;
+
+(text-color:&quot;LightCoral&quot;)[&quot;Until we can leave town safely.&quot;]&lt;br&gt;
+
+You wait a week. The federal officers come to Sofía&#39;s door one more time, but they do not search the house, and you remain well hidden in the closet. Then, the officers seem to leave town, convinced that you must have left.&lt;br&gt;
+
+You can&#39;t stay here any longer. Everyone knows they&#39;re looking for you, now. Your cover is blown.&lt;br&gt;
+
+Sofía gives you a cowboy hat, sunglasses, and a large denim jacket. Then, one morning, before the sun is up, she and her wife rush you into their car, and drive you south, to Corpus Christi. (text-color:&quot;LightCoral&quot;)[&quot;I&#39;ve got family there,&quot;] Sofía says. (text-color:&quot;LightCoral&quot;)[&quot;I&#39;ve explained everything. They&#39;ll take care of you.&quot;]&lt;br&gt;
+
+All you can do is thank her. When you arrive in Corpus Christi, you cry, and you hug, and you thank Sofía and her wife once more. It&#39;s going to be hard, starting over. But you&#39;ve done it before. And this time, you&#39;re not alone.&lt;br&gt;
+
+It&#39;s easier to survive, with friends. You can do it again.&lt;br&gt;
+
+[[The End-&gt;Credits]]]]
+]]
+
+(click: ?country)[(replace:?town)[](replace:?woods)[](replace:?friend)[](replace:?country)[Your professor life hasn&#39;t paid you as much as your doctoral peers who work for hedge funds, insurance companies, or weapons manufacturers, but you&#39;ve still managed to save quite a bit of money. So, you withdraw as much as you can from your accounts, and then you pack as much as you can into a duffel bag and a backpack.&lt;br&gt;
+
+[Buy a forged passport]&lt;forgepass|&lt;br&gt;
+[Steal a passport from someone at the airport]&lt;stealpass|&lt;br&gt;
+
+(click: ?forgepass)[(replace:?stealpass)[](replace:?forgepass)[You&#39;ve never done this before. You don&#39;t even know how to get a fake driver&#39;s license, much less passports. You do some searching on the internet and find someone who&#39;s able to help you. Or, you hope they&#39;ll help you. They take your money, at least. You submit a scan of your own passport photo, for them to use in the forged document, and they say you should receive the document in your mailbox in two days.&lt;br&gt;
+
+When the day of the delivery comes, you wait at your door all day, impatient and wracked with anxiety. The mail never comes. Instead, you hear sirens approaching, and the next thing you know, a squad of police cars have surrounded your house.&lt;br&gt;
+
+You have no choice, then, but to surrender, when they arrest you.&lt;br&gt;
+
+That evening, a government lawyer calmly explains to you that the passport forgery was a sting. She tells you that the government works closely with Celestial Streams to surveil all academics with tenure, to ensure that those who are drafted do not attempt to flee. She tells you that your mission would have made you famous, and you made a very foolish decision.&lt;br&gt;
+
+You feign ignorance and innocence, but you know that it matters little. They will make sure the jury is packed with people who love Celestial Streams, and who distrust universities and professors. People like that are easy to find, these days.&lt;br&gt;
+
+So, the lawyer gives you a choice. You can go to trial, where she says precedent dictates that the judge will sentence you to a prison term twice the length of time you would have served Celestial Streams. Or, you can agree to be brought to Celestial Streams, and they will consider this incident forgotten.&lt;br&gt;
+
+[Agree to the terms]&lt;continue|&lt;br&gt;
+[Refuse service in the Scholars Draft]&lt;trial|&lt;br&gt;
+
+(click: ?continue)[(replace:?trial)[](replace:?continue)[{(masteraudio: &#39;stopall&#39;)
+(track: &#39;theme&#39;, &#39;loop&#39;, true)
+(track: &#39;theme&#39;, &#39;playwhenpossible&#39;)}
+[[Go to Celestial Streams-&gt;Welcome to Celestial Streams]]
+]]
+
+(click: ?trial)[(replace:?continue)[](replace:?trial)[Your trial is swift and the judge is unforgiving. You are sentenced to life in prison.&lt;br&gt;
+
+You wonder, then, what the mission must have been, that this would be your sentence.&lt;br&gt;
+
+You wonder whether, perhaps, you made the right choice, after all.&lt;br&gt;
+
+[[The End-&gt;Credits]]]]
+]]
+
+(click: ?stealpass)[(replace:?forgepass)[](replace:?stealpass)[You head to the JFK International Airport and find a seat near the bag check outside of the international terminal, scouring the crowd for someone whose appearance might match yours close enough. You wait for a couple hours before spotting someone who you think resembles you enough for this to work.&lt;br&gt;
+
+Your target is holding the passport in their hand. You have a matter of seconds to decide on your approach.&lt;br&gt;
+
+[Casually bump into your target]&lt;bump|&lt;br&gt;
+[Theatrically drop all your things right in front of your target]&lt;drop|&lt;br&gt;
+
+(click: ?bump)[(replace:?drop)[](replace:?bump)[You walk briskly on a collision path and casually bump into your target, reaching for the passport. You manage to grab hold of it, but you know the moment you do that you&#39;ve been made. A shout comes from behind you, (text-color:&quot;LightGreen&quot;)[&quot;Hey! My passport!&quot;]&lt;br&gt;
+
+You run, but it&#39;s too little, too late. Airport security tackles you. Your face hits the floor, hard. There&#39;s a lot of blood. They take you in for questioning, and it doesn&#39;t take them long to figure out what has happened. And once they do, you don&#39;t even bother denying it.&lt;br&gt;
+
+The next several weeks are a blur. Your name is on every newscast. Your trial progresses quickly. The judge sentences you to life in prison. It seems steep to you, considering the charges. But there&#39;s nothing you can do.&lt;br&gt;
+
+You regret your choices for the rest of your life.&lt;br&gt;
+
+[[The End-&gt;Credits]]]]
+
+(click: ?drop)[(replace:?bump)[](replace:?drop)[You unzip your bags and walk briskly on a collision path with your target, stumbling right in front of them and dropping all of your belongings, which go scattering. Your target gives a shout of fright, but then apologizes and leans down to help you gather your things.&lt;br&gt;
+
+Your heart pounds as your victim hands you a bundle of clothes to put back in your bag. You reach for the bundle, grabbing it //just// right, and the passport slides down into your bag with the clothes.&lt;br&gt;
+
+The poor fool doesn&#39;t even notice.&lt;br&gt;
+
+Once your belongings are gathered, you head for an airline desk. There, you book a seat on the next nonstop flight to Morocco, which has no extradition treaty with the United States, paying in cash. You&#39;re afraid that you&#39;ll be discovered immediately, but the agents who check your stolen passport glance your direction and appear satisfied.&lt;br&gt;
+
+You leave, then, without incident. A part of you is afraid that you&#39;ll be caught when you arrive. But you&#39;re not. You arrive in Rabat and enter the country without incident.&lt;br&gt;
+
+You can&#39;t believe your luck. You&#39;ve made it out of the United States.&lt;br&gt;
+
+As for what comes next...well, you&#39;ll figure it out. You&#39;ll do whatever you have to do. Celestial Streams will never get their hands on you.&lt;br&gt;
+
+[[The End-&gt;Credits]]]]
+]]
+]]
+
+(click: ?woods)[(replace:?country)[](replace:?town)[](replace:?friend)[](replace:?woods)[You have two weeks. That&#39;s plenty of time to plan. You buy some camping materials, nature and survival guidebooks, and some tools you&#39;ll need for shelter construction, in cash, so the purchases can&#39;t be traced. A week before you&#39;re due to report, you&#39;ve made your plan and gathered all the materials you think you&#39;ll need. You&#39;re ready.&lt;br&gt;
+
+[Sneak into a National Forest]&lt;forest|&lt;br&gt;
+[Disappear into the West Virginia wilderness]&lt;wv|&lt;br&gt;
+
+(click: ?forest)[(replace:?wv)[](replace:?forest)[You take a series of buses to Wyoming, paid for in cash, and then sneak into the Bridger–Teton National Forest. It&#39;s one of the largest national forests in the United States, with almost 14,000 square kilometers.&lt;br&gt;
+
+A national park gives you some key advantages: there is an extensive network of hiking trails, so you don&#39;t want to be spotted too many times, but if someone randomly comes across you near one of those trails, they should assume that you are just passing through. Additionally, you may be able to ask for food from &quot;fellow&quot; hikers, pretending that you didn&#39;t pack enough for your hike (or even steal food or materials from campers).&lt;br&gt;
+
+You spend two days wandering the grounds of the park, dodging park rangers and attempting to find a secluded enough spot to set up your camp. You find a good spot, not too far from some freshwater, and hidden behind some boulders deep in the woods. You set up a makeshift shelter.&lt;br&gt;
+
+The first few days go well, or at least, not worse than you expected. The nights are cold, but your sleeping bag and coat are more than enough to keep you warm. You have some hunting gear (some traps and knives, as guns would be too loud), cooking gear, canned food, and more than enough water purification tablets, to keep you safe for a while. However, you want to reserve your canned food for emergencies, and you don&#39;t want to set up traps or start hunting until you know the area and the habits of the park rangers a little better.&lt;br&gt;
+
+[Look for campers to steal from]&lt;steal|&lt;br&gt;
+[Live off berries as long as you can before resorting to theft]&lt;berries|&lt;br&gt;
+
+(click: ?steal)[(replace:?berries)[](replace:?steal)[You know how to get to the campsites, and it doesn&#39;t take you long to scout out a campsite with a couple who seem to be readying for a short excursion, leaving a cooler and several bags unattended.&lt;br&gt;
+
+You wait two minutes after they leave before sneaking into the campsite and going through their bags. You find several bags of nuts and dried fruit and a few protein bars, which you stuff into your pockets. From the cooler, you grab a bottle of bear, and—&lt;br&gt;
+
+(text-color:&quot;LightGreen&quot;)[&quot;Hey, what the fuck are you doing?&quot;]&lt;br&gt;
+
+//Fuck.// They must have come back for something they forgot. You don&#39;t even turn to look at the sound of the voice. You run.&lt;br&gt;
+
+You feel a sharp pain in your chest before you even hear the //bang// of the gun firing.&lt;br&gt;
+
+You find yourself staring at a few blades of grass, a gnarled root, and a warm crawling in the dirt.&lt;br&gt;
+
+Darkness creeps in.&lt;br&gt;
+
+[[The End-&gt;Credits]]]]
+
+(click: ?berries)[(replace:?steal)[](replace:?berries)[Fortunately, you have a guidebook to help you identify berries that are safe to eat. You soon identify a wealth of saskatoon berries nearby, edible and delicious, with a sweet, almond-like flavor.&lt;br&gt;
+
+It&#39;s enough to keep you going for a while, as you scout out more of the surrounding territory, get used to the hiking trails and the campsites, and the patterns of the park rangers.&lt;br&gt;
+
+Before long, you&#39;re able to snag the odd protein bar or bag of nuts from campsites, and confidently set out a few traps to catch rabbits and squirrels that you&#39;re quite sure no one else will come across.&lt;br&gt;
+
+And as the days turn into weeks and months, you begin to believe that your plan might work. You reinforce your shelter, making it stronger and more weather-resistant.&lt;br&gt;
+
+The winter is hard, and you become more reliant on thievery for food and warmth.&lt;br&gt;
+
+You lose count of the exact number of days you&#39;ve been out here. You keep track of time with the help of the phases of the moon and the passing of the seasons.&lt;br&gt;
+
+The seasons turn to years. Your fingers are more calloused than they have ever been. You grow bolder, spending your days wandering more and more of the park. It is beautiful, after all.&lt;br&gt;
+
+You are amazed at how quickly you grow used to this life, this quiet seclusion. Your life as a professor feels like nothing more than a long-faded dream, something you&#39;re not entirely sure ever happened at all. Or, if it did happen, it must have happened to someone else.&lt;br&gt;
+
+You wonder at the politics of the outside world. You wonder what has happened to friends and family. There&#39;s no way for you to know, aside from snippets of conversation as you pass by hikers, which you do less and less over the years. You want to avoid becoming recognizable, here.&lt;br&gt;
+
+One summer, when you&#39;re out gathering food, you come back to find a rockslide has destroyed your shelter.&lt;br&gt;
+
+[Rebuild the shelter near the original location]&lt;rebuild|&lt;br&gt;
+[Build a new shelter elsewhere]&lt;move|&lt;br&gt;
+
+(click: ?rebuild)[(replace:?move)[](replace:?rebuild)[You know the entire park very well, now, and there&#39;s nowhere else where you&#39;re convinced you won&#39;t be found. Moving is too risky. You need to stay put.&lt;br&gt;
+
+It doesn&#39;t even take you very long to rebuild the shelter. You&#39;ve made repairs before, and you know what you&#39;re doing.&lt;br&gt;
+
+The real issue is that all your belongings are buried beneath the rocks. It takes you a matter of days to steal a new sleeping bag and mess kit. You&#39;re fortunate that this happened in summer, rather than winter.&lt;br&gt;
+
+You settle back into your routine, and the years pass again.&lt;br&gt;
+
+In the end, it&#39;s a matter of time. You knew it was always going to be a matter of time.&lt;br&gt;
+
+You are most fortunate in that it is a long time. By your counting of the seasons, it&#39;s been over 20 years. Longer than you ever could have hoped.&lt;br&gt;
+
+When the park rangers find you, you give them a fake name, but they still direct you to come with them, clearly surprised at the quality and age of your shelter and eager to determine who you really are.&lt;br&gt;
+
+With your age, it takes them a while to identify you. But, eventually, they do.&lt;br&gt;
+
+You break down, then, and ask them, plead with them, not to turn you in.&lt;br&gt;
+
+Then they tell you there is nowhere to turn you in, anyway. The Scholars Draft was abolished almost 10 years ago. After you went missing, another academic was drafted to Celestial Streams in your place and forced to go on a life-long, one-way mission to another star system. They managed to break through the encryption on their spacecraft communications equipment and send back daily reports to the public on Earth. They were being confined to a small ship, alone, for decades, in what amounted to solitary confinement. They had been coerced and had not volunteered for the mission at all. Celestial Streams had given them no choice. The public loved this astronaut more than any other in history, and when their plight was made known, public opinion turned against the Scholars Draft.&lt;br&gt;
+
+There was no way to save the lost astronaut and bring them home. But they ensured the Academic Corporations were broken up and the Scholars Draft abolished.&lt;br&gt;
+
+You are free.&lt;br&gt;
+
+[[The End-&gt;Credits]]]]
+(click: ?move)[(replace:?rebuild)[](replace:?move)[It&#39;s a shame, because this was the best location in the park. But it&#39;s not safe, anymore.&lt;br&gt;
+
+Of course, you&#39;ve been preparing for myriad disasters, and you already had a secondary location in mind, so it&#39;s only a week before you have constructed a temporary shelter there and reacquired possessions from unsuspecting campers. Then, it&#39;s only a few more weeks before your shelter is reconsutrcteed into something more permanent.&lt;br&gt;
+
+You settle back into your routine, but in the end, it&#39;s only a matter of time.&lt;br&gt;
+
+One morning, you&#39;re awakened by the sound of voices outside your shelter.&lt;br&gt;
+
+Panicking, you scramble up and outside to try to escape, but it&#39;s too late. A couple of armed officers are flanking a group of surveyors, and they&#39;ve spotted you. The officers point their guns your direction, and it&#39;s over. You&#39;re arrested.&lt;br&gt;
+
+You stay silent, but it doesn&#39;t matter. They have facial recognition software installed on their government-issued phones, capable of identifying you within moments despite your advanced age since the last time you were seen publicly.&lt;br&gt;
+
+At your trial, you learn that the surveyors were acting on behalf of mining corporations, which had lobbied the government to allow mining on all formerly protected lands. The National Park that should have been safe forever was going to be destroyed for profit.&lt;br&gt;
+
+You are sentenced to 25 years in prison.&lt;br&gt;
+
+You can&#39;t help but wonder if you made a mistake, in not just turning yourself in for the draft.&lt;br&gt;
+
+[[The End-&gt;Credits]]]]
+]]
+]]
+(click: ?forest)[(replace:?wv)[](replace:?forest)[You buy a bunch of survival gear in cash and head for the forests of West Virginia. You spend a few days sleeping in the wilderness, scouting out a secluded enough area to set up your camp.&lt;br&gt;
+
+It doesn&#39;t take long for you to find an adequate spot in the Appalachians, near a fresh stream. The land is beautiful here, and you go on regular hikes, watching sunrise and sunset. This life is far more peaceful than anything you could have imagined before.&lt;br&gt;
+
+Finding food, however, is more difficult. You stocked up on several weeks worth of canned goods before heading out here, but that won&#39;t last forever. You gather berries and mushrooms, relying on survival guides to tell you what&#39;s safe.&lt;br&gt;
+
+Occasionally, you march several miles to the nearest small town, to steal from unlocked houses or shoplift from large grocery stores.&lt;br&gt;
+
+Eventually, though, you know you must deal with the fact that you may have to stay out here for a long time.&lt;br&gt;
+
+[Build a permanent structure]&lt;structure|&lt;br&gt;
+[Live out of your tent and stay mobile]&lt;tent|&lt;br&gt;
+
+(click: ?structure)[(replace:?tent)[](replace:?structure)[{(masteraudio: &#39;stopall&#39;)
+(track: &#39;theme&#39;, &#39;loop&#39;, true)
+(track: &#39;theme&#39;, &#39;playwhenpossible&#39;)}It takes you months, but following your survival guides, you manage to construct a small house for yourself. It&#39;s not much to look at, a simple log cabin with just a single room, but it provides much more warmth and shelter than your tent.&lt;br&gt;
+
+And before long, you really start to think of it as your home.&lt;br&gt;
+
+Time passes, and the seasons cycle. The summers are hot and the winters cold. Your shelter helps you resist the worst of the weather.&lt;br&gt;
+
+You become used to gathering food, and you find it less difficult than you expected to find what you need. You rais the nearby town less and less, both because it&#39;s the most likely time for you to get spotted or caught, and because it becomes less necessary as your survival skills improve.&lt;br&gt;
+
+The seasons turn to years. You are spotted by hikers, twice, while out walking. Fortunately, it&#39;s far from your home.&lt;br&gt;
+
+On your rare forays into town, you often try to grab a newspaper, to help keep track of the date and of significant occurrences across the country and around the world. The news is rarely good.&lt;br&gt;
+
+The years turn to decades. You befriend a family of squirrels. When you see your reflection in the stream where you get your water, you no longer recognize yourself.&lt;br&gt;
+
+The decades become a lifetime. You steal a newspaper from town for the first time in a few years. The names mean nothing to you. You look at the year, but it&#39;s been so long that you don&#39;t actually remember the exact year you fled, so you don&#39;t even know exactly how long you&#39;ve been out here.&lt;br&gt;
+
+One cold winter&#39;s morning, you step outside your small cabin and slip on an ice-covered rock. You fall hard and hear the snap of several breaking bones. Grimacing, you find yourself incapable of standing up.&lt;br&gt;
+
+You drag yourself along the ground for a while, before your limbs give out, too weak and cold to carry on.&lt;br&gt;
+
+Snow falls between the skeletal limbs of the trees.&lt;br&gt;
+
+So, then. This is it.&lt;br&gt;
+
+It&#39;s alright. You&#39;ve lived a long life. And a good one. With your freedom, you&#39;ve been happier than you ever imagined you would be.&lt;br&gt;
+
+It was worth it, in the end.&lt;br&gt;
+
+One of the squirrels hops over the icy ground and sniffs at your face, before nestling against your side.&lt;br&gt;
+
+[[The End-&gt;Credits]]]]
+
+(click: ?tent)[(replace:?structure)[](replace:?tent)[
+One path ending in lyme disease -&gt; flu-like symptoms then tinnitus, vertigo, dizziness, eventually you scramble your way to a road and wake up in hospital
+[[The End-&gt;Credits]]]]
+]]
+]]
+(click: ?friend)[(replace:?country)[](replace:?woods)[](replace:?town)[](replace:?friend)[
+
+[[The End-&gt;Credits]]
+]]
+
+&lt;/div&gt;]]
+}
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
