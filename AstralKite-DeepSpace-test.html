@@ -302,10 +302,10 @@ tw-sidebar { display: none; }
 (track: &#39;theme&#39;, &#39;playwhenpossible&#39;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 	[[Play Astral Kite: Deep Space-&gt;cw]]
-&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Letter1" tags="" position="625,425" size="100,100">{(set: $year to (random: 2040, 2240))
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Letter1" tags="" position="625,425" size="100,100">{(set: $ontherun to &quot;no&quot;)
+(set: $year to (random: 2040, 2240))
 (set: $months to (a: &#39;January&#39;, &#39;February&#39;, &#39;March&#39;, &#39;April&#39;, &#39;May&#39;, &#39;June&#39;, &#39;July&#39;, &#39;August&#39;, &#39;September&#39;, &#39;October&#39;, &#39;November&#39;, &#39;December&#39;))
 (set: $month to $months&#39;s (random: 1, 12))
-
 (if: $month is &#39;February&#39;)[(set: $day to (random: 1, 28))]
 (else-if: ($month is &quot;April&quot;) or ($month is &quot;June&quot;) or ($month is &quot;September&quot;) or ($month is &quot;November&quot;))[(set: $day to (random: 1, 30))]
 (else:)[(set: $day to (random: 1, 31))]}
@@ -319,7 +319,8 @@ tw-sidebar { display: none; }
 &lt;/div&gt;
 ]]}
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Welcome to Celestial Streams" tags="" position="625,550" size="100,100">&lt;div class=&quot;controls-section&quot;&gt;
-{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ontherun to &quot;no&quot;)
+(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 (text-color: &quot;LightCoral&quot;)[We are thrilled to welcome you to Celestial Streams, the world’s leading space science and aerospace academic corporation. We extend our gratitude for your choice to pursue a career as a tenured Professor and in so doing entering the Scholars Draft. We would like to assure you that we are currently reviewing your stated draft preferences to determine which of our projects will be the best fit for you.&lt;br&gt;
 
 In the meantime, please fill out your personal information.]&lt;br&gt;
@@ -560,7 +561,7 @@ showControls: false</tw-passagedata><tw-passagedata pid="13" name="Credits" tags
 (else-if: &quot;PSR&quot; is in $dest)[&lt;a href=&quot;https://en.wikipedia.org/wiki/PSR_J0437%E2%88%924715&quot; target=&quot;_blank&quot;&gt;PSR J0437-4715&lt;/a&gt;]
 (else-if: &quot;TOI-700&quot; is in $dest)[&lt;a href=&quot;https://en.wikipedia.org/wiki/TOI-700_d&quot; target=&quot;_blank&quot;&gt;TOI-700 d&lt;/a&gt;]
 (else-if: &quot;J318&quot; is in $dest)[&lt;a href=&quot;https://en.wikipedia.org/wiki/PSO_J318.5%E2%88%9222&quot; target=&quot;_blank&quot;&gt;PSO J318.5-22&lt;/a&gt;]
-(else:)[&lt;a href=&quot;https://en.wikipedia.org/wiki/Proxima_Centauri&quot; target=&quot;_blank&quot;&gt;Proxima Centauri&lt;/a&gt;]]&lt;br&gt;
+(else:)[&lt;a href=&quot;https://en.wikipedia.org/wiki/Proxima_Centauri&quot; target=&quot;_blank&quot;&gt;Proxima Centauri&lt;/a&gt;]&lt;br&gt;]
 |special)[(transition: &quot;dissolve&quot;)[Special thanks to...]]&lt;br&gt;
 |silvi)[(transition: &quot;dissolve&quot;)[Silvana Delgado Andrade]]&lt;br&gt;
 |heath)[(transition: &quot;dissolve&quot;)[Heath Redmond]]&lt;br&gt;
@@ -574,7 +575,62 @@ showControls: false</tw-passagedata><tw-passagedata pid="13" name="Credits" tags
 |play)[(transition: &quot;dissolve&quot;)[[[Play Again-&gt;Welcome]]]]&lt;br&gt;
 }
 {
-(if: $regrets is not &quot;&quot; and $music is not &quot;&quot; and $food is not &quot;&quot; and &#39;8B&#39; is in $received)[
+(if: $ontherun is &quot;yes&quot;)[
+	(live: 3.5s)[
+		(set: $transCounter to it + 1)
+
+		(if: $transCounter is 1)[
+			(show: ?music)
+		]
+		(else-if: $transCounter is 2)[
+			(show: ?art)
+		]
+		(else-if: $transCounter is 3)[
+			(show: ?playtest)
+		]
+		(else-if: $transCounter is 4)[
+			(show: ?studios)
+        ]
+		(else-if: $transCounter is 5)[
+			(show: ?special)
+         ]
+		(else-if: $transCounter is 6)[
+			(show: ?silvi)
+         ]
+		(else-if: $transCounter is 7)[
+			(show: ?heath)
+         ]
+		(else-if: $transCounter is 8)[
+			(show: ?gwen)
+         ]
+		(else-if: $transCounter is 9)[
+			(show: ?quinn)
+         ]
+		(else-if: $transCounter is 10)[
+			(show: ?tful)
+         ]
+         (else-if: $transCounter is 11)[
+         	(show: ?carport)
+        ]
+		(else-if: $transCounter is 12)[
+			(show: ?player)
+		]
+        (else-if: $transCounter is 13)[
+        	(show: ?thanks)
+		]
+        (else-if: $transCounter is 14)[
+	        (show: ?seeyou)
+            ]
+        (else-if: $transCounter is 15)[
+			(show: ?play)
+		]
+		(else:)[
+			(stop:)
+		]
+	]
+]
+
+(else-if: $regrets is not &quot;&quot; and $music is not &quot;&quot; and $food is not &quot;&quot; and &#39;8B&#39; is in $received)[
 	(live: 3.5s)[
 		(set: $transCounter to it + 1)
 
@@ -9582,8 +9638,10 @@ When your eyes close for the final time, a soft smile lingers on your face.
 (set: $dest to &quot;M57&quot;)
 (set: $received to &quot;8A,7B&quot;)
 [[Credits]]</tw-passagedata><tw-passagedata pid="65" name="On the Run" tags="" position="750,500" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;{(masteraudio: &#39;stopall&#39;)
+(set: $ontherun to &quot;yes&quot;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
-(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)}
+(track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)
+(set: $received to &#39;&#39;)(set: $regrets to &quot;&quot;)(set: $music to &quot;&quot;)(set: $food to &quot;&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 You never thought it would happen. You never thought *you* would get selected for the Scholars Draft.&lt;br&gt;
 
