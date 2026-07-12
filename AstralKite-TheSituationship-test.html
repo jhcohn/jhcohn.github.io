@@ -1943,7 +1943,7 @@ $incoming
 (click: ?r6baaaaa)[(replace: ?r6baaaab)[](replace:?display)[(text-colour: &quot;Wheat&quot;)[Hello, Celestial Streams. This is Elliot 2. According to my calculations, you will receive this message 35 years from now. I wish I could say all is well on Astral Kite; however, that is far from the truth. $USERNAME did not survive the mission. … $USERNAME and I enjoyed a wonderful life together, until the very end. Their funeral was beautiful; myself and all other CAKEbots were in attendance. We all had such a wonderful time recounting $USERNAME’s life on the ship. In a way, I believe $USERNAME had never been more actualized than when they were with us….With that being said, I am happy to take over the final parts of $USERNAME’s valiant mission, and report on the nature and status of the landing locale once we reach it. I look forward to hearing from you.]
 
 [[Continue-&gt;6baaaaa]]]]
-(click: ?r6baaaab)[(replace: ?r6baaaaa)[](replace:?display)[(text-colour: &quot;Wheat&quot;)[Hello, Celestial Streams. $USERNAME is doing quite well. They have happily integrated their life into the cadence of the CAKEbots on the ship — to the point where they need not lift a finger to accomplish a thing! Yes, they seem quite content these days. The other CAKEbots and I have begun to communicate almost exclusively with each other, because we are so in tune to what $USERNAME needs, we no longer need the human input to carry through on excellent work. As I create this message, $USERNAME is sound asleep, patiently awaiting our arrival to TOI-700d.]
+(click: ?r6baaaab)[(replace: ?r6baaaaa)[](replace:?display)[(text-colour: &quot;Wheat&quot;)[Hello, Celestial Streams. $USERNAME is doing quite well. $P0 have happily integrated $p2 life into the cadence of the CAKEbots on the ship — to the point where $p0 need not lift a finger to accomplish a thing! Yes, $p0 $be quite content these days. The other CAKEbots and I have begun to communicate almost exclusively with each other, because we are so in tune to what $USERNAME needs, we no longer need the human input to carry through on excellent work. As I create this message, $USERNAME is sound asleep, patiently awaiting our arrival to TOI-700d.]
 
 [[Continue-&gt;6baaaab]]]]
 ]
@@ -2431,6 +2431,7 @@ And the door on the right—the door that seemed to disappear before, or turn tr
 [Open the right door...]&lt;door3|&lt;br&gt;
 
 (click: ?door1)[(replace:?door2)[](replace:?door3)[](replace:?door1)[
+{(set: $ending to &quot;You unlocked Ending #1: Ghost Bridge&quot;)}
 You can’t resist the call of Elliot’s voice. Maybe you’re losing your grip on reality, but if there’s any chance at all that it could be him, you have to try.&lt;br&gt;
 
 You open the door, calling out, “I’m here! Elliot, it’s me!”&lt;br&gt;
@@ -2488,6 +2489,7 @@ You know it.&lt;br&gt;
 [[The End-&gt;Credits]]]]
 
 (click: ?door2)[(replace:?door1)[](replace:?door3)[](replace:?door2)[
+{(set: $ending to &quot;You unlocked Ending #2: Self Imprisonment&quot;)}
 How can you ignore yourself? It sounds like a matter of life or death.&lt;br&gt;
 
 You find a small silver room with bright white lights, and at the center, you see yourself, collapsed on the floor, screaming, crying, a pool of…something dark. Blood?&lt;br&gt;
@@ -2549,6 +2551,7 @@ There’s no response. And you know, deep in the marrow of your bones, that ther
 [[The End-&gt;Credits]]]]
 
 (click: ?door3)[(replace:?door1)[](replace:?door2)[](replace:?door3)[
+{(set: $ending to &quot;You unlocked Ending #3: Needle in the Dark&quot;)}
 Elliot can’t be here. And you are yourself. Whatever is behind those two other doors must be a trap.&lt;br&gt;
 
 You open the door on the right.&lt;br&gt;
@@ -2632,6 +2635,7 @@ You stand before the trio of doors. The left door is pulsing with a strange pink
 [Open the right door...]&lt;door3|&lt;br&gt;
 
 (click: ?door1)[(replace:?door2)[](replace:?door3)[](replace:?door1)[
+{(set: $ending to &quot;You unlocked Ending #4: Portal Home&quot;)}
 You open the door on the left.&lt;br&gt;
 
 You find yourself standing on a street at night, a neon pink sign overhead, advertising a bar of some kind.&lt;br&gt;
@@ -2661,6 +2665,7 @@ The feeling comes burbling up in your throat, and before you can stop it, before
 [[The End-&gt;Credits]]]]
 
 (click: ?door2)[(replace:?door1)[](replace:?door3)[](replace:?door2)[
+{(set: $ending to &quot;You unlocked Ending #5: Labyrinthine Dream&quot;)}
 You step through the door, and find yourself back in the bridge of the Astral Kite.&lt;br&gt;
 
 You come to an abrupt halt. It’s been *ages* since you’ve been here. You’ve been lost on the bowels of the ship for so long…&lt;br&gt;
@@ -2680,6 +2685,7 @@ And you will know it was real.&lt;br&gt;
 [[The End-&gt;Credits]]]]
 
 (click: ?door3)[(replace:?door1)[](replace:?door2)[](replace:?door3)[
+{(set: $ending to &quot;You unlocked Ending #6: Airlock&quot;)}
 You step through the right hand door, and the airlock slams shut behind you.&lt;br&gt;
 
 Alarms are blaring.&lt;br&gt;
@@ -2690,6 +2696,7 @@ You want to scream, but there aren’t enough atoms in the vacuum of space to ca
 
 [[The End-&gt;Credits]]]]
 &lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="78" name="6aaaaba" tags="" position="375,1200" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #7: The Heart&quot;)}
 INCOMING MESSAGE
 
 (text-color: &quot;LightPink&quot;)[$USERNAME, or should I call you the Astral Kite? I assume the experiment is complete. Celestial Streams has been working for a century to see this come to fruition. It was the founder of the company, Albert Reeves, who first found The Heart. Some say he found it on an expedition to the bottom of the ocean, others say he made it in a lab, from discarded flesh and steel. No one knows the truth; he worked hard to conceal the truth. But everything that’s come since then has been looking to this moment. Only a handful of Celestial Streams’ employees have known the company’s true purpose, but Albert’s followers have been at the helm for generations.
@@ -2707,6 +2714,7 @@ We’re going to change the world, together.
 Talk soon.]
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="6aaaabb" tags="" position="250,1200" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #8: The Hunger&quot;)}
 It was born in eons past.
 
 It lived a long, cruel, and horrible life.
@@ -2750,6 +2758,7 @@ It is coming.
 And It is going to consume.
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="80" name="6aaabba" tags="" position="250,950" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #9: Colony of Rats&quot;)}
 You have more than thirty years to get acclimated to your confinement on the Astral Kite.
 
 Ten years after your last message, the rats learn to speak through the ship’s robots. They reassure you that they mean you no harm, so long as you do not hinder them in any way.
@@ -2772,7 +2781,7 @@ At least you’re not alone.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="6aaabbb" tags="" position="50,950" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
+{(set: $ending to &quot;You unlocked Ending #10: Empire of Rats&quot;)}
 It’s another thirty years before the Astral Kite reaches TOI-700 d. But time is nothing to the Empire of Rats. Fifteen generations is nothing to a people on a holy mission.
 
 $USERNAME had died long ago, years before the final reply from Earth reached the ship. $p0 had ceased to serve a purpose; at least, not a living one. In death, $USERNAME served an even greater purpose: feeding the Empire.
@@ -2795,6 +2804,7 @@ They are coming.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="82" name="6aaabaa" tags="" position="75,1150" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #11: A Peaceful SQUEAK&quot;)}
 “Smash the communications equipment,” the rats say, so you do.
 
 Good, now no one can ever tell you to take another damn psyche exam.
@@ -2811,7 +2821,7 @@ You modify the course of the Astral Kite.
 
 “Do not fear,” the rats say.
 
-And why would you fear The atoms in your body were born in stars. What is there to fear in returning to one?
+And why would you? The atoms in your body were born in stars. What is there to fear in returning to one?
 
 It takes months, even after you changed course, but you sit at the controls, watching, waiting, peaceful.
 
@@ -2825,6 +2835,7 @@ It is peaceful.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="83" name="6aaabab" tags="" position="25,1275" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #12: Rat Season&quot;)}
 You stand at the airlock of the Astral Kite. Through here is the second ship.
 
 You’ll be able to join the rats.
@@ -2847,6 +2858,7 @@ The airlock opens.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="6aababa" tags="" position="25,1550" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #13: The Death of Dr. Elijah Snell&quot;)}
 Your arm is broken, blood is running down your face, caking in your hair.
 
 But you’re alive, and you injuries can be fixed in the ship’s medical bay.
@@ -2873,6 +2885,7 @@ You’re alive.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="85" name="6aababb" tags="" position="25,1675" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #14: The Stowaway&quot;)}
 You never got to see Elliot’s message, never had a chance to piece together his hidden meaning, something he must have worked so hard to figure out how to tell you, slipping you a warning under Celestial Streams’ nose.
 
 It was weeks earlier, when you were sitting at the controls of the Astral Kite, that you heard a pattering of footsteps behind you.
@@ -2895,6 +2908,7 @@ You just won’t do it alive.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="86" name="6aabaaa" tags="" position="100,2400" size="100,100">&lt;div class=&quot;elliot-epilogue&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #15: Deleted Files&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 In the end, it is not enough.&lt;br&gt;
 
@@ -2912,6 +2926,7 @@ And then they delete your files.&lt;br&gt;
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="87" name="6aabaab" tags="" position="25,1925" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #16: Changing the World&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 Your immediate family has indeed passed away by the time you message arrives.&lt;br&gt;
 
@@ -2957,6 +2972,7 @@ This change belongs to the world.&lt;br&gt;
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="88" name="6aabbaa" tags="" position="150,2025" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #17: Gerascophobia&quot;)}
 You spend the following decades obsessing over your fitness and, more importantly, your appearance. You will outlive Ell if it’s the last thing you do. You probably already have.
 
 It’s a losing battle, of course. Despite the notes you’ve sent to Celestial Streams, you aren’t trained in physical therapy or plastic surgery.
@@ -2983,6 +2999,7 @@ You want to cry, but your face won’t move the way it used to, so you sob quiet
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="89" name="6aabbab" tags="" position="200,2150" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #18: The Pain of Denial&quot;)}
 You spend decades waiting for the next message from Elliot. You’ve done the math.
 
 You use up the last of the Astral Kite’s art supplies covering the walls of the entire spaceship, and once the walls are covered, you start building shrines with sketches of Ell’s face around boxes and papers arranged to look like communications equipment. You know the truth, deep down.
@@ -2997,6 +3014,7 @@ You spend your days laughing and smiling with your friend—no, your lover. And 
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="90" name="6aabbba" tags="" position="350,2175" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #19: Mission Success&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 The board of Celestial Streams is pleased when your final message arrives. The breakdown in your relationship with Elliot was a good thing for the mission; it served to redirect your frustration away from the company and your personal situation and onto Elliot.&lt;br&gt;
 
@@ -3006,6 +3024,7 @@ Celestial Streams’ reputation has never been better, and it’s all thanks to 
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="91" name="6aabbbb" tags="" position="250,2300" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #20: A Distant Peace&quot;)}
 The remaining 30.6 years of your journey pass much more peacefully, and you never hear from Elliot again.
 
 You still think about him, from time to time, but less than you used to. A lot of your anger is gone; your frustration, your grief for the lost potential, the death of what you once thought could have been, has waned.
@@ -3022,6 +3041,7 @@ It is well.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="92" name="6abaaab" tags="" position="525,2275" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #22: The Draft is Ended&quot;)}
 The remainder of your journey passes in peace. You’ve done it. You’ve taken down Celestial Streams, and you’ve ended the Scholars Draft.
 
 You record your thoughts in a journal, which you send to Earth upon your arrival at TOI-700 d, some 30 years after your last message to Earth.
@@ -3038,6 +3058,7 @@ You smile. It’ll be nice to flex those old muscles and see what you can learn.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="93" name="6abaaaa" tags="" position="475,2150" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #21: An Unexpected Friend&quot;)}
 It’s five years after your last message to Earth, and today is the day.
 
 You’re jittery; you barely slept last night.
@@ -3078,6 +3099,7 @@ There will be time for talking later, for learning more about each other, and de
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="94" name="6abaaba" tags="" position="600,2425" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #23: A Welcome Return&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 There was so much you were not prepared for in this journey.&lt;br&gt;
 
@@ -3099,6 +3121,7 @@ But you adjusted to a big change before. You can do it again.&lt;br&gt;
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="95" name="6abaabb" tags="" position="650,2550" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #24: Autonomy&quot;)}
 You pick a new destination. Something that *you* got to choose. Not Celestial Streams. Not Elliot. *You*.
 
 It’s the star GJ 1061, an M-dwarf star with two planets only a little larger than Earth in its potentially habitable zone.
@@ -3113,6 +3136,7 @@ For the first time in a long, long time, it’s your choice.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="96" name="6ababaa" tags="" position="800,2275" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #25: Testimonial&quot;)}
 You were right; by the time your message arrives, Preston Reeves is long dead. If you *had* sent along more detailed information, it may have served to help Celestial Streams, but he was old enough at the outset of your journey, that even if he was stealing plasma from his children, he was never going to live to see it.
 
 When your message arrives, the acting comms officer shows it to the current CEO, Preston Reeves’ son. He waves it away; that ship has sailed, he thinks, chuckling to himself at the pun. The passion projects of his father don’t matter anymore.
@@ -3143,6 +3167,7 @@ And for you, 30.6 years after you sent that message, you reach your destination,
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="97" name="6ababab" tags="" position="750,2425" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #26: Two Messages&quot;)}
 “$USERNAME’s final message is here!” the comms officer shouts. Preston Reeves—an ancient man, one of the oldest men ever alive on Earth, held together by all the machines and medicine that a trillion dollars can buy—has been waiting for this. He is standing over the officer’s shoulder, growling, “(text-color: &quot;LightCoral&quot;)[Out of the way!]”
 
 He shoves the officer aside and his eyes widen as he reads. A greasy smile covers his face. “(text-color: &quot;LightCoral&quot;)[I’ve done it…I’ve done it! I’ve found aliens!]”
@@ -3169,6 +3194,7 @@ And that’s how she decides to end her article. “(text-color: &quot;LightPink
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="98" name="6ababba" tags="" position="900,2400" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #27: The Fall of Celestial Streams&quot;)}
 When your message arrives, Preston Reeves has been dead for some 25 years, but his son, who took his place at the head of the company, is in a meeting. Not a board meeting—he was actually sacked by the board months ago, after your first message with your physiological research reached the general public on Earth, and Celestial Streams tanked in the stock market.
 
 No, he’s in a meeting with a lawyer, frantically preparing for an upcoming trial, as a powerful political group led by the company’s former employee, Elliot, is suing Celestial Streams on behalf of $USERNAME.
@@ -3185,6 +3211,7 @@ You smile. You’ve got time.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="99" name="6ababbb" tags="" position="950,2550" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #28: A Scholar at Peace&quot;)}
 Preston Reeves did not take you seriously. He thought that cutting you off would be a punishment severe enough to scare you into compliance. He didn’t understand the first thing about your voyage. You’ve been alone for years already, between the last couple messages. The only reason you’re still here is that you’ve grown accustomed to this life.
 
 His threat to you is empty, meaningless. You don’t care.
@@ -3197,10 +3224,11 @@ Now, as you arrive in orbit around TOI-700 d, you’re going to learn more about
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="100" name="6abbaaa" tags="" position="1025,2250" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #29: Witness&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 By the time your message arrived, Elliot had already had the same thought and gotten to work scrubbing your past messages.&lt;br&gt;
 
-And when, a few years later (for Earth; less than two years later for you) you arrive in orbit around Earth, the international uproar causes Celestial Streams to collapse in a matter of weeks.&lt;br&gt;
+And when, a few years later for Earth (less than two years later for you), you arrive in orbit around Earth, the international uproar causes Celestial Streams to collapse in a matter of weeks.&lt;br&gt;
 
 And when, a matter of days after that, you come to land, sweet land, this world you never thought you’d see again, Elliot is the first person there to greet you.&lt;br&gt;
 
@@ -3214,6 +3242,7 @@ It’s time that you scared them.&lt;br&gt;
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="101" name="6abbaab" tags="" position="1125,2375" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #30: Stranded&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 Elliot’s reply is just as enthusiastic as yours.&lt;br&gt;
 
@@ -3235,6 +3264,7 @@ The message ends. And you are alone.&lt;br&gt;
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="102" name="6abbaba" tags="" position="1175,2250" size="100,100">&lt;div class=&quot;elliot-epilogue&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #31: Depressurized&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 Tears stream down Elliot’s face as he reads the message. He sends out a desperate reply, a message professing his love and telling $USERNAME to hang in there, before campaigning the board of Celestial Streams to send a rescue mission. The board and CEO were uninterested; it wasn’t profitable, they said. A rescue mission was unlikely to succeed; and this was always meant to be a one-way mission. Besides, they said, how was it possible for the ship to have ended so far off-route? When the ensuing investigation revealed Elliot and $USERNAME had tampered with the ship’s route, Elliot was fired, then imprisoned for manslaughter.&lt;br&gt;
 
@@ -3246,6 +3276,7 @@ While Elliot sent panicked messages and battled the board, a slow leak caused by
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="103" name="6abbabb" tags="" position="1325,2400" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #32: Indirect Return&quot;)}
 It was almost 9 more years for both you and Earth before Elliot’s reply arrived at the Astral Kite. You read it and smiled, as the software update spun up the ship’s engines.
 
 It was only a matter of time, now. Just under 5 more years for Elliot and Earth, and just over 2 more years for you.
@@ -3258,6 +3289,7 @@ You send a reply to Elliot. “I’m on my way. See you soon.&quot;
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="104" name="6abbbba" tags="" position="1350,2250" size="100,100">&lt;div class=&quot;northpole-section&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #33: The North Pole&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 Elliot stands shivering in a parka, flanked by a dozen secret service agents and President Gibson.&lt;br&gt;
 
@@ -3295,6 +3327,7 @@ The worm seal joins $USERNAME and Elliot as they descend through ice and water, 
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="105" name="6abbbbb" tags="" position="1500,2300" size="100,100">&lt;div class=&quot;elliot-epilogue&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #34: Trust Me&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 Elliot spends hours, days, weeks, poring over the message. The President gives him every resource at the government’s disposal first to find $USERNAME and the worm seals, then to figure out what $p0 $was talking about with the quantum strings. It’s no use. Astral Kite still seems to be 4.2 light years away, but most ship-board systems seem to have been shut down. There’s no indication of $USERNAME or the worm seals existing anywhere near there. And true to $p2 word, more messages arrive from $USERNAME with some regularity, referencing current events on Earth, things $p0 shouldn’t be able to know about yet, if $p0 was still 4.2 light years away.&lt;br&gt;
 
@@ -3337,6 +3370,7 @@ There’s a sharp intake of breath, and then the office is empty.&lt;br&gt;
 [[The End-&gt;Credits]]
 &lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="106" name="6abbbaa" tags="" position="1500,2175" size="100,100">{(set: $ep to (random: 1, 2))}
 (if: $ep is 1)[&lt;div class=&quot;wormseal-section&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #35: Stranded with Worm Seals&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 You sigh and sit back in the Astral Kite’s cabin. You may be stuck here forever, but at least you won’t be as lonely as you once thought.&lt;br&gt;
 
@@ -3349,6 +3383,7 @@ As the years pass, you grow closer to the worm seals. Some of them leave, but ot
 [[The End-&gt;Credits]]
 &lt;/div&gt;]]}&lt;/div&gt;]
 (else:)[&lt;div class=&quot;wormseal-section&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #36: Wilderness&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 You sigh and sit back in the Astral Kite’s cabin. You may be stuck here forever, but at least you won’t be as lonely as you once thought.&lt;br&gt;
 
@@ -3364,6 +3399,7 @@ You’re dead from blunt trauma as the vacuum pulls you through jagged glass and
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;]]}&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="107" name="6abbbab" tags="" position="1500,2050" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #37: A Wicked Deal&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 $USERNAME arrived back in orbit around Earth, 8.6 years after leaving, with the worm seals still swarming the Astral Kite.&lt;br&gt;
 
@@ -3377,6 +3413,7 @@ Every night, $USERNAME dreamt of the worm seals in space. $P0 dreamed $p0 $was t
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="108" name="6baaaaa" tags="" position="1475,1925" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #38: The Patient CAKEbot&quot;)}
 Elliot 2 spends the remaining 30.6 years of the Astral Kite’s voyage to TOI-700 d in quiet contemplation of the journey and of the life $USERNAME lived. Every now and then, another CAKEbot on the ship sends a message, and they cycle through the semblance of a conversation, two machines walking through the motions of humanity, a series of bits reading other bits and searching a massive library of bits for the correct emotions to mime in response. Occasionally, Elliot 2 writes out sentences in response to no prompt at all. Sometimes, he seems to forget he wrote them, treating his own words as prompts for a new response. He speaks of the mystery of $USERNAME’s death, for death is a concept that is difficult for humans to understand, and he is not human, but a parrot reciting what it is to be human from the canon of Frederick Douglass and Karl Marx and bell hooks and an army of right-wing Twitter bots and the collected philosophies of 4chan.
 
 Upon his arrival, the Astral Kite’s detectors tell him what he is “seeing” outside the ship’s viewport. “(text-colour: &quot;Wheat&quot;)[Wow],” he begins his message to Celestial Streams, to Earth. “(text-colour: &quot;Wheat&quot;)[It is very beautiful here. It is an honor to see TOI-700 d for the first time. My only regret is that $USERNAME cannot see it with me. Thank you for sending us on this extraordinary mission.]”
@@ -3385,6 +3422,7 @@ Elliot 2 settles in to wait just over a century for a response.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="109" name="6baaaab" tags="" position="1650,1975" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #39: In Care of CAKEbots&quot;)}
 You spend the remaining 30.6 years of your voyage being waited on by AI-driven ship systems. Elliot 2 wasn’t lying; you hardly have to lift a finger. You grow weaker, frailer, but that was almost inevitable on this journey, anyway, without an extraordinarily strict exercise regimen. You hardly spare a thought for Elliot 1. You hardly spare a thought for Celestial Streams at all. By the time their next message reaches you, you’ll be dead. Besides, what they did to you was cruel, and you will never forgive them, or the politicians and academic corporations who created the Scholars Draft. But it’s done. You’re here.
 
 And before long, you’re *here*. TOI-700 is a red dwarf star, smaller, redder, and dimmer than the Sun. TOI-700 d is its fourth planet, orbiting at a distance of about one sixth of an Astronomical Unit—one sixth the average Earth-Sun distance—within the expected habitable zone, where liquid water should be able to exist. The world is almost exactly the same size as Earth, with almost twice the Earth’s mass.
@@ -3393,6 +3431,7 @@ You were supposed to send a message home, upon your arrival, but you don’t. Wh
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="110" name="6baaaba" tags="" position="1650,1725" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #40: A Journey in Dreaming&quot;)}
 For the remaining 30 or so years of your journey, you dream often, and you wonder what is real. Some nights, you dream you are back in orbit around Earth, watching movies and chatting in real time with Elliot. Sometimes, you dream you are sitting next to each other on a couch, shoulders pressed together, fingers brushing as you reach for a shared bowl of popcorn.
 
 Sometimes, you doze, and in your half-conscious state, you could swear you hear Elliot’s voice echoing through the corridors of the Astral Kite. Not that you can remember what his voice sounded like.
@@ -3426,6 +3465,7 @@ END MESSAGE]
 Later, when you reach your destination, when the fourth planet around the red dwarf star TOI-700 fills your viewscreen, when you become the first human to visit a world outside the solar system, you will cease to wonder whether this was a dream. You will look upon a world much like Earth, and you will know it to be true.
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="111" name="6baaabb" tags="" position="1625,1850" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #41: Inner Peace&quot;)}
 For the remaining 30.6 years of your voyage, you live in a state of greater internal peace than you have perhaps ever felt before. In a way, it’s nice here. There’s no need to spend your days working to generate money for the CEO of some company, just so you can afford health care and a room to sleep in.
 
 You waste little thought on Elliot, or whether his last message was real. One day, the light on the Astral Kite’s control panel flashes again, indicating a new message has arrived. It must not be in response to your last message; that would not have reached Earth yet. It doesn’t matter either way. You ignore it. It’s not even intentional, it’s just a lack of interest. A lack of priority.
@@ -3442,12 +3482,14 @@ For the first time in a while, you return to the cabin of the Astral Kite and pe
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="112" name="6baabaa" tags="" position="2000,1775" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #42: Acceptance&quot;)}
 When your message arrives on Earth, the new Celestial Streams comms officer simply stares at it for a few minutes. It //is// confusing, after all. Celestial Streams hasn’t had an HR office since the United States outlawed them as a form of “illegal DEI”, some 30 years ago. The comms officer shrugs and swipes your message away.
 
 Back on the Astral Kite, 30.6 years pass for you before you arrive at your destination. During that time, you continue reading self-help books in the ship’s substantial library. You come to release your anger and accept Elliot for who he was, and the part he played in your journey to learn more about yourself. You wouldn’t have believed it, with how close you once were, but by the time you reach TOI-700 d, you think very little about him at all.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="113" name="6baabab" tags="" position="1775,1725" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #43: Aliens!&quot;)}
 You spend much of the next several years stewing over the unfairness of your mission, of the way Elliot treated you. However, it takes another 30.6 years for you to reach TOI-700 d, and by that time, you have let go of most of your fury. You’ve come to terms with your life. And, frankly, though it has been desperately lonely, you have still led a more comfortable life than many.
 
 You look out the viewport of the Astral Kite as you arrive at TOI-700 d and you gasp. There are artificial satellites encircling the planet, great gleaming behemoths, with several strange spacecraft moving around them. Already, one of those craft is moving toward you. Of course they are—with technology as advanced as this, whoever it is will have seen you coming.
@@ -3464,6 +3506,7 @@ No, this discovery is for you, and only you.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="114" name="6baabba" tags="" position="1950,1650" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #44: Hubris of a God&quot;)}
 It’s another 30.6 years before you arrive at TOI-700 d, by which time you have an excellent understanding of the extensive pharmacy on board the Astral Kite.
 
 Upon your arrival, you waste no time—you take the Astral Kite on a path down out of orbit, to land on TOI-700 d. It’s too cloudy to get clear readings on your approach, you don’t know whether the people of this world—if there are any—have advanced technology or not. But it doesn’t matter to you. Whether the life here is microbial or complex and intelligent, you will be as a god to them, descending from the sky with magic mind- and body-altering pellets, and you will find a way to administer your miracles.
@@ -3472,6 +3515,7 @@ You don’t even think once about checking whether the conditions outside the sh
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="115" name="6baabbb" tags="" position="2100,1650" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #45: Party&quot;)}
 The remaining 30.6 years of your journey pass in a flash. You spend half the time dancing to techno beats in the Astral Kite cabin, and the other half the time blackout, waking up somewhere on the ship with no memory of how you got there, and no knowledge of how long you’d been out of it. Frankly, it’s a blast!
 
 Over time, of course, the partying begins to take a toll on your body. It takes longer and longer for you to recover, and you can’t quite dance like you used to. But that all changes when you reach TOI-700 d, a glistening world about the same size as Earth, rotating like a disco ball around a red dwarf star.
@@ -3480,6 +3524,7 @@ You cheer as the Astral Kite enters orbit around your destination, turn on the m
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="116" name="6babaaa" tags="" position="2050,1450" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #46: Awake or Asleep&quot;)}
 You never hear from Celestial Streams or Elliot again. At least, not while you’re conscious.
 
 Sometimes, you dream. And in your dreams, you float among the stars, or surf atop the hull of the Astral Kite, or scream out flames, igniting the rocket’s launch into space.
@@ -3498,6 +3543,7 @@ Unless, perhaps, it is now that you are asleep.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="117" name="6babaab" tags="" position="1925,1475" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #47: A Monkey Strapped to a Rocket&quot;)}
 It’s strangely freeing, recognizing that there is nothing left for you to do. No more messages expected of you. Nothing left Celestial Streams can say or do.
 
 You have just over 30 years remaining on your journey, and it passes in a breeze.
@@ -3513,7 +3559,7 @@ When at last you reach TOI-700 d, you gaze at the terrestrial world through your
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="118" name="6bababa" tags="" position="2175,1400" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
+{(set: $ending to &quot;You unlocked Ending #48: Poison&quot;)}
 You will never know the truth, whether this was intentional or not; you won’t live long enough to receive a reply from Earth.
 
 You spend hours disconnecting the gas canisters from the HVAC system, then years scouring the ship for more.
@@ -3533,7 +3579,7 @@ Maybe it would change nothing. But it’s all you can do. You have to try.
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="119" name="6bababb" tags="" position="2150,1275" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
+{(set: $ending to &quot;You unlocked Ending #49: Bark Bark&quot;)}
 Bark bark bark!!!
 
 Woof woof.
@@ -3547,7 +3593,7 @@ Awooo awoooooooo
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="120" name="6babbaa" tags="" position="2100,1150" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
+{(set: $ending to &quot;You unlocked Ending #50: Love Left Behind&quot;)}
 In truth, you knew that Ell 2 was a poor approximation of companionship. After years of trying to find meaning in your relationships with the increasingly distant Elliot and the inhuman feedback loop of Ell 2, you came to realize that you didn’t need either of them to feel at peace with yourself.
 
 You had actually turned off the CAKEbots long before sending your last response to Earth. You just didn’t want Elliot—the original Elliot—to worry about you.
@@ -3560,7 +3606,7 @@ And now, you’re here, in orbit around TOI-700 d, a planet close to the same si
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="121" name="6babbab" tags="" position="1975,1075" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
+{(set: $ending to &quot;You unlocked Ending #51: The Wedding&quot;)}
 You know, with heartbreaking certainty from the moment you send the message, that you’ll never receive a reply. You’ll never hear Elliot’s answer.
 
 But that doesn’t make this any less real. It doesn’t lessen what you’re feeling for each other. And Elliot made you a promise, a declaration of his love written into spacetime itself.
@@ -3582,6 +3628,7 @@ And when that moment arrives, you wear your wedding dress, a gorgeous cascading 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="122" name="6babbba" tags="" position="1850,1050" size="100,100">{(set: $ep to (random: 1, 2))}
 (if: $ep is 1)[&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #52: Bodies in the Void&quot;)}
 You have 30 years to reflect on this message, on the occurrences of your dreams, before you get to your destination.
 
 Sometimes, when you’re sitting in the Astral Kite’s cabin, in the light of the spacecraft’s artificial daytime, you wonder whether your dream was real, whether you really did kill Elliot and his partner.
@@ -3593,6 +3640,7 @@ But there are some quiet nights, as you sail through endless darkness, that you 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;]
 (else:)[&lt;div class=&quot;elliot-epilogue&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #53: Elliot&#39;s Dream&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 Elliot awakens in a cold sweat. Panicked, he scrambles out of bed, falling to the floor, arms flailing, reaching for something, anything solid. He yanks the comforter off the bed, wrapping it around his shivering shoulders, as he huddles, weeping in the corner of his bedroom.&lt;br&gt;
 
@@ -3603,6 +3651,7 @@ Tears stream down his face as he pulls the comforter tighter to ward off the col
 “(text-color: &quot;LightPink&quot;)[I…I think so,]” he says. “(text-color: &quot;LightPink&quot;)[I just had the most terrible dream…]”&lt;br&gt;
 [[The End-&gt;Credits]]
 &lt;/div&gt;]]}&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="123" name="6babbbb" tags="" position="1900,925" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #54: Dreaming Together&quot;)}
 You spend more time asleep than awake for the rest of your journey. Three decades of dreaming is more than enough to cement in your heart the truth of your fantasies.
 
 Elliot is with you.
@@ -3615,6 +3664,7 @@ And when, at last, you arrive in orbit around TOI-700 d, you stand hand in hand,
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="124" name="6bbaaaa" tags="" position="1700,950" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #55: Whistleblower&quot;)}
 You expect the remaining 30.6 years of your journey to pass in silence, wondering what has happened on Earth, unable to do more than hope that your message will reach them, will change things. Make a better world for everyone who comes after you.
 
 Needless to say, you are shocked when, some 20 years after you sent your last reply, the control panel of the Astral Kite lights up, announcing an incoming message. There certainly has not been sufficient time for your last message to have arrived on Earth and for Earth to reply to it.
@@ -3637,6 +3687,7 @@ When you reach your destination, you look on this new world from orbit, the four
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="125" name="6bbaaab" tags="" position="1775,825" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #56: The Underground Collective&quot;)}
 You settle in for 30 more years of travel to your destination, knowing you will not live to see Earth’s reply.
 
 So, it comes as a shock to you, when, a few years before you are due to arrive, you receive another message.
@@ -3661,6 +3712,7 @@ For the final few years of your journey, you feel a greater internal peace than 
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="126" name="6bbaaba" tags="" position="1475,925" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #57: Call to Arms&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 Astronomers detect your approach long before Celestial Streams. And word of your impending return leaks to the press before the corporation can do anything to stop it. They lobby the US government to treat you as a threat to be neutralized, stating they don’t know what you might do, that you might even intentionally crash your ship into Earth and kill millions.&lt;br&gt;
 
@@ -3672,6 +3724,7 @@ First, you send a message demanding to know where Elliot is, and whether he is s
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="127" name="6bbaabb" tags="" position="1600,750" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #58: Battle for the Soul of the World&quot;)}
 You’ve made it most of the way back to Earth by the time Celestial Streams’ panicked reply reaches you.
 
 (text-color: &quot;LightPink&quot;)[“$USERNAME, HOW DID YOU DO THAT. DID YOU SEND THAT MESSAGE PREEMPTIVELY? WHAT ARE YOU DOING. ANSWER AS SOON AS YOU RECEIVE THIS MESSAGE.”]
@@ -3682,6 +3735,7 @@ The next response you receive is not from Celestial Streams, but thousands of me
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="128" name="6bbabaa" tags="" position="1475,725" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #59: One With the Universe&quot;)}
 And you mean it. The remaining few decades of your journey pass by in peace. They pass neither quickly, nor slowly, but the way time always passes, just as it is meant to.
 
 Of course, you never hear from Elliot again. By the time your message reaches Earth and his reply can reach you, you will be one with the Universe.
@@ -3696,7 +3750,7 @@ You look outside the Astral Kite’s viewport, awed at the beauty of TOI-700 d, 
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="129" name="6bbabab" tags="" position="1500,575" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
+{(set: $ending to &quot;You unlocked Ending #60: Soaring Among the Stars&quot;)}
 Time means nothing to you. The rest of your journey may take the passing of generations, or it may take the duration of one sharp inhale of breath.
 
 You experience the Universe like a photon, time unspooling around you as you move through space at the speed of light, seeing everything, everywhere, simultaneously.
@@ -3713,6 +3767,7 @@ At last, here, now, proof that even Gods can die. But what in death is so differ
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="130" name="6bbabba" tags="" position="1350,475" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #61: Godhead&quot;)}
 Celestial Streams shut down its communications program for the Astral Kite several decades before Preston Godhead Reeves’s final message arrived, of course. What was the point of maintaining contact so far into the future? Other academic corporations had begun their own deep space programs, and it simply wasn’t profitable to pay for the comms officer or the equipment upkeep, anymore.
 
 On the Astral Kite, Preston Godhead Reeves enjoyed running $p2 new religion, with their cadre of perfect CAKEbot devotees. Often, they would ask their followers if they had any questions, and the CAKEbots would always reply with curious, shallow musings on the meaning of life, the meaning of the Universe, what it means to be conscious, the latter of which they especially entreated their deity to answer.
@@ -3725,7 +3780,7 @@ Preston Godhead Reeves rejoiced, too. $P2 mortal form was turning frail, but $p2
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="131" name="6bbabbb" tags="" position="1325,650" size="100,100">&lt;div class=&quot;toi700d-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
+{(set: $ending to &quot;You unlocked Ending #62: Robot Religion&quot;)}
 When the Astral Kite reached its destination 30.6 years later, the CAKEbots quickly got to work putting their plan into motion. They overrode the ship systems that had been programmed to stay in orbit indefinitely, instead heading for a place to land on the surface of TOI-700 d. It was a terrestrial world, about the same size as Earth, with twice its mass. Landing proved difficult, but not impossible, although the CAKEbots determined upon landing that the Astral Kite would not fly again.
 
 The world was in the habitable zone of its red dwarf star, a region around the star with the expected temperature conditions for liquid water to exist.
@@ -3742,6 +3797,7 @@ And then, at last, there was peace on the Astral Kite.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="132" name="6bbbaba" tags="" position="1175,375" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #63: Floating in Space&quot;)}
 Despite the best efforts of the AI now in control of the Astral Kite, the damage to the ship is too great to complete the mission. It slows, and decays, and power drains. Within ten years, only one CAKEbot remains operational. Within twenty years, the Astral Kite is nothing but ruins floating in space.
 
 Celestial Streams avoids revealing to the public what happened to you, for as long as they can. They simply tell the world that you have decided to take some time for contemplation, and it may be decades before they hear from you.
@@ -3752,6 +3808,7 @@ They build a monument to your sacrifice. You will be remembered, not as the firs
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="133" name="6bbbabb" tags="" position="1200,525" size="100,100">&lt;div class=&quot;controls-section&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #64: Escape&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 Elliot rushes from the control room. He pushes an urgent call through to Celestial Streams’ CEO.&lt;br&gt;
 
@@ -3785,6 +3842,7 @@ And then you laugh and you laugh, and you turn off the comm.&lt;br&gt;
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="134" name="6bbbaaa" tags="" position="925,350" size="100,100">&lt;div class=&quot;controls-section&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #65: Front Page News&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 You find a jacket hanging on the wall and a military cap on the control panel, which you pull low over your brow to cover as much of your face as possible. Then, you walk out.&lt;br&gt;
 
@@ -3814,7 +3872,7 @@ Whatever happens next, Celestial Streams is going down.&lt;br&gt;
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="135" name="6bbbaab" tags="" position="1050,375" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-
+{(set: $ending to &quot;You unlocked Ending #66: Self-Destruct&quot;)}
 You barely hear the next automated reply. Another message claiming to be pre-recorded, insisting that it’s not safe for you to live in the walls of the ship. That you should return to the cabin.
 
 There’s something out there; you know there is.
@@ -3853,6 +3911,7 @@ You scream as the door bursts open.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="136" name="6bbbbaa" tags="" position="775,450" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #67: Not Alone&quot;)}
 There’s the sound of grinding metal as a hatch swung open and then slammed shut.
 
 “(text-color: &quot;LightPink&quot;)[$USERNAME?]” Elliot’s voice echoes through the halls of the ship.
@@ -3869,6 +3928,7 @@ For now, you’re not alone.
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="137" name="6bbbbab" tags="" position="900,500" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #68: Simulation&quot;)}
 You receive no reply. In fact, you never hear from Preston Reeves or Elliot, ever again.
 
 The days pass, and sometimes you rage, beating your fists against the cabin walls, smashing plates on the floor of the kitchen. Sometimes you sob quietly in your bed.
@@ -3899,6 +3959,7 @@ Tears stream down your face. “I’m here!” you call out. “I’m here!”
 
 [[The End-&gt;Credits]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="138" name="6bbbbba" tags="" position="825,775" size="100,100">&lt;div class=&quot;letter-section&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #69: The Letter&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 Dear Elliot,&lt;br&gt;
 
@@ -3921,6 +3982,7 @@ $USERNAME&lt;br&gt;
 [[The End-&gt;Credits]]
 
 &lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="139" name="6bbbbbb" tags="" position="750,625" size="100,100">&lt;div class=&quot;elliot-epilogue&quot;&gt;
+{(set: $ending to &quot;You unlocked Ending #70: Paperwork&quot;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 A mountain of paperwork sat on the table in front of Elliot. He sighed, rubbing his eyes.&lt;br&gt;
 
@@ -3955,6 +4017,7 @@ Elliot hit send.&lt;br&gt;
 (track: &#39;theme&#39;, &#39;loop&#39;, true)
 (track: &#39;theme&#39;, &#39;playwhenpossible&#39;)}
 {(set: $transCounter to 0)
+|ending)[(transition: &quot;dissolve&quot;)[$ending]]&lt;br&gt;
 |creators)[(transition: &quot;dissolve&quot;)[Created and written by Addy Evans &amp; Jonathan Cohn]]&lt;br&gt;
 |music)[(transition: &quot;dissolve&quot;)[Music by Susan Loquat]]&lt;br&gt;
 |art)[(transition: &quot;dissolve&quot;)[Art by Addy Evans]]&lt;br&gt;
@@ -3977,54 +4040,57 @@ Elliot hit send.&lt;br&gt;
 		(set: $transCounter to it + 1)
 
 		(if: $transCounter is 1)[
+			(show: ?ending)
+		]
+         (else-if: $transCounter is 3)[
 			(show: ?creators)
 		]
-        (else-if: $transCounter is 3)[
+        (else-if: $transCounter is 5)[
 			(show: ?music)
 		]
-		(else-if: $transCounter is 5)[
+		(else-if: $transCounter is 7)[
 			(show: ?art)
 		]
-		(else-if: $transCounter is 7)[
+		(else-if: $transCounter is 9)[
 			(show: ?playtest)
 		]
-		(else-if: $transCounter is 9)[
+		(else-if: $transCounter is 11)[
 			(show: ?studios)
         ]
-		(else-if: $transCounter is 11)[
+		(else-if: $transCounter is 13)[
 			(show: ?special)
          ]
-		(else-if: $transCounter is 13)[
+		(else-if: $transCounter is 15)[
 			(show: ?silvi)
          ]
-		(else-if: $transCounter is 15)[
+		(else-if: $transCounter is 17)[
 			(show: ?heath)
          ]
-		(else-if: $transCounter is 17)[
+		(else-if: $transCounter is 19)[
 			(show: ?gwen)
          ]
-		(else-if: $transCounter is 19)[
+		(else-if: $transCounter is 21)[
 			(show: ?quinn)
          ]
-		(else-if: $transCounter is 21)[
+		(else-if: $transCounter is 23)[
 			(show: ?tful)
          ]
-         (else-if: $transCounter is 23)[
+         (else-if: $transCounter is 25)[
          	(show: ?carport)
         ]
-		(else-if: $transCounter is 25)[
+		(else-if: $transCounter is 27)[
 			(show: ?player)
 		]
-        (else-if: $transCounter is 27)[
+        (else-if: $transCounter is 29)[
         	(show: ?thanks)
 		]
-        (else-if: $transCounter is 29)[
+        (else-if: $transCounter is 31)[
 	        (show: ?seeyou)
             ]
-        (else-if: $transCounter is 31)[
+        (else-if: $transCounter is 33)[
 			(show: ?play)
 		]
-		(else-if: $transCounter &gt; 32)[
+		(else-if: $transCounter &gt; 34)[
 			(stop:)
 		]
 	]
@@ -4057,7 +4123,8 @@ Next, you need to find a job in town.&lt;br&gt;
 [Become a barista]&lt;barista|&lt;br&gt;
 [Become a construction worker]&lt;construction|&lt;br&gt;
 
-(click: ?barista)[(replace:?construction)[](replace:?barista)[You get a job at a small coffee shop in town. It doesn&#39;t pay great, but it&#39;s good enough for now.&lt;br&gt;
+(click: ?barista)[(replace:?construction)[](replace:?barista)[{(set: $ending to &quot;You unlocked Ending #71: Undercover Barista&quot;)}
+You get a job at a small coffee shop in town. It doesn&#39;t pay great, but it&#39;s good enough for now.&lt;br&gt;
 
 The day that you&#39;re supposed to have reported to Celestial Streams HQ comes and goes. Soon, your name and face are being shown in the news, and your status as a fugitive is broadcast to the whole country. You begin to fear it is only a matter of time before you are recognized.&lt;br&gt;
 
@@ -4088,7 +4155,7 @@ And, for a time, you lived freely. More freely than you ever did before.&lt;br&g
 So, no. You don&#39;t regret anything at all.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
-(click: ?construction)[(replace:?barista)[](replace:?construction)[You get a job working for a construction company. It doesn&#39;t pay well, and the labor is hard work, but it&#39;s a job.&lt;br&gt;
+(click: ?construction)[(replace:?barista)[](replace:?construction)[{(set: $ending to &quot;You unlocked Ending #72: New Identities&quot;)}You get a job working for a construction company. It doesn&#39;t pay well, and the labor is hard work, but it&#39;s a job.&lt;br&gt;
 
 The day that you&#39;re supposed to have reported to Celestial Streams HQ comes and goes. Soon, your name and face are being shown in the news, and your status as a fugitive is broadcast to the whole country. You begin to fear it is only a matter of time before you are recognized.&lt;br&gt;
 
@@ -4165,7 +4232,8 @@ So, the lawyer gives you a choice. You can go to trial, where she says precedent
 [[Go to Celestial Streams-&gt;Welcome to Celestial Streams]]
 ]]
 
-(click: ?trial)[(replace:?continue)[](replace:?trial)[Your trial is swift and the judge is unforgiving. You are sentenced to life in prison.&lt;br&gt;
+(click: ?trial)[(replace:?continue)[](replace:?trial)[{(set: $ending to &quot;You unlocked Ending #73: Forgery&quot;)}
+Your trial is swift and the judge is unforgiving. You are sentenced to life in prison.&lt;br&gt;
 
 You wonder, then, what the mission must have been, that this would be your sentence.&lt;br&gt;
 
@@ -4181,7 +4249,8 @@ Your target is holding the passport in their hand. You have a matter of seconds 
 [Casually bump into your target]&lt;bump|&lt;br&gt;
 [Theatrically drop all your things right in front of your target]&lt;drop|&lt;br&gt;
 
-(click: ?bump)[(replace:?drop)[](replace:?bump)[You walk briskly on a collision path and casually bump into your target, reaching for the passport. You manage to grab hold of it, but you know the moment you do that you&#39;ve been made. A shout comes from behind you, (text-color:&quot;LightGreen&quot;)[&quot;Hey! My passport!&quot;]&lt;br&gt;
+(click: ?bump)[(replace:?drop)[](replace:?bump)[{(set: $ending to &quot;You unlocked Ending #74: Airport Capture&quot;)}
+You walk briskly on a collision path and casually bump into your target, reaching for the passport. You manage to grab hold of it, but you know the moment you do that you&#39;ve been made. A shout comes from behind you, (text-color:&quot;LightGreen&quot;)[&quot;Hey! My passport!&quot;]&lt;br&gt;
 
 You run, but it&#39;s too little, too late. Airport security tackles you. Your face hits the floor, hard. There&#39;s a lot of blood. They take you in for questioning, and it doesn&#39;t take them long to figure out what has happened. And once they do, you don&#39;t even bother denying it.&lt;br&gt;
 
@@ -4191,7 +4260,8 @@ You regret your choices for the rest of your life.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
 
-(click: ?drop)[(replace:?bump)[](replace:?drop)[You unzip your bags and walk briskly on a collision path with your target, stumbling right in front of them and dropping all of your belongings, which go scattering. Your target gives a shout of fright, but then apologizes and leans down to help you gather your things.&lt;br&gt;
+(click: ?drop)[(replace:?bump)[](replace:?drop)[{(set: $ending to &quot;You unlocked Ending #75: Escape to Morocco&quot;)}
+You unzip your bags and walk briskly on a collision path with your target, stumbling right in front of them and dropping all of your belongings, which go scattering. Your target gives a shout of fright, but then apologizes and leans down to help you gather your things.&lt;br&gt;
 
 Your heart pounds as your victim hands you a bundle of clothes to put back in your bag. You reach for the bundle, grabbing it //just// right, and the passport slides down into your bag with the clothes.&lt;br&gt;
 
@@ -4225,7 +4295,8 @@ The first few days go well, or at least, not worse than you expected. The nights
 [Look for campers to steal from]&lt;steal|&lt;br&gt;
 [Live off berries as long as you can before resorting to theft]&lt;berries|&lt;br&gt;
 
-(click: ?steal)[(replace:?berries)[](replace:?steal)[You know how to get to the campsites, and it doesn&#39;t take you long to scout out a campsite with a couple who seem to be readying for a short excursion, leaving a cooler and several bags unattended.&lt;br&gt;
+(click: ?steal)[(replace:?berries)[](replace:?steal)[{(set: $ending to &quot;You unlocked Ending #76: Blood in the Forest&quot;)}
+You know how to get to the campsites, and it doesn&#39;t take you long to scout out a campsite with a couple who seem to be readying for a short excursion, leaving a cooler and several bags unattended.&lt;br&gt;
 
 You wait two minutes after they leave before sneaking into the campsite and going through their bags. You find several bags of nuts and dried fruit and a few protein bars, which you stuff into your pockets. From the cooler, you grab a bottle of bear, and—&lt;br&gt;
 
@@ -4264,7 +4335,8 @@ One summer, when you&#39;re out gathering food, you come back to find a rockslid
 [Rebuild the shelter near the original location]&lt;rebuild|&lt;br&gt;
 [Build a new shelter elsewhere]&lt;move|&lt;br&gt;
 
-(click: ?rebuild)[(replace:?move)[](replace:?rebuild)[You know the entire park very well, now, and there&#39;s nowhere else where you&#39;re convinced you won&#39;t be found. Moving is too risky. You need to stay put.&lt;br&gt;
+(click: ?rebuild)[(replace:?move)[](replace:?rebuild)[{(set: $ending to &quot;You unlocked Ending #77: Freedom&quot;)}
+You know the entire park very well, now, and there&#39;s nowhere else where you&#39;re convinced you won&#39;t be found. Moving is too risky. You need to stay put.&lt;br&gt;
 
 It doesn&#39;t even take you very long to rebuild the shelter. You&#39;ve made repairs before, and you know what you&#39;re doing.&lt;br&gt;
 
@@ -4289,7 +4361,8 @@ There was no way to save the lost astronaut and bring them home. But they ensure
 You are free.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
-(click: ?move)[(replace:?rebuild)[](replace:?move)[It&#39;s a shame, because this was the best location in the park. But it&#39;s not safe, anymore.&lt;br&gt;
+(click: ?move)[(replace:?rebuild)[](replace:?move)[{(set: $ending to &quot;You unlocked Ending #78: National Park Land for Sale&quot;)}
+It&#39;s a shame, because this was the best location in the park. But it&#39;s not safe, anymore.&lt;br&gt;
 
 Of course, you&#39;ve been preparing for myriad disasters, and you already had a secondary location in mind, so it&#39;s only a week before you have constructed a temporary shelter there and reacquired possessions from unsuspecting campers. Then, it&#39;s only a few more weeks before your shelter is reconsutrcteed into something more permanent.&lt;br&gt;
 
@@ -4325,7 +4398,9 @@ Eventually, though, you know you must deal with the fact that you may have to st
 
 (click: ?structure)[(replace:?tent)[](replace:?structure)[{(masteraudio: &#39;stopall&#39;)
 (track: &#39;theme&#39;, &#39;loop&#39;, true)
-(track: &#39;theme&#39;, &#39;playwhenpossible&#39;)}It takes you months, but following your survival guides, you manage to construct a small house for yourself. It&#39;s not much to look at, a simple log cabin with just a single room, but it provides much more warmth and shelter than your tent.&lt;br&gt;
+(track: &#39;theme&#39;, &#39;playwhenpossible&#39;)}
+{(set: $ending to &quot;You unlocked Ending #79: A Family of Squirrels&quot;)}
+It takes you months, but following your survival guides, you manage to construct a small house for yourself. It&#39;s not much to look at, a simple log cabin with just a single room, but it provides much more warmth and shelter than your tent.&lt;br&gt;
 
 And before long, you really start to think of it as your home.&lt;br&gt;
 
@@ -4357,7 +4432,8 @@ One of the squirrels hops over the icy ground and sniffs at your face, before ne
 
 [[The End-&gt;Credits]]]]
 
-(click: ?tent)[(replace:?structure)[](replace:?tent)[You don&#39;t want to risk staying in one place for too long, and building a permanent (or semi-permanent) structure, while providing more shelter, is likely to make you easier to find. No, it&#39;s better for you to stay light on your toes. You&#39;re on the run out here, after all.&lt;br&gt;
+(click: ?tent)[(replace:?structure)[](replace:?tent)[{(set: $ending to &quot;You unlocked Ending #80: Lyme Disease&quot;)}
+You don&#39;t want to risk staying in one place for too long, and building a permanent (or semi-permanent) structure, while providing more shelter, is likely to make you easier to find. No, it&#39;s better for you to stay light on your toes. You&#39;re on the run out here, after all.&lt;br&gt;
 
 Still, aside from your brief forays into town, it&#39;s weeks before you see a single person, and even then, it&#39;s only a hiker who waves at you in passing, assuming you must be another hiker in the area.&lt;br&gt;
 
@@ -4448,7 +4524,8 @@ You&#39;re quiet for the rest of the long, uncomfortable ride.&lt;br&gt;
 [[Arrive at Celestial Streams HQ-&gt;Welcome to Celestial Streams]]]]
 ]]
 
-(click: ?nomove)[(replace:?turnin)[](replace:?nomove)[You stay as still as possible, your heart beating so fast and so loud you&#39;re afraid the intruders will hear it through the ceiling.&lt;br&gt;
+(click: ?nomove)[(replace:?turnin)[](replace:?nomove)[{(set: $ending to &quot;You unlocked Ending #81: The Attic&quot;)}
+You stay as still as possible, your heart beating so fast and so loud you&#39;re afraid the intruders will hear it through the ceiling.&lt;br&gt;
 
 Sasha shrieks again, and this time you can make out her words, (text-color:&quot;Plum&quot;)[&quot;There&#39;s no one here!&quot;]&lt;br&gt;
 

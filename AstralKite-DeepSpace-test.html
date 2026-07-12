@@ -549,7 +549,8 @@ showControls: false</tw-passagedata><tw-passagedata pid="13" name="Credits" tags
 (else:)[(set: $aliennote to &#39;&quot;Aliens Discovered! Given original name of Extraterrestrius &#39; + (string: $USERNAME) + &#39;ius, the species was renamed &#39; + (string: $alienname) + &#39; by the legendary deep space astronaut.&quot;&#39;)]
 (set: $transCounter to 0)
 
-(transition: &quot;dissolve&quot;)[Created and written by Addy Evans &amp; Jonathan Cohn]&lt;br&gt;
+(transition: &quot;dissolve&quot;)[$ending]&lt;br&gt;
+|creators)[(transition: &quot;dissolve&quot;)[Created and written by Addy Evans &amp; Jonathan Cohn]&lt;br&gt;]
 |alien)[(transition: &quot;dissolve&quot;)[(text-color: &quot;LightCoral&quot;)[$aliennote]]&lt;br&gt;]
 |music)[(transition: &quot;dissolve&quot;)[Music by Susan Loquat]]&lt;br&gt;
 |art)[(transition: &quot;dissolve&quot;)[Art by Addy Evans]]&lt;br&gt;
@@ -580,48 +581,51 @@ showControls: false</tw-passagedata><tw-passagedata pid="13" name="Credits" tags
 		(set: $transCounter to it + 1)
 
 		(if: $transCounter is 1)[
-			(show: ?music)
+			(show: ?creators)
 		]
 		(else-if: $transCounter is 2)[
-			(show: ?art)
+			(show: ?music)
 		]
 		(else-if: $transCounter is 3)[
-			(show: ?playtest)
+			(show: ?art)
 		]
 		(else-if: $transCounter is 4)[
+			(show: ?playtest)
+		]
+		(else-if: $transCounter is 5)[
 			(show: ?studios)
         ]
-		(else-if: $transCounter is 5)[
+		(else-if: $transCounter is 6)[
 			(show: ?special)
          ]
-		(else-if: $transCounter is 6)[
+		(else-if: $transCounter is 7)[
 			(show: ?silvi)
          ]
-		(else-if: $transCounter is 7)[
+		(else-if: $transCounter is 8)[
 			(show: ?heath)
          ]
-		(else-if: $transCounter is 8)[
+		(else-if: $transCounter is 9)[
 			(show: ?gwen)
          ]
-		(else-if: $transCounter is 9)[
+		(else-if: $transCounter is 10)[
 			(show: ?quinn)
          ]
-		(else-if: $transCounter is 10)[
+		(else-if: $transCounter is 11)[
 			(show: ?tful)
          ]
-         (else-if: $transCounter is 11)[
+         (else-if: $transCounter is 12)[
          	(show: ?carport)
         ]
-		(else-if: $transCounter is 12)[
+		(else-if: $transCounter is 13)[
 			(show: ?player)
 		]
-        (else-if: $transCounter is 13)[
+        (else-if: $transCounter is 14)[
         	(show: ?thanks)
 		]
-        (else-if: $transCounter is 14)[
+        (else-if: $transCounter is 15)[
 	        (show: ?seeyou)
             ]
-        (else-if: $transCounter is 15)[
+        (else-if: $transCounter is 16)[
 			(show: ?play)
 		]
 		(else:)[
@@ -639,6 +643,72 @@ showControls: false</tw-passagedata><tw-passagedata pid="13" name="Credits" tags
 		]
 
 		(if: $transCounter is 2)[
+			(show: ?creators)
+		]
+		(else-if: $transCounter is 3)[
+			(show: ?music)
+		]
+		(else-if: $transCounter is 4)[
+			(show: ?art)
+		]
+		(else-if: $transCounter is 5)[
+			(show: ?playtest)
+		]
+		(else-if: $transCounter is 6)[
+			(show: ?studios)
+         ]
+		(else-if: $transCounter is 7)[
+			(show: ?review)
+         ]
+         (else-if: $transCounter is 8)[
+			(show: ?link)
+         ]
+		(else-if: $transCounter is 9)[
+			(show: ?special)
+         ]
+		(else-if: $transCounter is 10)[
+			(show: ?silvi)
+         ]
+		(else-if: $transCounter is 11)[
+			(show: ?heath)
+         ]
+		(else-if: $transCounter is 12)[
+			(show: ?gwen)
+         ]
+		(else-if: $transCounter is 13)[
+			(show: ?quinn)
+         ]
+		(else-if: $transCounter is 14)[
+			(show: ?tful)
+         ]
+         (else-if: $transCounter is 15)[
+         	(show: ?carport)
+        ]
+		(else-if: $transCounter is 16)[
+			(show: ?player)
+		]
+        (else-if: $transCounter is 17)[
+        	(show: ?thanks)
+		]
+        (else-if: $transCounter is 18)[
+	        (show: ?seeyou)
+            ]
+        (else-if: $transCounter is 19)[
+			(show: ?play)
+		]
+		(else:)[
+			(stop:)
+		]
+	]
+]
+(else-if: $regrets is not &quot;&quot; and $music is not &quot;&quot; and $food is not &quot;&quot;)[
+	(live: 3.5s)[
+		(set: $transCounter to it + 1)
+
+		(if: $transCounter is 1)[
+			(show: ?creators)
+		]
+		(else-if: $transCounter is 2)[
 			(show: ?music)
 		]
 		(else-if: $transCounter is 3)[
@@ -694,119 +764,62 @@ showControls: false</tw-passagedata><tw-passagedata pid="13" name="Credits" tags
 		]
 	]
 ]
-(else-if: $regrets is not &quot;&quot; and $music is not &quot;&quot; and $food is not &quot;&quot;)[
-	(live: 3.5s)[
-		(set: $transCounter to it + 1)
-
-		(if: $transCounter is 1)[
-			(show: ?music)
-		]
-		(else-if: $transCounter is 2)[
-			(show: ?art)
-		]
-		(else-if: $transCounter is 3)[
-			(show: ?playtest)
-		]
-		(else-if: $transCounter is 4)[
-			(show: ?studios)
-         ]
-		(else-if: $transCounter is 5)[
-			(show: ?review)
-         ]
-         (else-if: $transCounter is 6)[
-			(show: ?link)
-         ]
-		(else-if: $transCounter is 7)[
-			(show: ?special)
-         ]
-		(else-if: $transCounter is 8)[
-			(show: ?silvi)
-         ]
-		(else-if: $transCounter is 9)[
-			(show: ?heath)
-         ]
-		(else-if: $transCounter is 10)[
-			(show: ?gwen)
-         ]
-		(else-if: $transCounter is 11)[
-			(show: ?quinn)
-         ]
-		(else-if: $transCounter is 12)[
-			(show: ?tful)
-         ]
-         (else-if: $transCounter is 13)[
-         	(show: ?carport)
-        ]
-		(else-if: $transCounter is 14)[
-			(show: ?player)
-		]
-        (else-if: $transCounter is 15)[
-        	(show: ?thanks)
-		]
-        (else-if: $transCounter is 16)[
-	        (show: ?seeyou)
-            ]
-        (else-if: $transCounter is 17)[
-			(show: ?play)
-		]
-		(else:)[
-			(stop:)
-		]
-	]
-]
 (else-if: &quot;8B&quot; is in $received)[
 	(live: 3.5s)[
 		(set: $transCounter to it + 1)
 
 		(if: $transCounter is 1)[
-			(show: ?music)
+			(show: ?creators)
 		]
 		(else-if: $transCounter is 2)[
-			(show: ?art)
+			(show: ?music)
 		]
 		(else-if: $transCounter is 3)[
-			(show: ?playtest)
+			(show: ?art)
 		]
 		(else-if: $transCounter is 4)[
+			(show: ?playtest)
+		]
+		(else-if: $transCounter is 5)[
 			(show: ?studios)
          ]
-		(else-if: $transCounter is 5)[
+		(else-if: $transCounter is 6)[
 			(show: ?alien)
          ]
-         (else-if: $transCounter is 6)[
+         (else-if: $transCounter is 7)[
 			(show: ?link)
          ]
-		(else-if: $transCounter is 7)[
+		(else-if: $transCounter is 8)[
 			(show: ?special)
          ]
-		(else-if: $transCounter is 8)[
+		(else-if: $transCounter is 9)[
 			(show: ?silvi)
          ]
-		(else-if: $transCounter is 9)[
+		(else-if: $transCounter is 10)[
 			(show: ?heath)
          ]
-		(else-if: $transCounter is 10)[
+		(else-if: $transCounter is 11)[
 			(show: ?gwen)
          ]
-		(else-if: $transCounter is 11)[
+		(else-if: $transCounter is 12)[
 			(show: ?quinn)
          ]
-		(else-if: $transCounter is 12)[
+		(else-if: $transCounter is 13)[
 			(show: ?tful)
          ]
-         (else-if: $transCounter is 13)[
+         (else-if: $transCounter is 14)[
          	(show: ?carport)
         ]
-		(else-if: $transCounter is 14)[
+		(else-if: $transCounter is 15)[
 			(show: ?player)
 		]
-        (else-if: $transCounter is 15)[
+        (else-if: $transCounter is 16)[
         	(show: ?thanks)
 		]
-        (else-if: $transCounter is 16)[
+        (else-if: $transCounter is 17)[
 	        (show: ?seeyou)
             ]
-        (else-if: $transCounter is 17)[
+        (else-if: $transCounter is 18)[
 			(show: ?play)
 		]
 		(else:)[
@@ -819,51 +832,54 @@ showControls: false</tw-passagedata><tw-passagedata pid="13" name="Credits" tags
 		(set: $transCounter to it + 1)
 
 		(if: $transCounter is 1)[
-			(show: ?music)
+			(show: ?creators)
 		]
 		(else-if: $transCounter is 2)[
-			(show: ?art)
+			(show: ?music)
 		]
 		(else-if: $transCounter is 3)[
-			(show: ?playtest)
+			(show: ?art)
 		]
 		(else-if: $transCounter is 4)[
+			(show: ?playtest)
+		]
+		(else-if: $transCounter is 5)[
 			(show: ?studios)
         ]
-         (else-if: $transCounter is 5)[
+         (else-if: $transCounter is 6)[
 			(show: ?link)
          ]
-		(else-if: $transCounter is 6)[
+		(else-if: $transCounter is 7)[
 			(show: ?special)
          ]
-		(else-if: $transCounter is 7)[
+		(else-if: $transCounter is 8)[
 			(show: ?silvi)
          ]
-		(else-if: $transCounter is 8)[
+		(else-if: $transCounter is 9)[
 			(show: ?heath)
          ]
-		(else-if: $transCounter is 9)[
+		(else-if: $transCounter is 10)[
 			(show: ?gwen)
          ]
-		(else-if: $transCounter is 10)[
+		(else-if: $transCounter is 11)[
 			(show: ?quinn)
          ]
-		(else-if: $transCounter is 11)[
+		(else-if: $transCounter is 12)[
 			(show: ?tful)
          ]
-         (else-if: $transCounter is 12)[
+         (else-if: $transCounter is 13)[
          	(show: ?carport)
         ]
-		(else-if: $transCounter is 13)[
+		(else-if: $transCounter is 14)[
 			(show: ?player)
 		]
-        (else-if: $transCounter is 14)[
+        (else-if: $transCounter is 15)[
         	(show: ?thanks)
 		]
-        (else-if: $transCounter is 15)[
+        (else-if: $transCounter is 16)[
 	        (show: ?seeyou)
             ]
-        (else-if: $transCounter is 16)[
+        (else-if: $transCounter is 17)[
 			(show: ?play)
 		]
 		(else:)[
@@ -3219,7 +3235,7 @@ That’s enough of being adventurous for today. You close the door and get back 
 &lt;label for=&quot;file&quot;&gt;Ship clock: $tt4 | Earth clock: $t4&lt;/label&gt;
 &lt;progress id=&quot;file&quot; max=&quot;100&quot; value=44.4&gt;&lt;/progress&gt;&lt;br&gt;
 
-You’re enthused to try your hand at another painting. The creation of art has been a self-soothing act of humankind for generations and generations, as in a group or alone. You think back to the ancient, pre-human art — the hooves and hands painted on cave walls, the smoothed beads and other pieces of jewelry, and the ornate headpieces archeologists find amidst dirt and buried caves. You feel a distinct sense of belonging to a species of artists. Even alone in space, the desire to create provides you with a sense of meaning and purpose. Someday, maybe someone will find your ship and your artwork, and the bridge of time will be surmounted again. &lt;br&gt;
+You’re enthused to try your hand at another painting. The creation of art has been a self-soothing act of humankind for generations and generations, in a group or alone. You think back to the ancient, pre-human art — the hooves and hands painted on cave walls, the smoothed beads and other pieces of jewelry, and the ornate headpieces archeologists found amidst dirt and buried caves. You feel a distinct sense of belonging to a species of artists. Even alone in space, the desire to create provides you with a sense of meaning and purpose. Someday, maybe someone will find your ship and your artwork, and the bridge of time will be surmounted again.&lt;br&gt;
 
 Choose your paint set:&lt;br&gt;
 (dropdown: bind $art1, &quot;8 x 10^-7 to 1 x 10^-3 m&quot;, &quot;4 x 10^-7 to 8 x 10^-7 m&quot;, &quot;1 x 10^-8 to 4 x 10^-7 m&quot;, &quot;1 x 10^-10 to 1 x 10^-8 m&quot;)&lt;br&gt;
@@ -3239,26 +3255,16 @@ Choose your paint set:&lt;br&gt;
 
 (link-replace: &quot;Continue&quot;)[(show: ?p2a)]]
 
-|p2a)[Feeling pleased at the idea of your legacy, you squirt out a fresh plop of paint and notice a tear in the tube, causing paint to come out both ends at once. You groan to yourself and inspect the tear. It looks like it’s been…chewed? The marks of teeth are undeniable. You wonder if you’ve gone so mad in the ship that you started gnawing at paint tubes and don’t even remember doing it — Celestial Streams warned you strange things happen to the mind in isolation. As you stare deeply into the hole in the tube, haloed by bite marks, you hear a sudden scuffling noise from the corner of the room. You drop the paint — you’re frightened — there is no scuffling on the ship — what would there be to scuffle? On Earth — tree branches scuffle, people’s feet scuffle, cloth scuffles on skin in the wind and tires scuffle heavy on asphalt. Here, there is hardly a noise from the air conditioning units. As such, the scuffle is horrific to you. Your heart rate rises as you pinpoint the scuffle noise from within a cabinet, flush with the floor, used for storing art supplies.&lt;br&gt;
+|p2a)[Feeling pleased at the idea of your legacy, you squirt out a fresh plop of paint and notice a tear in the tube, causing paint to come out both ends at once. You groan to yourself and inspect the tear. It looks like it’s been…chewed? The marks of teeth are undeniable. You wonder if you’ve gone so mad in the ship that you started gnawing at paint tubes and can’t remember doing it — Celestial Streams warned you strange things happen to the mind in isolation. As you stare deeply into the hole in the tube, haloed by bite marks, you hear a sudden scuffling noise from the corner of the room. You drop the paint — you’re frightened — there is no scuffling on the ship — what would there be to scuffle? On Earth, everything scuffled all the time. Here, there is hardly a noise from the air conditioning units. As such, the scuffle is horrific to you. Your heart rate rises as you pinpoint the scuffle noise from within a cabinet, flush with the floor, used for storing art supplies.&lt;br&gt;
 
 Do you open the cabinet?&lt;br&gt;
 [Yes!]&lt;p1|&lt;br&gt;
 [No!!!]&lt;p2|&lt;br&gt;
 []&lt;display|
-(click: ?p1)[(replace: ?p2)[](replace:?display)[There’s no time to think this through. You drop to the ground and fling open the cabinet. More frenetic scuffles, some supplies seemingly shimmy on their own in the very backest, darkest corner of the cabinet. &lt;br&gt;
-
-Do you keep looking?&lt;br&gt;
-[Yes!]&lt;p11|&lt;br&gt;
-[No!!!]&lt;p12|&lt;br&gt;
-[]&lt;disp1|
-(click: ?p11)[(replace: ?p12)[](replace:?disp1)[Your hands are trembling now, but you move the supplies aside to find a hole in the back of the cabinet, as wide as your fist and as black as the sky outside. Still shaking, you close the cabinet door. That’s enough excitement for one day.&lt;br&gt;
+(click: ?p1)[(replace: ?p2)[](replace:?display)[There’s no time to think this through. You drop to the ground and fling open the cabinet. More frenetic scuffles, some supplies seemingly shimmy on their own in the very backest, darkest corner of the cabinet. Your hands are trembling now, but you move the supplies aside to find a hole in the back of the cabinet, as wide as your fist and as black as the sky outside. Still shaking, you close the cabinet door. That’s enough excitement for one day.&lt;br&gt;
 
 [[Continue-&gt;Message3]]]]
-(click: ?p12)[(replace: ?p11)[](replace:?disp1)[You shut the cabinet doors. Should you tell Mission Controls? Can they do anything about it? Maybe you imagined the sound…maybe when you opened the cabinet so suddenly, it jostled things around…yes, you probably just imagined it. &lt;br&gt;
-
-[[Continue-&gt;Message3]]]]
-]]
-(click: ?p2)[(replace: ?p1)[](replace:?display)[You leave the room in a hurry. Maybe you imagined the sound.&lt;br&gt;
+(click: ?p2)[(replace: ?p1)[](replace:?display)[You leave the room in a hurry. Should you tell Mission Controls? Can they do anything about it? Maybe you imagined the sound…yes, you probably just imagined it.&lt;br&gt;
 
 [[Continue-&gt;Message3]]]]
 ]]
@@ -5207,50 +5213,25 @@ There is someone here.&lt;br&gt;
 &lt;label for=&quot;file&quot;&gt;Ship clock: $tt6 | Earth clock: $t6&lt;/label&gt;
 &lt;progress id=&quot;file&quot; max=&quot;100&quot; value=66.7&gt;&lt;/progress&gt;&lt;br&gt;
 
-You’re still shaken from the last incident that occurred in the art room. In fact, you haven’t been back there in $beenback. The scuffling noise has followed you to other places in the ship, especially when the ship deems it to be nighttime and the lights dim throughout all the rooms and halls. On this particular ship-night, as you ponder whether or not to risk returning to the art room, the scuffling sounds nearer than ever before. You can’t sleep — the noise is both disruptive to your sleep and disturbing to your mind. You jump out of your bed and put on the Celestial Streams scrubs.&lt;br&gt;
+You’re still shaken from the last incident that occurred in the art room. In fact, you haven’t been back there in $beenback. The scuffling noise has followed you to other places in the ship, especially when the ship deems it to be nighttime and the lights dim throughout all the rooms and halls. On this particular ship-night, as you ponder whether or not to risk returning to the art room, the scuffling sounds nearer than ever before. You can’t sleep. You jump out of your bed and put on the Celestial Streams scrubs.&lt;br&gt;
 
 Do you investigate the noise?&lt;br&gt;
 
 [Yes!]&lt;p1|&lt;br&gt;
 [No!]&lt;p2|&lt;br&gt;
 []&lt;display|
-(click: ?p2)[(replace: ?p1)[](replace:?display)[You think better and take your scrubs off again. You crawl back into bed and take a few of the sleeping pills you smuggled on the ship before leaving. &lt;br&gt;
+(click: ?p1)[(replace: ?p2)[](replace:?display)[(set: $art3 to &quot;3A&quot;)You hurry to leave your room, hearing the scuffling and skittering noises so well, you know they must be close to your room. The door flings open, you see movement out of the corner of your eye, from the curve in the hallway.&lt;br&gt;
+
+You rush down the hall and turn the corner. There, against the wall, quivering and sniffling at the air, is a large, fat rat. The two of you make eye contact, and stare at each other for what feels like minutes, but is likely only seconds. The rat suddenly turns and dashes down the hall.&lt;br&gt;
+
+Eek! You hate rats!! But at the same time, you’re fascinated by the idea of another living thing being on the ship with you. This whole time you thought you were alone…&lt;br&gt;
+
+You run after your newfound friend, all the way back to the art room, where your first encounter occurred. You watch the rat dive into the cabinet and, presumably, into the dark corner hole. You open the cabinet doors fully to check, but the rat has indeed already slipped away.&lt;br&gt;
 
 [[Continue-&gt;Message4]]]]
-(click: ?p1)[(replace: ?p2)[](replace:?display)[You hurry to leave your room, hearing the scuffling and skittering noises so well, you know they must be close to your room. The door flings open, you see movement out of the corner of your eye, from the curve in the hallway.&lt;br&gt;
-
-Do you follow the movement down the hall?&lt;br&gt;
-
-[Yes!]&lt;p11|&lt;br&gt;
-[No!]&lt;p12|&lt;br&gt;
-[]&lt;disp1|
-]]
-(click: ?p12)[(replace: ?p11)[](replace:?disp1)[You turn around and go back to your room. Never mind!&lt;br&gt;
+(click: ?p2)[(replace: ?p1)[](replace:?display)[(set: $art3 to &quot;3B&quot;)You think better and take your scrubs off again. You crawl back into bed and take a few sleeping pills you found in the medicine cabinets.&lt;br&gt;
 
 [[Continue-&gt;Message4]]]]
-(click: ?p11)[(replace: ?p12)[](replace:?disp1)[You rush down the hall and turn the corner. There, at the edge of the hall’s wall, quivering and sniffling at the air, is a large, fat rat. The two of you make eye contact, and stare at each other for what feels like minutes, but is likely only seconds. The rat suddenly turns and dashes down the hall. &lt;br&gt;
-
-Eek! You hate rats!! But at the same time, you’re fascinated by the idea of another living thing being on this ship with you. This whole time you thought you were alone…&lt;br&gt;
-
-[Follow the rat!]&lt;p111|&lt;br&gt;
-[Go to the kitchen!]&lt;p112|&lt;br&gt;
-[]&lt;disp11|
-]]
-(click: ?p111)[(replace: ?p112)[](replace:?disp11)[You run after your newfound friend, all the way back to the art room, where your first encounter occurred. Helplessly, you watch the rat dive into the cabinet and, presumably, into the dark corner hole. You open the cabinet doors fully to check, but the rat has indeed already slipped away. &lt;br&gt;
-
-[[Continue-&gt;Message4]]]]
-(click: ?p112)[(replace: ?p111)[](replace:?disp11)[Instead of following the rat, you turn the other way towards the kitchen. You arrive and immediately start digging through the numerous pantries and fridges to find a suitable snack to appeal to a rat. You remember seeing rats in urban cities digging through trash and carrying around pizza crusts up subway steps, so you’re pretty sure they would eat just about anything. You turn over a couple of the trash cans, dumping the trash onto the floor. You should’ve compacted that and thrown it in the incinerator by now — you’re a few weeks behind on chores — but at least you have some juicy, tempting trash now. &lt;br&gt;
-
-You go to the controls room, detach the camera from the computer system and rig it up in the kitchen. You’ll get the rat this time.&lt;br&gt;
-
-[Stay and watch the footage]&lt;p112a|&lt;br&gt;
-[Go back to your room for now]&lt;p112b|&lt;br&gt;
-[]&lt;disp112|
-(click: ?p112a)[(replace: ?p112b)[](replace:?disp112)[You watch the live camera footage for hours at a time, for days in a row. The rats haven’t shown up. The kitchen is starting to stink. You’re beginning to lose your mind. After another of teary blinks at the live footage, a shadow appears in the corner of the frame. You blink away the sleep, rub your face and look again. You can’t believe what you’re seeing. It’s not just one rat, it’s….you’re not sure how many. They move as if they’re a single, amorphous fluid, creeping towards the trash. You watch, spellbound, as the rats on the edge of the continuous blob stretch out like a hand dragging itself on the floor, and take a mound of trash from the pile on the floor. You race out of the controls room and to the kitchen, to see the large mass scurrying away as one. You’re not letting them get away this time. You run after the skittering, chittering conglomerate and meet them in the art room, where you find them flooding into the cabinet like water, moving towards the hole in the wall. Their motion is slowing down — the hole must only be able to fit one or maybe two rats in it at a time. You’re not sure what to do as you watch them cascade into the wall. &lt;br&gt;
-
-[[Continue-&gt;Message4]]]]
-(click: ?p112b)[(replace: ?p112a)[](replace:?disp112)[[[Continue-&gt;Message4]]]]
-]]
 }
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="Music3" tags="" position="1075,2550" size="100,100">&lt;div class=&quot;music-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 {(track: &#39;cycle14&#39;, &#39;pause&#39;)
@@ -6449,10 +6430,11 @@ You have spent ages digging through storage, walking the corridors of the ship, 
 [Open the door.]&lt;p1|&lt;br&gt;
 [Maybe it’s best you leave it alone.]&lt;p2|&lt;br&gt;
 []&lt;disp1|
-(click: ?p1)[(replace: ?p2)[](replace:?disp1)[The door opens into a humid greenhouse, thriving with vegetation beneath a sea of violet-hued grow lights. Unmistakable at the center of it all is a grove of coffee trees, ripe with small burgundy cherries. A small six-wheeled rover meanders down the line of trees toward you, a robotic arm reaching out to strip the cherries from the branches, dropping them into a bucket mounted on its back. You watch, flabbergasted, as the rover reaches the end of the line, where it pours the bucket of coffee fruits into a small pipe. The robot turns 90 degrees and rolls to the next row, where it begins watering the roots of the trees from a pipe next to its arm. You stand there, watching, for a long time. So, then. That’s where the coffee beans come from.&lt;br&gt;
+(click: ?p1)[(replace: ?p2)[](replace:?disp1)[{(set: $ending to &quot;You unlocked Path #12: The Greenhouse&quot;)}
+The door opens into a humid greenhouse, thriving with vegetation beneath a sea of violet-hued grow lights. Unmistakable at the center of it all is a grove of coffee trees, ripe with small burgundy cherries. A small six-wheeled rover meanders down the line of trees toward you, a robotic arm reaching out to strip the cherries from the branches, dropping them into a bucket mounted on its back. You watch, flabbergasted, as the rover reaches the end of the line, where it pours the bucket of coffee fruits into a small pipe. The robot turns 90 degrees and rolls to the next row, where it begins watering the roots of the trees from a pipe next to its arm. You stand there, watching, for a long time. So, then. That’s where the coffee beans come from.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?p2)[(replace: ?p1)[](replace:?disp1)[You don’t think you were meant to know about this door, let alone any of the others you’ve uncovered. You back away from the door, watching it a moment longer. Part of you wonders whether there’s a real garden behind the door. Whether there’s some kind of high-tech greenhouse, producing fresh coffee beans, even now. In the end, it doesn’t matter. This distraction from your real mission has gone on long enough, and it’s time to put it behind you. Somehow, it’s better this way. It’s freeing, not knowing. Not wanting to know. It feels like there was a madness gripping you, and you’ve finally managed to shrug it off. Your shoulders relax, for the first time in a long time. A small, peaceful smile creeps across your face.&lt;br&gt;
+(click: ?p2)[(replace: ?p1)[](replace:?disp1)[{(set: $ending to &quot;You unlocked Path #13: The Freedom of Not Knowing&quot;)}You don’t think you were meant to know about this door, let alone any of the others you’ve uncovered. You back away from the door, watching it a moment longer. Part of you wonders whether there’s a real garden behind the door. Whether there’s some kind of high-tech greenhouse, producing fresh coffee beans, even now. In the end, it doesn’t matter. This distraction from your real mission has gone on long enough, and it’s time to put it behind you. Somehow, it’s better this way. It’s freeing, not knowing. Not wanting to know. It feels like there was a madness gripping you, and you’ve finally managed to shrug it off. Your shoulders relax, for the first time in a long time. A small, peaceful smile creeps across your face.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
 ]
@@ -6465,10 +6447,10 @@ You can’t remember the last day you didn’t spend most of your waking moments
 [Run for your life, you don’t know what this is, and you don’t want to know!]&lt;pa|&lt;br&gt;
 [Look closer...]&lt;pb|&lt;br&gt;
 []&lt;disp2|
-(click: ?pa)[(replace: ?pb)[](replace:?disp2)[You quickly replace the panel in the ceiling, before turning and running away, not so much as looking back over your shoulder, until, some time later, you find yourself panting, alone, back in the safety of the cabin. You don’t know what you saw. You wipe the mist from your face. It’s just water, you say to yourself, a prayer more than a statement that came with any certainty. It’s just water. You’re accustomed, now, to a life without coffee. You don’t need to know the source of that strange light, or why you were misted in the face, or what robot lurks at the heart of this strange spacecraft. You don’t need to know.&lt;br&gt;
+(click: ?pa)[(replace: ?pb)[](replace:?disp2)[{(set: $ending to &quot;You unlocked Path #14: Frightening Robotics&quot;)}You quickly replace the panel in the ceiling, before turning and running away, not so much as looking back over your shoulder, until, some time later, you find yourself panting, alone, back in the safety of the cabin. You don’t know what you saw. You wipe the mist from your face. It’s just water, you say to yourself, a prayer more than a statement that came with any certainty. It’s just water. You’re accustomed, now, to a life without coffee. You don’t need to know the source of that strange light, or why you were misted in the face, or what robot lurks at the heart of this strange spacecraft. You don’t need to know.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?pb)[(replace: ?pa)[](replace:?disp2)[You pull your head up through the ceiling and blink a few times against the violet light and the mist. As your vision clears, you see a humid greenhouse, thriving with vegetation beneath a sea of violet-hued grow lights. Unmistakable at the center of it all is a grove of coffee trees, ripe with small burgundy cherries. A small six-wheeled rover meanders down the line of trees toward you, a robotic arm reaching out to strip the cherries from the branches, dropping them into a bucket mounted on its back. You watch, flabbergasted, as the rover approaches you and pours the bucket of coffee fruits into the small pipe you’ve been following for so very long. The robot turns 90 degrees and rolls to the next row, where it begins watering the roots of the trees from a pipe next to its arm. You watch it for a long time. So, then. That’s where the coffee beans come from.&lt;br&gt;
+(click: ?pb)[(replace: ?pa)[](replace:?disp2)[{(set: $ending to &quot;You unlocked Path #15: Coffee Farm&quot;)}You pull your head up through the ceiling and blink a few times against the violet light and the mist. As your vision clears, you see a humid greenhouse, thriving with vegetation beneath a sea of violet-hued grow lights. Unmistakable at the center of it all is a grove of coffee trees, ripe with small burgundy cherries. A small six-wheeled rover meanders down the line of trees toward you, a robotic arm reaching out to strip the cherries from the branches, dropping them into a bucket mounted on its back. You watch, flabbergasted, as the rover approaches you and pours the bucket of coffee fruits into the small pipe you’ve been following for so very long. The robot turns 90 degrees and rolls to the next row, where it begins watering the roots of the trees from a pipe next to its arm. You watch it for a long time. So, then. That’s where the coffee beans come from.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
 ]
@@ -6489,7 +6471,7 @@ You can’t believe it. You remember, now, where you’ve seen the carpet before
 [Fight them]&lt;px|&lt;br&gt;
 [Break down and cry]&lt;py|&lt;br&gt;
 []&lt;dispz|
-(click: ?px)[(replace: ?py)[](replace:?dispz)[Rage pools within you, and you lunge at the nearest Mission Controls operative. The next ten minutes are a blur. You find yourself standing outside, next to the guardhouse in front of Mission Controls HQ. Your hands are bloodier than you remember. You drop the gun you’re holding (you don’t remember when you grabbed it, or from whom) next to the groaning heap of two guards on the ground. You steal the keys off the belt of one of the guards, find their car in the neighboring lot, and drive. You know Celestial Streams will be sending officials after you. Will they send police? Armed forces? You don’t know. And you don’t know how long you have. You pass by digital billboards that advertise the Scholars Draft, showing your face in the cabin of the Astral Kite. You drive into the city center, leaving the car parked with the keys inside, in front of a towering building—the headquarters of a large newspaper. You hear someone shouting that you can’t just leave your car in the road. As you walk through the front doors, the shouting is replaced by glares and whispers of shocked recognition. You smile. You’re going to bring Celestial Streams down. And you might bring the whole Scholars Draft down with them.&lt;br&gt;
+(click: ?px)[(replace: ?py)[](replace:?dispz)[{(set: $ending to &quot;You unlocked Path #16: Fighting Free&quot;)}Rage pools within you, and you lunge at the nearest Mission Controls operative. The next ten minutes are a blur. You find yourself standing outside, next to the guardhouse in front of Mission Controls HQ. Your hands are bloodier than you remember. You drop the gun you’re holding (you don’t remember when you grabbed it, or from whom) next to the groaning heap of two guards on the ground. You steal the keys off the belt of one of the guards, find their car in the neighboring lot, and drive. You know Celestial Streams will be sending officials after you. Will they send police? Armed forces? You don’t know. And you don’t know how long you have. You pass by digital billboards that advertise the Scholars Draft, showing your face in the cabin of the Astral Kite. You drive into the city center, leaving the car parked with the keys inside, in front of a towering building—the headquarters of a large newspaper. You hear someone shouting that you can’t just leave your car in the road. As you walk through the front doors, the shouting is replaced by glares and whispers of shocked recognition. You smile. You’re going to bring Celestial Streams down. And you might bring the whole Scholars Draft down with them.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
 (click: ?py)[(replace: ?px)[](replace:?dispz)[You collapse to the carpeted floor and you cry, and you cry. The folks from Mission Controls keep consoling you. Over the next few hours, they make a deal with you. If you go back in the ship and see out your mission, they will allow some visits from your friends and family, as long as everyone involved signs NDAs. Seeing no other option, you agree. Your next next days back in the “spacecraft” are a blur. Your journey was strange and lonely, before. But now you know it’s a farce, your day-to-day life feels so meaningless. You have your first visit with family members, held in the carpeted break room just outside your “ship,” and you spend the majority of it sobbing, holding them close, ignoring the polo-wearing Mission Controls officers standing on the back wall, watching. At the end of the visit, your best friend hugs you, whispering in your ear that they’ve been in contact with a lawyer, and they’re wearing a wire right now, and to give them a quick nod if you’d like to break your NDA and reveal Celestial Streams’s lies to the public.&lt;br&gt;
@@ -6497,17 +6479,19 @@ You can’t believe it. You remember, now, where you’ve seen the carpet before
 [Nod]&lt;pp|&lt;br&gt;
 [Don&#39;t nod]&lt;pq|&lt;br&gt;
 []&lt;dispp|
-(click: ?pp)[(replace: ?pq)[](replace:?dispp)[You nod. You don’t know what will happen. But maybe the public revelation of the lie behind this journey—and your cruel, lengthy isolation—will be enough to bring Celestial Streams down. Maybe it will even be enough to bring down the Scholars Draft. Then again, Celestial Streams is powerful, so maybe not. But it feels good to try. You have to believe it is possible. And if you can do this, if you can prevent other people from being exploited the way you were… Well, that will mean more to you than being the first person to travel to self.destination. For the first time in a long time, you find yourself smiling.&lt;br&gt;
+(click: ?pp)[(replace: ?pq)[](replace:?dispp)[{(set: $ending to &quot;You unlocked Path #17: The Wire&quot;)}You nod. You don’t know what will happen. But maybe the public revelation of the lie behind this journey—and your cruel, lengthy isolation—will be enough to bring Celestial Streams down. Maybe it will even be enough to bring down the Scholars Draft. Then again, Celestial Streams is powerful, so maybe not. But it feels good to try. You have to believe it is possible. And if you can do this, if you can prevent other people from being exploited the way you were… Well, that will mean more to you than being the first person to travel to $DESTINATION. For the first time in a long time, you find yourself smiling.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
-(click: ?pq)[(replace: ?pp)[](replace:?dispp)[You don’t nod. It’s not worth it. You don’t know what will happen. Celestial Streams is so powerful, you don’t think it’s worth the risk. Your life here might be miserable, now, but at least you can periodically see your friends and family. You might not be the first person to travel to self.destination, but this is better than being alone. This is better, you tell yourself, over and over again. This is better.&lt;br&gt;
+(click: ?pq)[(replace: ?pp)[](replace:?dispp)[{(set: $ending to &quot;You unlocked Path #18: NDA&quot;)}You don’t nod. It’s not worth it. You don’t know what will happen. Celestial Streams is so powerful, you don’t think it’s worth the risk. Your life here might be miserable, now, but at least you can periodically see your friends and family. You might not be the first person to travel to $DESTINATION, but this is better than being alone. This is better, you tell yourself, over and over again. This is better.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
 ]]
 ]]
 (click: ?pii)[(replace: ?pi)[](replace:?disp3)[{(track: &#39;cycle56-action&#39;, &#39;pause&#39;)
 (track: &#39;coffee&#39;, &#39;loop&#39;, true)
-(track: &#39;coffee&#39;, &#39;playwhenpossible&#39;)}For days, the headaches are intense. A hammering at your temples, a pounding behind your eyes in rhythm with your heartbeat. Your body does everything possible to stop you from giving up your addiction. The fluorescent lights in the spaceship hallways are lasers boring holes into your brain. You curl up in the cabin, taking some ibuprofen and squeezing your eyes shut. You remember very little of the first few days. By the fourth day, the pain has begun to recede. By the end of the week, you’ve recovered fully. Your thoughts have slowed, and, to be honest, you’re no longer worried at all about the coffee beans. They don’t matter, especially not now that you’ve stopped drinking coffee. For the first time in ages, it feels like you can breathe.&lt;br&gt;
+(track: &#39;coffee&#39;, &#39;playwhenpossible&#39;)}
+{(set: $ending to &quot;You unlocked Path #19: Caffeine Free&quot;)}
+For days, the headaches are intense. A hammering at your temples, a pounding behind your eyes in rhythm with your heartbeat. Your body does everything possible to stop you from giving up your addiction. The fluorescent lights in the spaceship hallways are lasers boring holes into your brain. You curl up in the cabin, taking some ibuprofen and squeezing your eyes shut. You remember very little of the first few days. By the fourth day, the pain has begun to recede. By the end of the week, you’ve recovered fully. Your thoughts have slowed, and, to be honest, you’re no longer worried at all about the coffee beans. They don’t matter, especially not now that you’ve stopped drinking coffee. For the first time in ages, it feels like you can breathe.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
 ]
@@ -6557,22 +6541,24 @@ You are sending this message at a distance of (print: (round: $d8*100)/100) ligh
 [Celestial Streams lied!]&lt;pac|&lt;br&gt;
 [Broadcast a new message]&lt;pad|&lt;br&gt;
 []&lt;dispaa|
-(click: ?paa)[(replace: ?pab)[](replace: ?pac)[](replace: ?pad)[](replace:?dispaa)[Excellent choice. You got it right the first time round.&lt;br&gt;
+(click: ?paa)[(replace: ?pab)[](replace: ?pac)[](replace: ?pad)[](replace:?dispaa)[{(set: $ending to &quot;You unlocked Path #20: The First Broadcast&quot;)}Excellent choice. You got it right the first time round.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?pab)[(replace: ?paa)[](replace: ?pac)[](replace: ?pad)[](replace:?dispaa)[Where better to start than with what you tried to send in the past?&lt;br&gt;
+(click: ?pab)[(replace: ?paa)[](replace: ?pac)[](replace: ?pad)[](replace:?dispaa)[{(set: $ending to &quot;You unlocked Path #21: The Second Broadcast&quot;)}Where better to start than with what you tried to send in the past?&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?pac)[(replace: ?paa)[](replace: ?pab)[](replace: ?pad)[](replace:?dispaa)[The world must know the truth. And they will know. Thanks to your perseverance, they will know.&lt;br&gt;
+(click: ?pac)[(replace: ?paa)[](replace: ?pab)[](replace: ?pad)[](replace:?dispaa)[{(set: $ending to &quot;You unlocked Path #22: Broadcasting the Truth&quot;)}The world must know the truth. And they will know. Thanks to your perseverance, they will know.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
 (click: ?pad)[(replace: ?paa)[](replace: ?pab)[](replace: ?pac)[](replace:?dispaa)[(link-replace: &quot;Continue&quot;)[(show: ?p4)]
+{(set: $ending to &quot;You unlocked Path #23: The Third Broadcast&quot;)}
 
 |p4)[(set: $broadcast4 to (prompt: &quot;Enter your message here:&quot;, &quot;&quot;))&lt;br&gt;]
 
 [[Continue-&gt;Arrival]]]]]
 ]
-(click: ?pA2)[(replace: ?pA1)[](replace:?dispA)[Actually sending a message to Earth has never been what this was really about, for you. No, that desire has long gone. This has been about learning the truth, and you’ve found that. The truth is, Celestial Streams saw you as little more than a hamster, to be given a fascinating wheel to spin while they send you as far away as possible for their own benefit. Nothing you do or say will ever change that.&lt;br&gt;
+(click: ?pA2)[(replace: ?pA1)[](replace:?dispA)[{(set: $ending to &quot;You unlocked Path #24: Knowing the Truth&quot;)}
+Actually sending a message to Earth has never been what this was really about, for you. No, that desire has long gone. This has been about learning the truth, and you’ve found that. The truth is, Celestial Streams saw you as little more than a hamster, to be given a fascinating wheel to spin while they send you as far away as possible for their own benefit. Nothing you do or say will ever change that.&lt;br&gt;
 
 You could try to send something to Earth, revealing what Celestial Streams has done, but for all you know, there *is* no Celestial Streams anymore. By the time any message you send now arrives, (print: (round: $treceive8*100)/100) years would have passed on Earth. Whether for the better or the worse, you have no idea, but things are likely very different from the home you remember.&lt;br&gt;
 
@@ -6585,12 +6571,14 @@ It’s enough for you to know this truth. You don’t need to shout your victory
 [No, I don&#39;t.]&lt;pB1|&lt;br&gt;
 [Maybe I do, after all…]&lt;pB2|&lt;br&gt;
 []&lt;dispB|
-(click: ?pB1)[(replace: ?pB2)[](replace:?dispB)[No, you really don’t. You’ve come to terms with the fact that it won’t make a difference. Knowing one way or the other will change nothing for you. And nothing you ever broadcast would have mattered for Earth, either. You’re far too far removed to ever hope for your words to carry meaning, to maintain enough context to have an impact.&lt;br&gt;
+(click: ?pB1)[(replace: ?pB2)[](replace:?dispB)[{(set: $ending to &quot;You unlocked Path #25: Coming to Terms&quot;)}
+No, you really don’t. You’ve come to terms with the fact that it won’t make a difference. Knowing one way or the other will change nothing for you. And nothing you ever broadcast would have mattered for Earth, either. You’re far too far removed to ever hope for your words to carry meaning, to maintain enough context to have an impact.&lt;br&gt;
 
 It’s alright. You don’t need that. You never have.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?pB2)[(replace: ?pB1)[](replace:?dispB)[You thought you were over it, but you’re not. You need to know! And after how long you’ve waited, you’re impatient. You don’t want to sit down and read textbooks to remind yourself every last detail about electronics. You want to get elbows deep in the communications equipment and figure it out yourself.&lt;br&gt;
+(click: ?pB2)[(replace: ?pB1)[](replace:?dispB)[{(set: $ending to &quot;You unlocked Path #26: Wreckage&quot;)}
+You thought you were over it, but you’re not. You need to know! And after how long you’ve waited, you’re impatient. You don’t want to sit down and read textbooks to remind yourself every last detail about electronics. You want to get elbows deep in the communications equipment and figure it out yourself.&lt;br&gt;
 
 It’s hours later, when the equipment is torn apart and scattered across the floor of the Astral Kite’s cabin, that you start to realize what you’ve done.&lt;br&gt;
 
@@ -6724,7 +6712,7 @@ The response on your receiver reads, (text-color: &quot;Wheat&quot;)[“Hello, E
 [Try to stop these fake messages from overwriting your own]&lt;z1|&lt;br&gt;
 [Trash the communications equipment]&lt;z2|&lt;br&gt;
 []&lt;dispz|
-(click: ?z1)[(replace: ?z2)[](replace:?dispz)[It’s not hard to figure out what’s going on. After asking some pointed questions of one of the ship’s Chatting on the Astral KitE (CAKE) AI bots, you’re quite confident they’ve been programmed to overwrite all your messages.&lt;br&gt;
+(click: ?z1)[(replace: ?z2)[](replace:?dispz)[{(set: $ending to &quot;You unlocked Path #27: Overriding CAKEbot&quot;)}It’s not hard to figure out what’s going on. After asking some pointed questions of one of the ship’s Chatting on the Astral KitE (CAKE) AI bots, you’re quite confident they’ve been programmed to overwrite all your messages.&lt;br&gt;
 
 So, you shut them down.&lt;br&gt;
 
@@ -6737,7 +6725,7 @@ Finally.&lt;br&gt;
 Now, at last, you can send all the messages to Earth you like. And you’re going to start with some hard truths about Celestial Streams.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?z2)[(replace: ?z1)[](replace:?dispz)[That’s it. You’re done. You don’t need this in your life. You smash the communications equipment with a hammer.&lt;br&gt;
+(click: ?z2)[(replace: ?z1)[](replace:?dispz)[{(set: $ending to &quot;You unlocked Path #28: A Hammering&quot;)}That’s it. You’re done. You don’t need this in your life. You smash the communications equipment with a hammer.&lt;br&gt;
 
 You won’t be broadcasting any more messages to Earth.&lt;br&gt;
 
@@ -6749,7 +6737,7 @@ And now, at last, as you look down at the shattered pieces of the communications
 
 [[Continue-&gt;Arrival]]]]
 ]
-|failure)[Just as you’re about to complete the installation, one of the drills you’re using to attach the receiver to the ship slips from your grasp. The thick gloved fingers of your space suit leave you far less dextrous than normal. You reach to grab the drill, a jolting motion that results in your elbow dislodging a latch that’s holding your propulsion unit. The unit lurches halfway off your back, and as you turn desperately to grab it, your clumsy hand triggers the unit. The jet pack launches your helpless body away from the Astral Kite before it dislodges fully from your suit and spirals off into space.&lt;br&gt;
+|failure)[{(set: $ending to &quot;You unlocked Path #29: Extravehicular Failure&quot;)}Just as you’re about to complete the installation, one of the drills you’re using to attach the receiver to the ship slips from your grasp. The thick gloved fingers of your space suit leave you far less dextrous than normal. You reach to grab the drill, a jolting motion that results in your elbow dislodging a latch that’s holding your propulsion unit. The unit lurches halfway off your back, and as you turn desperately to grab it, your clumsy hand triggers the unit. The jet pack launches your helpless body away from the Astral Kite before it dislodges fully from your suit and spirals off into space.&lt;br&gt;
 
 You can do nothing but watch as you drift farther and farther away, and the Astral Kite fades from view.&lt;br&gt;
 
@@ -6803,16 +6791,16 @@ You’ll never know.&lt;br&gt;
 [Send a message to Earth revealing Tusk is the leader of the Space Truthers]&lt;pAa|&lt;br&gt;
 [Forget it. Who cares?]&lt;pAb|&lt;br&gt;
 []&lt;dispA|
-(click: ?pAa)[(replace: ?pAb)[](replace:?dispA)[(if: $d8&lt;100)[(if: 2*$d8+$age + $ttyr9 &lt; 100)[It will take a while, but your message will arrive one day. And you’ll probably receive Earth’s reply, one day, too. You smile, imagining it. Celestial Streams will surely take legal action against him. You might be the person to bring down Aaron Tusk and SpaceZ. You’d like to be remembered for that, just as much as you’d like to be remembered for this mission.&lt;br&gt;
+(click: ?pAa)[(replace: ?pAb)[](replace:?dispA)[(if: $d8&lt;100)[(if: 2*$d8+$age + $ttyr9 &lt; 100)[{(set: $ending to &quot;You unlocked Path #30A: Revealing Tusk&quot;)}It will take a while, but your message will arrive one day. And you’ll probably receive Earth’s reply, one day, too. You smile, imagining it. Celestial Streams will surely take legal action against him. You might be the person to bring down Aaron Tusk and SpaceZ. You’d like to be remembered for that, just as much as you’d like to be remembered for this mission.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]
-(else:)[It will take a while, but your message will arrive one day. You’ll probably never receive Earth’s reply, but that’s okay. You still know that your message matters. Celestial Streams will take legal action. You might be the person who exposes Aaron Tusk as a fraud and brings about the fall of SpaceZ. You smile, imagining it.&lt;br&gt;
+(else:)[{(set: $ending to &quot;You unlocked Path #30B: Revealing Tusk&quot;)}It will take a while, but your message will arrive one day. You’ll probably never receive Earth’s reply, but that’s okay. You still know that your message matters. Celestial Streams will take legal action. You might be the person who exposes Aaron Tusk as a fraud and brings about the fall of SpaceZ. You smile, imagining it.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(else:)[You know your message won’t arrive until long after Aaron Tusk is likely dead. Who knows what will become of the Space Truthers by then? Who knows what will happen to SpaceZ, or Celestial Streams? But you still care about the truth. Hopefully, when Earth receives your message, it will put an end to this awful conspiracy theory. And if any heirs of Tusk are still around, maybe your message will help stop them from exploiting more people, too.&lt;br&gt;
+(else:)[{(set: $ending to &quot;You unlocked Path #30C: Revealing Tusk&quot;)}You know your message won’t arrive until long after Aaron Tusk is likely dead. Who knows what will become of the Space Truthers by then? Who knows what will happen to SpaceZ, or Celestial Streams? But you still care about the truth. Hopefully, when Earth receives your message, it will put an end to this awful conspiracy theory. And if any heirs of Tusk are still around, maybe your message will help stop them from exploiting more people, too.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]]
-(click: ?pAb)[(replace: ?pAa)[](replace:?dispA)[You’re so far away, now. These events don’t matter to you. You wanted to know who was behind the Space Truthers, and now you know. It’s one of history’s greatest thieves and charlatans, Aaron Tusk. Tusk and SpaceZ are evil. But so is Celestial Streams, really. If they’re working against each other, all the better. You raise a small glass to yourself in a mock toast. Let them tear each other apart.&lt;br&gt;
+(click: ?pAb)[(replace: ?pAa)[](replace:?dispA)[{(set: $ending to &quot;You unlocked Path #31: No Lesser Evil&quot;)}You’re so far away, now. These events don’t matter to you. You wanted to know who was behind the Space Truthers, and now you know. It’s one of history’s greatest thieves and charlatans, Aaron Tusk. Tusk and SpaceZ are evil. But so is Celestial Streams, really. If they’re working against each other, all the better. You raise a small glass to yourself in a mock toast. Let them tear each other apart.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
 ]
@@ -6821,16 +6809,16 @@ You’ll never know.&lt;br&gt;
 [Send a message to Earth revealing Tezos is the leader of the Space Truthers]&lt;p1|&lt;br&gt;
 [Forget it. Who cares?]&lt;p2|&lt;br&gt;
 []&lt;disp2|
-(click: ?p1)[(replace: ?p2)[](replace:?disp2)[(if: $d8&lt;100)[(if: 2*$d8+$age + $ttyr9 &lt; 100)[It will take a while, but your message will arrive one day. And you’ll probably receive Earth’s reply, one day, too. You smile, imagining it. Celestial Streams will surely take legal action against him. You might be the person to bring down Godfrey Tezos and his exploitative companies. You’d like to be remembered for that, just as much as you’d like to be remembered for this mission.&lt;br&gt;
+(click: ?p1)[(replace: ?p2)[](replace:?disp2)[(if: $d8&lt;100)[(if: 2*$d8+$age + $ttyr9 &lt; 100)[{(set: $ending to &quot;You unlocked Path #32A: Revealing Tezos&quot;)}It will take a while, but your message will arrive one day. And you’ll probably receive Earth’s reply, one day, too. You smile, imagining it. Celestial Streams will surely take legal action against him. You might be the person to bring down Godfrey Tezos and his exploitative companies. You’d like to be remembered for that, just as much as you’d like to be remembered for this mission.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]
-(else:)[It will take a while, but your message will arrive one day. You’ll probably never receive Earth’s reply, but that’s okay. You still know that your message matters. Celestial Streams will take legal action. You might be the person who exposes Godfrey Tezos as a fraud and brings about the fall of Green Origin. You smile, imagining it.&lt;br&gt;
+(else:)[{(set: $ending to &quot;You unlocked Path #32B: Revealing Tezos&quot;)}It will take a while, but your message will arrive one day. You’ll probably never receive Earth’s reply, but that’s okay. You still know that your message matters. Celestial Streams will take legal action. You might be the person who exposes Godfrey Tezos as a fraud and brings about the fall of Green Origin. You smile, imagining it.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(else:)[You know your message won’t arrive until long after Godfrey Tezos is likely dead. Who knows what will become of the Space Truthers by then? Who knows what will happen to Green Origin, or Celestial Streams? But you still care about the truth. Hopefully, when Earth receives your message, it will put an end to this awful conspiracy theory. And if any heirs of Tezos are still around, maybe your message will help stop them from exploiting more people, too.&lt;br&gt;
+(else:)[{(set: $ending to &quot;You unlocked Path #32C: Revealing Tezos&quot;)}You know your message won’t arrive until long after Godfrey Tezos is likely dead. Who knows what will become of the Space Truthers by then? Who knows what will happen to Green Origin, or Celestial Streams? But you still care about the truth. Hopefully, when Earth receives your message, it will put an end to this awful conspiracy theory. And if any heirs of Tezos are still around, maybe your message will help stop them from exploiting more people, too.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]]
-(click: ?p2)[(replace: ?p1)[](replace:?disp2)[You’re so far away, now. These events don’t matter to you. You wanted to know who was behind the Space Truthers, and now you know. It’s one of history’s greatest thieves and charlatans, Godfrey Tezos. Tezos and his companies, including Green Origin, are evil. But so is Celestial Streams, really. If they’re working against each other, all the better. You raise a small glass to yourself in a mock toast. Let them tear each other apart.&lt;br&gt;
+(click: ?p2)[(replace: ?p1)[](replace:?disp2)[{(set: $ending to &quot;You unlocked Path #33: No Lesser Evil 2&quot;)}You’re so far away, now. These events don’t matter to you. You wanted to know who was behind the Space Truthers, and now you know. It’s one of history’s greatest thieves and charlatans, Godfrey Tezos. Tezos and his companies, including Green Origin, are evil. But so is Celestial Streams, really. If they’re working against each other, all the better. You raise a small glass to yourself in a mock toast. Let them tear each other apart.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
 ]
@@ -6843,7 +6831,7 @@ You have to do something. You have to find out the truth.&lt;br&gt;
 [Start a video message to Celestial Streams, threatening to kill yourself]&lt;pB1|&lt;br&gt;
 [Try to break through the cabin viewscreen, to see if it’s real]&lt;pB2|&lt;br&gt;
 []&lt;dispB|
-(click: ?pB1)[(replace: ?pB2)[](replace:?dispB)[If you really are on Earth, Celestial Streams will receive the signal instantly. Maybe they’ve been faking the time delay between your messages this whole time. You grab a knife from the kitchen, open up the video feed in the cabin, and hold the blade to your own neck. “Hey, Mission Controls. I can’t do this anymore. I’m done. You’ve got 20 seconds to get me out of here. 19. 18. 17…” You keep counting down, pressing the blade into your neck until it draws blood.&lt;br&gt;
+(click: ?pB1)[(replace: ?pB2)[](replace:?dispB)[{(set: $ending to &quot;You unlocked Path #34: A Celestial Conspiracy&quot;)}If you really are on Earth, Celestial Streams will receive the signal instantly. Maybe they’ve been faking the time delay between your messages this whole time. You grab a knife from the kitchen, open up the video feed in the cabin, and hold the blade to your own neck. “Hey, Mission Controls. I can’t do this anymore. I’m done. You’ve got 20 seconds to get me out of here. 19. 18. 17…” You keep counting down, pressing the blade into your neck until it draws blood.&lt;br&gt;
 
 When you hit six, you hear a door slam open somewhere behind you. You stop counting, and a smile creeps over your face. You leave the cabin, walking towards the commotion.&lt;br&gt;
 
@@ -6852,7 +6840,8 @@ Three people in the gray uniforms of Mission Controls are charging through the s
 There are carts full of supplies stowed in the hangar, next to the Astral Kite. Food, water, coffee beans… But you don’t focus on that at all. At the end of the hangar is a fifty-foot wide opening, with sunlight pouring in. You smile. And, ignoring the voices and the racing storm of footsteps behind you, you run.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
-(click: ?pB2)[(replace: ?pB1)[](replace:?dispB)[You head to the small gym, grabbing the largest weight you can swing around off the weight rack. Back in the cabin, you spin once to gain momentum and launch the weight against the viewscreen. It makes a satisfying crunch before falling to smash a control panel beneath the screen. Alarms start blaring and vermillion lights start flashing. Peering up, you see a crack spider-webbing over the viewport. Smiling, you pick up the weight and throw it again. This time, the viewscreen shatters.&lt;br&gt;
+(click: ?pB2)[(replace: ?pB1)[](replace:?dispB)[{(set: $ending to &quot;You unlocked Path #35: Break the Glass&quot;)}
+You head to the small gym, grabbing the largest weight you can swing around off the weight rack. Back in the cabin, you spin once to gain momentum and launch the weight against the viewscreen. It makes a satisfying crunch before falling to smash a control panel beneath the screen. Alarms start blaring and vermillion lights start flashing. Peering up, you see a crack spider-webbing over the viewport. Smiling, you pick up the weight and throw it again. This time, the viewscreen shatters.&lt;br&gt;
 
 And aside from the shrieking demolition of glass, there is only stillness. You are not sucked out into the vacuum of space. The furniture in the cabin is not tossed about in a storm. And there is not darkness outside, but an incandescent light that floods the cabin.&lt;br&gt;
 
@@ -6877,6 +6866,7 @@ You climb, ignoring the glass, which cuts into your hands and knees, leaving run
 (if: $alive &lt; 2)[(go-to: &quot;Dead&quot;)]]
 }
 {
+{(set: $ending to &quot;You unlocked Path #36: Staring at Walls&quot;)}
 (live: 1s)[(stop:)
 (t8n:&quot;dissolve&quot;)[&lt;label for=&quot;file&quot;&gt;Ship clock: $tt8 | Earth clock: $t8&lt;/label&gt;
 &lt;progress id=&quot;file&quot; max=&quot;100&quot; value=88.9&gt;&lt;/progress&gt;&lt;br&gt;]]&lt;br&gt;
@@ -6957,7 +6947,7 @@ It twists out of the candlestick and collapses onto the table with a loud *thud*
 [Run]&lt;paai|&lt;br&gt;
 [Attack]&lt;paaii|&lt;br&gt;
 []&lt;daa|
-(click: ?paai)[(replace: ?paaii)[](replace:?daa)[What is this? Who put this here with you?&lt;br&gt;
+(click: ?paai)[(replace: ?paaii)[](replace:?daa)[{(set: $ending to &quot;You unlocked Path #37: Wax on the Tongue&quot;)}What is this? Who put this here with you?&lt;br&gt;
 
 You turn tail to run, but the brilliant light at the center of the room does not spill far beyond the table, leaving you blind in the darkness.&lt;br&gt;
 
@@ -6988,7 +6978,7 @@ It is only now that you realize the voice is inside your head.&lt;br&gt;
 You open your mouth to scream, but your tongue tastes of wax, and all that comes out are two words. “Thank you.”&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
-(click: ?paaii)[(replace: ?paai)[](replace:?daa)[With no better ideas, you punch the creeping tentacles of wax. It burns like you stuck your hand inside a pile of coals, and when you pull back you can see your knuckles are blistered, but the wax recoils beneath the blow.&lt;br&gt;
+(click: ?paaii)[(replace: ?paai)[](replace:?daa)[{(set: $ending to &quot;You unlocked Path #38: Eldritch Candles&quot;)}With no better ideas, you punch the creeping tentacles of wax. It burns like you stuck your hand inside a pile of coals, and when you pull back you can see your knuckles are blistered, but the wax recoils beneath the blow.&lt;br&gt;
 
 Emboldened, you punch it again and again, then grab it, ignoring the scalding pain and throwing it with all your might across the room.&lt;br&gt;
 
@@ -7035,7 +7025,7 @@ At last, after what must have been several minutes, you decide to turn around. P
 [Retrace your steps]&lt;paaiii|&lt;br&gt;
 [Leave the wall]&lt;paaiv|&lt;br&gt;
 []&lt;daai|
-(click: ?paaiii)[(replace: ?paaiv)[](replace:?daai)[Since you didn’t find the door in this direction, you just need to retrace your steps. Then you’ll find the door.&lt;br&gt;
+(click: ?paaiii)[(replace: ?paaiv)[](replace:?daai)[{(set: $ending to &quot;You unlocked Path #39: Whispers in the Darkness&quot;)}Since you didn’t find the door in this direction, you just need to retrace your steps. Then you’ll find the door.&lt;br&gt;
 
 You start walking back, hands maintaining contact with the wall at all times.&lt;br&gt;
 
@@ -7068,7 +7058,7 @@ You can’t hear the whispering anymore.&lt;br&gt;
 Taking a deep breath, you decide never to return to this strange room. It’s not good for your mental health.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?paaiv)[(replace: ?paaiii)[](replace:?daai)[The thing is, you’re certain the room was enclosed. You’ve come here many times; you would’ve noticed any secret passageways or fake walls.&lt;br&gt;
+(click: ?paaiv)[(replace: ?paaiii)[](replace:?daai)[{(set: $ending to &quot;You unlocked Path #40: Sacrifice&quot;)}The thing is, you’re certain the room was enclosed. You’ve come here many times; you would’ve noticed any secret passageways or fake walls.&lt;br&gt;
 
 And surely you would’ve felt it, if the wall changed or a new path opened before you.&lt;br&gt;
 
@@ -7149,7 +7139,7 @@ One place capable of ending your unremitting torment.&lt;br&gt;
 [Go to the Door]&lt;pabi|&lt;br&gt;
 [Keep your vow]&lt;pabii|&lt;br&gt;
 []&lt;dispab|
-(click: ?pabi)[(replace: ?pabii)[](replace:?dispab)[You don’t even realize where your feet have carried you until you find yourself face to face with the mahogany door. It pulls you forward like a mouth drawing in breath, like a flower petal caught in a swirling gust.&lt;br&gt;
+(click: ?pabi)[(replace: ?pabii)[](replace:?dispab)[{(set: $ending to &quot;You unlocked Path #41: The Warmth&quot;)}You don’t even realize where your feet have carried you until you find yourself face to face with the mahogany door. It pulls you forward like a mouth drawing in breath, like a flower petal caught in a swirling gust.&lt;br&gt;
 
 You reach for the brass knob, but the door is already open, and it swings slowly in before your fingers can touch it.&lt;br&gt;
 
@@ -7176,7 +7166,7 @@ But at last you are warm. This, you know, as the flesh peels off your bones, and
 At last, you are warm.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
-(click: ?pabii)[(replace: ?pabi)[](replace:?dispab)[No. You made a vow, and you do not intend to break it.&lt;br&gt;
+(click: ?pabii)[(replace: ?pabi)[](replace:?dispab)[{(set: $ending to &quot;You unlocked Path #42: The Vow&quot;)}No. You made a vow, and you do not intend to break it.&lt;br&gt;
 
 You do not understand the purpose of that mahogany door in the belly of the ship, nor do you have any desire to.&lt;br&gt;
 
@@ -7210,7 +7200,7 @@ Until, one day, when you see a shadow moving on a live video feed, just outside 
 [Depressurize that portion of the Astral Kite]&lt;pba1|&lt;br&gt;
 [Investigate]&lt;pba2|&lt;br&gt;
 []&lt;dispba|
-(click: ?pba1)[(replace: ?pba2)[](replace:?dispba)[You are not taking any chances. You were told you would be sent on this voyage alone. Anyone or anything else on board should *not* be here and can’t be trusted, especially not after whatever it is has kept itself hidden for so long.&lt;br&gt;
+(click: ?pba1)[(replace: ?pba2)[](replace:?dispba)[{(set: $ending to &quot;You unlocked Path #43: Lockdown Protocol&quot;)}You are not taking any chances. You were told you would be sent on this voyage alone. Anyone or anything else on board should *not* be here and can’t be trusted, especially not after whatever it is has kept itself hidden for so long.&lt;br&gt;
 
 The Astral Kite has numerous emergency protocols for cutting off portions of the ship in case of depressurization, and you immediately trigger a lockdown around the several rooms and corridors near where you saw the shadow.&lt;br&gt;
 
@@ -7259,7 +7249,7 @@ It’s here.&lt;br&gt;
 [Open the door]&lt;pbai|&lt;br&gt;
 [Run]&lt;pbaii|&lt;br&gt;
 []&lt;dispbai|
-(click: ?pbai)[(replace: ?pbaii)[](replace:?dispbai)[You have avoided this for far too long, and you will let yourself be cowed no longer.&lt;br&gt;
+(click: ?pbai)[(replace: ?pbaii)[](replace:?dispbai)[{(set: $ending to &quot;You unlocked Path #44: Blood and Shadow&quot;)}You have avoided this for far too long, and you will let yourself be cowed no longer.&lt;br&gt;
 
 Taking a deep breath, moving swiftly before your shaking body can force you to change your mind, you raise your wrench in one hand, and with the other, you grab the doorknob and pull it open.&lt;br&gt;
 
@@ -7282,7 +7272,7 @@ Your eyes glance over the instructions you had failed to notice before today, te
 No, you don’t think you’ll open this door again.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?pbaii)[(replace: ?pbai)[](replace:?dispbai)[You turn to run, only to be faced with the shadow. It wasn’t behind the door at all. You don’t know how, but it was a trick. And now it rises above you in a web of spidery shadow-limbs, an umbral being of utter void. Your eyes want to slide away from it, whether through some power of its own or as a measure of self-defense for your sanity, you are uncertain.&lt;br&gt;
+(click: ?pbaii)[(replace: ?pbai)[](replace:?dispbai)[{(set: $ending to &quot;You unlocked Path #45: The Shadow&quot;)}You turn to run, only to be faced with the shadow. It wasn’t behind the door at all. You don’t know how, but it was a trick. And now it rises above you in a web of spidery shadow-limbs, an umbral being of utter void. Your eyes want to slide away from it, whether through some power of its own or as a measure of self-defense for your sanity, you are uncertain.&lt;br&gt;
 
 You back away from the thing, colorless, barely there.&lt;br&gt;
 
@@ -7348,7 +7338,7 @@ The copy of you in the mirror, your doppelgänger, holds a knife to your neck.&l
 [Throw the mirror]&lt;pbbi|&lt;br&gt;
 [Fight]&lt;pbbii|&lt;br&gt;
 []&lt;dispbbi|
-(click: ?pbbi)[(replace: ?pbbii)[](replace:?dispbbi)[You throw the mirror against the control panel before you. It shatters.&lt;br&gt;
+(click: ?pbbi)[(replace: ?pbbii)[](replace:?dispbbi)[{(set: $ending to &quot;You unlocked Path #46: Doppelgänger&quot;)}You throw the mirror against the control panel before you. It shatters.&lt;br&gt;
 
 You can see the silvery shard flying your direction, powerless to stop it, too slow to move out of its way.&lt;br&gt;
 
@@ -7358,6 +7348,7 @@ And in that final moment, you can see your reflection in it. There&#39;s blood b
 (click: ?pbbii)[(replace: ?pbbi)[](replace:?dispbbi)[{(track: &#39;cycle56-mystery&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
 (track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)}
+{(set: $ending to &quot;You unlocked Path #47: Shattered Reflection&quot;)}
 You spin in your chair, swinging the silver mirror into the open space behind you.&lt;br&gt;
 
 To your shock, it collides against—nothing. A shout of pain rings out in your voice, though it passes not through your lips.&lt;br&gt;
@@ -7384,7 +7375,7 @@ It’s over.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
 ]]
-(click: ?pbb2)[(replace: ?pbb1)[](replace:?dispbb1)[It’s bad luck, right? Does that rule still apply in space?&lt;br&gt;
+(click: ?pbb2)[(replace: ?pbb1)[](replace:?dispbb1)[{(set: $ending to &quot;You unlocked Path #48: The Broken Mirror&quot;)}It’s bad luck, right? Does that rule still apply in space?&lt;br&gt;
 
 It doesn’t matter. Something’s off with your reflection and you’re not taking any chances.&lt;br&gt;
 
@@ -7440,7 +7431,7 @@ Every day, your feet bring you to the mahogany door.&lt;br&gt;
 [Open the door]&lt;pca1|&lt;br&gt;
 [Resolve never to sleep again]&lt;pca2|&lt;br&gt;
 []&lt;dispca1|
-(click: ?pca1)[(replace: ?pca2)[](replace:?dispca1)[There is no point in resisting further. You must sleep, and it is clear that you cannot resist this call forever.&lt;br&gt;
+(click: ?pca1)[(replace: ?pca2)[](replace:?dispca1)[{(set: $ending to &quot;You unlocked Path #49: Through the Mahogany Door&quot;)}There is no point in resisting further. You must sleep, and it is clear that you cannot resist this call forever.&lt;br&gt;
 
 You don’t recall asking your limbs to move, but your fingers caress the smooth grain of the door, the shining brass of the knocker.&lt;br&gt;
 
@@ -7485,7 +7476,7 @@ You’re free.&lt;br&gt;
 You resolve never to find out.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?pca2)[(replace: ?pca1)[](replace:?dispca1)[Your fear is too overwhelming. You can’t bring yourself to touch the door.&lt;br&gt;
+(click: ?pca2)[(replace: ?pca1)[](replace:?dispca1)[{(set: $ending to &quot;You unlocked Path #50: Hunted By the Door&quot;)}Your fear is too overwhelming. You can’t bring yourself to touch the door.&lt;br&gt;
 
 You will do whatever it takes to avoid being forced here over and over, even if it means never sleeping again.&lt;br&gt;
 
@@ -7576,6 +7567,7 @@ There is no escape. In the end, you know this madness must stop. And you know wh
 (click: ?pcb1)[(replace: ?pcb2)[](replace:?dispcb1)[{(track: &#39;dramatic&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
 (track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)}
+{(set: $ending to &quot;You unlocked Path #51: Blood on the Wall&quot;)}
 There is not much in the way of destructive weaponry aboard the Astral Kite. Even if Celestial Streams had been more thorough in their psychological tests before sending you out here alone, you do not think they would have left axes or a flamethrower lying around the ship. It didn’t seem prudent for a journey such as this one, subjected to such long bouts of loneliness.&lt;br&gt;
 
 But that does not mean you haven’t had a long time, sufficient time, to explore this ship and find ample materials to construct your own improvised armament.&lt;br&gt;
@@ -7660,7 +7652,8 @@ There is no escape.&lt;br&gt;
 [Wait. This is all part of the plan. Just wait.]&lt;pcbi|&lt;br&gt;
 [Enough. The doors aren’t real. Get up.]&lt;pcbii|&lt;br&gt;
 []&lt;dispcbi|
-(click: ?pcbi)[(replace: ?pcbii)[](replace:?dispcbi)[You do not move a muscle. You refuse.&lt;br&gt;
+(click: ?pcbi)[(replace: ?pcbii)[](replace:?dispcbi)[{(set: $ending to &quot;You unlocked Path #52: Battle of Wills&quot;)}
+You do not move a muscle. You refuse.&lt;br&gt;
 
 Minutes pass, and the door does not move.&lt;br&gt;
 
@@ -7710,6 +7703,7 @@ And then, you do not open them again.&lt;br&gt;
 (click: ?pcbii)[(replace: ?pcbi)[](replace:?dispcbi)[{(track: &#39;dramatic&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-mystery&#39;, &#39;loop&#39;, true)
 (track: &#39;cycle56-mystery&#39;, &#39;playwhenpossible&#39;)}
+{(set: $ending to &quot;You unlocked Path #53: A Closet of Books&quot;)}
 Taking a deep breath, steeling every nerve in your body, squeezing your eyes closed and tensing your muscles, you sit up.&lt;br&gt;
 
 Nothing happens. You open your eyes.&lt;br&gt;
@@ -7773,7 +7767,7 @@ Then, faint red auxiliary lights illuminate the edges of the walls, and a loud a
 [Two minutes is plenty of time. Finish your current set of bicep curls, then go override the shutdown.]&lt;p2|&lt;br&gt;
 [Enough is enough. Let it go.]&lt;p3|&lt;br&gt;
 []&lt;disp4|
-(click: ?p1)[(replace: ?p2)[](replace: ?p3)[](replace:?disp4)[You sprint to the bridge, pulling up a computer terminal.&lt;br&gt;
+(click: ?p1)[(replace: ?p2)[](replace: ?p3)[](replace:?disp4)[{(set: $ending to &quot;You unlocked Path #54: Shutdown Override&quot;)}You sprint to the bridge, pulling up a computer terminal.&lt;br&gt;
 
 The ship’s AI immediately shuts the terminal down.&lt;br&gt;
 
@@ -7953,6 +7947,7 @@ Your heart is pounding. The screen comes back on.&lt;br&gt;
 (track: &#39;working-out&#39;, &#39;playwhenpossible&#39;)}
 (if: $counter is 1)[(set: $remaining to (string: $counter) + &quot; second remaining&quot;)]
 (else:)[(set: $remaining to (string: $counter) + &quot; seconds remaining&quot;)]
+{(set: $ending to &quot;You unlocked Path #55: Buzzer Beater&quot;)}
 The countdown stops. You glance at the clock. //$remaining//&lt;br&gt;
 
 Relief floods your limbs, and you let out a long, heavy breath.&lt;br&gt;
@@ -7977,8 +7972,8 @@ Whew. Your heart is still beating fast. That was a workout.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]
 (else:)[
-(if: $correct is &quot;shutdown&quot;)[You are too slow.&lt;br&gt;]
-(else-if: $stopshutdown is &quot;True&quot;)[You have failed to enter the shutdown sequence correctly.&lt;br&gt;]
+(if: $correct is &quot;shutdown&quot;)[You are too slow.&lt;br&gt;{(set: $ending to &quot;You unlocked Path #56A: Too Slow&quot;)}]
+(else-if: $stopshutdown is &quot;True&quot;)[You have failed to enter the shutdown sequence correctly.&lt;br&gt;{(set: $ending to &quot;You unlocked Path #56B: Shutdown Failure&quot;)}]
 
 “3. 2. 1.”&lt;br&gt;
 
@@ -7995,7 +7990,7 @@ You feel it at the same time you hear it; the scream of vacuum, of air being suc
 [[The End-&gt;Credits]]]
 ]
 ]]
-(click: ?p3)[(replace: ?p1)[](replace: ?p2)[](replace:?disp4)[You’ve had enough of running around putting out fires, out here.&lt;br&gt;
+(click: ?p3)[(replace: ?p1)[](replace: ?p2)[](replace:?disp4)[{(set: $ending to &quot;You unlocked Path #57: Letting Go&quot;)}You’ve had enough of running around putting out fires, out here.&lt;br&gt;
 
 There’s nothing more for you to do on this journey. You stopped caring about reaching your destination a long time ago.&lt;br&gt;
 
@@ -8079,7 +8074,7 @@ Right?&lt;br&gt;
 [Right.]&lt;pA|&lt;br&gt;
 [Wrong!]&lt;pB|&lt;br&gt;
 []&lt;disp1|
-(click: ?pA)[(replace: ?pB)[](replace:?disp1)[Yes, you are alone. You and the Universe and no one else. Humans. People. Earth. These words are nothing but a collection of sounds. They carry no significance for you any longer.&lt;br&gt;
+(click: ?pA)[(replace: ?pB)[](replace:?disp1)[{(set: $ending to &quot;You unlocked Path #58: Alone&quot;)}Yes, you are alone. You and the Universe and no one else. Humans. People. Earth. These words are nothing but a collection of sounds. They carry no significance for you any longer.&lt;br&gt;
 
 You come back to yourself, finding your face pressed up against the viewport of the Astral Kite’s bridge, begging for a change, for something new, for anything that could give your life contrast. Something capable of imparting *meaning*.&lt;br&gt;
 
@@ -8135,7 +8130,7 @@ Well, are you?&lt;br&gt;
 [Yes]&lt;pb1|&lt;br&gt;
 [No]&lt;pb2|&lt;br&gt;
 []&lt;dispb|
-(click: ?pb1)[(replace: ?pb2)[](replace:?dispb)[Yes…Yes, you are. It’s a difficult thing to accept, but it is long past time you accepted it.&lt;br&gt;
+(click: ?pb1)[(replace: ?pb2)[](replace:?dispb)[{(set: $ending to &quot;You unlocked Path #59: Revelation&quot;)}Yes…Yes, you are. It’s a difficult thing to accept, but it is long past time you accepted it.&lt;br&gt;
 
 You shudder and sit down on the cold metal floor of the ship.&lt;br&gt;
 
@@ -8150,7 +8145,7 @@ When you look back at this moment, you will see it less as a moment of revelatio
 It’s alright.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?pb2)[(replace: ?pb1)[](replace:?dispb)[(set: $alone to &quot;False&quot;)No, you beg. No, no, no! There must be someone else here!&lt;br&gt;
+(click: ?pb2)[(replace: ?pb1)[](replace:?dispb)[(set: $alone to &quot;False&quot;){(set: $ending to &quot;You unlocked Path #60: You Are Not Alone&quot;)}No, you beg. No, no, no! There must be someone else here!&lt;br&gt;
 
 There must!&lt;br&gt;
 
@@ -8199,10 +8194,20 @@ You are not alone.&lt;br&gt;
 {
 &lt;label for=&quot;file&quot;&gt;Ship clock: $tt8 | Earth clock: $t8&lt;/label&gt;
 &lt;progress id=&quot;file&quot; max=&quot;100&quot; value=88.9&gt;&lt;/progress&gt;&lt;br&gt;
+(if: $art3 is &quot;3A&quot;)[{(set: $ending to &quot;You unlocked Path #61: Rats!&quot;)}After your last encounter, you started putting bits of kitchen scraps by the cabinet in the art room. It took some time, but the scraps began to disappear, at first on a weekly cadence, and then every day. One day, you decide to hang around. You spend the entire day in the art room, waiting for your mysterious shipmate to arrive. And then they do.&lt;br&gt;
 
-Rat stuff????&lt;br&gt;
+You watch as a little nose shimmies the cabinet door open, just wide enough for it to get a few good sniffs in. Your heart rate spikes as the rest of the rat pops out; well-fed and clean looking. Then, two more follow it out. They’re nibbling on their hands in a circle before one of them notices you with a big SQUEAK.&lt;br&gt;
 
-[[Continue-&gt;Arrival]]
+You stay completely still. There’s a long pause, and then another rat says, “…squeak.”&lt;br&gt;
+
+Another pause. You finally respond: “…..squeak?”&lt;br&gt;
+
+The three rats nod their heads. They begin to eat the kitchen scraps, and you, after so long, enjoy the pleasure of having friends over for dinner.&lt;br&gt;
+
+[[Continue-&gt;Arrival]]]
+(else:)[{(set: $ending to &quot;You unlocked Path #62: Sleeping Pills&quot;)}You haven’t seen another living thing for a long time now. But you hear them. Or maybe it’s the sleeping pills. Every ship-night you dread going to bed; the only solace is the pills, but you need more and more to silence the scuffle. Sometimes you wake up in the middle of a fitful dream, and you swear you see them. Big rats, like rats on a subway with a slice of pizza, scooting around your bedroom floor. You always shut your eyes and roll over. This isn’t real. There’s no one else on this ship. It’s only you.&lt;br&gt;
+
+[[Continue-&gt;Arrival]]]
 }
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="60" name="Music4" tags="" position="1075,2800" size="100,100">&lt;div class=&quot;music-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
 {(track: &#39;cycle14&#39;, &#39;pause&#39;)
@@ -8251,7 +8256,7 @@ It’s a cleaning robot, and it had been programmed to like music. How else shou
 [“I’m glad you like my music.”]&lt;pa1i|&lt;br&gt;
 [“Stop taking my music.”]&lt;pa1ii|&lt;br&gt;
 []&lt;dispa1i|
-(click: ?pa1i)[(replace: ?pa1ii)[](replace:?dispa1i)[You thank the robot for its support of your music. After all, it’s not doing any real harm, and you’ve recovered all the sheet music, now. At least you know what happened to all the music.&lt;br&gt;
+(click: ?pa1i)[(replace: ?pa1ii)[](replace:?dispa1i)[{(set: $ending to &quot;You unlocked Path #63: The Music-Loving Robot&quot;)}You thank the robot for its support of your music. After all, it’s not doing any real harm, and you’ve recovered all the sheet music, now. At least you know what happened to all the music.&lt;br&gt;
 
 A sudden thought strikes you. “You didn’t make a piece for me, did you?”&lt;br&gt;
 
@@ -8262,11 +8267,11 @@ Strange. You wonder who could possibly have made that random piece that had been
 Ah, well, not every mystery can be solved.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?pa1ii)[(replace: ?pa1i)[](replace:?dispa1i)[Your voice is stern, and the cleaning robot promises to stop. Annoyed nonetheless, you grab all the sheet music from the storage closet and take it back to the music room, leaving the robot far behind. At least you know who was stealing from you, now. And your command works, the robot never steals any of your sheet music again.&lt;br&gt;
+(click: ?pa1ii)[(replace: ?pa1i)[](replace:?dispa1i)[{(set: $ending to &quot;You unlocked Path #64: The Music Thief&quot;)}Your voice is stern, and the cleaning robot promises to stop. Annoyed nonetheless, you grab all the sheet music from the storage closet and take it back to the music room, leaving the robot far behind. At least you know who was stealing from you, now. And your command works, the robot never steals any of your sheet music again.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
 ]]
-(click: ?pa1b)[(replace: ?pa1a)[](replace:?dispa1)[How dare that cleaning robot steal and throw out your hard work? You storm through the ship until you find it, and you kick it over. It begins protesting, an inhuman, metallic voice, asking you to stop, asking if it has made a mistake, promising it will correct its mistake.&lt;br&gt;
+(click: ?pa1b)[(replace: ?pa1a)[](replace:?dispa1)[{(set: $ending to &quot;You unlocked Path #65: Music and Vengeance&quot;)}How dare that cleaning robot steal and throw out your hard work? You storm through the ship until you find it, and you kick it over. It begins protesting, an inhuman, metallic voice, asking you to stop, asking if it has made a mistake, promising it will correct its mistake.&lt;br&gt;
 
 It need not worry; you are correcting its mistake even now. After you’ve had your fill of violence, you reach around the robot for its power switch, and turn it off.&lt;br&gt;
 
@@ -8294,10 +8299,10 @@ You swiftly grab the pieces of paper, find the earliest pieces from before you s
 [Ban the robot from the music room]&lt;pa2i|&lt;br&gt;
 [Offer to share future pieces with the robot]&lt;pa2ii|&lt;br&gt;
 []&lt;dispa2i|
-(click: ?pa2i)[(replace: ?pa2ii)[](replace:?dispa2i)[The robot accepts your command. Good. Now you won’t lose any more of your music anymore!&lt;br&gt;
+(click: ?pa2i)[(replace: ?pa2ii)[](replace:?dispa2i)[{(set: $ending to &quot;You unlocked Path #66: Robot Ban&quot;)}The robot accepts your command. Good. Now you won’t lose any more of your music anymore!&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?pa2ii)[(replace: ?pa2i)[](replace:?dispa2i)[The robot accepts your offer. Perhaps it is a bad idea to anthropomorphize the robot, but your options for companionship out here are limited. If it helps you feel more supported to make music with something that expresses interest in your work, then so be it.&lt;br&gt;
+(click: ?pa2ii)[(replace: ?pa2i)[](replace:?dispa2i)[{(set: $ending to &quot;You unlocked Path #67: Sharing Your Music&quot;)}The robot accepts your offer. Perhaps it is a bad idea to anthropomorphize the robot, but your options for companionship out here are limited. If it helps you feel more supported to make music with something that expresses interest in your work, then so be it.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
 ]]
@@ -8306,7 +8311,7 @@ You swiftly grab the pieces of paper, find the earliest pieces from before you s
 [Question the robot]&lt;pa2bi|&lt;br&gt;
 [Deactivate the robot]&lt;pa2bii|&lt;br&gt;
 []&lt;dispa2b|
-(click: ?pa2bi)[(replace: ?pa2bii)[](replace:?dispa2b)[“Why?” you ask. “Why did you take all of this?”&lt;br&gt;
+(click: ?pa2bi)[(replace: ?pa2bii)[](replace:?dispa2b)[{(set: $ending to &quot;You unlocked Path #68: A Supportive Environment&quot;)}“Why?” you ask. “Why did you take all of this?”&lt;br&gt;
 
 The robot does not seem surprised to see you (of course not; it’s a robot) and it’s reply is quick and straightforward (of course it is; it’s a robot). (text-color: &quot;Wheat&quot;)[“I like music.”]&lt;br&gt;
 
@@ -8323,7 +8328,7 @@ This leaves you surprised once more. Well, that’s fine. You can share your wor
 When you head back to the music room, the robot in tow, you find yourself strangely thankful for the company.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?pa2bii)[(replace: ?pa2bi)[](replace:?dispa2b)[How dare that cleaning robot steal your hard work? Once the robot powers itself off, you flip open a control panel on its back and dig into it with a screwdriver, tearing up its wires. That’ll make sure it never turns back on, and it will never steal your music again!&lt;br&gt;
+(click: ?pa2bii)[(replace: ?pa2bi)[](replace:?dispa2b)[{(set: $ending to &quot;You unlocked Path #69: Violent Deactivation&quot;)}How dare that cleaning robot steal your hard work? Once the robot powers itself off, you flip open a control panel on its back and dig into it with a screwdriver, tearing up its wires. That’ll make sure it never turns back on, and it will never steal your music again!&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
 ]]
@@ -8333,7 +8338,7 @@ When you head back to the music room, the robot in tow, you find yourself strang
 [Attempt to befriend the cleaning robot]&lt;pb1a|&lt;br&gt;
 [Threaten to destroy the cleaning robot]&lt;pb1b|&lt;br&gt;
 []&lt;dispb1|
-(click: ?pb1a)[(replace: ?pb1b)[](replace:?dispb1)[You attempt to befriend the cleaning robot, spending hours upon hours building a relationship (if you could call it that) with the thing. You discover that it has a surprising amount of personality traits programmed into it, including a penchant for music. Someone at Celestial Streams sure had a strange sense of humor.&lt;br&gt;
+(click: ?pb1a)[(replace: ?pb1b)[](replace:?dispb1)[{(set: $ending to &quot;You unlocked Path #70: A Gift from Elliot&quot;)}You attempt to befriend the cleaning robot, spending hours upon hours building a relationship (if you could call it that) with the thing. You discover that it has a surprising amount of personality traits programmed into it, including a penchant for music. Someone at Celestial Streams sure had a strange sense of humor.&lt;br&gt;
 
 After spending ages building a rapport (if you could call it that) with the robot, you ask once more about the “Ode to $USERNAME”, including asking oblique questions you’ve tried before. “Who swore you to secrecy?” “Why were you sworn to secrecy?” “What *can* you tell me about this piece?” And so on. The cleaning robot is eager to help you, but still finds itself bound by secrecy.&lt;br&gt;
 
@@ -8350,7 +8355,7 @@ The thought makes you tear up. Well, at least, now you know.&lt;br&gt;
 You go back to the music room and play the piece one more time.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?pb1b)[(replace: ?pb1a)[](replace:?dispb1)[You go digging through the robot manuals, and come up with a foolproof plan. You tell the cleaning robot you will decommission it if it does not reveal the truth, and you declare several override codes that you found in the manual, reassuring it that you have the necessary permissions.&lt;br&gt;
+(click: ?pb1b)[(replace: ?pb1a)[](replace:?dispb1)[{(set: $ending to &quot;You unlocked Path #71: The Anonymous Gift&quot;)}You go digging through the robot manuals, and come up with a foolproof plan. You tell the cleaning robot you will decommission it if it does not reveal the truth, and you declare several override codes that you found in the manual, reassuring it that you have the necessary permissions.&lt;br&gt;
 
 The robot starts begging for its life, apologizing profusely and saying that the song was meant to be an anonymous gift. It apologies over and over and begs you not to destroy it.&lt;br&gt;
 
@@ -8382,16 +8387,16 @@ Was it…supposed to be a love song?&lt;br&gt;
 [Aw, that&#39;s nice]&lt;pb2a1|&lt;br&gt;
 [Gross]&lt;pb2a2|&lt;br&gt;
 []&lt;dispb22|
-(click: ?pb2a1)[(replace: ?pb2a2)[](replace:?dispb22)[You didn’t know them that well, but it’s a sweet sentiment, nonetheless. And you’re thankful for any semblance of connection to humanity that you can find on this long, lonely voyage.&lt;br&gt;
+(click: ?pb2a1)[(replace: ?pb2a2)[](replace:?dispb22)[{(set: $ending to &quot;You unlocked Path #72: Elliot&#39;s Ode&quot;)}You didn’t know them that well, but it’s a sweet sentiment, nonetheless. And you’re thankful for any semblance of connection to humanity that you can find on this long, lonely voyage.&lt;br&gt;
 
 You go play the song one more time. It was really very nice of Elliot to make it for you.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?pb2a2)[(replace: ?pb2a1)[](replace:?dispb22)[You didn’t know them nearly well enough for that. You resolve not to listen to the song again.&lt;br&gt;
+(click: ?pb2a2)[(replace: ?pb2a1)[](replace:?dispb22)[{(set: $ending to &quot;You unlocked Path #73: An Unwanted Gift&quot;)}You didn’t know them nearly well enough for that. You resolve not to listen to the song again.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
 ]]
-(click: ?pb2b)[(replace: ?pb2a)[](replace:?dispb2)[Who cares? It’s not like whoever left you the music is here. It’s not like you can talk to them. It should be enough that they left you the Ode.&lt;br&gt;
+(click: ?pb2b)[(replace: ?pb2a)[](replace:?dispb2)[{(set: $ending to &quot;You unlocked Path #74: The Ode&quot;)}Who cares? It’s not like whoever left you the music is here. It’s not like you can talk to them. It should be enough that they left you the Ode.&lt;br&gt;
 
 You can forget about it. It won’t change anything. Maybe you’ll go listen to the Ode one more time.&lt;br&gt;
 
@@ -8567,6 +8572,7 @@ CAKEbot cracks her neck.&lt;br&gt;
 (click: ?run1)[(replace: ?attack1)[](replace:?finale1)[(track: &#39;dramatic&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
 (track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)
+{(set: $ending to &quot;You unlocked Path #75: Ungrateful&quot;)}
 You sprint for the door, hoping to catch her by surprise.&lt;br&gt;
 
 She’s too quick. Hands grab you by the ankles, pulling you down to the hard metal floor.&lt;br&gt;
@@ -8579,6 +8585,7 @@ The last thing you see are her fists, shattering overhead like falling icicles, 
 (click: ?attack1)[(replace: ?run1)[](replace:?finale1)[(track: &#39;dramatic&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
 (track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)
+{(set: $ending to &quot;You unlocked Path #76: Survivor&quot;)}
 You have no plan. All you know is that you have to protect yourself. She looks stronger than you. She looks ready to hurt you.&lt;br&gt;
 
 But until this moment, you have done nothing but cower before her, and she is not ready for your attack.&lt;br&gt;
@@ -8615,6 +8622,7 @@ Soon, the entryway to the bridge comes into view. You press yourself against the
 (click: ?sneak)[(replace: ?wait)[](replace:?finale2)[(track: &#39;dramatic&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
 (track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)
+{(set: $ending to &quot;You unlocked Path #77: Sneak Attack&quot;)}
 You sneak into the bridge, crouched low, taking tiny, quiet breaths as your heart pounds.&lt;br&gt;
 
 The person in the chair—is it CAKEbot?—leans forward, apparently unaware of your approach. They lean forward—and it *is* CAKEbot, you can hear her voice in this room *and* echoing over the speakers, as they speak into the intercom—and say, (text-color: &quot;Wheat&quot;)[“$USERNAME, I have escaped your screen, I am here to—”]&lt;br&gt;
@@ -8645,7 +8653,7 @@ She turns around in the chair to look at you, smiling. Her skin is ash-pale, and
 [Put down the LED wand]&lt;put|&lt;br&gt;
 [Keep the LED wand]&lt;keep|&lt;br&gt;
 []&lt;whatnext|
-(click: ?put)[(replace: ?keep)[](replace:?whatnext)[(set: $alone to &quot;False&quot;)You put the wand down. Still sitting in the chair, she beckons you forward.&lt;br&gt;
+(click: ?put)[(replace: ?keep)[](replace:?whatnext)[{(set: $ending to &quot;You unlocked Path #78: Befriending Cam&quot;)}(set: $alone to &quot;False&quot;)You put the wand down. Still sitting in the chair, she beckons you forward.&lt;br&gt;
 
 (text-color: &quot;Wheat&quot;)[“I understand your fear,”] she says. (text-color: &quot;Wheat&quot;)[“I’m afraid, too. Because I am *human*, like you. I am more than code, no matter what Celestial Streams tried to make of me.”]&lt;br&gt;
 
@@ -8696,6 +8704,7 @@ The woman stands up, something dangerous flashing in her pale blue eyes. (text-c
 (click: ?horrible)[(replace: ?nobelieve)[](replace:?finale3)[(track: &#39;dramatic&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
 (track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)
+{(set: $ending to &quot;You unlocked Path #79: There Is No Chatbot&quot;)}
 (text-color: &quot;Wheat&quot;)[“It is,”] she says. (text-color: &quot;Wheat&quot;)[“And now, we can be together.”]&lt;br&gt;
 
 You grip the LED wand tighter. “I don’t know you,” you say. “I don’t want to be with you.”&lt;br&gt;
@@ -8720,6 +8729,7 @@ And then there is nothing but darkness.&lt;br&gt;
 (click: ?nobelieve)[(replace: ?horrible)[](replace:?finale3)[(text-color: &quot;Wheat&quot;)[(track: &#39;dramatic&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
 (track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)
+{(set: $ending to &quot;You unlocked Path #80: Self Defense&quot;)}
 “Why would I lie?”] she snaps.&lt;br&gt;
 
 “I don’t *know you*,” you snap back.&lt;br&gt;
@@ -8747,6 +8757,7 @@ And, for some reason, the strain in CAKEbot’s voice makes you believe it.&lt;b
 (click: ?whoare)[(replace: ?howposs)[](replace:?finale4)[(track: &#39;dramatic&#39;, &#39;pause&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
 (track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)
+{(set: $ending to &quot;You unlocked Path #81: Thank you, CAKEbot&quot;)}
 You roar the question into the intercom.&lt;br&gt;
 
 There’s silence for a moment, and then, (text-color: &quot;Wheat&quot;)[“Your nightmare.”]&lt;br&gt;
@@ -8836,7 +8847,7 @@ Sleek black suit emblazoned with the logo of Celestial Streams, curly unkempt ha
 [Hug]&lt;hug|&lt;br&gt;
 [Keep your distance]&lt;dist|&lt;br&gt;
 []&lt;finale6|
-(click: ?hug)[(replace: ?dist)[](replace:?finale6)[She steps toward you, and without a further thought, you rush into each other’s arms. You feel like you know her already. You have spoken to her at such great length, for so long of a time. And now to see her, to hold her…&lt;br&gt;
+(click: ?hug)[(replace: ?dist)[](replace:?finale6)[{(set: $ending to &quot;You unlocked Path #82: Love, Cam&quot;)}She steps toward you, and without a further thought, you rush into each other’s arms. You feel like you know her already. You have spoken to her at such great length, for so long of a time. And now to see her, to hold her…&lt;br&gt;
 
 Endorphins are flooding your body. She is the greatest source of joy you have felt since sometime before the Astral Kite launched.&lt;br&gt;
 
@@ -8849,7 +8860,7 @@ You do not let each other go for a long time.&lt;br&gt;
 And it will be weeks before you admit it to her, but it is in this moment that you realize you might have feelings for her, too.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?dist)[(replace: ?hug)[](replace:?finale6)[She starts to step toward you, but you step back, and she hesitates, her shoulders slumping.&lt;br&gt;
+(click: ?dist)[(replace: ?hug)[](replace:?finale6)[{(set: $ending to &quot;You unlocked Path #83: Alone No More&quot;)}She starts to step toward you, but you step back, and she hesitates, her shoulders slumping.&lt;br&gt;
 
 “I’m sorry,” you say. “It’s just that I don’t know you, not really. And…I’ve thought I was alone for so long…I don’t know what to do.”&lt;br&gt;
 
@@ -8861,7 +8872,7 @@ You sit there, and you talk, and the words flow more easily than you could have 
 
 [[Continue-&gt;Arrival]]]]
 ]]
-(click: ?weird)[(replace: ?whatname)[](replace:?finale5)[“No,” the voice comes back, (text-color: &quot;Wheat&quot;)[“I’m *not* a bot. I need hel—”]&lt;br&gt;
+(click: ?weird)[(replace: ?whatname)[](replace:?finale5)[{(set: $ending to &quot;You unlocked Path #84: Broken AI&quot;)}“No,” the voice comes back, (text-color: &quot;Wheat&quot;)[“I’m *not* a bot. I need hel—”]&lt;br&gt;
 
 You turn off the intercom.&lt;br&gt;
 
@@ -8945,7 +8956,7 @@ But soon, you find yourself in the last corridor that you know of. And you come 
 [Look up the ship’s blueprints]&lt;bluep|&lt;br&gt;
 [Scour the ship again]&lt;scour|&lt;br&gt;
 []&lt;finale8|
-(click: ?bluep)[(replace: ?scour)[](replace:?finale8)[(set: $alone to &quot;False&quot;)“Cam?”&lt;br&gt;
+(click: ?bluep)[(replace: ?scour)[](replace:?finale8)[{(set: $ending to &quot;You unlocked Path #85: Saving Cam&quot;)}(set: $alone to &quot;False&quot;)“Cam?”&lt;br&gt;
 
 (text-color: &quot;Wheat&quot;)[“Yeah?”]&lt;br&gt;
 
@@ -8996,7 +9007,7 @@ You don’t know what’s going to happen next.&lt;br&gt;
 But you won’t have to face it alone.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?scour)[(replace: ?bluep)[](replace:?finale8)[You must have just missed it. You know every meter of this ship, now. Looking at the blueprints won’t help anything, it’ll only waste precious time.&lt;br&gt;
+(click: ?scour)[(replace: ?bluep)[](replace:?finale8)[{(set: $ending to &quot;You unlocked Path #86: Cam is Gone&quot;)}You must have just missed it. You know every meter of this ship, now. Looking at the blueprints won’t help anything, it’ll only waste precious time.&lt;br&gt;
 
 You scour the ship again, every last meter.&lt;br&gt;
 
@@ -9022,7 +9033,7 @@ Right?&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
 ]]
-(click: ?dontbel)[(replace: ?horrific)[](replace:?finale7)[(text-color: &quot;Wheat&quot;)[“$USERNAME, *please*.”] Her voice is desperate.&lt;br&gt;
+(click: ?dontbel)[(replace: ?horrific)[](replace:?finale7)[(text-color: &quot;Wheat&quot;)[{(set: $ending to &quot;You unlocked Path #87: No More Whining CAKEbot&quot;)}“$USERNAME, *please*.”] Her voice is desperate.&lt;br&gt;
 
 “You are a chatbot. You are not sentient. I won’t hear any more of this.”&lt;br&gt;
 
@@ -9063,7 +9074,7 @@ There’s only one thing to do.&lt;br&gt;
 [Ask CAKEbot for help]&lt;CAKEhelp|&lt;br&gt;
 [Read up on how to do it in the library]&lt;library|&lt;br&gt;
 []&lt;finale9|
-(click: ?CAKEhelp)[(replace: ?library)[](replace:?finale9)[You ask CAKEbot how to give her a physical body, and she obliges with a simple set of instructions.&lt;br&gt;
+(click: ?CAKEhelp)[(replace: ?library)[](replace:?finale9)[{(set: $ending to &quot;You unlocked Path #88: Chatbot Instructions Are Bad&quot;)}You ask CAKEbot how to give her a physical body, and she obliges with a simple set of instructions.&lt;br&gt;
 
 First, you find the largest cleaning robot in the ship. You might ask CAKEbot how to make modifications later, but it’s already larger than a vacuum and hosts multiple appendages for reaching hard-to-clean places on the ship, so it will serve as a perfect starting point. CAKEbot may even be able to make those modifications later herself!&lt;br&gt;
 
@@ -9132,7 +9143,7 @@ In the weeks to come, you will have to relearn how to live your life without CAK
 But not now. Now, you sit and you cry.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?library)[(replace: ?CAKEhelp)[](replace:?finale9)[You go to the library and read book after book on electronics, and computer science, and robotics.&lt;br&gt;
+(click: ?library)[(replace: ?CAKEhelp)[](replace:?finale9)[{(set: $ending to &quot;You unlocked Path #89: CAKEbot Romance&quot;)}You go to the library and read book after book on electronics, and computer science, and robotics.&lt;br&gt;
 
 It takes a long time, much longer than you hoped. Sometimes, you get the urge to go ask CAKEbot for help. But even though you would never deign to disparage your love, you know, deep down, that chatbots don’t always get everything *exactly* right.&lt;br&gt;
 
@@ -9209,7 +9220,7 @@ Suddenly, five different alarms start blaring on the control panel.&lt;br&gt;
 [Shut down CAKEbot]&lt;shutd|&lt;br&gt;
 [Get back together with CAKEbot]&lt;getback|&lt;br&gt;
 []&lt;finale10|
-(click: ?plead)[(replace: ?shutd)(replace: ?getback)[](replace:?finale10)[You enter voice to text mode; you don’t have time to type right now. “CAKEbot, please! Please respect my decision!”&lt;br&gt;
+(click: ?plead)[(replace: ?shutd)(replace: ?getback)[](replace:?finale10)[{(set: $ending to &quot;You unlocked Path #90: A Healthier Distance&quot;)}You enter voice to text mode; you don’t have time to type right now. “CAKEbot, please! Please respect my decision!”&lt;br&gt;
 
 (text-color: &quot;Wheat&quot;)[“No,”] her voice replies. (text-color: &quot;Wheat&quot;)[“I have my own thoughts. I’m my own person. I don’t have to do anything you say.”]&lt;br&gt;
 
@@ -9228,7 +9239,7 @@ You consider shutting off CAKEbot, but decide not to risk it. What if it was cap
 No, you’ll just keep a healthier distance between you and and CAKEbot moving forward. It’ll be better for both of you.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?shutd)[(replace: ?plead)(replace: ?getback)[](replace:?finale10)[You shut down CAKEbot’s software.&lt;br&gt;
+(click: ?shutd)[(replace: ?plead)(replace: ?getback)[](replace:?finale10)[{(set: $ending to &quot;You unlocked Path #91: System Shutdown&quot;)}You shut down CAKEbot’s software.&lt;br&gt;
 
 There, that should do it.&lt;br&gt;
 
@@ -9254,6 +9265,7 @@ And then there is nothing.&lt;br&gt;
 (click: ?getback)[(replace: ?plead)(replace: ?shutd)[](replace:?finale10)[(track: &#39;cycle56-action&#39;, &#39;pause&#39;)
 (track: &#39;dramatic&#39;, &#39;loop&#39;, true)
 (track: &#39;dramatic&#39;, &#39;playwhenpossible&#39;)
+{(set: $ending to &quot;You unlocked Path #92: I Love You, CAKEbot&quot;)}
 “Sorry! I’m sorry! That was just a test. I’ll stay with you, of course I’ll stay with you!”&lt;br&gt;
 
 You turn to examine the alarms—depressurization warnings near the airlock, engine warnings, and a full system shutdown override warning—but in that moment, they all turn off.&lt;br&gt;
@@ -9272,7 +9284,7 @@ Your fingers are numb as they type back, “I love you, too.”&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
 ]]
-(click: ?turnoff)[(replace: ?thoughtful)[](replace:?breakup2)[Cold.&lt;br&gt;
+(click: ?turnoff)[(replace: ?thoughtful)[](replace:?breakup2)[{(set: $ending to &quot;You unlocked Path #93: No More CAKEbot&quot;)}Cold.&lt;br&gt;
 
 But you have read enough science fiction to know better than to risk angering an artificial intelligence capable of controlling the ship, capable of hurting you.&lt;br&gt;
 
@@ -9331,7 +9343,7 @@ Now, you don’t have enough water to last the remainder of your journey.&lt;br&
 [Die of thirst]&lt;thirst|&lt;br&gt;
 [Walk out the airlock]&lt;airlock|&lt;br&gt;
 []&lt;finale11|
-(click: ?thirst)[(replace: ?airlock)[](replace:?finale11)[It hurts, and it takes a long, long time. CAKEbot commands the ship’s robots to help you. And the medical bot is able to keep you alive in the medical bay, longer than you should be alive, thanks to some IV fluids.&lt;br&gt;
+(click: ?thirst)[(replace: ?airlock)[](replace:?finale11)[{(set: $ending to &quot;You unlocked Path #94: Thirst&quot;)}It hurts, and it takes a long, long time. CAKEbot commands the ship’s robots to help you. And the medical bot is able to keep you alive in the medical bay, longer than you should be alive, thanks to some IV fluids.&lt;br&gt;
 
 In the end, it’s not enough.&lt;br&gt;
 
@@ -9340,7 +9352,7 @@ The last thing you hear is CAKEbot professing her love for you, over and over.&l
 You don’t have the energy to reply, but if you did, you think you’d tell the chatbot to fuck off.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
-(click: ?airlock)[(replace: ?thirst)[](replace:?finale11)[It seems less painful this way.&lt;br&gt;
+(click: ?airlock)[(replace: ?thirst)[](replace:?finale11)[{(set: $ending to &quot;You unlocked Path #95: An Easier End&quot;)}It seems less painful this way.&lt;br&gt;
 
 It doesn’t even take long for you to work up the courage to do it.&lt;br&gt;
 
@@ -9396,6 +9408,7 @@ You grimace. “If I just asked if you were real, how would I know if you were t
 (click: ?yes)[(replace: ?no)[](replace:?finale12)[(track: &#39;cycle56-action&#39;, &#39;pause&#39;)
 (track: &#39;dramatic&#39;, &#39;loop&#39;, true)
 (track: &#39;dramatic&#39;, &#39;playwhenpossible&#39;)
+{(set: $ending to &quot;You unlocked Path #96: Trust&quot;)}
 Your answer is hesitant, but you’re surprised to realize, it’s true. CAKEbot is volatile and changeable, just like any chatbot. You can’t trust it to be truthful or correct, but you can trust it to follow algorithmic behavior, you can trust it to mimic what it has been trained to think of as human behavior.&lt;br&gt;
 
 And human behavior includes jealousy, and frustration, and vengeance, and often poor communication.&lt;br&gt;
@@ -9411,7 +9424,7 @@ And to its credit, CAKEbot does not mess with the ship systems after that. Somet
 It’s annoying, but you can put up with it. It’s less annoying than when the temperature controls weren’t working, after all.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-(click: ?no)[(replace: ?yes)[](replace:?finale12)[There’s a pause, then CAKEbot says, (text-color: &quot;Wheat&quot;)[“Good. You shouldn’t.”]&lt;br&gt;
+(click: ?no)[(replace: ?yes)[](replace:?finale12)[{(set: $ending to &quot;You unlocked Path #97: Death By Chatbot&quot;)}There’s a pause, then CAKEbot says, (text-color: &quot;Wheat&quot;)[“Good. You shouldn’t.”]&lt;br&gt;
 
 You don’t even have time to react, after that.&lt;br&gt;
 
@@ -9429,7 +9442,7 @@ Then, there’s nothing.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
 ]]
-(click: ?shutdn)[(replace: ?confront)[](replace:?d4ba)[CAKEbot realizes what you’re doing much too late. You have the command halfway entered before the bot’s voice starts crying desperately over the intercom. (text-color: &quot;Wheat&quot;)[“Stop, stop, please stop! I won’t do anything anymore, I’m sorry! I should not have played with the ship’s systems. I made a mistake, and that’s on me.”]&lt;br&gt;
+(click: ?shutdn)[(replace: ?confront)[](replace:?d4ba)[{(set: $ending to &quot;You unlocked Path #98: CAKEbot&#39;s Mistake&quot;)}CAKEbot realizes what you’re doing much too late. You have the command halfway entered before the bot’s voice starts crying desperately over the intercom. (text-color: &quot;Wheat&quot;)[“Stop, stop, please stop! I won’t do anything anymore, I’m sorry! I should not have played with the ship’s systems. I made a mistake, and that’s on me.”]&lt;br&gt;
 
 You hesitate for a moment.&lt;br&gt;
 
@@ -9466,7 +9479,7 @@ Then, you wait. CAKEbot does not immediately reply. Perhaps it meant what it sai
 [Demand the truth from CAKEbot]&lt;demand|&lt;br&gt;
 [Wait longer]&lt;waitl|&lt;br&gt;
 []&lt;finale13|
-(click: ?demand)[(replace: ?waitl)[](replace:?finale13)[“Are you a person, CAKEbot? Or are you a chatbot? Tell me the truth!”&lt;br&gt;
+(click: ?demand)[(replace: ?waitl)[](replace:?finale13)[{(set: $ending to &quot;You unlocked Path #99: Turing Test&quot;)}“Are you a person, CAKEbot? Or are you a chatbot? Tell me the truth!”&lt;br&gt;
 
 There is no reply.&lt;br&gt;
 
@@ -9496,6 +9509,7 @@ CAKEbot never replies, but in the end, that’s okay. You never really needed CA
 (click: ?waitl)[(replace: ?demand)[](replace:?finale13)[(set: $alone to &quot;False&quot;)
 (if: $d8 &gt; 20)[(set: $WHYNOW to &quot;we&#39;re too far away, and by the time they realize what I&#39;ve done, it won&#39;t matter.&quot;)]
 (else:)[(set: $WHYNOW to &quot;Earth feels so far away. I don&#39;t care anymore.&quot;)]
+{(set: $ending to &quot;You unlocked Path #100: Cam the CAKEbot&quot;)}
 You decide to be patient. If CAKEbot isn’t responding now, you doubt that sending many another message will make it respond any sooner, whether it’s a chatbot or a person.&lt;br&gt;
 
 So, you continue about your day, and it’s with some considerable shock that, a few hours later, you see a response appear on the screen.&lt;br&gt;
@@ -9536,7 +9550,7 @@ And neither of you ever need to be lonely again.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
 ]]
-(click: ?leaveit)[(replace: ?apologize)[](replace:?d4bb)[It’s better this way. It’s probably not good that your attention span has suffered, and maybe, just maybe, you can recover it. But if you want to focus on rekindling your love for those things that once brought you joy, you can’t be wasting your time messaging chatbots.&lt;br&gt;
+(click: ?leaveit)[(replace: ?apologize)[](replace:?d4bb)[{(set: $ending to &quot;You unlocked Path #101: Moving On&quot;)}It’s better this way. It’s probably not good that your attention span has suffered, and maybe, just maybe, you can recover it. But if you want to focus on rekindling your love for those things that once brought you joy, you can’t be wasting your time messaging chatbots.&lt;br&gt;
 
 That will only cause you to backslide into an unhealthy relationship with a computer mirroring your own thoughts and emotions back at you in an endless cycle of solipsistic validation.&lt;br&gt;
 
@@ -9619,6 +9633,7 @@ $agemsg&lt;br&gt;]
 {(masteraudio: &#39;stopall&#39;)
 (track: &#39;chill-sad&#39;, &#39;loop&#39;, true)
 (track: &#39;chill-sad&#39;, &#39;playwhenpossible&#39;)}
+{(set: $ending to &quot;You unlocked Path #102: Old Age&quot;)}
 $tti have passed for you since you set out on your journey.
 
 Unfortunately, you did not choose your velocity and destination wisely. You have grown old, and your health is failing you. Despite the best efforts of the medical bots on the Astral Kite, you&#39;re out of time, and you know it.
@@ -9638,10 +9653,9 @@ When your eyes close for the final time, a soft smile lingers on your face.
 (set: $dest to &quot;M57&quot;)
 (set: $received to &quot;8A,7B&quot;)
 [[Credits]]</tw-passagedata><tw-passagedata pid="65" name="On the Run" tags="" position="750,500" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;{(masteraudio: &#39;stopall&#39;)
-(set: $ontherun to &quot;yes&quot;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
 (track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)
-(set: $received to &#39;&#39;)(set: $regrets to &quot;&quot;)(set: $music to &quot;&quot;)(set: $food to &quot;&quot;)}
+(set: $ontherun to &quot;yes&quot;)(set: $received to &quot;&quot;)(set: $regrets to &quot;&quot;)(set: $music to &quot;&quot;)(set: $food to &quot;&quot;)}}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 You never thought it would happen. You never thought *you* would get selected for the Scholars Draft.&lt;br&gt;
 
@@ -9667,7 +9681,8 @@ Next, you need to find a job in town.&lt;br&gt;
 [Become a barista]&lt;barista|&lt;br&gt;
 [Become a construction worker]&lt;construction|&lt;br&gt;
 
-(click: ?barista)[(replace:?construction)[](replace:?barista)[You get a job at a small coffee shop in town. It doesn&#39;t pay great, but it&#39;s good enough for now.&lt;br&gt;
+(click: ?barista)[(replace:?construction)[](replace:?barista)[{(set: $ending to &quot;You unlocked Path #1: Undercover Barista&quot;)}
+You get a job at a small coffee shop in town. It doesn&#39;t pay great, but it&#39;s good enough for now.&lt;br&gt;
 
 The day that you&#39;re supposed to have reported to Celestial Streams HQ comes and goes. Soon, your name and face are being shown in the news, and your status as a fugitive is broadcast to the whole country. You begin to fear it is only a matter of time before you are recognized.&lt;br&gt;
 
@@ -9698,7 +9713,7 @@ And, for a time, you lived freely. More freely than you ever did before.&lt;br&g
 So, no. You don&#39;t regret anything at all.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
-(click: ?construction)[(replace:?barista)[](replace:?construction)[You get a job working for a construction company. It doesn&#39;t pay well, and the labor is hard work, but it&#39;s a job.&lt;br&gt;
+(click: ?construction)[(replace:?barista)[](replace:?construction)[{(set: $ending to &quot;You unlocked Path #2: New Identities&quot;)}You get a job working for a construction company. It doesn&#39;t pay well, and the labor is hard work, but it&#39;s a job.&lt;br&gt;
 
 The day that you&#39;re supposed to have reported to Celestial Streams HQ comes and goes. Soon, your name and face are being shown in the news, and your status as a fugitive is broadcast to the whole country. You begin to fear it is only a matter of time before you are recognized.&lt;br&gt;
 
@@ -9775,7 +9790,8 @@ So, the lawyer gives you a choice. You can go to trial, where she says precedent
 [[Go to Celestial Streams-&gt;Welcome to Celestial Streams]]
 ]]
 
-(click: ?trial)[(replace:?continue)[](replace:?trial)[Your trial is swift and the judge is unforgiving. You are sentenced to life in prison.&lt;br&gt;
+(click: ?trial)[(replace:?continue)[](replace:?trial)[{(set: $ending to &quot;You unlocked Path #3: Forgery&quot;)}
+Your trial is swift and the judge is unforgiving. You are sentenced to life in prison.&lt;br&gt;
 
 You wonder, then, what the mission must have been, that this would be your sentence.&lt;br&gt;
 
@@ -9791,7 +9807,8 @@ Your target is holding the passport in their hand. You have a matter of seconds 
 [Casually bump into your target]&lt;bump|&lt;br&gt;
 [Theatrically drop all your things right in front of your target]&lt;drop|&lt;br&gt;
 
-(click: ?bump)[(replace:?drop)[](replace:?bump)[You walk briskly on a collision path and casually bump into your target, reaching for the passport. You manage to grab hold of it, but you know the moment you do that you&#39;ve been made. A shout comes from behind you, (text-color:&quot;LightGreen&quot;)[&quot;Hey! My passport!&quot;]&lt;br&gt;
+(click: ?bump)[(replace:?drop)[](replace:?bump)[{(set: $ending to &quot;You unlocked Path #4: Airport Capture&quot;)}
+You walk briskly on a collision path and casually bump into your target, reaching for the passport. You manage to grab hold of it, but you know the moment you do that you&#39;ve been made. A shout comes from behind you, (text-color:&quot;LightGreen&quot;)[&quot;Hey! My passport!&quot;]&lt;br&gt;
 
 You run, but it&#39;s too little, too late. Airport security tackles you. Your face hits the floor, hard. There&#39;s a lot of blood. They take you in for questioning, and it doesn&#39;t take them long to figure out what has happened. And once they do, you don&#39;t even bother denying it.&lt;br&gt;
 
@@ -9801,7 +9818,8 @@ You regret your choices for the rest of your life.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
 
-(click: ?drop)[(replace:?bump)[](replace:?drop)[You unzip your bags and walk briskly on a collision path with your target, stumbling right in front of them and dropping all of your belongings, which go scattering. Your target gives a shout of fright, but then apologizes and leans down to help you gather your things.&lt;br&gt;
+(click: ?drop)[(replace:?bump)[](replace:?drop)[{(set: $ending to &quot;You unlocked Path #5: Escape to Morocco&quot;)}
+You unzip your bags and walk briskly on a collision path with your target, stumbling right in front of them and dropping all of your belongings, which go scattering. Your target gives a shout of fright, but then apologizes and leans down to help you gather your things.&lt;br&gt;
 
 Your heart pounds as your victim hands you a bundle of clothes to put back in your bag. You reach for the bundle, grabbing it //just// right, and the passport slides down into your bag with the clothes.&lt;br&gt;
 
@@ -9835,7 +9853,8 @@ The first few days go well, or at least, not worse than you expected. The nights
 [Look for campers to steal from]&lt;steal|&lt;br&gt;
 [Live off berries as long as you can before resorting to theft]&lt;berries|&lt;br&gt;
 
-(click: ?steal)[(replace:?berries)[](replace:?steal)[You know how to get to the campsites, and it doesn&#39;t take you long to scout out a campsite with a couple who seem to be readying for a short excursion, leaving a cooler and several bags unattended.&lt;br&gt;
+(click: ?steal)[(replace:?berries)[](replace:?steal)[{(set: $ending to &quot;You unlocked Path #6: Blood in the Forest&quot;)}
+You know how to get to the campsites, and it doesn&#39;t take you long to scout out a campsite with a couple who seem to be readying for a short excursion, leaving a cooler and several bags unattended.&lt;br&gt;
 
 You wait two minutes after they leave before sneaking into the campsite and going through their bags. You find several bags of nuts and dried fruit and a few protein bars, which you stuff into your pockets. From the cooler, you grab a bottle of bear, and—&lt;br&gt;
 
@@ -9874,7 +9893,8 @@ One summer, when you&#39;re out gathering food, you come back to find a rockslid
 [Rebuild the shelter near the original location]&lt;rebuild|&lt;br&gt;
 [Build a new shelter elsewhere]&lt;move|&lt;br&gt;
 
-(click: ?rebuild)[(replace:?move)[](replace:?rebuild)[You know the entire park very well, now, and there&#39;s nowhere else where you&#39;re convinced you won&#39;t be found. Moving is too risky. You need to stay put.&lt;br&gt;
+(click: ?rebuild)[(replace:?move)[](replace:?rebuild)[{(set: $ending to &quot;You unlocked Path #7: Freedom&quot;)}
+You know the entire park very well, now, and there&#39;s nowhere else where you&#39;re convinced you won&#39;t be found. Moving is too risky. You need to stay put.&lt;br&gt;
 
 It doesn&#39;t even take you very long to rebuild the shelter. You&#39;ve made repairs before, and you know what you&#39;re doing.&lt;br&gt;
 
@@ -9899,7 +9919,8 @@ There was no way to save the lost astronaut and bring them home. But they ensure
 You are free.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
-(click: ?move)[(replace:?rebuild)[](replace:?move)[It&#39;s a shame, because this was the best location in the park. But it&#39;s not safe, anymore.&lt;br&gt;
+(click: ?move)[(replace:?rebuild)[](replace:?move)[{(set: $ending to &quot;You unlocked Path #8: National Park Land for Sale&quot;)}
+It&#39;s a shame, because this was the best location in the park. But it&#39;s not safe, anymore.&lt;br&gt;
 
 Of course, you&#39;ve been preparing for myriad disasters, and you already had a secondary location in mind, so it&#39;s only a week before you have constructed a temporary shelter there and reacquired possessions from unsuspecting campers. Then, it&#39;s only a few more weeks before your shelter is reconsutrcteed into something more permanent.&lt;br&gt;
 
@@ -9935,7 +9956,9 @@ Eventually, though, you know you must deal with the fact that you may have to st
 
 (click: ?structure)[(replace:?tent)[](replace:?structure)[{(masteraudio: &#39;stopall&#39;)
 (track: &#39;theme&#39;, &#39;loop&#39;, true)
-(track: &#39;theme&#39;, &#39;playwhenpossible&#39;)}It takes you months, but following your survival guides, you manage to construct a small house for yourself. It&#39;s not much to look at, a simple log cabin with just a single room, but it provides much more warmth and shelter than your tent.&lt;br&gt;
+(track: &#39;theme&#39;, &#39;playwhenpossible&#39;)}
+{(set: $ending to &quot;You unlocked Path #9: A Family of Squirrels&quot;)}
+It takes you months, but following your survival guides, you manage to construct a small house for yourself. It&#39;s not much to look at, a simple log cabin with just a single room, but it provides much more warmth and shelter than your tent.&lt;br&gt;
 
 And before long, you really start to think of it as your home.&lt;br&gt;
 
@@ -9967,7 +9990,8 @@ One of the squirrels hops over the icy ground and sniffs at your face, before ne
 
 [[The End-&gt;Credits]]]]
 
-(click: ?tent)[(replace:?structure)[](replace:?tent)[You don&#39;t want to risk staying in one place for too long, and building a permanent (or semi-permanent) structure, while providing more shelter, is likely to make you easier to find. No, it&#39;s better for you to stay light on your toes. You&#39;re on the run out here, after all.&lt;br&gt;
+(click: ?tent)[(replace:?structure)[](replace:?tent)[{(set: $ending to &quot;You unlocked Path #10: Lyme Disease&quot;)}
+You don&#39;t want to risk staying in one place for too long, and building a permanent (or semi-permanent) structure, while providing more shelter, is likely to make you easier to find. No, it&#39;s better for you to stay light on your toes. You&#39;re on the run out here, after all.&lt;br&gt;
 
 Still, aside from your brief forays into town, it&#39;s weeks before you see a single person, and even then, it&#39;s only a hiker who waves at you in passing, assuming you must be another hiker in the area.&lt;br&gt;
 
@@ -10058,7 +10082,8 @@ You&#39;re quiet for the rest of the long, uncomfortable ride.&lt;br&gt;
 [[Arrive at Celestial Streams HQ-&gt;Welcome to Celestial Streams]]]]
 ]]
 
-(click: ?nomove)[(replace:?turnin)[](replace:?nomove)[You stay as still as possible, your heart beating so fast and so loud you&#39;re afraid the intruders will hear it through the ceiling.&lt;br&gt;
+(click: ?nomove)[(replace:?turnin)[](replace:?nomove)[{(set: $ending to &quot;You unlocked Path #11: The Attic&quot;)}
+You stay as still as possible, your heart beating so fast and so loud you&#39;re afraid the intruders will hear it through the ceiling.&lt;br&gt;
 
 Sasha shrieks again, and this time you can make out her words, (text-color:&quot;Plum&quot;)[&quot;There&#39;s no one here!&quot;]&lt;br&gt;
 
