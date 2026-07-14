@@ -187,7 +187,8 @@ tw-sidebar { display: none; }
 (track: &#39;theme&#39;, &#39;playwhenpossible&#39;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 	[[Play Astral Kite: The Situationship-&gt;cw]]
-&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Letter1" tags="" position="625,425" size="100,100">{(set: $year to (random: 2040, 2240))
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Letter1" tags="" position="625,425" size="100,100">{(set: $ontherun to &quot;no&quot;)
+(set: $year to (random: 2040, 2240))
 (set: $months to (a: &#39;January&#39;, &#39;February&#39;, &#39;March&#39;, &#39;April&#39;, &#39;May&#39;, &#39;June&#39;, &#39;July&#39;, &#39;August&#39;, &#39;September&#39;, &#39;October&#39;, &#39;November&#39;, &#39;December&#39;))
 (set: $month to $months&#39;s (random: 1, 12))
 
@@ -252,7 +253,8 @@ You will travel aboard our proprietary interstellar spacecraft, the Astral Kite,
 
 During this journey, (str: (round: $tt_tot*100)/100) years will pass for you, while (str: (round: $te_tot*100)/100) years will pass on Earth.
 
-[[Travel to the International Space Station-&gt;Cutscene1]]
+(if: $ontherun is &quot;no&quot;)[[[Travel to the International Space Station-&gt;Cutscene1]]]
+(else:)[[[Travel to the International Space Station-&gt;Cutscene1a]]]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Cutscene1" tags="" position="625,1050" size="100,100">&lt;div class=&quot;iss-section&quot;&gt;
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
 {(set: $incoming to &quot;INCOMING MESSAGE...&quot;)}
@@ -4095,7 +4097,8 @@ Elliot hit send.&lt;br&gt;
 		]
 	]
 }
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="141" name="On the Run" tags="" position="500,550" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;{(masteraudio: &#39;stopall&#39;)
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="141" name="On the Run" tags="" position="500,550" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;{(set: $ontherun to &quot;yes&quot;)
+(masteraudio: &#39;stopall&#39;)
 (track: &#39;cycle56-action&#39;, &#39;loop&#39;, true)
 (track: &#39;cycle56-action&#39;, &#39;playwhenpossible&#39;)}
 {(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
@@ -4559,6 +4562,39 @@ Slowly, you smile. This life of hiding will be a strange one, but you think it&#
 ]]
 &lt;/div&gt;]]
 }
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="142" name="Cutscene1a" tags="" position="750,1150" size="100,100">&lt;div class=&quot;iss-section&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+{(set: $incoming to &quot;INCOMING MESSAGE...&quot;)}
+You arrive on the International Space Station in low Earth orbit, where you wait while the final preparations are made for the Astral Kite&#39;s launch...&lt;br&gt;
+[$incoming&lt;br&gt;
+(link-replace: &quot;Open message&quot;)[(show: ?earth1)]]
+
+|earth1)[(text-color: &quot;LightPink&quot;)[Hey, Elliot here! I hope your journey up into orbit went smoothly. I just wanted to say I’m in absolute awe of you. Going on a mission like this—it takes someone so brave. Anyway, I’ll be in charge of comms while you’re in orbit, so I’m looking forward to staying in touch until your launch next month!]&lt;br&gt;&lt;br&gt;
+
+(link-replace: &quot;Thanks, but I’m not exactly brave.&quot;)[(show: ?reply1)]]
+
+|reply1)[Thanks, but I’m not exactly brave. I was just selected from the Scholars Draft. It could have been anyone. I’m $USERNAME, by the way. Nice to meet you.&lt;br&gt;&lt;br&gt;
+
+$incoming&lt;br&gt;
+(link-replace: &quot;Open message&quot;)[(show: ?earth2)]]
+
+|earth2)[(text-color: &quot;LightPink&quot;)[Hey, sorry for the delayed reply! I have to admit, I didn’t know a lot about the Scholars Draft before taking this job. I just took some time to look into it and…I hope you don’t mind me saying this, but it seems kind of messed up. I’m sorry you didn’t get to have much say in how you ended up here. Anyway, I think you’re still really brave. If I’d been selected for a mission to leave Earth, I might’ve tried to run away haha]&lt;br&gt;&lt;br&gt;
+
+(link-replace: &quot;Are you allowed to say stuff like that on this channel?&quot;)[(show: ?reply2)]]
+
+|reply2)[Are you allowed to say stuff like that on this channel? Anyway, I guess Celestial Streams is keeping it quiet, but I did try running away. It didn’t work. There are just…so many people who’ve said they wish they were in my place, doing something “great” for their country. It’s like I’m going off to war or something. I don’t think everyone realizes it’s just me alone in an empty ship for (str: (round: $tt_tot*100)/100) years.&lt;br&gt;&lt;br&gt;
+
+$incoming&lt;br&gt;
+(link-replace: &quot;Open message&quot;)[(show: ?earth3)]]
+
+|earth3)[(text-color: &quot;LightPink&quot;)[I think some of the higher ups in Celestial Streams wouldn’t like it, but there’s no one really looking over my shoulder for these messages. I mean, they’re recorded for posterity, but I don’t think anyone at Mission Controls really cares what I have to say as long as I pass on their official messages, too. And I am really sorry that you didn’t have a choice in coming here. I know it’s not the same thing, but just to say, you won’t be completely alone. I’ll always be on the other end of this line. Anyway, I’m planning to drink some wine and binge-watch the new season of RuPaul’s Drag Race tonight. Let me know if you want to hang out online??]&lt;br&gt;&lt;br&gt;
+
+(link-replace: &quot;Yeah, that sounds fun actually.&quot;)[(show: ?reply3)]]
+
+|reply3)[Yeah, that sounds fun actually. I don’t have anything to do up here except worry…send me the link?&lt;br&gt;
+
+[[Continue-&gt;Cutscene2]]]
+&lt;/div&gt;]]}
 &lt;/div&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
