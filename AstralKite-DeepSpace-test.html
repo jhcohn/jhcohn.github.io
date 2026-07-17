@@ -1330,7 +1330,7 @@ You can’t help but feel like a show animal, shipped off to space for the human
 [Send a message, who cares if you&#39;re a mess?]&lt;r6bb|&lt;br&gt;
 [Toast your friend.]&lt;r6bc|&lt;br&gt;
 []&lt;display|&lt;br&gt;
-(click: ?r6ba)[(replace: ?r6bb)[](replace: ?r6bc)[](replace:?display)[ou compose yourself and record a cheery message to your friend, wishing them well. You even manage to include an inside joke from graduate school. Something about a loaf of banana bread. &lt;br&gt;
+(click: ?r6ba)[(replace: ?r6bb)[](replace: ?r6bc)[](replace:?display)[You compose yourself and record a cheery message to your friend, wishing them well. You even manage to include an inside joke from graduate school. Something about a loaf of banana bread. &lt;br&gt;
 
 [[Continue-&gt;Putter1]]]]
 (click: ?r6bb)[(replace: ?r6ba)[](replace: ?r6bc)[](replace:?display)[You begin to cry as soon as you hit record. “Dr. $b6_dr, I hope the mission treats you well,” you conclude in the recording. &lt;br&gt;
@@ -2228,7 +2228,7 @@ You can’t help but feel like a show animal, shipped off to space for the human
 [Toast your friend.]&lt;r6bc|&lt;br&gt;
 
 []&lt;display|
-(click: ?r6ba)[(replace: ?r6bb)[](replace: ?r6bc)[](replace:?display)[ou compose yourself and record a cheery message to your friend, wishing them well. You even manage to include an inside joke from graduate school. Something about a loaf of banana bread. &lt;br&gt;
+(click: ?r6ba)[(replace: ?r6bb)[](replace: ?r6bc)[](replace:?display)[You compose yourself and record a cheery message to your friend, wishing them well. You even manage to include an inside joke from graduate school. Something about a loaf of banana bread. &lt;br&gt;
 
 (if: $putter1 is &quot;coffee&quot;)[[[Continue-&gt;Coffee2]]]
 (else-if: $putter1 is &quot;broadcast&quot;)[[[Continue-&gt;Broadcast2]]]
@@ -2617,8 +2617,7 @@ As per your earlier request, Mission Control has ensured that you still have acc
 &lt;label for=&quot;file&quot;&gt;Ship clock: $tt2 | Earth clock: $t2&lt;/label&gt;
 &lt;progress id=&quot;file&quot; max=&quot;100&quot; value=22.2&gt;&lt;/progress&gt;&lt;br&gt;
 
-(if: $v &gt; 0.5)[The Cosmic Microwave Background was cool, at first. It’s something no one else in the history of humankind had seen before, after all. But, at the end of the day, it’s just a big blue disk in an otherwise featureless night sky, and it’s not going anywhere.]&lt;br&gt;
-(else:)[Your warped view of the Universe was cool, at first. It’s something no one else in the history of humankind had seen before, after all. But, at the end of the day, it’s a bunch of warped lights in an otherwise featureless night sky, and it’s not going anywhere.]&lt;br&gt;
+Your view of the Universe was cool, at first. It’s something no one else in the history of humankind had seen before, at relativistic speeds. But, at the end of the day, it’s just a slightly warped view of space, and it’s not going anywhere.&lt;br&gt;
 
 And up here, in the loneliness of deep space, you find it’s pretty difficult to care about much. Books and TV shows you used to enjoy hardly seem worth your time anymore. All the problems of people back on Earth feel so small. And you can’t affect things back home anymore, even if you wanted to.&lt;br&gt;
 
@@ -2648,7 +2647,7 @@ Do you make a cup of coffee?&lt;br&gt;
 &lt;label for=&quot;file&quot;&gt;Ship clock: $tt2 | Earth clock: $t2&lt;/label&gt;
 &lt;progress id=&quot;file&quot; max=&quot;100&quot; value=22.2&gt;&lt;/progress&gt;&lt;br&gt;
 
-It’s very important, since you’ll be stuck inside this spacecraft for a long time, to keep up your fitness. There’s a small treadmill in the spacecraft cabin for just this purpose. However, the settings are…unusual. They seem to be listed in terms of velocities equivalent to the orbital speeds of various celestial objects. Which do you choose?&lt;br&gt;
+It’s very important, since you’ll be stuck inside this spacecraft for a long time, to keep up your fitness. There’s a small treadmill in the spacecraft for just this purpose. However, the settings are…unusual. They seem to be listed in terms of velocities equivalent to the orbital speeds of various celestial objects. Which do you choose?&lt;br&gt;
 (dropdown: bind $jog1, &quot;One thousandth the average orbital speed of Earth around the Sun&quot;, &quot;One thousandth the average orbital speed of Pluto around the Sun&quot;, &quot;One thousandth the average orbital speed of the Moon around the Earth&quot;, &quot;One ten thousandth the average orbital speed of the Sun around the Milky Way&quot;)&lt;br&gt;
 
 (link-replace: &quot;Continue&quot;)[(show: ?p1a)]
@@ -4062,7 +4061,7 @@ You can’t help but feel like a show animal, shipped off to space for the human
 [Toast your friend.]&lt;r6bc|&lt;br&gt;
 
 []&lt;display|
-(click: ?r6ba)[(replace: ?r6bb)[](replace: ?r6bc)[](replace:?display)[ou compose yourself and record a cheery message to your friend, wishing them well. You even manage to include an inside joke from graduate school. Something about a loaf of banana bread. &lt;br&gt;
+(click: ?r6ba)[(replace: ?r6bb)[](replace: ?r6bc)[](replace:?display)[You compose yourself and record a cheery message to your friend, wishing them well. You even manage to include an inside joke from graduate school. Something about a loaf of banana bread. &lt;br&gt;
 
 (if: $putter1 is &quot;coffee&quot;)[[[Continue-&gt;Coffee3]]]
 (else-if: $putter1 is &quot;broadcast&quot;)[[[Continue-&gt;Broadcast3]]]
@@ -5129,7 +5128,7 @@ A chuckle curdles in your throat. “Hellooooo?”&lt;br&gt;
 
 You creep down to the end of the corridor, pausing a moment and then jumping around the corner.&lt;br&gt;
 
-You find yourself on the bridge; it has been quite some time since you’ve been here. You glance over the flashing buttons, the familiar brilliant sapphire eye of the blueshifted Universe surveilling you in the viewport, as if the Astral Kite were but one cell in a panopticon.&lt;br&gt;
+You find yourself on the bridge; it has been quite some time since you’ve been here. You glance over the flashing buttons, the familiar stars of the blueshifted Universe surveilling you in the viewport, as if the Astral Kite were but one cell in a panopticon.&lt;br&gt;
 
 Seconds tick forward on a display that reads $tt7. You chuckle again at the meaningless words.&lt;br&gt;
 
@@ -5379,7 +5378,7 @@ Well, that about does that. At least you know for sure the CAKEbot is a bot.
 [[Continue-&gt;Message4]]]]
 (click: ?pb2)[(replace: ?pb1)[](replace:?dispb)[(set: $chatbot4 to &quot;4BB&quot;)You ask CAKEbot a simple question: “What was the first interstellar mission?”
 
-(text-color: &quot;Wheat&quot;)[“The first interstellar mission was the famous Astral Kite, sent to $DESTINATION by Celestial Streams.”]
+(text-color: &quot;Wheat&quot;)[“The first interstellar mission was the famous Astral Kite, sent to $dest by Celestial Streams.”]
 
 “That’s incorrect,” you say.
 
@@ -6109,7 +6108,7 @@ You can’t help but feel like a show animal, shipped off to space for the human
 [Toast your friend.]&lt;r6bc|&lt;br&gt;
 
 []&lt;display|
-(click: ?r6ba)[(replace: ?r6bb)[](replace: ?r6bc)[](replace:?display)[ou compose yourself and record a cheery message to your friend, wishing them well. You even manage to include an inside joke from graduate school. Something about a loaf of banana bread. &lt;br&gt;
+(click: ?r6ba)[(replace: ?r6bb)[](replace: ?r6bc)[](replace:?display)[You compose yourself and record a cheery message to your friend, wishing them well. You even manage to include an inside joke from graduate school. Something about a loaf of banana bread. &lt;br&gt;
 
 (if: $putter1 is &quot;coffee&quot;)[[[Continue-&gt;Coffee4]]]
 (else-if: $putter1 is &quot;broadcast&quot;)[[[Continue-&gt;Broadcast4]]]
@@ -6479,10 +6478,10 @@ You can’t believe it. You remember, now, where you’ve seen the carpet before
 [Nod]&lt;pp|&lt;br&gt;
 [Don&#39;t nod]&lt;pq|&lt;br&gt;
 []&lt;dispp|
-(click: ?pp)[(replace: ?pq)[](replace:?dispp)[{(set: $ending to &quot;You unlocked Path #17: The Wire&quot;)}You nod. You don’t know what will happen. But maybe the public revelation of the lie behind this journey—and your cruel, lengthy isolation—will be enough to bring Celestial Streams down. Maybe it will even be enough to bring down the Scholars Draft. Then again, Celestial Streams is powerful, so maybe not. But it feels good to try. You have to believe it is possible. And if you can do this, if you can prevent other people from being exploited the way you were… Well, that will mean more to you than being the first person to travel to $DESTINATION. For the first time in a long time, you find yourself smiling.&lt;br&gt;
+(click: ?pp)[(replace: ?pq)[](replace:?dispp)[{(set: $ending to &quot;You unlocked Path #17: The Wire&quot;)}You nod. You don’t know what will happen. But maybe the public revelation of the lie behind this journey—and your cruel, lengthy isolation—will be enough to bring Celestial Streams down. Maybe it will even be enough to bring down the Scholars Draft. Then again, Celestial Streams is powerful, so maybe not. But it feels good to try. You have to believe it is possible. And if you can do this, if you can prevent other people from being exploited the way you were… Well, that will mean more to you than being the first person to travel to $dest. For the first time in a long time, you find yourself smiling.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
-(click: ?pq)[(replace: ?pp)[](replace:?dispp)[{(set: $ending to &quot;You unlocked Path #18: NDA&quot;)}You don’t nod. It’s not worth it. You don’t know what will happen. Celestial Streams is so powerful, you don’t think it’s worth the risk. Your life here might be miserable, now, but at least you can periodically see your friends and family. You might not be the first person to travel to $DESTINATION, but this is better than being alone. This is better, you tell yourself, over and over again. This is better.&lt;br&gt;
+(click: ?pq)[(replace: ?pp)[](replace:?dispp)[{(set: $ending to &quot;You unlocked Path #18: NDA&quot;)}You don’t nod. It’s not worth it. You don’t know what will happen. Celestial Streams is so powerful, you don’t think it’s worth the risk. Your life here might be miserable, now, but at least you can periodically see your friends and family. You might not be the first person to travel to $dest, but this is better than being alone. This is better, you tell yourself, over and over again. This is better.&lt;br&gt;
 
 [[The End-&gt;Credits]]]]
 ]]
@@ -6697,7 +6696,7 @@ Then, you pull up the screen where your receiver will send any messages it recei
 
 You gasp as a message pops up. It’s working!&lt;br&gt;
 
-But…you look closer. *Oh, no*. The message it received says, (text-color: &quot;Wheat&quot;)[“Hello, Earth. $USERNAME, here. I just wanted to update you that all is well, and I am now (print: (round: $d8*100)/100) from $DESTINATION. This mission is the greatest opportunity I could ever have imagined, and it’s an honor to know I have your support.”]&lt;br&gt;
+But…you look closer. *Oh, no*. The message it received says, (text-color: &quot;Wheat&quot;)[“Hello, Earth. $USERNAME, here. I just wanted to update you that all is well, and I am now (print: (round: $d8*100)/100) from $dest. This mission is the greatest opportunity I could ever have imagined, and it’s an honor to know I have your support.”]&lt;br&gt;
 
 You try typing out another message. “Hey, what the fuck? This is some bullshit.”&lt;br&gt;
 
@@ -8614,7 +8613,7 @@ CAKEbot’s voice comes through the speaker again. (text-color: &quot;Wheat&quot
 
 Taking a deep breath, you crack the door open. The corridor outside your room is empty. You take off your boots, allowing you to move with stealth through the Astral Kite.&lt;br&gt;
 
-Soon, the entryway to the bridge comes into view. You press yourself against the wall of the cabin. Peering through the opening into the bridge, you can see the back of a figure seated in the captain’s chair, *your* chair, leaning forward over the ship’s control panel, the brilliant eye of the cosmic microwave background glaring through viewscreen above them.&lt;br&gt;
+Soon, the entryway to the bridge comes into view. You press yourself against the wall of the cabin. Peering through the opening into the bridge, you can see the back of a figure seated in the captain’s chair, your chair, leaning forward over the ship’s control panel, a sea of brilliant stars shining through viewscreen above them.&lt;br&gt;
 
 [Sneak up and attack]&lt;sneak|&lt;br&gt;
 [Wait to see if the figure leaves]&lt;wait|&lt;br&gt;
@@ -9614,10 +9613,10 @@ This message was sent from Earth $me_sent9 after launch.&lt;br&gt;
 (if: $DESTINATION contains &quot;M57&quot;)[Your spacecraft comes to a stop about a quarter of a light year from the planetary nebula known as M57, or the Ring Nebula. The name “planetary nebula,” of course, is an old misnomer; it has nothing to do with planets. When stars less than 8 times the mass of the Sun run out of Hydrogen to fuse into Helium, they no longer radiate enough energy to support their incredible mass, causing their cores to contract into dense white dwarfs while their atmosphere is ejected into space. The beautiful shells of ionized gas fill the sky before you in the shape of an eye, stretching more than 2 light years across, a little less bright than a full moon. The outer edges are flared in fiery crimson tendrils extending from a sharp, bright, tangerine ring. The clouds fades through yellow and sclera-like white to a pale aloe green that surrounds a brilliant azure blue iris. Dark knots of dense gas speckle the nebula. And at the very center of it all is small, bright, white dwarf star, the remains of the star that produced the planetary nebula. It’s beautiful.&lt;br&gt;
 
 $agemsg&lt;br&gt;]
-(else-if: $DESTINATION contains &quot;PSR&quot;)[Your Celestial Streams spacecraft settles into orbit around this system, which actually contains a binary—both the millisecond pulsar that brought you here, and a companion white dwarf star. However, to the naked eye, this system is not the most interesting. As a millisecond pulsar, PSR J0437-4715 is spinning incredibly rapidly, 5750 rotations per second, with a stability to the rotation that’s as reliable as an atomic clock. The pulsar is also beaming out powerful emission in the X-ray wavelengths. Unfortunately, none of this is visible in the optical wavelengths. All you can see are the two small, white stars orbiting each other. At least this system will be exciting to study with all the instruments on board your craft.&lt;br&gt;
+(else-if: $DESTINATION contains &quot;PSR&quot;)[Your Celestial Streams spacecraft settles into orbit around this system, which actually contains a binary—both the millisecond pulsar that brought you here, and a companion white dwarf star. As a millisecond pulsar, PSR J0437-4715 is spinning incredibly rapidly, 5750 rotations per second, with a stability to the rotation that’s as reliable as an atomic clock. The pulsar is also beaming out powerful emission in the X-ray wavelengths. Unfortunately, none of this is visible in the optical wavelengths. All you can see are the two small, white stars orbiting each other. But the system is moving quickly through space, and arcing in a giant bow shock near the pulsar is a nebula of hydrogen gas, shimmering in a deep red. You never knew there could be such grandeur in all the Universe.&lt;br&gt;
 
 $agemsg&lt;br&gt;]
-(else-if: $DESTINATION contains &quot;TOI-700&quot;)[In the TOI-700 star system, your Celestial Streams spacecraft arrives in orbit around the fourth exoplanet in the system, TOI-700d. TOI-700 is a red dwarf star, smaller, redder, and dimmer than the Sun. TOI-700d is orbiting at a distance of about one sixth of an Astronomical Unit—one sixth the average Earth-Sun distance—within its star’s expected habitable zone, where liquid water should be able to exist. The world is almost exactly the same size as Earth, with almost twice the Earth’s mass. Now that you’re here, you’ll be able to explore the planet in much more detail. Does it have an atmosphere? Does it have oceans? Does it host life? You head to the viewport of your spacecraft, excited to look at this exciting world, something no one else has ever done.&lt;br&gt;
+(else-if: $DESTINATION contains &quot;TOI-700&quot;)[In the TOI-700 star system, your Celestial Streams spacecraft arrives in orbit around the fourth exoplanet in the system, TOI-700 d. TOI-700 is a red dwarf star, smaller, redder, and dimmer than the Sun. TOI-700 d is orbiting at a distance of about one sixth of an Astronomical Unit—one sixth the average Earth-Sun distance—within its star’s expected habitable zone, where liquid water should be able to exist. The world is almost exactly the same size as Earth, with almost twice the Earth’s mass. Now that you’re here, you’ll be able to explore the planet in much more detail. Does it have an atmosphere? Does it have oceans? Does it host life? You head to the viewport of your spacecraft, excited to look at this exciting world, something no one else has ever done.&lt;br&gt;
 
 $agemsg&lt;br&gt;]
 (else-if: $DESTINATION contains &quot;J318&quot;)[Your Celestial Streams spacecraft enters orbit around the rogue planet PSO J318.5−22. The world itself is a gas giant, larger than Jupiter, and there has been debate among astronomers about whether it’s actually a true planet, or more accurately a brown dwarf—a failed star that never achieved nuclear fusion. Even now that you are here, you won’t be able to tell by eye; you’ll need to make some observations to determine the truth of the matter. But whether it is a true rogue planet or not, it is strange to find yourself orbiting a world with no true star in sight. As a gas giant, there’s no surface on the world for you to visit. But the world is beautiful nonetheless; hued in reds, whites, and yellows and covered in clouds.&lt;br&gt;
