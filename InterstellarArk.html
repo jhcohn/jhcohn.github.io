@@ -9,7 +9,13 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The Interstellar Ark.</tw-noscript></noscript></tw-story>
-<tw-storydata name="The Interstellar Ark" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="b2f1590a-219f-452c-9712-da82d27f5e95" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.space-section {
+<tw-storydata name="The Interstellar Ark" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="b2f1590a-219f-452c-9712-da82d27f5e95" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.space-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.space-section {
     background-image: url("/Users/jonathancohn/Downloads/deepfieldedit-wide.jpg");
   background-size: contain; /* ensures image covers entire section (or should I use contain?) */
   background-position: center; /* centers image */
@@ -54,6 +60,88 @@
   align-items: center;
 }
 
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll;
+  background-color: rgba(0,0,0,0.8); /* #000000;  rgba(0, 0, 0, 0.7); Semi-transparent background for readability */
+  color: white;
+  font-family: 'Lucida Console'; /* 'American Typewriter'; */
+  font-size: 16px; /* 18px */
+  font-weight: 100;
+  width: 600px; /* 600px Limits the maximum width of the text */
+  max-height: 300px; /* set maximum height of text */
+  text-align: left;
+  padding-left: 9px;
+  padding-top: 32px;
+}
+
+.left-text {
+  position: absolute;
+  top: 48%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll;
+  background-color: rgba(0,0,0,0.8); /* #000000;  rgba(0, 0, 0, 0.7); Semi-transparent background for readability */
+  color: white;
+  font-family: 'Lucida Console'; /* 'American Typewriter'; */
+  font-size: 16px; /* 18px */
+  font-weight: 100;
+  width: 400px; /* 600px Limits the maximum width of the text */
+  max-height: 300px; /* set maximum height of text */
+  text-align: left;
+  padding-left: 9px;
+  padding-top: 32px;
+}
+
+.top-left {
+  width: 250px; /* 600px Limits the maximum width of the text */
+  max-height: 200px; /* set maximum height of text */
+  position: absolute;
+  top: 40px;
+  left: 8px;
+  padding: 9px;
+  background-color: rgba(0,0,0,0.8); /* #000000;  rgba(0, 0, 0, 0.7); Semi-transparent background for readability */
+  color: white;
+  font-family: 'Lucida Console'; /* 'American Typewriter'; */
+  font-size: 16px; /* 18px */
+  font-weight: 100;
+  overflow-y: scroll;
+}
+
+.bottom-left {
+  width: 250px; /* 600px Limits the maximum width of the text */
+  max-height: 200px; /* set maximum height of text */
+  position: absolute;
+  bottom: 40px;
+  left: 8px;
+  padding: 9px;
+  background-color: rgba(0,0,0,0.8); /* #000000;  rgba(0, 0, 0, 0.7); Semi-transparent background for readability */
+  color: white;
+  font-family: 'Lucida Console'; /* 'American Typewriter'; */
+  font-size: 16px; /* 18px */
+  font-weight: 100;
+  overflow-y: scroll;
+}
+
+.top-right {
+  width: 350px; /* 600px Limits the maximum width of the text */
+  max-height: 400px; /* set maximum height of text */
+  position: absolute;
+  top: 40px;
+  right: 8px;
+  padding: 9px;
+  background-color: rgba(0,0,0,0.8); /* #000000;  rgba(0, 0, 0, 0.7); Semi-transparent background for readability */
+  color: white;
+  font-family: 'Lucida Console'; /* 'American Typewriter'; */
+  font-size: 16px; /* 18px */
+  font-weight: 100;
+  overflow-y: scroll;
+  text-align: left;
+}
+
 .text-overlay {
   width: 450px; /* 600px Limits the maximum width of the text */
   padding: 9px;
@@ -68,13 +156,18 @@
   font-size: 16px; /* 18px */
   font-weight: 100;
   max-height: 200px;
-}
+  overflow-y: scroll;
 
-div {
-    overflow-y: scroll;
 }
 
 tw-sidebar { display: none; }
+
+tw-story {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
 
 /**
  * Harlowe Audio Library (HAL), by Chapel, v2.3.0
@@ -140,13 +233,14 @@ Welcome, $USERNAME. Please select your pronouns:
 (dropdown: bind $p, &quot;she/her/hers&quot;, &quot;he/him/his&quot;, &quot;they/them/their&quot;, &quot;she/they&quot;, &quot;he/they&quot;, &quot;any pronouns&quot;)
 
 Please select your age, in years:
-(dropdown: bind $age, &quot;20&quot;, &quot;21&quot;, &quot;22&quot;, &quot;23&quot;, &quot;24&quot;, &quot;25&quot;, &quot;26&quot;, &quot;27&quot;, &quot;28&quot;, &quot;29&quot;, &quot;30&quot;, &quot;31&quot;, &quot;32&quot;, &quot;33&quot;, &quot;34&quot;, &quot;35&quot;, &quot;36&quot;, &quot;37&quot;, &quot;38&quot;, &quot;39&quot;, &quot;40&quot;, &quot;41&quot;, &quot;42&quot;, &quot;43&quot;, &quot;44&quot;, &quot;45&quot;, &quot;46&quot;, &quot;47&quot;, &quot;48&quot;, &quot;49&quot;, &quot;50&quot;, &quot;51&quot;, &quot;52&quot;, &quot;53&quot;, &quot;54&quot;, &quot;55&quot;, &quot;56&quot;, &quot;57&quot;, &quot;58&quot;, &quot;59&quot;, &quot;60&quot;, &quot;61&quot;, &quot;62&quot;, &quot;63&quot;, &quot;64&quot;, &quot;65&quot;, &quot;66&quot;, &quot;67&quot;, &quot;68&quot;, &quot;69&quot;, &quot;70&quot;)
+(dropdown: bind $age, &quot;18&quot;, &quot;19&quot;, &quot;20&quot;, &quot;21&quot;, &quot;22&quot;, &quot;23&quot;, &quot;24&quot;, &quot;25&quot;, &quot;26&quot;, &quot;27&quot;, &quot;28&quot;, &quot;29&quot;, &quot;30&quot;, &quot;31&quot;, &quot;32&quot;, &quot;33&quot;, &quot;34&quot;, &quot;35&quot;, &quot;36&quot;, &quot;37&quot;, &quot;38&quot;, &quot;39&quot;, &quot;40&quot;, &quot;41&quot;, &quot;42&quot;, &quot;43&quot;, &quot;44&quot;, &quot;45&quot;, &quot;46&quot;, &quot;47&quot;, &quot;48&quot;, &quot;49&quot;, &quot;50&quot;, &quot;51&quot;, &quot;52&quot;, &quot;53&quot;, &quot;54&quot;, &quot;55&quot;, &quot;56&quot;, &quot;57&quot;, &quot;58&quot;, &quot;59&quot;, &quot;60&quot;, &quot;61&quot;, &quot;62&quot;, &quot;63&quot;, &quot;64&quot;, &quot;65&quot;, &quot;66&quot;, &quot;67&quot;, &quot;68&quot;, &quot;69&quot;, &quot;70&quot;, &quot;71&quot;, &quot;72&quot;, &quot;73&quot;, &quot;74&quot;, &quot;75&quot;, &quot;76&quot;, &quot;77&quot;, &quot;78&quot;, &quot;79&quot;, &quot;80&quot;)
 
 Please select your occupation:
 (dropdown: bind $class, &quot;cook&quot;, &quot;customer service&quot;, &quot;driver&quot;, &quot;engineer&quot;, &quot;farmer&quot;, &quot;freight&quot;, &quot;nurse&quot;, &quot;scientist&quot;, &quot;teacher&quot;, &quot;writer&quot;)
 
 [[Continue...-&gt;Opening]]
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Launch" tags="" position="625,925" size="100,100">&lt;div class=&quot;space-section&quot;&gt;
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Launch" tags="" position="625,925" size="100,100">&lt;div class=&quot;space-container&quot;&gt;
+&lt;img src=&quot;/Users/jonathancohn/Downloads/deepfieldedit-wide.jpg&quot; alt=&quot;space&quot; style=&quot;width:100%;&quot;&gt;
 {(set: $km_per_ly to 9460528400000)
 (set: $c_kms to 299792.458)
 (set: $s_per_yr to 31556926)
@@ -155,6 +249,7 @@ Please select your occupation:
 (set: $gamma to (sqrt: 1 / (1 - $v*$v)))
 (set: $te_tot to $d * $km_per_ly / ($v * $c_kms) / $s_per_yr)
 (set: $tt_tot to $te_tot / $gamma)
+(set: $total_travel_time to 0)
 
 (set: $possible_geo to (a: ))
 (for: each _i, ...(range: 0, 19))[(set: $possible_geo to it + (a: &#39;No&#39;))]
@@ -169,6 +264,7 @@ Please select your occupation:
 (set: $nav_choices to 3)
 (set: $reverse to false)
 (set: $num_visits to 0)
+(set: $past_activities to (a:))
 
 (set: $dists to (a: 3.16, 3.22, 3.27, 3.33, 3.39, 3.45, 3.51, 3.57, 3.63, 3.7, 3.76, 3.83, 3.89, 3.96, 4.03, 4.1, 4.17, 4.25, 4.32, 4.4, 4.47, 4.55, 4.63, 4.71, 4.8, 4.88, 4.97, 5.05, 5.14, 5.23, 5.32, 5.42, 5.51, 5.61, 5.71, 5.81, 5.91, 6.01, 6.12, 6.22, 6.33, 6.44, 6.56, 6.67, 6.79, 6.91, 7.03, 7.15, 7.27, 7.4, 7.53, 7.66, 7.8, 7.93, 8.07, 8.21, 8.36, 8.5, 8.65, 8.8, 8.96, 9.12, 9.28, 9.44, 9.6, 9.77, 9.94, 10.12, 10.29, 10.47, 10.66, 10.84, 11.03, 11.23, 11.42, 11.62, 11.83, 12.03, 12.24, 12.46, 12.68, 12.9, 13.12, 13.35, 13.59, 13.83, 14.07, 14.31, 14.57, 14.82, 15.08, 15.34, 15.61, 15.89, 16.16, 16.45, 16.73, 17.03, 17.33, 17.63, 17.94, 18.25, 18.57, 18.9, 19.23, 19.56, 19.91, 20.26, 20.61, 20.97, 21.34, 21.71, 22.09, 22.48, 22.87, 23.27, 23.68, 24.09, 24.52, 24.95, 25.38, 25.83, 26.28, 26.74, 27.21, 27.68, 28.17, 28.66, 29.16, 29.67, 30.19, 30.72, 31.26, 31.81, 32.36, 32.93, 33.51, 34.09, 34.69, 35.3, 35.92, 36.54, 37.18, 37.83, 38.5, 39.17, 39.86, 40.55, 41.26, 41.99, 42.72, 43.47, 44.23, 45.01, 45.79, 46.6, 47.41, 48.24, 49.09, 49.95, 50.82, 51.71, 52.61, 53.54, 54.47, 55.43, 56.4, 57.38, 58.39, 59.41, 60.45, 61.51, 62.59, 63.68, 64.8, 65.93, 67.09, 68.26, 69.46, 70.67, 71.91, 73.17, 74.45, 75.75, 77.08, 78.43, 79.8, 81.2, 82.62, 84.07, 85.54, 87.04, 88.56, 90.11, 91.69, 93.29, 94.93, 96.59, 98.28, 100.0))
 
@@ -231,9 +327,9 @@ Please select your occupation:
 (for: each _i, ...(range: 0, 4))[
 (set: $planets to it + (a: &#39;a small terrestrial moon orbiting an inhospitable super-Earth&#39;))]
 (for: each _i, ...(range: 0, 4))[
-(set: $planets to it + (a: &#39;a large terrestrial moon orbiting an gas giant with rings&#39;))]
+(set: $planets to it + (a: &#39;a large terrestrial moon orbiting a gas giant with rings&#39;))]
 (for: each _i, ...(range: 0, 4))[
-(set: $planets to it + (a: &#39;a small terrestrial moon orbiting an gas giant with rings&#39;))]
+(set: $planets to it + (a: &#39;a small terrestrial moon orbiting a gas giant with rings&#39;))]
 (for: each _i, ...(range: 0, 4))[
 (set: $planets to it + (a: &#39;a large terrestrial moon orbiting a gas giant&#39;))]
 (for: each _i, ...(range: 0, 4))[
@@ -282,10 +378,14 @@ Please select your occupation:
 (set: $visited to (dm:
 &#39;0&#39;, (a: &#39;Earth&#39;, $at_thic, $at_tox, $temp, $water_phase, $bio_sig, $resources, $past_civ, $past_civ_detectable, $current_civ, $current_civ_detectable, $geo, $weather, $danger_life, $edible, $safe_landing, $description, $current_favorability, $current_civ_peaceful)))
 
-(set: $morale to 100)
 
+(set: $morale to 100)
+(set: $moralewords to &quot;very high&quot;)
 (set: $data to (dm: &#39;history&#39;, 100, &#39;science&#39;, 100, &#39;arts&#39;, 100, &#39;philosophy&#39;, 100, &#39;log&#39;, 0))
-(set: $systems to (dm: &#39;hull&#39;, 100, &#39;navigation&#39;, 100, &#39;cryo&#39;, 100, &#39;engines&#39;, 100, &#39;storage&#39;, 100, &#39;data&#39;, $data, &#39;probes&#39;, 3))
+(set: $systems to (dm: &#39;hull&#39;, 100, &#39;navigation&#39;, 100, &#39;cryo&#39;, 100, &#39;engines&#39;, 100, &#39;storage&#39;, 100, &#39;probes&#39;, 3))
+
+
+(set: $fascism to 0)
 
 (if: $scenario is &quot;rebel&quot;)[(set: $inhabitants to (dm: &quot;aristocrats&quot;, 0, &quot;artists&quot;, 1200, &quot;businesspeople&quot;, 100, &quot;educators&quot;, 600, &quot;journalists&quot;, 300, &quot;laborers&quot;, 7000, &quot;physicians&quot;, 300, &quot;police&quot;, 0, &quot;politicians&quot;, 100, &quot;scientists&quot;, 400))
 (set: $inhabitants_initial to (dm: &quot;aristocrats&quot;, 0, &quot;artists&quot;, 1200, &quot;businesspeople&quot;, 100, &quot;educators&quot;, 600, &quot;journalists&quot;, 300, &quot;laborers&quot;, 7000, &quot;physicians&quot;, 300, &quot;police&quot;, 0, &quot;politicians&quot;, 100, &quot;scientists&quot;, 400))
@@ -309,9 +409,9 @@ Please select your occupation:
 (set: $inhabitant_types to (a: &#39;aristocrats&#39;, &#39;artists&#39;, &#39;businesspeople&#39;, &#39;educators&#39;, &#39;journalists&#39;, &#39;laborers&#39;, &#39;physicians&#39;, &#39;police&#39;, &#39;politicians&#39;, &#39;scientists&#39;))
 ]
 
-
-
 (set: $awakes to (dm: &quot;aristocrats&quot;, 0, &quot;artists&quot;, 0, &quot;businesspeople&quot;, 0, &quot;educators&quot;, 0, &quot;journalists&quot;, 0, &quot;laborers&quot;, 0, &quot;physicians&quot;, 0, &quot;police&quot;, 0, &quot;politicians&quot;, 0, &quot;scientists&quot;, 0))
+(set: $awake_aging to (dm: ))
+(set: $anyawakes to false)
 
 (set: $n_you_kill to 0)
 (set: $n_you_let_die to 0)
@@ -332,39 +432,44 @@ Please select your occupation:
 
 (track: &#39;theme&#39;, &#39;pause&#39;)
 (track: &#39;launch&#39;, &#39;loop&#39;, true)
-(track: &#39;launch&#39;, &#39;playwhenpossible&#39;)
-(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
-After the chaos of your launch, you have a moment to take stock of things. $SHIPNAME is traveling at 0.9 times the speed of light and carrying $survline, all in cryo sleep.&lt;br&gt;
-
-(if: $scenario is &quot;rebel&quot;)[Among the businesspeople, you recognize several names of people who have materially supported bigoted and corrupt politicians in recent years. You fear that these businesspeople are opportunists who joined your protest with only selfish intentions.&lt;br&gt;
+(track: &#39;launch&#39;, &#39;playwhenpossible&#39;)}
+&lt;div class=&quot;centered&quot;&gt;
+{After the chaos of your launch, you have a moment to take stock of things. $SHIPNAME is traveling at 0.9 times the speed of light and carrying $survline, all in cryo sleep.&lt;br&gt;
 
 $intro2&lt;br&gt;
 
 [[Continue-&gt;Loop]]
+}&lt;/div&gt;
+&lt;div class=&quot;top-left&quot;&gt;{
+(set: $tabletext to &#39;&lt;table style=&quot;width:100%&quot;&gt;&lt;tr&gt;&lt;th&gt;System&lt;/th&gt;&lt;th&gt;Capacity&lt;/th&gt;&lt;/tr&gt;&#39;)
+(set: $keycol to (dm: ))
+(for: each _key, ...(data-names: $systems))[(if: (_key is not &quot;log&quot;) and (_key is not &quot;probes&quot;))[
+(if: $systems&#39;s _key &gt; 90)[(set: $keycol to it + (dm: _key, &quot;DarkSeaGreen&quot;))]
+(else-if: $systems&#39;s _key &gt; 50)[(set: $keycol to it + (dm: _key, &quot;Orange&quot;))]
+(else:)[(set: $keycol to it + (dm: _key, &quot;LightCoral&quot;)]
 ]
-(else-if: $scenario is &quot;rogue&quot;)[You recognize the politicians as fascists who have stoked bigotry and war for decades, the aristocrats as those who own the politicians and bribe them to protect their profits, the journalists as their most loyal propagandists, and the artists as musicians, actors, and authors who are some of their most sycophantic supporters. Even among the scientists and educators, you recognize names that have been in the news for denying climate change, protecting abusers in academia, and teaching &quot;alternative facts.&quot; The police on board, unsurprisingly, have established records of violating civil rights, including targeting minoritized people, planting evidence, strike-breaking activities, arbitrary arrests, and frequent use of lethal force.&lt;br&gt;
-
-$intro2&lt;br&gt;
-
-[[Continue-&gt;Loop]]
+(else-if: _key is &quot;probes&quot;)[
+(if: $systems&#39;s _key &gt; 2)[(set: $keycol to it + (dm: _key, &quot;DarkSeaGreen&quot;))]
+(else-if: $systems&#39;s _key &gt; 1)[(set: $keycol to  it + (dm: _key, &quot;Orange&quot;))]
+(else:)[(set: $keycol to  it + (dm: _key, &quot;LightCoral&quot;))]]
+(set: $tabletext to it + &quot;&lt;tr&gt;&lt;td&gt;&quot; + _key + &#39;&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;&#39; + $keycol&#39;s _key + &#39;&quot;&gt;&#39; + (string: $systems&#39;s _key) + &quot; / 100&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&quot;)
 ]
-(else:)[Among the aristocrats and businesspeople you recognize several names of people who have loudly supported bigoted and corrupt politicians in recent years. You fear that most of these aristocrats and businesspeople supported your mission solely as a means to escape Earth themselves, rather than out of any goodwill.&lt;br&gt;
+(set: $tabletext to it + &quot;&lt;/table&gt;&quot;)
+$SHIPNAME
+(print: $tabletext)&lt;br&gt;
 
-$intro2&lt;br&gt;
+(set: $tabletext2 to &#39;&lt;table style=&quot;width:100%&quot;&gt;&lt;tr&gt;&lt;th&gt;Inhabitants&lt;/th&gt;&lt;th&gt;Living in cryo&lt;/th&gt;&lt;/tr&gt;&#39;)
+(for: each _key, ...(data-names: $inhabitants))[(if: $inhabitants_initial&#39;s _key is not 0)[(set: $tabletext2 to it + &quot;&lt;tr&gt;&lt;td&gt;&quot; + _key + &quot;&lt;/td&gt;&lt;td&gt;&quot; + (string: $inhabitants&#39;s _key) + &quot; / &quot; + (string: $inhabitants_initial&#39;s _key) + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;)]]
+(set: $tabletext2 to it + &quot;&lt;/table&gt;&quot;)
+(print: $tabletext2)
+}&lt;/div&gt;
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="5" name="cw" tags="" position="625,300" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
+[[Play Game-&gt;Inputs]]
 
-[[Continue-&gt;Loop]]
-]
-&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="cw" tags="" position="625,300" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-Interstellar Ark is a work of fiction. Any resemblance to real people, places, or events, is coincidental.
+(text-size: 0.5)[Interstellar Ark is a response to space exploration games that glorify and perpetuate the harms of colonization.
 
-This game contains some topics that may be triggering to players. Would you like to see a list of content warnings?
-
-[Yes]&lt;y1|
-[[No-&gt;Inputs]]
-
-(click: ?y1)[This game contains themes and events including suicide and violence. Not every path you take will include these themes, but one or more of them may appear throughout the game.
-
-[[Play Game-&gt;Inputs]]]
+This game is a work of fiction. Any resemblance to real people, places, or events, is coincidental. The game contains themes and events including suicide and violence. Not every path you take will include these themes, but one or more of them may appear throughout the game.]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="hal.tracks" tags="" position="775,175" size="100,100">test-name: /Users/jonathancohn/Downloads/MMGSecondTheme.wav
 
 test2: /Users/jonathancohn/Downloads/MMGFirstTheme.wav
@@ -404,7 +509,7 @@ showControls: false</tw-passagedata><tw-passagedata pid="8" name="Credits" tags=
 (transition: &quot;dissolve&quot;)[Created and written by Jonathan Cohn]&lt;br&gt;
 |music)[(transition: &quot;dissolve&quot;)[Music by Susan Loquat]]&lt;br&gt;
 |art)[(transition: &quot;dissolve&quot;)[Art by Isabelle Goldstein]]&lt;br&gt;
-|playtest)[(transition: &quot;dissolve&quot;)[Playtesters: (TBD!)]]&lt;br&gt;
+|playtest)[(transition: &quot;dissolve&quot;)[Playtesters: Peter Ferguson, MORE TBD!]]&lt;br&gt;
 |studios)[(transition: &quot;dissolve&quot;)[A Starcoded Studios Production]]&lt;br&gt;
 |special)[(transition: &quot;dissolve&quot;)[Spectial thanks to Addy Evans and Quinn Casey, without whom this game would not exist]]&lt;br&gt;
 |player)[(transition: &quot;dissolve&quot;)[and to you, the player]]&lt;br&gt;
@@ -490,16 +595,28 @@ Now, the time has come for you to flee. You are joined by 2000 scientists and th
 ]]
 
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="Ship" tags="" position="625,800" size="100,100">&lt;div class=&quot;earth-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-(set: $SHIPNAME to (prompt: &quot;Enter your ship&#39;s name:&quot;, &quot;&quot;))
+{
+(set: $maxstar to (dm: &#39;a B-type star&#39;, 2e7, &#39;an A-type star&#39;, 1e9, &#39;an F-type star&#39;, 2e9, &#39;a G-type star&#39;, 4e9, &#39;a K-type star&#39;, 1e10, &#39;an M-type star&#39;, 1e12, &#39;a brown dwarf&#39;, 2e8, &#39;a white dwarf&#39;, 2e10, &#39;a red giant star&#39;, 3e8, &#39;a blue giant star&#39;, 1e7, &#39;a neutron star&#39;, 2e6, &#39;a black hole&#39;, 1e3, &#39;a rogue planet&#39;, 1e6))
+(set: $planetdiff to (dm: &#39;an Earth-like planet&#39;, 0, &#39;a super-Earth terrestrial planet&#39;, 2, &#39;a sub-Earth terrestrial planet&#39;, 2, &#39;a large terrestrial moon orbiting a gas giant&#39;, 3, &#39;a small terrestrial moon orbiting a gas giant&#39;, 3, &#39;a large terrestrial moon orbiting a gas giant with icy rings&#39;, 2.25, &#39;a small terrestrial moon orbiting a gas giant with icy rings&#39;, 2.25, &#39;a large terrestrial moon orbiting an inhospitable super-Earth&#39;, 3, &#39;a small terrestrial moon orbiting an inhospitable super-Earth&#39;, 3, &#39;a large terrestrial moon orbiting an ice giant&#39;, 3, &#39;a small terrestrial moon orbiting an ice giant&#39;, 3, &#39;a large terrestrial moon orbiting an ice giant with rings&#39;, 2.25, &#39;a small terrestrial moon orbiting an ice giant with rings&#39;, 2.25))
+(set: $realscore to 0)
+
+}
+(set: $SHIPNAME to (prompt: &quot;Enter your ship&#39;s name,&quot;, &quot;&quot;))
 
 [[Launch]]
 
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Loop" tags="" position="625,1050" size="100,100">&lt;div class=&quot;space-section&quot;&gt;
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Loop" tags="" position="625,1050" size="100,100">&lt;div class=&quot;space-container&quot;&gt;
+&lt;img src=&quot;/Users/jonathancohn/Downloads/deepfieldedit-wide.jpg&quot; alt=&quot;space&quot; style=&quot;width:100%;&quot;&gt;
 {
+(if: $total_travel_time &gt; 10)[(set: $morale to it - 10)]
+(else-if: $total_travel_time &gt; 25)[(set: $morale to it - 10)]
+(else-if: $total_travel_time &gt; 40)[(set: $morale to it - 10)]
+(else-if: $total_travel_time &gt; 60)[(set: $morale to it - 10)]
+(set: $activitycount to 0)
 (if: $morale &gt; 90)[(set: $moralewords to &quot;very high&quot;)]
 (else-if: $morale &gt; 70)[(set: $moralewords to &quot;high&quot;)]
 (else-if: $morale &gt; 50)[(set: $moralewords to &quot;moderately high&quot;)]
-(else-if: $morale &gt; 30)[(set: $moralewords to &quot;moderately low&quot;)(set: $nav_choices to (min: 2, $nav_choices))]
+(else-if: $morale &gt; 30)[(set: $moralewords to &quot;moderately low&quot;)]
 (else-if: $morale &gt; 10)[(set: $moralewords to &quot;low&quot;)(set: $nav_choices to (min: 2, $nav_choices))]
 (else-if: $morale &gt; 0)[(set: $moralewords to &quot;very low&quot;)(set: $nav_choices to (min: 1, $nav_choices))]
 (set: $choices to (a:))
@@ -509,9 +626,9 @@ Now, the time has come for you to flee. You are joined by 2000 scientists and th
 (set: $planets_dm to (dm:))
 (set: $zones_dm to (dm:))
 }
-{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
-Your morale is $moralewords.&lt;br&gt;
-Your biological age is (print: (round: 100 * $age)/100) Earth years.&lt;br&gt;
+&lt;div class=&quot;centered&quot;&gt;
+{Your morale is $moralewords.&lt;br&gt;
+Your biological age is (print: (round: 100 * $age)/100) Earth years. (print: (round: 100 * $total_travel_time) / 100) years have passed on board $SHIPNAME since leaving Earth.&lt;br&gt;
 
 (if: $age &gt; 70)[Due to your advancing age, you may consider entering cryo sleep during travel to avoid aging much more on your way to your next destination.&lt;br&gt;]
 
@@ -551,6 +668,7 @@ Your destination is $visit.&lt;br&gt;
 
 [[Begin travel-&gt;Activities]]]
 (else:)[Scanning nearby systems for known exoplanet hosts...&lt;br&gt;
+(set: $planettable to &#39;&lt;table style=&quot;width:100%&quot;&gt;&lt;tr&gt;&lt;th&gt;Option&lt;/th&gt;&lt;th&gt;Details&lt;/th&gt;&lt;/tr&gt;&#39;)
 (for: each _i, ...(range: 1, $nav_choices))[
 (set: $this_star to (either: ...$stars))
 (set: $this_dist to (either: ...$dists))
@@ -559,26 +677,72 @@ Your destination is $visit.&lt;br&gt;
 (if: $this_star is &#39;a rogue planet&#39;)[(set: $this_choice to $this_star + &#39;, &#39; + (string: $this_dist) + &#39; light years away&#39;)]
 (else:)[(set: $this_choice to $this_star + &#39; with &#39; + $this_planet + &#39; &#39; + $this_zone + &#39;, &#39; + (string: $this_dist) + &#39; light years away&#39;)]
 (set: $choices to it + (a: $this_choice))
-(set: $choices_dm to it + (dm: (string: _i), $this_choice))
-(set: $stars_dm to it + (dm: (string: _i), $this_star))
-(set: $dists_dm to it + (dm: (string: _i), $this_dist))
-(set: $zones_dm to it + (dm: (string: _i), $this_zone))
-(set: $planets_dm to it + (dm: (string: _i), $this_planet))
-(_i) $this_choice&lt;br&gt;
-]
+(set: $choices_dm to it + (dm: &quot;(&quot; + (string: _i) + &quot;)&quot;, $this_choice))
+(set: $stars_dm to it + (dm: &quot;(&quot; + (string: _i) + &quot;)&quot;, $this_star))
+(set: $dists_dm to it + (dm: &quot;(&quot; + (string: _i) + &quot;)&quot;, $this_dist))
+(set: $zones_dm to it + (dm: &quot;(&quot; + (string: _i) + &quot;)&quot;, $this_zone))
+(set: $planets_dm to it + (dm:&quot;(&quot; +  (string: _i) + &quot;)&quot;, $this_planet))
+(set: $planettable to it + &quot;&lt;tr&gt;&lt;td&gt;(&quot; + (string: _i) + &quot;)  &lt;/td&gt;&lt;td&gt;&quot; + $this_choice + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;)]
+
+(set: $planettable to it + &quot;&lt;/table&gt;&quot;)
+(print: $planettable)
 
 Select your next destination:&lt;br&gt;
-(dropdown: bind $n_choice, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;)&lt;br&gt;
+(dropdown: bind $n_choice, &quot;(1)&quot;, &quot;(2)&quot;, &quot;(3)&quot;)&lt;br&gt;
 
 [[Begin travel-&gt;Activities]]
+]}
+&lt;/div&gt;
+&lt;div class=&quot;top-left&quot;&gt;{
+(set: $tabletext to &#39;&lt;table style=&quot;width:100%&quot;&gt;&lt;tr&gt;&lt;th&gt;System&lt;/th&gt;&lt;th&gt;Capacity&lt;/th&gt;&lt;/tr&gt;&#39;)
+(set: $keycol to (dm: ))
+(for: each _key, ...(data-names: $systems))[(if: (_key is not &quot;log&quot;) and (_key is not &quot;probes&quot;))[
+(if: $systems&#39;s _key &gt; 90)[(set: $keycol to it + (dm: _key, &quot;DarkSeaGreen&quot;))]
+(else-if: $systems&#39;s _key &gt; 50)[(set: $keycol to it + (dm: _key, &quot;Orange&quot;))]
+(else:)[(set: $keycol to it + (dm: _key, &quot;LightCoral&quot;))]
 ]
+(else-if: _key is &quot;probes&quot;)[
+(if: $systems&#39;s _key &gt; 2)[(set: $keycol to it + (dm: _key, &quot;DarkSeaGreen&quot;))]
+(else-if: $systems&#39;s _key &gt; 1)[(set: $keycol to  it + (dm: _key, &quot;Orange&quot;))]
+(else:)[(set: $keycol to  it + (dm: _key, &quot;LightCoral&quot;))]]
+(set: $tabletext to it + &quot;&lt;tr&gt;&lt;td&gt;&quot; + _key + &#39;&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;&#39; + $keycol&#39;s _key + &#39;&quot;&gt;&#39; + (string: $systems&#39;s _key) + &quot; / 100&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&quot;)
+]
+(set: $tabletext to it + &quot;&lt;/table&gt;&quot;)
+$SHIPNAME
+(print: $tabletext)&lt;br&gt;
 
-&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Test" tags="" position="1000,1050" size="100,100">{
+(set: $tabletext2 to &#39;&lt;table style=&quot;width:100%&quot;&gt;&lt;tr&gt;&lt;th&gt;Inhabitants&lt;/th&gt;&lt;th&gt;Living in cryo&lt;/th&gt;&lt;/tr&gt;&#39;)
+(for: each _key, ...(data-names: $inhabitants))[(if: $inhabitants_initial&#39;s _key is not 0)[(set: $tabletext2 to it + &quot;&lt;tr&gt;&lt;td&gt;&quot; + _key + &quot;&lt;/td&gt;&lt;td&gt;&quot; + (string: $inhabitants&#39;s _key) + &quot; / &quot; + (string: $inhabitants_initial&#39;s _key) + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;)]]
+(set: $tabletext2 to it + &quot;&lt;/table&gt;&quot;)
+(print: $tabletext2)
+}&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Test" tags="" position="1000,1050" size="100,100">{
+(set: $nn to 1e4)
+$nn&lt;br&gt;
+(print: $nn - 331) hmm&lt;br&gt;
+(set: $potential_longevity to 1298019090)
+(set: $yrs to (string: (round: $potential_longevity / 1e9)) + &quot; billion years&quot;)
+(round: $potential_longevity / 1e9), $yrs, yrs&lt;br&gt;
+(print: 400 + 100 / 3 * ((log10: 1e8) - 6))&lt;br&gt;
+
+(set: $aa to (floor: 36.5 / 40))
+$aa, floor&lt;br&gt;
 (set: $possible_temp to (a:))
 (for: each _i, ...(range: 0, 1))[(set: $possible_temp to it + (a: &#39;Extremely hot&#39;))]
 $possible_temp, temps
 
 (set: $inhabitants to (dm: &quot;aristocrats&quot;, 0, &quot;artists&quot;, 1200, &quot;businesspeople&quot;, 100, &quot;educators&quot;, 600, &quot;journalists&quot;, 300, &quot;laborers&quot;, 7000, &quot;physicians&quot;, 300, &quot;police&quot;, 0, &quot;politicians&quot;, 100, &quot;scientists&quot;, 400))
+
+(set: $final_survline to &quot;&quot;)
+(set: $dmnums to (data-values: $inhabitants))
+(set: $dments to (data-names: $inhabitants))
+(for: each _i, ...$dments)[(print: $inhabitants&#39;s _i)]&lt;br&gt;
+(for: each _i, ...$dments)[(if: _i is $dments&#39;s last)[(set: $final_survline to it + &quot;and &quot; (string: (print: $inhabitants&#39;s _i)) + &quot; &quot; + $dments)]
+(else:[(set: $final_survline to it + (string: (print: $inhabitants&#39;s _i)) + &quot; &quot; + $dments + &quot;, &quot;)]
+]
+SURVIVAL LINE: $final_survline&lt;br&gt;
+[[Test 2]]
+
 (set: $sumalive to $inhabitants&#39;s &quot;aristocrats&quot; + $inhabitants&#39;s &quot;artists&quot; + $inhabitants&#39;s &quot;businesspeople&quot; + $inhabitants&#39;s &quot;educators&quot; + $inhabitants&#39;s &quot;journalists&quot; + $inhabitants&#39;s &quot;laborers&quot; + $inhabitants&#39;s &quot;physicians&quot; + $inhabitants&#39;s &quot;police&quot; + $inhabitants&#39;s &quot;politicians&quot; + $inhabitants&#39;s &quot;scientists&quot;)
 $sumalive, this worked!&lt;br&gt;
 (set: $suminh to (dm-values: $inhabitants))
@@ -586,6 +750,9 @@ $suminh, suminh&lt;br&gt;
 (set: $total to (folded: _currentNumber making _total via _total + _currentNumber, ...$suminh))
 $total, making array of datavalues and summing them with folded worked&lt;br&gt;
 
+(checkbox: bind $choicelist, &quot;test&quot;)&lt;br&gt;
+(link-replace: &quot;continue&quot;)[(show: ?choicetest)]&lt;br&gt;
+|choicetest)[$test, choicelist]&lt;br&gt;
 
 (set: $stars to (a: &#39;a B-type star&#39;))
 (for: each _i, ...(range: 0, 1))[
@@ -675,16 +842,17 @@ am I (string: $alive)
 $event
 
 (set: $damaged_type to (either: &quot;history&quot;, &quot;philosophy&quot;, &quot;science&quot;, &quot;arts&quot;))
-$damaged_type</tw-passagedata><tw-passagedata pid="14" name="Activities" tags="" position="775,1125" size="100,100">&lt;div class=&quot;space-section&quot;&gt;
+$damaged_type</tw-passagedata><tw-passagedata pid="14" name="Activities" tags="" position="825,1125" size="100,100">&lt;div class=&quot;space-container&quot;&gt;
+&lt;img src=&quot;/Users/jonathancohn/Downloads/deepfieldedit-wide.jpg&quot; alt=&quot;space&quot; style=&quot;width:100%;&quot;&gt;
 {(set: $visit to $choices_dm&#39;s $n_choice)
 (set: $star to $stars_dm&#39;s $n_choice)
 (set: $dist to $dists_dm&#39;s $n_choice)
 (set: $planet to $planets_dm&#39;s $n_choice)
 (set: $zone to $zones_dm&#39;s $n_choice)
 (set: $travel_time to (round: 100 * $dist * $km_per_ly / $v / $c_kms / $s_per_yr / $gamma) / 100)
-(set: $age to it + $travel_time)
-(set: $morale to it - (floor: $travel_time / 2))
+(set: $maxcount to (max: 1, (round: $travel_time / 7)))
 (set: $visiting to $star + &quot; with &quot; + $planet + &quot; &quot; + $zone + &quot;, &quot; + (string: $dist) + &quot; light years away&quot;)
+(set: $time_for_activities to (round: $maxcount - $activitycount))
 
 (set: $wakables to (a: ))
 (set: $killables to (a: ))
@@ -692,51 +860,54 @@ $damaged_type</tw-passagedata><tw-passagedata pid="14" name="Activities" tags=""
 (for: each _key, ...(data-names: $inhabitants))[(set: $wakables to it + (a: _key))]
 (for: each _key, ...(data-names: $inhabitants))[(if: $inhabitants&#39;s _key is not 0)[(set: $killables to it + (a:  _key))]]
 
-(set: $events to (a: &quot;Catastrophic&quot;, &quot;Catastrophic&quot;, &quot;Inconvenience&quot;, &quot;Inconvenience&quot;, &quot;Inconvenience&quot;, &quot;None&quot;, &quot;None&quot;, &quot;None&quot;, &quot;None&quot;, &quot;None&quot;))
+(if: $travel_time &gt; 20)[(set: $events to (a: &quot;Catastrophic&quot;, &quot;Catastrophic&quot;, &quot;Catastrophic&quot;, &quot;Catastrophic&quot;, &quot;Inconvenience&quot;, &quot;Inconvenience&quot;, &quot;Inconvenience&quot;, &quot;Inconvenience&quot;, &quot;Inconvenience&quot;, &quot;None&quot;, &quot;None&quot;))]
+(else-if: $travel_time &gt; 10)[(set: $events to (a: &quot;Catastrophic&quot;, &quot;Catastrophic&quot;, &quot;Catastrophic&quot;, &quot;Inconvenience&quot;, &quot;Inconvenience&quot;, &quot;Inconvenience&quot;, &quot;Inconvenience&quot;, &quot;None&quot;, &quot;None&quot;, &quot;None&quot;, &quot;None&quot;))]
+(else:)[(set: $events to (a: &quot;Catastrophic&quot;, &quot;Catastrophic&quot;, &quot;Inconvenience&quot;, &quot;Inconvenience&quot;, &quot;Inconvenience&quot;, &quot;None&quot;, &quot;None&quot;, &quot;None&quot;, &quot;None&quot;, &quot;None&quot;))]
 (set: $event_type to (either: ...$events))
 
-
-(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
-The journey to the next world will take $travel_time years.&lt;br&gt;
+}
+&lt;div class=&quot;centered&quot;&gt;
+{The journey to the next world will take $travel_time years.&lt;br&gt;
 
 (if: $class is &quot;cook&quot;)[How do you pass the time on your journey?&lt;br&gt;
 
-(dropdown: bind $activity, &quot;Cook delicious food to improve your morale&quot;, &quot;Record a captain&#39;s log to explain your choices for future generations&quot;, &quot;Perform maintenance and repairs&quot;, &quot;Edit your ship&#39;s cultural data&quot;, &quot;Awaken a passenger from cryo sleep&quot;, &quot;Tamper with cryo chambers to kill some of your passengers&quot;, &quot;Enter cryo sleep until you reach your destination&quot;)&lt;br&gt;
+(if: $time_for_activities is 1)[You have time for one activity:&lt;br&gt;]
+(else:)[You have time for $time_for_activities activities:&lt;br&gt;]
+(dropdown: bind $activity, &quot;Cook delicious food to improve your morale&quot;, &quot;Record a captain&#39;s log to explain your choices for future generations&quot;, &quot;Perform maintenance and repairs&quot;, &quot;Edit your ship&#39;s cultural data&quot;, &quot;Investigate your passengers&quot;, &quot;Awaken a passenger from cryo sleep&quot;, &quot;Tamper with cryo chambers to kill some of your passengers&quot;, &quot;Enter cryo sleep until you reach your destination&quot;)&lt;br&gt;
 
 (link-replace: &quot;Continue&quot;)[(show: ?activity)]&lt;br&gt;]
 (else-if: $class is &quot;writer&quot;)[As a writer, you always record a captain&#39;s log to explain your choices for future generations. How else do you pass the time on your journey?&lt;br&gt;
 (set: $data&#39;s &quot;log&quot; to it + 25)
 
-(dropdown: bind $activity, &quot;Perform maintenance and repairs&quot;, &quot;Edit your ship&#39;s cultural data&quot;, &quot;Awaken a passenger from cryo sleep&quot;, &quot;Tamper with cryo chambers to kill some of your passengers&quot;, &quot;Enter cryo sleep until you reach your destination&quot;)&lt;br&gt;
+(if: $time_for_activities is 1)[You have time for one activity:&lt;br&gt;]
+(else:)[You have time for $time_for_activities activities:&lt;br&gt;]
+(dropdown: bind $activity, &quot;Perform maintenance and repairs&quot;, &quot;Edit your ship&#39;s cultural data&quot;, &quot;Investigate your passengers&quot;, &quot;Awaken a passenger from cryo sleep&quot;, &quot;Tamper with cryo chambers to kill some of your passengers&quot;, &quot;Enter cryo sleep until you reach your destination&quot;)&lt;br&gt;
 (link-replace: &quot;Continue&quot;)[(show: ?activity)]&lt;br&gt;]
 (else:)[How do you pass the time on your journey?&lt;br&gt;
 
-(dropdown: bind $activity, &quot;Record a captain&#39;s log to explain your choices for future generations&quot;, &quot;Perform maintenance and repairs&quot;, &quot;Edit your ship&#39;s cultural data&quot;, &quot;Awaken a passenger from cryo sleep&quot;, &quot;Tamper with cryo chambers to kill some of your passengers&quot;, &quot;Enter cryo sleep until you reach your destination&quot;)&lt;br&gt;
+(if: $time_for_activities is 1)[You have time for one activity:&lt;br&gt;]
+(else:)[You have time for $time_for_activities activities:&lt;br&gt;]
+(dropdown: bind $activity, &quot;Record a captain&#39;s log to explain your choices for future generations&quot;, &quot;Perform maintenance and repairs&quot;, &quot;Edit your ship&#39;s cultural data&quot;, &quot;Investigate your passengers&quot;, &quot;Awaken a passenger from cryo sleep&quot;, &quot;Tamper with cryo chambers to kill some of your passengers&quot;, &quot;Enter cryo sleep until you reach your destination&quot;)&lt;br&gt;
 
 (link-replace: &quot;Continue&quot;)[(show: ?activity)]&lt;br&gt;]
 
-|activity)[
+|activity)[(set: $past_activities to it + (a: $activity))
 (if: &quot;Cook delicious&quot; is in $activity)[(set: $morale to it + 25)
 You spend your journey experimenting with various recipes and cooking some delicious food, improving your morale.&lt;br&gt;
 
-[[Continue-&gt;Random Event]]]
+(set: $activitycount to it + 1)
+(if: $activitycount &gt;= $maxcount)[[[Continue-&gt;Random Event]]]
+(else:)[[[Continue-&gt;Activities]]]
+]
 (else-if: &quot;Record a captain&#39;s&quot; is in $activity)[(set: $data&#39;s &quot;log&quot; to it + 25)
 You carefully detail your choices on the journey, from before launch up to the present. This information will be valuable for your passengers when establishing a new civilization.&lt;br&gt;
 
-[[Continue-&gt;Random Event]]]
+(set: $activitycount to it + 1)
+(if: $activitycount &gt;= $maxcount)[[[Continue-&gt;Random Event]]]
+(else:)[[[Continue-&gt;Activities]]]
+]
 (else-if: &quot;maintenance&quot; is in $activity)[(set: $datatot to $data&#39;s &quot;history&quot; + $data&#39;s &quot;science&quot; + $data&#39;s &quot;arts&quot; + $data&#39;s &quot;philosophy&quot;)
-Ship systems are shown below:&lt;br&gt;
-Cryo: Operating at (string: $systems&#39;s &#39;cryo&#39;)% capacity.&lt;br&gt;
-Data (arts): Operating at (string: $data&#39;s &quot;arts&quot;)% capacity.&lt;br&gt;
-Data (history): Operating at (string: $data&#39;s &quot;history&quot;)% capacity.&lt;br&gt;
-Data (philosophy): Operating at (string: $data&#39;s &quot;philosophy&quot;)% capacity.&lt;br&gt;
-Data (science): Operating at (string: $data&#39;s &quot;science&quot;)% capacity.&lt;br&gt;
-Engines: Operating at (string: $systems&#39;s &#39;engines&#39;)% capacity.&lt;br&gt;
-Hull: Operating at (string: $systems&#39;s &#39;hull&#39;)% capacity.&lt;br&gt;
-Navigation: Operating at (string: $systems&#39;s &#39;navigation&#39;)% capacity.&lt;br&gt;
-Storage: Operating at (string: $systems&#39;s &#39;storage&#39;)% capacity.&lt;br&gt;
-
-Select one to focus on for maintenance and repairs:
+Select one ship system to focus on for maintenance and repairs:&lt;br&gt;
 (dropdown: bind $repair, &quot;cryo&quot;, &quot;data (arts)&quot;, &quot;data (history)&quot;, &quot;data (philosophy)&quot;, &quot;data (science)&quot;, &quot;engines&quot;, &quot;hull&quot;, &quot;navigation&quot;, &quot;storage&quot;)&lt;br&gt;
 
 (link-replace: &quot;Continue repairs&quot;)[(show: ?repairs)]&lt;br&gt;
@@ -754,11 +925,17 @@ Select one to focus on for maintenance and repairs:
 (set: $data&#39;s &#39;science&#39; to it + (round: $travel_time))
 There are no major repairs to make to the $drepair data, so you perform routine maintenance.&lt;br&gt;
 
-[[Continue-&gt;Random Event]]]
+(set: $activitycount to it + 1)
+(if: $activitycount &gt;= $maxcount)[[[Continue-&gt;Random Event]]]
+(else:)[[[Continue-&gt;Activities]]]
+]
 (else:)[(set: $data&#39;s $drepair to it + 25 + $fixmod)
 You spend a significant amount of time fixing the corrupted $drepair data. It is now operating at (string: $data&#39;s $drepair)% capacity.&lt;br&gt;
 
-[[Continue-&gt;Random Event]]]
+(set: $activitycount to it + 1)
+(if: $activitycount &gt;= $maxcount)[[[Continue-&gt;Random Event]]]
+(else:)[[[Continue-&gt;Activities]]]
+]
 ]
 (else:)[(if: $systems&#39;s $repair is 100)[
 (set: $systems&#39;s &#39;cryo&#39; to it + (round: $travel_time))
@@ -767,13 +944,18 @@ You spend a significant amount of time fixing the corrupted $drepair data. It is
 (set: $systems&#39;s &#39;navigation&#39; to it + (round: $travel_time))
 There are no major repairs to make for the ship&#39;s $repair, so you perform routine maintenance.&lt;br&gt;
 
-[[Continue-&gt;Random Event]]]
+(set: $activitycount to it + 1)
+(if: $activitycount &gt;= $maxcount)[[[Continue-&gt;Random Event]]]
+(else:)[[[Continue-&gt;Activities]]]
+]
 (else:)[(set: $systems&#39;s $repair to it + 25 + $fixmod)
 You spend a significant amount of time repairing the $repair.  It is now operating at (string: $systems&#39;s $repair)% capacity.&lt;br&gt;
 
-[[Continue-&gt;Random Event]]]]
+(set: $activitycount to it + 1)
+(if: $activitycount &gt;= $maxcount)[[[Continue-&gt;Random Event]]]
+(else:)[[[Continue-&gt;Activities]]]
 ]]
-
+]]
 (else-if: &quot;cultural data&quot; is in $activity)[Select the cultural data to edit:&lt;br&gt;
 (if: $scenario is &quot;whistleblower&quot;)[(dropdown: bind $editing, &quot;Record additional historical data&quot;, &quot;Record additional scientific data&quot;, &quot;Record philosophical ideas&quot;, &quot;Create art&quot;)&lt;br&gt;
 
@@ -786,31 +968,57 @@ You spend a significant amount of time repairing the $repair.  It is now operati
 (if: &quot;historical&quot; is in $editing)[(set: $data&#39;s &quot;history&quot; to it + 25 + $datmod)
 You record a detailed account of recent Earth history. Your future civilization should be able to use this information to help avoid repeating past mistakes.&lt;br&gt;
 
-[[Continue-&gt;Random Event]]]
+(set: $activitycount to it + 1)
+(if: $activitycount &gt;= $maxcount)[[[Continue-&gt;Random Event]]]
+(else:)[[[Continue-&gt;Activities]]]
+]
 (else-if: &quot;scientific&quot; is in $editing)[(set: $data&#39;s &quot;science&quot; to it + 25 + $datmod + $scimod)
 You expand a database of scientific information on the ship, which may be helpful to your future civilization in building its new home.&lt;br&gt;
 
-[[Continue-&gt;Random Event]]]
+(set: $activitycount to it + 1)
+(if: $activitycount &gt;= $maxcount)[[[Continue-&gt;Random Event]]]
+(else:)[[[Continue-&gt;Activities]]]
+]
 (else-if: &quot;philosophical&quot; is in $editing)[(set: $data&#39;s &quot;philosophy&quot; to it + 25 + $datmod)
 You write a number of philosophical essays on the failures of humankind on Earth, hoping that they may help guide your future civilization in creating something better.&lt;br&gt;
 
-[[Continue-&gt;Random Event]]]
+(set: $activitycount to it + 1)
+(if: $activitycount &gt;= $maxcount)[[[Continue-&gt;Random Event]]]
+(else:)[[[Continue-&gt;Activities]]]
+]
 (else-if: &quot;Create art&quot; is in $editing)[(set: $data&#39;s &quot;arts&quot; to it + 25 + $datmod)(set: $morale to it + 10)
 You write poetry, novels, and short stories. You paint famous scenes from recent history and write musical pieces dedicated to the plight of people back on Earth. This act of creation also improves your morale.&lt;br&gt;
 
-[[Continue-&gt;Random Event]]]
+(set: $activitycount to it + 1)
+(if: $activitycount &gt;= $maxcount)[[[Continue-&gt;Random Event]]]
+(else:)[[[Continue-&gt;Activities]]]
+]
 (else:)[(set: $fascism to it - 5)
 (if: $class is &quot;writer&quot;)[(set: $fascism to it - 5)As a writer, this is your specialty!&lt;br&gt;]
 You search through the ship&#39;s data, finding that historical events, philosophy, and art are skewed by right-wing propaganda and the recorded science consists of debunked &#39;alternative facts&#39; promoting race science, anti-vaccination policies, and denying climate change. You change as much of it as possible, hoping to give your future civilization a chance at building something better.&lt;br&gt;
 
-[[Continue-&gt;Random Event]]]
+(set: $activitycount to it + 1)
+(if: $activitycount &gt;= $maxcount)[[[Continue-&gt;Random Event]]]
+(else:)[[[Continue-&gt;Activities]]]]
 ]
 ]
+(else-if: &quot;Investigate&quot; is in $activity)[It takes a long time, but you are able to find records detailing information about most of your passengers.&lt;br&gt;
+
+(if: $scenario is &quot;rebel&quot;)[You learn that most of the businesspeople aboard $SHIPNAME have materially supported bigoted and corrupt politicians in recent years. You fear that these businesspeople are opportunists who joined your protest with only selfish intentions.&lt;br&gt;]
+(else-if: $scenario is &quot;rogue&quot;)[The politicians are fascists who have stoked bigotry and war for decades, the aristocrats as those who own the politicians and bribe them to protect their profits, the journalists as their most loyal propagandists, and the artists as musicians, actors, and authors who are some of their most sycophantic supporters. Even among the scientists and educators, you recognize names that have been in the news for denying climate change, protecting abusers in academia, and teaching &quot;alternative facts.&quot; The police on board, unsurprisingly, have established records of violating civil rights, including targeting minoritized people, planting evidence, strike-breaking activities, arbitrary arrests, and frequent use of lethal force.&lt;br&gt;]
+(else:)[The aristocrats and businesspeople have loudly supported bigoted and corrupt politicians in recent years. You fear that most of these aristocrats and businesspeople supported your mission solely as a means to escape Earth themselves, rather than out of any goodwill.&lt;br&gt;]
+
+(set: $activitycount to it + 1)
+(if: $activitycount &gt;= $maxcount)[[[Continue-&gt;Random Event]]]
+(else:)[[[Continue-&gt;Activities]]]]
 (else-if: &quot;Awaken&quot; is in $activity)[Perhaps you are lonely, or perhaps you need help with maintenance or repairs.&lt;br&gt;
 
 (if: $sumalive is 0)[You spend ages searching the cryo chambers, but there are no living passengers anymore for you to awaken. You must have forgotten...&lt;br&gt;
 
-[[Continue-&gt;Random Event]]]
+(set: $activitycount to it + 1)
+(if: $activitycount &gt;= $maxcount)[[[Continue-&gt;Random Event]]]
+(else:)[[[Continue-&gt;Activities]]]
+]
 (else:)[Who do you awaken from cryo?&lt;br&gt;]
 (dropdown: bind $awakening, ...$wakables)&lt;br&gt;
 
@@ -821,10 +1029,20 @@ You search through the ship&#39;s data, finding that historical events, philosop
 (set: $systems&#39;s &#39;engines&#39; to it + 2 + $helpmod)
 (set: $systems&#39;s &#39;hull&#39; to it + 2 + $helpmod)
 (set: $systems&#39;s &#39;navigation&#39; to it + 2 + $helpmod)
+(set: $systems&#39;s &#39;storage&#39; to it + 2 + $helpmod)
 You awaken one of the $awakening from cryo sleep. Hopefully they will be able to help you around the ship.&lt;br&gt;
 
-[[Continue-&gt;Random Event]]]]
+(set: $anyawakes to true)
+(set: $awake_aging to it + (dm: $awakening, (random: 22, 65) + $travel_time))
+(set: $activitycount to it + 1)
+(if: $activitycount &gt;= $maxcount)[[[Continue-&gt;Random Event]]]
+(else:)[[[Continue-&gt;Activities]]]]]
 (else-if: &quot;Tamper&quot; is in $activity)[
+(if: &quot;Investigate your passengers&quot; is in $past_activities)[
+(if: $scenario is &quot;rebel&quot;)[You have already learned that the businesspeople aboard $SHIPNAME are complicit in fascism and the destruction of Earth.&lt;br&gt;]
+(else-if: $scenario is &quot;whistleblower&quot;)[You have already learned that the aristocrats and businesspeople aboard $SHIPNAME are complicit in fascism and the destruction of Earth.&lt;br&gt;]
+(else:)[You have already learned that the politicians, businesspeople, aristocrats, journalists, artists, scientists, educators, and police on board $SHIPNAME have been at the heart of the rise of fascism and the destruction of Earth.&lt;br&gt;]]
+
 (dropdown: bind $killcryo, ...$killables)&lt;br&gt;
 
 (link-replace: &quot;Continue&quot;)[(show: ?killer)]
@@ -853,20 +1071,56 @@ Select number of $killcryo to kill:&lt;br&gt;
 |afterkill)[(set: $inhabitants&#39;s $killcryo to it - (num: $killcount))
 You tamper with the cryo chambers of $killcount $killcryo, until they die in their sleep.&lt;br&gt;
 
-(if: $scenario_mod&#39;s $killcryo &lt; 0)[After reading more about the fascist activities these passengers were up to back on Earth, you have no regrets. They would have destroyed any civilization you attempted to build.&lt;br&gt;
+(if: $scenario_mod&#39;s $killcryo &lt; 0)[After reading more about the fascist activities the $killcryo were up to back on Earth, you have no regrets. They would have destroyed any civilization you attempted to build.&lt;br&gt;
 
-[[Continue-&gt;Random Event]]]
+(set: $activitycount to it + 1)
+(if: $activitycount &gt;= $maxcount)[[[Continue-&gt;Random Event]]]
+(else:)[[[Continue-&gt;Activities]]]]
 (else:)[You can&#39;t help but wonder if this was the right thing to do.&lt;br&gt;
 
-[[Continue-&gt;Random Event]]]
+(set: $activitycount to it + 1)
+(if: $activitycount &gt;= $maxcount)[[[Continue-&gt;Random Event]]]
+(else:)[[[Continue-&gt;Activities]]]]
 ]]]
 (else:)[(set: $age to it - $travel_time)(set: $morale to it + (floor: $travel_time / 2))
 There is a cryo chamber reserved for the ship&#39;s captain, to prevent your own aging on this journey. It is programmed to awaken you upon arrival at your destination.&lt;br&gt;
 
 [[Enter the cryo chamber-&gt;Random Event]]]
 ]
-&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="Random Event" tags="" position="625,1200" size="100,100">&lt;div class=&quot;space-section&quot;&gt;
-{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+}
+&lt;/div&gt;
+&lt;div class=&quot;top-left&quot;&gt;{
+(set: $tabletext to &#39;&lt;table style=&quot;width:100%&quot;&gt;&lt;tr&gt;&lt;th&gt;System&lt;/th&gt;&lt;th&gt;Capacity&lt;/th&gt;&lt;/tr&gt;&#39;)
+(set: $keycol to (dm: ))
+(for: each _key, ...(data-names: $systems))[(if: (_key is not &quot;log&quot;) and (_key is not &quot;probes&quot;))[
+(if: $systems&#39;s _key &gt; 90)[(set: $keycol to it + (dm: _key, &quot;DarkSeaGreen&quot;))]
+(else-if: $systems&#39;s _key &gt; 50)[(set: $keycol to it + (dm: _key, &quot;Orange&quot;))]
+(else:)[(set: $keycol to it + (dm: _key, &quot;LightCoral&quot;))]
+]
+(else-if: _key is &quot;probes&quot;)[
+(if: $systems&#39;s _key &gt; 2)[(set: $keycol to it + (dm: _key, &quot;DarkSeaGreen&quot;))]
+(else-if: $systems&#39;s _key &gt; 1)[(set: $keycol to  it + (dm: _key, &quot;Orange&quot;))]
+(else:)[(set: $keycol to  it + (dm: _key, &quot;LightCoral&quot;))]]
+(set: $tabletext to it + &quot;&lt;tr&gt;&lt;td&gt;&quot; + _key + &#39;&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;&#39; + $keycol&#39;s _key + &#39;&quot;&gt;&#39; + (string: $systems&#39;s _key) + &quot; / 100&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&quot;)
+]
+(set: $tabletext to it + &quot;&lt;/table&gt;&quot;)
+$SHIPNAME
+(print: $tabletext)&lt;br&gt;
+
+(set: $tabletext2 to &#39;&lt;table style=&quot;width:100%&quot;&gt;&lt;tr&gt;&lt;th&gt;Inhabitants&lt;/th&gt;&lt;th&gt;Living in cryo&lt;/th&gt;&lt;/tr&gt;&#39;)
+(for: each _key, ...(data-names: $inhabitants))[(if: $inhabitants_initial&#39;s _key is not 0)[(set: $tabletext2 to it + &quot;&lt;tr&gt;&lt;td&gt;&quot; + _key + &quot;&lt;/td&gt;&lt;td&gt;&quot; + (string: $inhabitants&#39;s _key) + &quot; / &quot; + (string: $inhabitants_initial&#39;s _key) + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;)]]
+(set: $tabletext2 to it + &quot;&lt;/table&gt;&quot;)
+(print: $tabletext2)
+}&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="Random Event" tags="" position="625,1250" size="100,100">&lt;div class=&quot;space-container&quot;&gt;
+&lt;img src=&quot;/Users/jonathancohn/Downloads/deepfieldedit-wide.jpg&quot; alt=&quot;space&quot; style=&quot;width:100%;&quot;&gt;
+&lt;div class=&quot;centered&quot;&gt;
+{(set: $age to it + $travel_time)
+(set: $total_travel_time to it + $travel_time)
+(set: $morale to it - (floor: $travel_time / 2))
+(if: $anyawakes is true)[
+(for: each _key, ...(data-names: $awake_aging))[(set: $awake_aging&#39;s _key to it + $travel_time)]]
+
 (if: $age &lt; 71)[(set: $alivelist to (a: true))]
 (else-if: $age &lt; 81)[(set: $alivelist to (a: true, true, true, true, true, true, true, true, true, false))]
 (else-if: $age &lt; 91)[(set: $alivelist to (a: true, true, true, true, true, false, false, false, false, false))]
@@ -874,28 +1128,34 @@ There is a cryo chamber reserved for the ship&#39;s captain, to prevent your own
 (else-if: $age &lt; 131)[(set: $alivelist to (a: true, false, false, false, false, false, false, false, false, false))]
 (else:)[(set: $alivelist to (a: false))]
 
+(set: $correct to &quot;&quot;)
+
 (set: $event_dic to (dm:
 	&quot;Catastrophic&quot;, (a: &quot;malware&quot;, &quot;cosmic ray catastrophe&quot;, &quot;cryo failure&quot;, &quot;engine failure&quot;, &quot;hull failure&quot;, &quot;navigation failure&quot;, &quot;storage failure&quot;, &quot;data failure&quot;),
     &quot;Inconvenience&quot;, (a: &quot;cosmic ray damage&quot;, &quot;solar flare&quot;, &quot;software bugs&quot;, &quot;cryo damage&quot;, &quot;engine damage&quot;, &quot;hull damage&quot;, &quot;navigation damage&quot;, &quot;storage damage&quot;, &quot;data damage&quot;),
     &quot;None&quot;, (a: &quot;none&quot;)))
 (set: $event_class to $event_dic&#39;s $event_type)
+(if: $event_type is &quot;Catastrophic&quot;)[(set: $morale to it - (random: 5, 15))]
+(else-if: $event_type is &quot;Inconvenience&quot;)[(set: $morale to it - (random: 1, 4))]
+(else:)[(set: $morale to it + 1)]
+
 (set: $event to (either: ...$event_class))
 (set: $damaged_data to (either: &quot;history&quot;, &quot;philosophy&quot;, &quot;science&quot;, &quot;arts&quot;))
-(set: $damage_type to (either: $inhabitant_types))
+(set: $damage_type to (either: ...$inhabitant_types))
 (set: $shutdown to false)
 
 (set: $alive to (either: ...$alivelist))
 (if: $alive is false)[(go-to: &quot;Dead&quot;)]
 (else:)[
-(if: $event is &quot;engine failure&quot;)[(set: $systems&#39;s &quot;engines&quot; to it - 50)
+(if: $event is &quot;engine failure&quot;)[(set: $systems&#39;s &quot;engines&quot; to it - (random: 35, 65))
 A collision with microscopic space dust has punched a hole in the engines; your craft only has the capacity to reach one more system after the current journey.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]
-(else-if: $event is &quot;engine damage&quot;)[(set: $systems&#39;s &quot;engines&quot; to it - 10)
+(else-if: $event is &quot;engine damage&quot;)[(set: $systems&#39;s &quot;engines&quot; to it - (random: 5, 15))
 The engines overheated on this journey, causing minor damage. Sustained engine damage could result in more difficulties on this voyage.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]
-(else-if: $event is &quot;cryo failure&quot;)[(set: $systems&#39;s &quot;cryo&quot; to it - 50)
+(else-if: $event is &quot;cryo failure&quot;)[(set: $systems&#39;s &quot;cryo&quot; to it - (random: 35, 65))
 (set: $n_danger to (random: 1, $inhabitants_initial&#39;s $damage_type))
 The cryo stasis chambers of $n_danger $damage_type are critically failing!&lt;br&gt;
 
@@ -931,7 +1191,7 @@ You manage to safely awaken $nsaved $damage_type using your training as a nurse.
 [[Continue-&gt;Arrival]]]
 ]
 ]
-(else-if: $event is &quot;cryo damage&quot;)[(set: $systems&#39;s &quot;cryo&quot; to it - 10)
+(else-if: $event is &quot;cryo damage&quot;)[(set: $systems&#39;s &quot;cryo&quot; to it - (random: 5, 15))
 (set: $n_danger to (random: 1, $inhabitants_initial&#39;s $damage_type))
 (set: $n_danger to (max: (floor: it / 2), 1))
 The cryo stasis chambers of $n_danger  $damage_type suffer minor failures, resulting in some long-term health problems.&lt;br&gt;
@@ -940,15 +1200,15 @@ The cryo stasis chambers of $n_danger  $damage_type suffer minor failures, resul
 (else:)[(set: $inhabitants_health&#39;s $damage_type to it - $n_danger)]
 
 [[Continue-&gt;Arrival]]]
-(else-if: $event is &quot;hull failure&quot;)[(set: $systems&#39;s &quot;hull&quot; to it - 50)
+(else-if: $event is &quot;hull failure&quot;)[(set: $systems&#39;s &quot;hull&quot; to it - (random: 35, 65))
 A collision with microscopic space dust has dealt significant damage to the hull.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]
-(else-if: $event is &quot;hull damage&quot;)[(set: $systems&#39;s &quot;hull&quot; to it - 10)
+(else-if: $event is &quot;hull damage&quot;)[(set: $systems&#39;s &quot;hull&quot; to it - (random: 5, 15))
 A collision with microscopic space dust has dealt minor damage to the hull.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]
-(else-if: $event is &quot;navigation failure&quot;)[(set: $nav_choices to it - 1)(set: $systems&#39;s &quot;navigation&quot; to it - 50)
+(else-if: $event is &quot;navigation failure&quot;)[(set: $nav_choices to it - 1)(set: $systems&#39;s &quot;navigation&quot; to it - (random: 35, 65))
 (if: $nav_choices &lt; 2)[The navigation systems have suffered a critical failure and are no longer capable of identifying viable options. You will now only be able to pick stars to visit at random.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]
@@ -956,28 +1216,28 @@ A collision with microscopic space dust has dealt minor damage to the hull.&lt;b
 
 [[Continue-&gt;Arrival]]]
 ]
-(else-if: $event is &quot;navigation damage&quot;)[(set: $systems&#39;s &quot;navigation&quot; to it - 10)
+(else-if: $event is &quot;navigation damage&quot;)[(set: $systems&#39;s &quot;navigation&quot; to it - (random: 5, 15))
 The navigation systems have suffered minor damage from cosmic rays.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]
 (else-if: $event is &quot;storage failure&quot;)[A critical failure in the cargo bay has resulted in significant damage to the stored food and resources.&lt;br&gt;
 (if: $class is &quot;freight&quot;)[(set: $systems&#39;s &quot;storage&quot; to it - 25)
 However, thanks to your background handling freight, you are able to save and recover much of it.&lt;br&gt;]
-(else:)[(set: $systems&#39;s &quot;storage&quot; to it - 50)]
+(else:)[(set: $systems&#39;s &quot;storage&quot; to it - (random: 35, 65))]
 
 [[Continue-&gt;Arrival]]]
 (else-if: $event is &quot;storage damage&quot;)[
 (if: $class is &quot;freight&quot;)[
 Despite a minor failure in the cargo bay, you are able to use your background handling freight to save and recover all of the stored resources.&lt;br&gt;]
-(else:)[(set: $systems&#39;s &quot;storage&quot; to it - 10)
+(else:)[(set: $systems&#39;s &quot;storage&quot; to it - (random: 5, 15))
 A minor failure in the cargo bay climate control has resulted in damage to stored resources.&lt;br&gt;]
 
 [[Continue-&gt;Arrival]]]
-(else-if: $event is &quot;data failure&quot;)[(set: $data&#39;s $damaged_data to it - 50)
+(else-if: $event is &quot;data failure&quot;)[(set: $data&#39;s $damaged_data to it - (random: 35, 65))
 There has been a critical failure to the $damaged_data data.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]
-(else-if: $event is &quot;data damage&quot;)[(set: $data&#39;s $damaged_data to it - 10)
+(else-if: $event is &quot;data damage&quot;)[(set: $data&#39;s $damaged_data to it - (random: 5, 15))
 Some of the $damaged_data data have been corrupted.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]
@@ -985,14 +1245,14 @@ Some of the $damaged_data data have been corrupted.&lt;br&gt;
 A deadly burst of cosmic rays hit the ship, dealing severe and long-term health effects to the passengers.&lt;br&gt;
 (if: $class is &quot;nurse&quot;)[(set: $inhabitants_health&#39;s $damage_type to it - 25)
 However, you are able to user your background as a nurse to mitigate some of these health issues.&lt;br&gt;]
-(else:)[(set: $inhabitants_health&#39;s $damage_type to it - 50)]
+(else:)[(set: $inhabitants_health&#39;s $damage_type to it - (random: 35, 65))]
 
 [[Continue-&gt;Arrival]]]
 (else-if: $event is &quot;cosmic ray damage&quot;)[Cosmic rays hit the ship. Passengers are likely to suffer long-term health effects.&lt;br&gt;
 
 (if: $class is &quot;nurse&quot;)[(set: $inhabitants_health&#39;s $damage_type to it - 2)
 However, you are able to user your background as a nurse to mitigate most of these health issues.&lt;br&gt;]
-(else:)[(set: $inhabitants_health&#39;s $damage_type to it - 10)]
+(else:)[(set: $inhabitants_health&#39;s $damage_type to it - (random: 5, 15))]
 
 [[Continue-&gt;Arrival]]]
 (else-if: $event is &quot;malware&quot;)[
@@ -1008,11 +1268,11 @@ However, you are able to user your background as a nurse to mitigate most of the
 (else:)[(set: $malkill to $inhabitants&#39;s _key)]
 (set: $n_you_let_die to it + $malkill)(set: $malkill_tot to it + $malkill)(set: $inhabitants&#39;s _key to it - $malkill)]
 (set: $systems&#39;s &quot;cryo&quot; to it - 99)(set: $systems&#39;s &quot;navigation&quot; to it - 99)(set: $systems&#39;s &quot;storage&quot; to it - 99)(set: $systems&#39;s &quot;engines&quot; to it - 99)
-(set: $data&#39;s &quot;history&quot; to it - 50)(set: $data&#39;s &quot;arts&quot; to it - 50)(set: $data&#39;s &quot;science&quot; to it - 50)(set: $data&#39;s &quot;philosophy&quot; to it - 50)
+(set: $data&#39;s &quot;history&quot; to it - (random: 35, 65))(set: $data&#39;s &quot;arts&quot; to it - (random: 35, 65))(set: $data&#39;s &quot;science&quot; to it - (random: 35, 65))(set: $data&#39;s &quot;philosophy&quot; to it - (random: 35, 65))
 The malware runs rampant through the ship, which sustains significant damage and almost completely shuts down. $malkill_tot passengers are killed.&lt;br&gt;]
 (else:)[Complete the following command quickly as you attempt to stop this malware.&lt;br&gt;
 (link-replace: &quot;Enter anti-malware sequence&quot;)[(show: ?down)]&lt;countdown|&lt;br&gt;
-|down)[{(set: $counter to 9)
+|down)[(set: $counter to 9)
 (replace: ?countdown)[$counter seconds remaining]&lt;br&gt;
 (live: 0.5s)[
      (stop:)
@@ -1103,18 +1363,17 @@ The malware runs rampant through the ship, which sustains significant damage and
      (else:)[
      (set: $counter to it - 1)(replace: ?countdown)[$counter seconds remaining]]
 	(show: ?shut)]
-}
 
 |shut)[(if: $correct is &quot;antimalware&quot; and $shutdown is true)[
 (if: $counter is 1)[(set: $remaining to (string: $counter) + &quot; second remaining&quot;)]
 (else:)[(set: $remaining to (string: $counter) + &quot; seconds remaining&quot;)]
 You manage to quickly stop the malware, saving the ship, the data, and all of the passengers.&lt;br&gt;]
-(else-if: $correct is &quot;antimalware&quot;)[(set: $systems&#39;s &quot;cryo&quot; to it - 10)(set: $systems&#39;s &quot;navigation&quot; to it - 10)(set: $systems&#39;s &quot;storage&quot; to it - 10)(set: $systems&#39;s &quot;engines&quot; to it - 10)
+(else-if: $correct is &quot;antimalware&quot;)[(set: $systems&#39;s &quot;cryo&quot; to it - (random: 5, 15))(set: $systems&#39;s &quot;navigation&quot; to it - (random: 5, 15))(set: $systems&#39;s &quot;storage&quot; to it - (random: 5, 15))(set: $systems&#39;s &quot;engines&quot; to it - (random: 5, 15))
 (set: $data&#39;s &quot;history&quot; to it - 20)(set: $data&#39;s &quot;arts&quot; to it - 20)(set: $data&#39;s &quot;science&quot; to it - 20)(set: $data&#39;s &quot;philosophy&quot; to it - 20)
 You manage to stop the malware from shutting down the entire ship, but some data have been corrupted and the ship itself has been damaged.&lt;br&gt;]
 (else:)[(set: $systems&#39;s &quot;cryo&quot; to it - 99)(set: $systems&#39;s &quot;navigation&quot; to it - 99)(set: $systems&#39;s &quot;storage&quot; to it - 99)(set: $systems&#39;s &quot;engines&quot; to it - 99)
-(set: $data&#39;s &quot;history&quot; to it - 50)(set: $data&#39;s &quot;arts&quot; to it - 50)(set: $data&#39;s &quot;science&quot; to it - 50)(set: $data&#39;s &quot;philosophy&quot; to it - 50)
-You are unable to stop the malware, and $SHIPNAME sustains significant damage.]
+(set: $data&#39;s &quot;history&quot; to it - (random: 35, 65))(set: $data&#39;s &quot;arts&quot; to it - (random: 35, 65))(set: $data&#39;s &quot;science&quot; to it - (random: 35, 65))(set: $data&#39;s &quot;philosophy&quot; to it - (random: 35, 65))
+You are unable to stop the malware, and $SHIPNAME sustains significant damage.&lt;br&gt;]
 
 [[Continue-&gt;Arrival]]]]
 ]]
@@ -1149,15 +1408,15 @@ A threatening message flashes across the screen, talking about revenge best serv
 
 [[Continue-&gt;Arrival]]]]
 ]]
-(else-if: $event is &quot;solar flare&quot;)[(if: $systems&#39;s &quot;hull&quot; &gt; 70)[(set: $systems&#39;s &quot;hull&quot; to it - 10)A massive solar flare hits $SHIPNAME. Fortunately, the hull is in good shape and the ship sustains minimal damage.]
-(else:)[(set: $systems&#39;s &quot;hull&quot; to it - 10)A massive solar flare hits $SHIPNAME on your approach. Due to the compromised nature of the hull, the ship systems have been damaged and passengers are likely to suffer health effects.&lt;br&gt;
+(else-if: $event is &quot;solar flare&quot;)[(if: $systems&#39;s &quot;hull&quot; &gt; 70)[(set: $systems&#39;s &quot;hull&quot; to it - (random: 5, 15))A massive solar flare hits $SHIPNAME. Fortunately, the hull is in good shape and the ship sustains minimal damage.&lt;br&gt;]
+(else:)[(set: $systems&#39;s &quot;hull&quot; to it - (random: 5, 15))A massive solar flare hits $SHIPNAME on your approach. Due to the compromised nature of the hull, the ship systems have been damaged and passengers are likely to suffer health effects.&lt;br&gt;
 
 (if: $class is &quot;nurse&quot;)[
 (for: each _key, $inhabitants_health)[(set: $inhabitants_health&#39;s _key to it - 5)]
 However, you are able to user your background as a nurse to mitigate some of these health issues.&lt;br&gt;]
 (else:)[(for: each _key, $inhabitants_health)[(set: $inhabitants_health&#39;s _key to it - 15)]]
-(set: $systems&#39;s &quot;cryo&quot; to it - 10)(set: $systems&#39;s &quot;navigation&quot; to it - 10)(set: $systems&#39;s &quot;storage&quot; to it - 10)(set: $systems&#39;s &quot;engines&quot; to it - 10)
-(set: $data&#39;s &quot;history&quot; to it - 10)(set: $data&#39;s &quot;arts&quot; to it - 10)(set: $data&#39;s &quot;science&quot; to it - 10)(set: $data&#39;s &quot;philosophy&quot; to it - 10)
+(set: $systems&#39;s &quot;cryo&quot; to it - (random: 5, 15))(set: $systems&#39;s &quot;navigation&quot; to it - (random: 5, 15))(set: $systems&#39;s &quot;storage&quot; to it - (random: 5, 15))(set: $systems&#39;s &quot;engines&quot; to it - (random: 5, 15))
+(set: $data&#39;s &quot;history&quot; to it - (random: 5, 15))(set: $data&#39;s &quot;arts&quot; to it - (random: 5, 15))(set: $data&#39;s &quot;science&quot; to it - (random: 5, 15))(set: $data&#39;s &quot;philosophy&quot; to it - (random: 5, 15))
 ]
 
 [[Continue-&gt;Arrival]]]
@@ -1183,11 +1442,36 @@ You manage to find and fix the bug, preventing substantial data corruption.&lt;b
 (else:)[Your journey passes uneventfully.&lt;br&gt;
 
 [[Continue-&gt;Arrival]]]]
-&lt;/div&gt;]]}
+}&lt;/div&gt;
+&lt;div class=&quot;top-left&quot;&gt;{
+(set: $tabletext to &#39;&lt;table style=&quot;width:100%&quot;&gt;&lt;tr&gt;&lt;th&gt;System&lt;/th&gt;&lt;th&gt;Capacity&lt;/th&gt;&lt;/tr&gt;&#39;)
+(set: $keycol to (dm: ))
+(for: each _key, ...(data-names: $systems))[(if: (_key is not &quot;log&quot;) and (_key is not &quot;probes&quot;))[
+(if: $systems&#39;s _key &gt; 90)[(set: $keycol to it + (dm: _key, &quot;DarkSeaGreen&quot;))]
+(else-if: $systems&#39;s _key &gt; 50)[(set: $keycol to it + (dm: _key, &quot;Orange&quot;))]
+(else:)[(set: $keycol to it + (dm: _key, &quot;LightCoral&quot;))]
+]
+(else-if: _key is &quot;probes&quot;)[
+(if: $systems&#39;s _key &gt; 2)[(set: $keycol to it + (dm: _key, &quot;DarkSeaGreen&quot;))]
+(else-if: $systems&#39;s _key &gt; 1)[(set: $keycol to  it + (dm: _key, &quot;Orange&quot;))]
+(else:)[(set: $keycol to  it + (dm: _key, &quot;LightCoral&quot;))]]
+(set: $tabletext to it + &quot;&lt;tr&gt;&lt;td&gt;&quot; + _key + &#39;&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;&#39; + $keycol&#39;s _key + &#39;&quot;&gt;&#39; + (string: $systems&#39;s _key) + &quot; / 100&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&quot;)
+]
+(set: $tabletext to it + &quot;&lt;/table&gt;&quot;)
+$SHIPNAME
+(print: $tabletext)&lt;br&gt;
+
+(set: $tabletext2 to &#39;&lt;table style=&quot;width:100%&quot;&gt;&lt;tr&gt;&lt;th&gt;Inhabitants&lt;/th&gt;&lt;th&gt;Living in cryo&lt;/th&gt;&lt;/tr&gt;&#39;)
+(for: each _key, ...(data-names: $inhabitants))[(if: $inhabitants_initial&#39;s _key is not 0)[(set: $tabletext2 to it + &quot;&lt;tr&gt;&lt;td&gt;&quot; + _key + &quot;&lt;/td&gt;&lt;td&gt;&quot; + (string: $inhabitants&#39;s _key) + &quot; / &quot; + (string: $inhabitants_initial&#39;s _key) + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;)]]
+(set: $tabletext2 to it + &quot;&lt;/table&gt;&quot;)
+(print: $tabletext2)
+}&lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Dead" tags="" position="800,1275" size="100,100">You die en route...&lt;br&gt;
 You were $age years old.&lt;br&gt;
 
-[[Game over-&gt;Credits]]</tw-passagedata><tw-passagedata pid="17" name="Arrival" tags="" position="475,1125" size="100,100">&lt;div class=&quot;planet-section&quot;&gt;
+[[Game over-&gt;Credits]]</tw-passagedata><tw-passagedata pid="17" name="Arrival" tags="" position="425,1125" size="100,100">&lt;div class=&quot;space-container&quot;&gt;
+&lt;img src=&quot;/Users/jonathancohn/Downloads/toi-700d-nasa.jpg&quot; alt=&quot;planet&quot; style=&quot;width:100%;&quot;&gt;
+&lt;div class=&quot;top-right&quot;&gt;
 {
 (set: $geo to (either: ...$possible_geo))
 
@@ -1209,7 +1493,7 @@ You were $age years old.&lt;br&gt;
 (if: ($geo is &quot;No&quot;) and (&quot;rings&quot; is not in $planet))[(set: $atmos_thic to &quot;Thin&quot;)]
 
 
-(if: (&quot;inner edge&quot; is in $zone) or (&quot;optimistic&quot; is in $zone))[(set: $ehot to 4)(set: $vhot to 3)(set: $tem to 2)(set: $vcold to 1)(set: $ecold to 1)]
+(if: (&quot;inner edge&quot; is in $zone) and (&quot;optimistic&quot; is in $zone))[(set: $ehot to 4)(set: $vhot to 3)(set: $tem to 2)(set: $vcold to 1)(set: $ecold to 1)]
 (else-if: &quot;inner edge&quot; is in $zone)[(set: $ehot to 2)(set: $vhot to 3)(set: $tem to 3)(set: $vcold to 1)(set: $ecold to 1)]
 (else-if: &quot;outer edge&quot; is in $zone)[(set: $ehot to 1)(set: $vhot to 1)(set: $tem to 2)(set: $vcold to 3)(set: $ecold to 4)]
 (else: )[(set: $ehot to 1)(set: $vhot to 2)(set: $tem to 4)(set: $vcold to 2)(set: $ecold to 1)]
@@ -1230,11 +1514,13 @@ You were $age years old.&lt;br&gt;
 (for: each _i, ...(range: 0, 6))[(set: $possible_water to it + (a: &quot;No water&quot;))]
 ]
 (else-if: $temperature is &quot;Very hot&quot;)[
+(for: each _i, ...(range: 0, 1))[(set: $possible_water to it + (a: &quot;Water vapor&quot;))]
 (for: each _i, ...(range: 0, 3))[(set: $possible_water to it + (a: &quot;Water vapor and liquid water&quot;))]
 (for: each _i, ...(range: 0, 5))[(set: $possible_water to it + (a: &quot;No water&quot;))]
 ]
 (else-if: $temperature is &quot;Very cold&quot;)[
 (for: each _i, ...(range: 0, 7))[(set: $possible_water to it + (a: &quot;Water ice and liquid water&quot;))]
+(for: each _i, ...(range: 0, 2))[(set: $possible_water to it + (a: &quot;Water ice&quot;))]
 (for: each _i, ...(range: 0, 1))[(set: $possible_water to it + (a: &quot;No water&quot;))]
 ]
 (else-if: $temperature is &quot;Extremely cold&quot;)[
@@ -1265,8 +1551,8 @@ You were $age years old.&lt;br&gt;
 (else:)[(set: $bio_signatures to it + (a: true))
 (for: each _i, ...(range: 0, 18))[(set: $bio_signatures to it + (a: false))]]
 (set: $bio_sig to (either: ...$bio_signatures))
-(if: $bio_sig)[(set: $bio to &quot;Biosignatures detected&quot;)]
-(else:)[(set: $bio to &quot;No biosignatures detected&quot;)]
+(if: $bio_sig)[(set: $bio to &quot;Biosignatures&quot;)]
+(else:)[(set: $bio to &quot;No biosignatures&quot;)]
 
 
 (set: $useful_resources to (a:))
@@ -1392,10 +1678,8 @@ You were $age years old.&lt;br&gt;
 (else:)[(set: $safe_landing_words to &quot;No safe landing zone identified&quot;)]
 (set: $safe_landing_identified to false)
 
-
 }
-{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
-You have reached your destination...&lt;br&gt;
+{You have reached your destination...&lt;br&gt;
 
 (if: $systems&#39;s &quot;cryo&quot; &lt;= 0)[Cryo stasis systems have suffered complete and catastrophic failure, resulting in the deaths of all passengers. You are the only survivor aboard the vessel.&lt;br&gt;
 (set: $systems&#39;s &quot;cryo&quot; to 0.0000000001)
@@ -1403,7 +1687,13 @@ You have reached your destination...&lt;br&gt;
 (if: $systems&#39;s &quot;engines&quot; &lt;= 0)[(set: $engine_countdown to 100000)]
 (else-if: $systems&#39;s &quot;engines&quot; &lt; 50)[(set: $engine_countdown to it + 1)]
 (if: $engine_countdown &gt; 2)[$SHIPNAME does not have the capability to travel to another system. This will be your final destination...&lt;br&gt;]
-
+}
+{
+(if: &quot;rogue&quot; is in $star)[(set: $tabletext3 to &#39;&lt;table style=&quot;width:100%&quot;&gt;&lt;tr&gt;&lt;th&gt;Destination&lt;/th&gt;&lt;th&gt;Details&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Star&lt;/td&gt;&lt;td&gt;N/A&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Planet&lt;/td&gt;&lt;td&gt;&#39; + $planet + &#39;&lt;/td&gt;&lt;/tr&gt;&#39;)]
+(else:)[
+(set: $tabletext3 to &#39;&lt;table style=&quot;width:100%&quot;&gt;&lt;tr&gt;&lt;th&gt;Destination&lt;/th&gt;&lt;th&gt;Details&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Star&lt;/td&gt;&lt;td&gt;&#39; + $star + &#39;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Planet&lt;/td&gt;&lt;td&gt;&#39; + $planet + &#39;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Orbit&lt;/td&gt;&lt;td&gt;&#39; + $zone + &#39;&lt;/td&gt;&lt;/tr&gt;&#39;)
+]
+(print: $tabletext3)
 (if: $reverse is false)[
 (set: $num_visits to it + 1)
 (set: $visited to it + (dm:
@@ -1413,23 +1703,23 @@ $star with $planet $zone, $dist light years away.&lt;br&gt;]
 (else:)[
 Detecting...&lt;br&gt;
 (link-replace: &quot;Generate report&quot;)[(show: ?report1)]
-|report1)[Sensors indicate this is $description.&lt;br&gt;
+|report1)[Sensors indicate this is (text-color: &quot;SkyBlue&quot;)[$description].&lt;br&gt;
 
-Atmosphere: $atmos_thic and $at_tox&lt;br&gt;
+(text-color: &quot;SkyBlue&quot;)[Atmosphere]: $atmos_thic and $at_tox.&lt;br&gt;
 
-Surface temperature: $temperature&lt;br&gt;
+(text-color: &quot;SkyBlue&quot;)[Surface temperature]: $temperature.&lt;br&gt;
 
-$water detected&lt;br&gt;
+(text-color: &quot;SkyBlue&quot;)[$water] detected.&lt;br&gt;
 
-$bio&lt;br&gt;
+(text-color: &quot;SkyBlue&quot;)[$bio] detected.&lt;br&gt;
 
-$resources useful resources detected&lt;br&gt;
+(text-color: &quot;SkyBlue&quot;)[$resources useful resources] detected.&lt;br&gt;
 
-(if: $past_civ_detectable is true)[Evidence of a previous civilization detected&lt;br&gt;]
+(if: $past_civ_detectable is true)[Evidence of a (text-color: &quot;SkyBlue&quot;)[previous civilization] detected.&lt;br&gt;]
 
-(if: $current_civ_detectable is true)[Evidence of a current civilization detected&lt;br&gt;]
+(if: $current_civ_detectable is true)[Evidence of a (text-color: &quot;SkyBlue&quot;)[current civilization] detected.&lt;br&gt;]
 
-(if: ($past_civ_detectable is false) and ($current_civ_detectable is false))[No evidence of past or current civilizations detected&lt;br&gt;]
+(if: ($past_civ_detectable is false) and ($current_civ_detectable is false))[No evidence of (text-color: &quot;SkyBlue&quot;)[past or current civilizations] detected.&lt;br&gt;]
 
 (link-replace: &quot;Continue&quot;)[(show: ?stayorgo)]
 |stayorgo)[
@@ -1476,15 +1766,15 @@ $resources useful resources detected&lt;br&gt;
 
 (link-replace: &quot;Generate report&quot;)[(show: ?probereport)]
 |probereport)[
-$geo geologic activity detected&lt;br&gt;
+(text-color: &quot;SkyBlue&quot;)[$geo geologic activity] detected.&lt;br&gt;
 
-$weather detected&lt;br&gt;
+(text-color: &quot;SkyBlue&quot;)[$weather] detected.&lt;br&gt;
 
-$danger_life detected&lt;br&gt;
+(text-color: &quot;SkyBlue&quot;)[$danger_life] detected.&lt;br&gt;
 
-$edible identified&lt;br&gt;
+(text-color: &quot;SkyBlue&quot;)[$edible] identified.&lt;br&gt;
 
-$safe_landing_words&lt;br&gt;
+(text-color: &quot;SkyBlue&quot;)[$safe_landing_words].&lt;br&gt;
 (if: $safe_landing is true)[(set: $safe_landing_identified to true)]
 
 (set: $probe_survival to (random: 0, 100))
@@ -1512,15 +1802,15 @@ $safe_landing_words&lt;br&gt;
 
 (link-replace: &quot;Generate report&quot;)[(show: ?probereport)]
 |probereport)[
-$geo geologic activity detected&lt;br&gt;
+(text-color: &quot;SkyBlue&quot;)[$geo geologic activity] detected.&lt;br&gt;
 
-$weather detected&lt;br&gt;
+(text-color: &quot;SkyBlue&quot;)[$weather] detected.&lt;br&gt;
 
-$danger_life detected&lt;br&gt;
+(text-color: &quot;SkyBlue&quot;)[$danger_life] detected.&lt;br&gt;
 
-$edible identified&lt;br&gt;
+(text-color: &quot;SkyBlue&quot;)[$edible] identified.&lt;br&gt;
 
-$safe_landing_words&lt;br&gt;
+(text-color: &quot;SkyBlue&quot;)[$safe_landing_words].&lt;br&gt;
 (if: $safe_landing is true)[(set: $safe_landing_identified to true)]
 
 (set: $probe_survival to (random: 0, 100))
@@ -1544,13 +1834,373 @@ $safe_landing_words&lt;br&gt;
 ]]
 ]]
 ]
-(else:)[REVERSE! (Line 1145) see also $visited above!
+(else:)[REVERSE! (Line 1145) see also $visited above!]
+]
+}&lt;/div&gt;
+&lt;div class=&quot;top-left&quot;&gt;{
+(set: $tabletext to &#39;&lt;table style=&quot;width:100%&quot;&gt;&lt;tr&gt;&lt;th&gt;System&lt;/th&gt;&lt;th&gt;Capacity&lt;/th&gt;&lt;/tr&gt;&#39;)
+(set: $keycol to (dm: ))
+(for: each _key, ...(data-names: $systems))[(if: (_key is not &quot;log&quot;) and (_key is not &quot;probes&quot;))[
+(if: $systems&#39;s _key &gt; 90)[(set: $keycol to it + (dm: _key, &quot;DarkSeaGreen&quot;))]
+(else-if: $systems&#39;s _key &gt; 50)[(set: $keycol to it + (dm: _key, &quot;Orange&quot;))]
+(else:)[(set: $keycol to it + (dm: _key, &quot;LightCoral&quot;))]
+]
+(else-if: _key is &quot;probes&quot;)[
+(if: $systems&#39;s _key &gt; 2)[(set: $keycol to it + (dm: _key, &quot;DarkSeaGreen&quot;))]
+(else-if: $systems&#39;s _key &gt; 1)[(set: $keycol to  it + (dm: _key, &quot;Orange&quot;))]
+(else:)[(set: $keycol to  it + (dm: _key, &quot;LightCoral&quot;))]]
+(set: $tabletext to it + &quot;&lt;tr&gt;&lt;td&gt;&quot; + _key + &#39;&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;&#39; + $keycol&#39;s _key + &#39;&quot;&gt;&#39; + (string: $systems&#39;s _key) + &quot; / 100&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&quot;)
+]
+(set: $tabletext to it + &quot;&lt;/table&gt;&quot;)
+$SHIPNAME
+(print: $tabletext)&lt;br&gt;
+
+(set: $tabletext2 to &#39;&lt;table style=&quot;width:100%&quot;&gt;&lt;tr&gt;&lt;th&gt;Inhabitants&lt;/th&gt;&lt;th&gt;Living in cryo&lt;/th&gt;&lt;/tr&gt;&#39;)
+(for: each _key, ...(data-names: $inhabitants))[(if: $inhabitants_initial&#39;s _key is not 0)[(set: $tabletext2 to it + &quot;&lt;tr&gt;&lt;td&gt;&quot; + _key + &quot;&lt;/td&gt;&lt;td&gt;&quot; + (string: $inhabitants&#39;s _key) + &quot; / &quot; + (string: $inhabitants_initial&#39;s _key) + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;)]]
+(set: $tabletext2 to it + &quot;&lt;/table&gt;&quot;)
+(print: $tabletext2)
+}&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="Land" tags="" position="625,1400" size="100,100">&lt;div class=&quot;planet-section&quot;&gt;
+{
+(set: $realscore to 0)
+(set: $destscore to 0)
+(set: $cultscore to 0)
+(set: $max_longevity to $maxstar&#39;s $star)
+(set: $mod_longevity to 1)
+(set: $cultural_longevity_mod to 1)
+(set: $livingdiff to $planetdiff&#39;s $planet)
+(set: $crashland to (a:))
+(if: $safe_landing is false)[
+(if: $class is &quot;driver&quot;)[(for: each _i, ...(range: 0, 4))[(set: $crashland to it + (a: &quot;miraculously find a safe place to land&quot;))]
+(for: each _i, ...(range: 0, 4))[(set: $crashland to it + (a: &quot;crash land, taking significant damage&quot;))]
+(for: each _i, ...(range: 0, 4))[(set: $crashland to it + (a: &quot;crash catastrophically; everyone dies&quot;))]
+]
+(else:)[
+(set: $crashland to it + (a: &quot;miraculously find a safe place to land&quot;))
+(for: each _i, ...(range: 0, 8))[(set: $crashland to it + (a: &quot;crash land, taking significant damage&quot;))]
+(for: each _i, ...(range: 0, 9))[(set: $crashland to it + (a: &quot;crash catastrophically; everyone dies&quot;))]]
+]
+(else-if: $safe_landing_identified is false)[
+(if: $class is &quot;driver&quot;)[(for: each _i, ...(range: 0, 9))[(set: $crashland to it + (a: &quot;find a safe place to land&quot;))]
+(for: each _i, ...(range: 0, 4))[(set: $crashland to it + (a: &quot;crash land, taking significant damage&quot;))]
+(for: each _i, ...(range: 0, 4))[(set: $crashland to it + (a: &quot;crash catastrophically; everyone dies&quot;))]
+]
+(else:)[
+(for: each _i, ...(range: 0, 4))[(set: $crashland to it + (a: &quot;find a safe place to land&quot;))]
+(for: each _i, ...(range: 0, 9))[(set: $crashland to it + (a: &quot;crash land, taking significant damage&quot;))]
+(for: each _i, ...(range: 0, 4))[(set: $crashland to it + (a: &quot;crash catastrophically; everyone dies&quot;))]]
+]
+(else:)[
+(if: $class is &quot;driver&quot;)[(set: $crashland to it + (a: &quot;land safely&quot;))]
+(else:)[
+(for: each _i, ...(range: 0, 19))[(set: $crashland to it + (a: &quot;land safely&quot;))]
+(set: $crashland to it + (a: &quot;crash land despite identifying a safe landing zone, taking significant damage&quot;))]
+]
+(set: $crash_or_land to (either: ...$crashland))
+(if: &quot;catastrophically&quot; is in $crash_or_land)[
+(set: $living_diff to it + 1000000)
+(for: each _key, ...(data-names: $inhabitants))[(set: $inhabitants&#39;s _key to 0)]
+(for: each _key, ...(data-names: $systems))[(set: $systems&#39;s _key to 0)]
+(for: each _key, ...(data-names: $data))[(set: $data&#39;s _key to 0)]
+]
+(else-if: &quot;crash land&quot; is in $crash_or_land)[
+(set: $living_diff to it + 10)
+(for: each _key, ...(data-names: $inhabitants))[(set: $inhabitants&#39;s _key to (round: it * 0.75))]
+(for: each _key, ...(data-names: $systems))[(set: $systems&#39;s _key to (round: it * (random: 0, 100) / 100))]
+(for: each _key, ...(data-names: $data))[(set: $data&#39;s _key to (round: it * (random: 0, 100) / 100))]
+(set: $longevity to it / 10)
 ]
 
+(if: $at_tox is &quot;Safe&quot;)[(set: $mod_longevity to it * 2)(set: $living_diff to it - 10)]
+(else:)[
+(if: $systems&#39;s &quot;storage&quot; &gt; 50)[(set: $mod_longevity to it * 0.5)(set: $living_diff to it + 1)]
+(else:)[(set: $max_longevity to (min: $max_longevity, $systems&#39;s &quot;storage&quot; * 2))(set: $living_diff to it + 3)]
 ]
-&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="Land" tags="" position="625,1350" size="100,100">Land!
 
-[[Credits]]</tw-passagedata></tw-storydata>
+(if: &quot;Comfortable&quot; is in $atmos_thic)[(set: $mod_longevity to it * 1.2)]
+(else:)[(set: $mod_longevity to it * $systems&#39;s &quot;storage&quot; / 100)(set: $living_diff to it + 5 - $systems&#39;s &quot;storage&quot; / 20)]
+
+(if: &quot;Very&quot; is in $temperature)[(set: $living_diff to it + 1)(set: $mod_longevity to it * 0.9)]
+(else-if: &quot;Extremely&quot; is in $temperature)[
+(if: $systems&#39;s &quot;storage&quot; &gt; 50)[(set: $mod_longevity to it * 0.2)(set: $living_diff to it + 2)]
+(else:)[(set: $mod_longevity to it * 0.02)(set: $living_diff to it + 5)]
+]
+(else:)[(set: $mod_longevity to it * 1.2)]
+
+(if: &quot;iquid&quot; is in $water)[(set: $mod_longevity to it * 1.5)(set: $living_diff to it - 2)]
+(else-if: &quot;ice&quot; is in $water)[(set: $mod_longevity to it * 1.2)]
+(else-if: &quot;vapor&quot; is in $water)[(set: $mod_longevity to it * 1.1)(set: $living_diff to it + 1)]
+(else:)[(set: $max_longevity to (min: $max_longevity, 1000 * $systems&#39;s &quot;storage&quot; / 100))
+(set: $living_diff to it + 10)]
+
+(if: $bio_sig is true)[(set: $mod_longevity to it * 1.2)]
+
+(if: $resources is &quot;Rich&quot;)[(set: $mod_longevity to it * 2)(set: $living_diff to it - 3)]
+(else-if: $resources is &quot;Scarce&quot;)[
+(if: $systems&#39;s &quot;storage&quot; &gt; 50)[(set: $mod_longevity to it * 0.5)(set: $living_diff to it + 1)]
+(else:)[(set: $max_longevity to  (min: $max_longevity, 10 * $systems&#39;s &quot;storage&quot;))(set: $living_diff to it + 3)]]
+(else-if: $resources is &quot;No&quot;)[(set: $max_longevity to  (min: $max_longevity, 2 * $systems&#39;s &quot;storage&quot;))(set: $living_diff to it + 6)]
+
+(if: $past_civ is true)[(set: $mod_longevity to it * 1.2)]
+
+(if: $current_civ is true)[
+(if: $current_favorability &gt; 100)[(set: $mod_longevity to it * 5)(set: $living_diff to it -10)]
+(else-if: ($current_favorability &gt; 50) and ($current_civ_peaceful &gt; 0))[(set: $mod_longevity to it * 1.2)]
+(else-if: $current_civ_peaceful &gt; 0)[(set: $mod_longevity to it *0.5)(set: $living_diff to it + 5)]
+(else-if: ($current_favorability &gt; -50) and ($current_civ_peaceful &gt; -5))[(set: $mod_longevity to it *0.1)(set: $living_diff to it + 10)]
+(else:)[(set: $mod_longevity to (min: $max_longevity, 100))(set: $living_diff to it + 10)]
+]
+
+(if: $geo is &quot;Some&quot;)[(set: $mod_longevity to it * 1.01)]
+(else-if: $geo is &quot;No&quot;)[
+(if: (&quot;gas giant&quot; is in $planet) and (&quot;rings&quot; is in $planet))[(set: $living_diff to it + 0.25)(set: $max_longevity to (min: $max_longevity, 1e8))]
+(else-if: (&quot;ice giant&quot; is in $planet) and (&quot;rings&quot; is in $planet))[(set: $living_diff to it + 0.5)(set: $max_longevity to (min: $max_longevity, 5e4))]
+(else:)[(set: $living_diff to it + 2)(set: $max_longevity to (min: $max_longevity, 100))]
+]
+(else-if: $geo is &quot;Dangerous&quot;)[(set: $living_diff to it + 2)(set: $max_longevity to (min: $max_longevity, 1e4))]
+(else-if: $geo is &quot;Catastrophic&quot;)[(set: $living_diff to it + 6)(set: $max_longevity to (min: $max_longevity, 1e3))]
+
+(if: $class is &quot;farmer&quot;)[(set: $farmmod to 3)]
+(else:)[(set: $farmmod to 1)]
+(if: &quot;Rich&quot; is in $edible)[(set: $mod_longevity to it * 2 * $farmmod)(set: $living_diff to it - 3)]
+(else-if: &quot;Sufficient&quot; is in $edible)[(set: $living_diff to it - 1)(set: $mod_longevity to it * $farmmod)]
+(else-if: &quot;Scarce&quot; is in $edible)[
+(if: $systems&#39;s &quot;storage&quot; &gt; 50)[(set: $mod_longevity to it * 0.5 * $farmmod)(set: $living_diff to it + 2)]
+(else:)[(set: $max_longevity to (min: $max_longevity, 10 * $systems&#39;s &quot;storage&quot;))(set: $living_diff to it + 3)]
+(else-if: &quot;No&quot; is in $edible)[
+(if: ($systems&#39;s &quot;storage&quot; &gt; 50) and ($class is &quot;Farmer&quot;))[(set: $mod_longevity to it * 0.75)(set: $living_diff to it + 3)]
+(else-if: $systems&#39;s &quot;storage&quot; &gt; 75)[(set: $mod_longevity to it * 0.5)(set: $living_diff to it + 4)]
+(else:)[(set: $max_longevity to (min: $max_longevity * 0.5, 10 * $systems&#39;s &quot;storage&quot;))(set: $living_diff to it + 8)]
+]
+]
+
+(if: &quot;Frequent&quot; is in $weather)[(set: $mod_longevity to it * 0.5)(set: $living_diff to it + 4)]
+(else-if: &quot;Seasonal&quot; is in $weather)[(set: $mod_longevity to it * 0.9)(set: $living_diff to it + 1)]
+(else-if: &quot;Limited&quot; is in $weather)[(set: $mod_longevity to it * 0.8)(set: $living_diff to it + 0.5)]
+
+(if: &quot;No&quot; is in $danger_life)[(set: $living_diff to it -0.3)]
+(else-if: (&quot;flora and fauna&quot; is in $danger_life) or (&quot;flora and funga&quot; is in $danger_life) or (&quot;flora, fauna, and funga&quot; is in $danger_life) or (&quot;microscopic&quot; is in $danger_life))[(set: $living_diff to it + 0.7)(set: $mod_longevity to it * 0.95)]
+(else:)[(set: $living_diff to it + 0.3)(set: $mod_longevity to it * 0.97)]
+
+(set: $potential_longevity to $max_longevity * $mod_longevity)
+
+
+(set: $longevity_description to &quot;You chose &quot; + $visiting + &quot;, capable of hosting a society for up to &quot;)
+(if: $potential_longevity &gt; 1e9)[(set: $destscore to it + 500)(set: $potential_longevity_words to (string: (round: $potential_longevity / 1e9)) + &quot; billion years.&quot;)]
+(else-if: $potential_longevity &gt; 1e6)[(set: $destscore to it + 400 + 100 / 3 * ((log10: $potential_longevity) - 6))(set: $potential_longevity_words to (string: (round: $potential_longevity / 1e6)) + &quot; million years.&quot;)]
+(else-if: $potential_longevity &gt; 1e3)[(set: $destscore to it + 250 + 150 / 3 * ((log10: $potential_longevity) - 3))(set: $potential_longevity_words to (string: (round: $potential_longevity / 1e3)) + &quot; thousand years.&quot;)]
+(else-if: $potential_longevity &gt; 100)[(set: $destscore to it + 100 + 150 * ((log10: $potential_longevity) - 2))(set: $potential_longevity_words to (string: (round: $potential_longevity)) + &quot; years.&quot;)]
+(else-if: $potential_longevity &gt; 1)[(set: $destscore to it + (round: $potential_longevity))(set: $potential_longevity_words to (string: (round: $potential_longevity)) + &quot; years.&quot;)]
+(else-if: $potential_longevity &gt; 0)[(set: $destscore to it + $potential_longevity)(set: $potential_longevity_words to (string: (round: $potential_longevity * 365)) + &quot; days.&quot;)]
+(else:)[(set: $destscore to 0)(set: $potential_longevity_words to &quot;&quot;)(set: $longevity_description to &quot;You chose &quot; + $visiting + &quot;, which is incapable of hosting a society.&quot;)]
+
+
+(if: $anyawakes is true)[
+(for: each _key, ...(data-names: $awake_aging))[(if: $awake_aging&#39;s _key &lt; 90)[(set: $inhabitants&#39;s _key to it + 1)]]
+]
+(set: $sumalive to $inhabitants&#39;s &quot;aristocrats&quot; + $inhabitants&#39;s &quot;artists&quot; + $inhabitants&#39;s &quot;businesspeople&quot; + $inhabitants&#39;s &quot;educators&quot; + $inhabitants&#39;s &quot;journalists&quot; + $inhabitants&#39;s &quot;laborers&quot; + $inhabitants&#39;s &quot;physicians&quot; + $inhabitants&#39;s &quot;police&quot; + $inhabitants&#39;s &quot;politicians&quot; + $inhabitants&#39;s &quot;scientists&quot;)
+
+(if: $sumalive is 1e4)[(set: $cultural_longevity_max to 1e6)(set: $living_diff to it - 3)]
+(else-if: $sumalive &gt; 9000)[(set: $cultural_longevity_max to 1e6)(set: $living_diff to it - 1)]
+(else-if: $sumalive &gt; 5000)[(set: $cultural_longevity_max to 1e6)]
+(else-if: $sumalive &gt; 1e3)[(set: $cultural_longevity_max to 1e4)(set: $living_diff to it + 1)]
+(else-if: $sumalive &gt; 100)[(set: $cultural_longevity_max to 1e3)(set: $living_diff to it + 3)]
+(else-if: $sumalive &gt; 50)[(set: $cultural_longevity_max to 1e3)(set: $living_diff to it + 5)]
+(else-if: $sumalive &gt; 10)[(set: $cultural_longevity_max to 200)(set: $living_diff to it + 6)]
+(else-if: $sumalive &gt; 2)[(set: $cultural_longevity_max to 150)(set: $living_diff to it + 10)]
+(else-if: $sumalive &gt; 0)[(set: $cultural_longevity_max to 60)]
+(else:)[(set: $cultural_longevity_max to 0)]
+
+(set: $final_survline to &quot;&quot;)
+(set: $dmnums to (data-values: $inhabitants))
+(set: $dments to (data-names: $inhabitants))
+(for: each _i, ...$dments)[
+(if: $inhabitants_initial&#39;s _i is not 0)[
+(if: _i is $dments&#39;s last)[(set: $final_survline to it + &quot;and &quot; + (string: $inhabitants&#39;s _i) + &quot; &quot; + _i)]
+(else:)[(set: $final_survline to it + (string: $inhabitants&#39;s _i) + &quot; &quot; + _i + &quot;, &quot;)]]
+]
+
+(if: $sumalive is 0)[(set: $survwords to &quot;You have no survivors left with which to build a new civilization.&quot;)]
+(else-if: $sumalive is 10000)[(set: $survwords to &quot;All of your passengers survived the journey!&quot;)]
+(else:)[(set: $survwords to &quot;You set out with &quot; + $survline + &quot; aboard &quot; + $SHIPNAME + &quot;. Now, at your destination, &quot; + $final_survline + &quot; have survived.&quot;)]
+
+
+(set: $dmod to 0)
+(for: each _key, ...(data-names: $data))[
+(if: _key is not &quot;log&quot;)[(set: $dmod to it + $data&#39;s _key / 100)]]
+(set: $cultural_longevity_mod to it * (min: 2, $dmod / 4))
+(set: $cultural_longevity_max to it * (max: 1, 1 + $data&#39;s &quot;log&quot; / 100))
+
+
+(set: $fasc_mod to 0)
+(set: $max_possible to 0)
+(set: $good_survivors to 0)
+(for: each _key, ...(data-names: $inhabitants))[
+(set: _mod to $scenario_mod&#39;s _key)
+(set: $good_survivors to it + $inhabitants&#39;s _key * _mod * $inhabitants_health&#39;s _key / 100)
+(if: _mod &gt; 0)[(set: $max_possible to it + $inhabitants_initial&#39;s _key * _mod * $inhabitants_health&#39;s _key / 100)]
+(else:)[(set: $fasc_mod to it + (abs: $inhabitants&#39;s _key * _mod * $inhabitants_health&#39;s _key / 100))]
+]
+(set: $fasc_mod to it / (0.05 * 1e4))
+
+(set: $fascism to it + $fasc_mod)
+(if: $fascism &gt; 10)[(set: $fascism to it + $living_diff)]
+(else-if: $fascism &gt; 2)[(set: $fascism to it + $living_diff / 10)]
+
+(set: $good_survivors to $sumalive / $max_possible)
+(if: $good_survivors &gt; 0)[(set: $cultural_longevity_mod to it * $good_survivors)]
+(else:)[(set: $cultural_longevity_mod to it * 0.5 * (abs: $good_survivors))]
+
+(if: $fascism &lt;= 0)[(set: $cultural_longevity_max to it * 10)]
+(else-if: $fascism &lt;= 0.5)[(set: $cultural_longevity_max to (min: $cultural_longevity_max, 2e4 * (1 - 9/5 * $fascism)))]
+(else-if: $fascism &lt;= 1.5)[(set: $cultural_longevity_max to (min: $cultural_longevity_max, 1e3 * (1.5 - $fascism) + 1e3))]
+(else-if: $fascism &lt;= 3)[(set: $cultural_longevity_max to (min: $cultural_longevity_max, 500 / 1.5 * (3 - $fascism) + 500))]
+(else-if: $fascism &lt;= 6)[(set: $cultural_longevity_max to (min: $cultural_longevity_max, 100 * (6 - $fascism) + 200))]
+(else-if: $fascism &lt;= 10)[(set: $cultural_longevity_max to (min: $cultural_longevity_max, 25 * (10 - $fascism) + 100))]
+(else-if: $fascism &lt;= 20)[(set: $cultural_longevity_max to (min: $cultural_longevity_max, 110 - $fascism))]
+(else:)[(set: $cultural_longevity_max to (min: $cultural_longevity_max, 5))]
+
+(if: ($class is &quot;teacher&quot;) and ($fascism &lt; 3))[(set: $cultural_longevity_mod to it * 2)]
+
+(set: $cultural_longevity to $cultural_longevity_max * $cultural_longevity_mod)
+
+(set: $cultural_longevity_words to &quot;&quot;)
+(if: $cultural_longevity &gt;= 1e4)[(set: $cultural_longevity_words to it + &quot;indefinitely&quot;)(set: $cultscore to it + 500)]
+(else-if: $cultural_longevity &gt;= 1e3)[(set: $cultural_longevity_words to it + &quot;for &quot; + (string: (round: $cultural_longevity / 1e3)) + &quot; thousand years&quot;)(set: $cultscore to it + 400 + 100 * ((log10: $cultural_longevity) - 3))]
+(else-if: $cultural_longevity &gt;= 100)[(set: $cultural_longevity_words to it + &quot;for &quot; + (string: (round: $cultural_longevity)) + &quot; years&quot;)(set: $cultscore to it + 100 + 300 * ((log10: $cultural_longevity) - 2))]
+(else-if: $cultural_longevity &gt;= 1)[(set: $cultural_longevity_words to it + &quot;for &quot; + (string: (round: $cultural_longevity)) + &quot; years&quot;)(set: $cultscore to it + (round: $cultural_longevity))]
+(else-if: $cultural_longevity &gt; 0)[(set: $cultural_longevity_words to it + &quot;for &quot; + (string: (round: $cultural_longevity)) + &quot; year&quot;)(set: $cultscore to it + (round: $cultural_longevity))]
+(else:)[(set: $cultural_longevity_words to it + &quot;for 0 years&quot;)(set: $cultscore to it + 0)]
+
+(set: $final_longevity_words to &quot;&quot;)
+(if: ($potential_longevity &lt; $cultural_longevity) and ($potential_longevity &lt; 1e3))[(set: $final_longevity_words to &quot;Your society would have been capable of surviving &quot; + $cultural_longevity_words + &quot;, but you chose a world that will only support you for &quot; + $potential_longevity_words)]
+(else-if: $potential_longevity &lt; $cultural_longevity)[(set: $final_longevity_words to &quot;Your society is capable of surviving &quot; + $cultural_longevity_words + &quot;. The world is capable of supporting you for &quot; + $potential_longevity_words)]
+(else:)[(set: $final_longevity_words to &quot;Your society is capable of surviving &quot; + $cultural_longevity_words + &quot;.&quot;)]
+
+(set: $realscore to $cultscore + $destscore)
+
+
+(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+You $crash_or_land.&lt;br&gt;
+
+$longevity_description $potential_longevity_words&lt;br&gt;
+
+But how long will your civilization actually survive?&lt;br&gt;
+
+$survwords&lt;br&gt;
+
+$final_longevity_words&lt;br&gt;
+
+Your destination score is: (print: (round: 100 * $destscore) / 100) / 500.&lt;br&gt;
+Your cultural survival score is:  (print: (round: 100 * $cultscore) / 100) / 500.&lt;br&gt;
+Final Score:  (print: (round: 100 * $realscore) / 100) / 1000.&lt;br&gt;
+
+[[Credits]]
+&lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="Test 2" tags="" position="1000,1175" size="100,100">{(set: $inhabitants to (dm: &quot;aristocrats&quot;, 0, &quot;artists&quot;, 1200, &quot;businesspeople&quot;, 100, &quot;educators&quot;, 600, &quot;journalists&quot;, 300, &quot;laborers&quot;, 7000, &quot;physicians&quot;, 300, &quot;police&quot;, 0, &quot;politicians&quot;, 100, &quot;scientists&quot;, 400))
+&lt;--! Do comments work? --&gt;
+[[Test 3]]
+(set: $maxcount to 2.25212341)(set: $activitycount to 4)
+(print: $maxcount - $activitycount)&lt;br&gt;
+(print: (round: $maxcount - $activitycount))&lt;br&gt;
+
+(set: $final_survline to &quot;&quot;)
+(set: $dmnums to (data-values: $inhabitants))
+(set: $dments to (data-names: $inhabitants))
+(for: each _i, ...$dments)[
+(if: _i is $dments&#39;s last)[(set: $final_survline to it + &quot;and &quot; + (string: $inhabitants&#39;s _i) + &quot; &quot; + _i)]
+(else:)[(set: $final_survline to it + (string: $inhabitants&#39;s _i) + &quot; &quot; + _i + &quot;, &quot;)]
+]
+SURVIVAL LINE: $final_survline&lt;br&gt;
+
+(for: each _key, ...(data-names: $inhabitants))[
+(set: _mod to $inhabitants&#39;s _key)
+(print: -_mod)
+(print: (abs: -_mod))&lt;br&gt;]&lt;br&gt;
+}
+
+(set: $cultural_longevity_mod to 1)
+(set: $cultural_longevity_max to 100)
+(set: $data to (dm: &#39;history&#39;, 100, &#39;science&#39;, 100, &#39;arts&#39;, 100, &#39;philosophy&#39;, 100, &#39;log&#39;, 25))
+(set: $dmod to 0)
+(for: each _key, ...(data-names: $data))[
+(if: _key is not &quot;log&quot;)[(set: $dmod to it + $data&#39;s _key / 100)]]
+(set: $cultural_longevity_mod to it * (min: 2, $dmod / 4))
+(set: $cultural_longevity_max to it * (max: 1, 1 + $data&#39;s &quot;log&quot; / 100))
+$dmod, $cultural_longevity_mod, $cultural_longevity_max
+
+Next thing:&lt;br&gt;
+(for: each _key, ...(data-names: $data))[_key]
+
+Next next:&lt;br&gt;
+(for: each _key, ...(data-names: $data))[(if: _key is not &quot;log&quot;)[_key: (print: $data&#39;s _key) / 100&lt;br&gt;]]
+
+
+(for: each _key, ...(data-names: $inhabitants))[(set: $inhabitants&#39;s _key to (round: it * 0.75))]
+(for: each _key, ...(data-names: $data))[(set: $data&#39;s _key to (round: it * (random: 0, 100) / 100))]
+$data
+
+(set: $good_survivors to 1)
+(set: $fascmod to 1)
+(for: each _key, ...(data-names: $inhabitants))[
+(set: _mod to $inhabitants&#39;s _key)
+(set: $good_survivors to it + $inhabitants&#39;s _key * _mod * $inhabitants&#39;s _key / 100)
+(if: _mod &gt; 0)[(set: $max_possible to it + $inhabitants&#39;s _key * _mod * $inhabitants&#39;s _key / 100)]
+(else:)[(set: $fasc_mod to it + (abs: $inhabitants&#39;s _key * _mod * $inhabitants&#39;s _key / 100))]
+]
+$good_survivors
+$fasc_mod
+
+
+(for: each _key, ...(data-names: $systems))[(if: (_key is not &quot;log&quot;) and (_key is not &quot;probes&quot;))[
+(if: $systems&#39;s _key &gt; 90)[(set: $keycol to &quot;DarkSeaGreen&quot;)]
+(else-if: $systems&#39;s _key &gt; 50)[(set: $keycol to &quot;Orange&quot;)]
+(else:)[(set: $keycol to &quot;LightCoral&quot;)]
+_key: (text-color: $keycol)[(print: $systems&#39;s _key) / 100&lt;br&gt;]]
+(else-if: _key is &quot;probes&quot;)[
+(if: $systems&#39;s _key &gt; 2)[(set: $keycol to &quot;DarkSeaGreen&quot;)]
+(else-if: $systems&#39;s _key &gt; 1)[(set: $keycol to &quot;Orange&quot;)]
+(else:)[(set: $keycol to &quot;LightCoral&quot;)]
+_key: (text-color: $keycol)[(print: $systems&#39;s _key) / 3&lt;br&gt;]]
+]</tw-passagedata><tw-passagedata pid="20" name="Test 3" tags="" position="1000,1300" size="100,100">&lt;div class=&quot;space-container&quot;&gt;
+&lt;img src=&quot;/Users/jonathancohn/Downloads/astralkite-viewport.png&quot; alt=&quot;space&quot; style=&quot;width:100%;&quot;&gt;
+&lt;div class=&quot;centered&quot;&gt;
+What does this look like?
+&lt;/div&gt;
+&lt;div class=&quot;top-left&quot;&gt;
+What about this [[Test4]]&lt;/div&gt;
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="21" name="Test4" tags="" position="1200,1050" size="100,100">
+
+
+
+
+
+(set: $keycol to (dm: ))
+(for: each _key, ...(data-names: $systems))[(if: (_key is not &quot;log&quot;) and (_key is not &quot;probes&quot;))[
+(if: $systems&#39;s _key &gt; 90)[(set: $keycol to it + (dm: _key, &quot;DarkSeaGreen&quot;))]
+(else-if: $systems&#39;s _key &gt; 50)[(set: $keycol to it + (dm: _key, &quot;Orange&quot;))]
+(else:)[(set: $keycol to it + (dm: _key, &quot;LightCoral&quot;)]]
+(else-if: _key is &quot;probes&quot;)[
+(if: $systems&#39;s _key &gt; 2)[(set: $keycol to it + (dm: _key, &quot;DarkSeaGreen&quot;))]
+(else-if: $systems&#39;s _key &gt; 1)[(set: $keycol to  it + (dm: _key, &quot;Orange&quot;))]
+(else:)[(set: $keycol to  it + (dm: _key, &quot;LightCoral&quot;))]]
+]
+$SHIPNAME
+&lt;table style=&quot;width:100%&quot;&gt;
+	&lt;tr&gt;
+  		&lt;th&gt;System&lt;/th&gt;
+		&lt;th&gt;Capacity&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;cryo&lt;/td&gt;&lt;td&gt;(text-color: $keycol&#39;s &quot;cryo&quot;)[(print: $systems&#39;s &quot;cryo&quot;) / 100]&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;engines&lt;/td&gt;&lt;td&gt;(text-color: $keycol&#39;s &quot;engines&quot;)[(print: $systems&#39;s &quot;engines&quot;) / 100]&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;hull&lt;/td&gt;&lt;td&gt;(text-color: $keycol&#39;s &quot;hull&quot;)[(print: $systems&#39;s &quot;hull&quot;) / 100]&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;navigation&lt;/td&gt;&lt;td&gt;(text-color: $keycol&#39;s &quot;navigation&quot;)[(print: $systems&#39;s &quot;navigation&quot;) / 100]&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;storage&lt;/td&gt;&lt;td&gt;(text-color: $keycol&#39;s &quot;storage&quot;)[(print: $systems&#39;s &quot;storage&quot;) / 100]&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;probes&lt;/td&gt;&lt;td&gt;(text-color: $keycol&#39;s &quot;probes&quot;)[(print: $systems&#39;s &quot;probes&quot;) / 3]&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+Inhabitants in cryo:&lt;br&gt;
+(for: each _key, ...(data-names: $inhabitants))[_key: (print: $inhabitants&#39;s _key) / (print: $inhabitants_initial&#39;s _key)&lt;br&gt;]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
