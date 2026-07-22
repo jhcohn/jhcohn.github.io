@@ -9,7 +9,30 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play AstralKite-TheSituationship.</tw-noscript></noscript></tw-story>
-<tw-storydata name="AstralKite-TheSituationship" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="DA39BA63-211F-4E23-B85E-BD131BD211B4" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.space-section {
+<tw-storydata name="AstralKite-TheSituationship" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="DA39BA63-211F-4E23-B85E-BD131BD211B4" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.space-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered-small {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.5); /* #000000;  rgba(0, 0, 0, 0.7); Semi-transparent background for readability */
+  color: white;
+  font-family: 'Lucida Console'; /* 'American Typewriter'; */
+  font-size: 24px; /* 18px */
+  font-weight: 100;
+  width: 200px; /* 600px Limits the maximum width of the text */
+  /* max-height: 300px; /* set maximum height of text */
+  text-align: center;
+  padding-left: 9px;
+  padding-top: 32px;
+}
+
+.space-section {
     background-image: url("renders/astralkite-viewport.png");
   background-size: contain; /* ensures image covers entire section (or should I use contain?) */
   background-position: center; /* centers image */
@@ -168,6 +191,13 @@
 
 tw-sidebar { display: none; }
 
+tw-link, .enchantment-link {
+    color: skyblue; /* plum */
+}
+tw-link:hover, .enchantment-link:hover {
+    color: cyan; /* orchid */
+}
+
 /**
  * Harlowe Audio Library (HAL), by Chapel, v2.3.0
  * for Harlowe 2.1.0 and higher
@@ -184,7 +214,7 @@ tw-sidebar { display: none; }
 {(masteraudio: &#39;stopall&#39;)
 (track: &#39;theme&#39;, &#39;loop&#39;, true)
 (track: &#39;theme&#39;, &#39;playwhenpossible&#39;)}
-{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;centered-small&quot;&gt;
 	[[Play Astral Kite: The Situationship-&gt;cw]]
 &lt;/div&gt;]]}&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Letter1" tags="" position="625,425" size="100,100">{(set: $ontherun to &quot;no&quot;)
 (set: $year to (random: 2040, 2240))
@@ -438,16 +468,10 @@ $incoming
 [[Continue-&gt;2bb]]]]
 ]
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="cw" tags="" position="625,300" size="100,100">&lt;div class=&quot;space-section&quot;&gt;&lt;div class=&quot;text-overlay&quot;&gt;
-{The Situationship is a work of fiction. Any resemblance to real people, places, or events, is coincidental.&lt;br&gt;
+{
+(align: &quot;=&gt;&lt;=&quot;)[(text-size: 1.2)[[[Play Game-&gt;Letter1]]&lt;br&gt;]]
 
-This game contains some topics that may be triggering to players. Would you like to see a list of content warnings?&lt;br&gt;
-
-[Yes]&lt;y1|&lt;br&gt;
-[[No-&gt;Letter1]]
-
-(click: ?y1)[This game contains themes including derealization, gaslighting, and suicide. Not every path you take will include these themes, but one or more of them may appear throughout the game.&lt;br&gt;
-
-[[Play Game-&gt;Letter1]]]
+(text-size: 0.5)[&lt;br&gt;The Situationship is a work of fiction. Any resemblance to real people, places, or events, is coincidental. This game contains themes including derealization, gaslighting, and suicide. Not every path you take will include these themes, but one or more of them may appear throughout the game.]
 }
 &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="hal.tracks" tags="" position="775,175" size="100,100">test-name: renders/MMGSecondTheme.wav
 
