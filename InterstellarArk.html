@@ -76,12 +76,6 @@
   padding-left: 9px;
   padding-top: 32px;
 }
-tw-link, .enchantment-link {
-    color: plum; /* skyblue */
-}
-tw-link:hover, .enchantment-link:hover {
-    color: orchid;
-}
 
 .centered {
   position: absolute;
@@ -210,6 +204,13 @@ tw-story {
   padding-right: 5%;
 }
 
+tw-link, .enchantment-link {
+    color: plum; /* skyblue */
+}
+tw-link:hover, .enchantment-link:hover {
+    color: orchid; /* cyan */
+}
+
 /**
  * Harlowe Audio Library (HAL), by Chapel, v2.3.0
  * for Harlowe 2.1.0 and higher
@@ -306,8 +307,34 @@ Please select your occupation:
 (set: $num_visits to 0)
 (set: $past_activities to (a:))
 
-(set: $dists to (a: 3.16, 3.22, 3.27, 3.33, 3.39, 3.45, 3.51, 3.57, 3.63, 3.7, 3.76, 3.83, 3.89, 3.96, 4.03, 4.1, 4.17, 4.25, 4.32, 4.4, 4.47, 4.55, 4.63, 4.71, 4.8, 4.88, 4.97, 5.05, 5.14, 5.23, 5.32, 5.42, 5.51, 5.61, 5.71, 5.81, 5.91, 6.01, 6.12, 6.22, 6.33, 6.44, 6.56, 6.67, 6.79, 6.91, 7.03, 7.15, 7.27, 7.4, 7.53, 7.66, 7.8, 7.93, 8.07, 8.21, 8.36, 8.5, 8.65, 8.8, 8.96, 9.12, 9.28, 9.44, 9.6, 9.77, 9.94, 10.12, 10.29, 10.47, 10.66, 10.84, 11.03, 11.23, 11.42, 11.62, 11.83, 12.03, 12.24, 12.46, 12.68, 12.9, 13.12, 13.35, 13.59, 13.83, 14.07, 14.31, 14.57, 14.82, 15.08, 15.34, 15.61, 15.89, 16.16, 16.45, 16.73, 17.03, 17.33, 17.63, 17.94, 18.25, 18.57, 18.9, 19.23, 19.56, 19.91, 20.26, 20.61, 20.97, 21.34, 21.71, 22.09, 22.48, 22.87, 23.27, 23.68, 24.09, 24.52, 24.95, 25.38, 25.83, 26.28, 26.74, 27.21, 27.68, 28.17, 28.66, 29.16, 29.67, 30.19, 30.72, 31.26, 31.81, 32.36, 32.93, 33.51, 34.09, 34.69, 35.3, 35.92, 36.54, 37.18, 37.83, 38.5, 39.17, 39.86, 40.55, 41.26, 41.99, 42.72, 43.47, 44.23, 45.01, 45.79, 46.6, 47.41, 48.24, 49.09, 49.95, 50.82, 51.71, 52.61, 53.54, 54.47, 55.43, 56.4, 57.38, 58.39, 59.41, 60.45, 61.51, 62.59, 63.68, 64.8, 65.93, 67.09, 68.26, 69.46, 70.67, 71.91, 73.17, 74.45, 75.75, 77.08, 78.43, 79.8, 81.2, 82.62, 84.07, 85.54, 87.04, 88.56, 90.11, 91.69, 93.29, 94.93, 96.59, 98.28, 100.0))
+(set: $closedists to (a: 3.16, 3.22, 3.27, 3.33, 3.39, 3.45, 3.51, 3.57, 3.63, 3.7, 3.76, 3.83, 3.89, 3.96, 4.03, 4.1, 4.17, 4.25, 4.32, 4.4, 4.47, 4.55, 4.63, 4.71, 4.8, 4.88, 4.97, 5.05, 5.14, 5.23, 5.32, 5.42, 5.51, 5.61, 5.71, 5.81, 5.91, 6.01, 6.12, 6.22, 6.33, 6.44, 6.56, 6.67, 6.79, 6.91, 7.03, 7.15, 7.27, 7.4, 7.53, 7.66, 7.8, 7.93, 8.07, 8.21, 8.36, 8.5, 8.65, 8.8, 8.96, 9.12, 9.28, 9.44, 9.6, 9.77, 9.94, 10.12, 10.29, 10.47, 10.66, 10.84, 11.03, 11.23, 11.42, 11.62, 11.83, 12.03, 12.24, 12.46, 12.68, 12.9, 13.12, 13.35, 13.59, 13.83, 14.07, 14.31, 14.57, 14.82, 15.08, 15.34, 15.61, 15.89, 16.16, 16.45, 16.73, 17.03, 17.33, 17.63, 17.94, 18.25, 18.57, 18.9, 19.23, 19.56, 19.91, 20.26, 20.61, 20.97, 21.34, 21.71, 22.09, 22.48, 22.87, 23.27, 23.68, 24.09, 24.52, 24.95, 25.38, 25.83, 26.28, 26.74, 27.21, 27.68, 28.17, 28.66, 29.16, 29.67, 30.19, 30.72, 31.26, 31.81, 32.36, 32.93, 33.51, 34.09, 34.69, 35.3, 35.92, 36.54, 37.18, 37.83, 38.5, 39.17, 39.86, 40.55, 41.26, 41.99, 42.72, 43.47, 44.23, 45.01, 45.79, 46.6, 47.41, 48.24, 49.09, 49.95, 50.82, 51.71, 52.61, 53.54, 54.47, 55.43, 56.4, 57.38, 58.39, 59.41, 60.45, 61.51, 62.59, 63.68, 64.8, 65.93, 67.09, 68.26, 69.46, 70.67, 71.91, 73.17, 74.45, 75.75, 77.08, 78.43, 79.8, 81.2, 82.62, 84.07, 85.54, 87.04, 88.56, 90.11, 91.69, 93.29, 94.93, 96.59, 98.28, 100.0))
+(set: $middledists to (a: 6.31, 6.4, 6.49, 6.58, 6.67, 6.76, 6.86, 6.95, 7.05, 7.15, 7.25, 7.35, 7.45, 7.56, 7.66, 7.77, 7.88, 7.99, 8.1, 8.21, 8.33, 8.45, 8.56, 8.68, 8.8, 8.93, 9.05, 9.18, 9.31, 9.44, 9.57, 9.7, 9.84, 9.98, 10.12, 10.26, 10.4, 10.55, 10.69, 10.84, 11.0, 11.15, 11.3, 11.46, 11.62, 11.79, 11.95, 12.12, 12.29, 12.46, 12.63, 12.81, 12.99, 13.17, 13.35, 13.54, 13.73, 13.92, 14.12, 14.31, 14.51, 14.72, 14.92, 15.13, 15.34, 15.56, 15.78, 16.0, 16.22, 16.45, 16.68, 16.91, 17.15, 17.39, 17.63, 17.88, 18.13, 18.38, 18.64, 18.9, 19.16, 19.43, 19.7, 19.98, 20.26, 20.54, 20.83, 21.12, 21.41, 21.71, 22.01, 22.32, 22.63, 22.95, 23.27, 23.6, 23.93, 24.26, 24.6, 24.95, 25.29, 25.65, 26.01, 26.37, 26.74, 27.11, 27.49, 27.88, 28.27, 28.66, 29.06, 29.47, 29.88, 30.3, 30.72, 31.15, 31.59, 32.03, 32.48, 32.93, 33.39, 33.86, 34.33, 34.81, 35.3, 35.79, 36.29, 36.8, 37.31, 37.83, 38.36, 38.9, 39.44, 40.0, 40.55, 41.12, 41.7, 42.28, 42.87, 43.47, 44.08, 44.69, 45.32, 45.95, 46.6, 47.25, 47.91, 48.58, 49.26, 49.95, 50.64, 51.35, 52.07, 52.8, 53.54, 54.28, 55.04, 55.81, 56.59, 57.38, 58.19, 59.0, 59.83, 60.66, 61.51, 62.37, 63.24, 64.13, 65.02, 65.93, 66.85, 67.79, 68.74, 69.7, 70.67, 71.66, 72.66, 73.68, 74.71, 75.75, 76.81, 77.89, 78.97, 80.08, 81.2, 82.33, 83.48, 84.65, 85.84, 87.04, 88.25, 89.49, 90.74, 92.01, 93.29, 94.6, 95.92, 97.26, 98.62, 100.0))
+(set: $fardists to (a: 10.0, 10.12, 10.23, 10.35, 10.47, 10.6, 10.72, 10.84, 10.97, 11.1, 11.23, 11.36, 11.49, 11.62, 11.76, 11.9, 12.03, 12.17, 12.32, 12.46, 12.6, 12.75, 12.9, 13.05, 13.2, 13.35, 13.51, 13.67, 13.83, 13.99, 14.15, 14.31, 14.48, 14.65, 14.82, 14.99, 15.17, 15.34, 15.52, 15.7, 15.89, 16.07, 16.26, 16.45, 16.64, 16.83, 17.03, 17.23, 17.43, 17.63, 17.83, 18.04, 18.25, 18.46, 18.68, 18.9, 19.12, 19.34, 19.56, 19.79, 20.02, 20.26, 20.49, 20.73, 20.97, 21.21, 21.46, 21.71, 21.96, 22.22, 22.48, 22.74, 23.0, 23.27, 23.54, 23.82, 24.09, 24.37, 24.66, 24.95, 25.24, 25.53, 25.83, 26.13, 26.43, 26.74, 27.05, 27.36, 27.68, 28.01, 28.33, 28.66, 28.99, 29.33, 29.67, 30.02, 30.37, 30.72, 31.08, 31.44, 31.81, 32.18, 32.55, 32.93, 33.31, 33.7, 34.09, 34.49, 34.89, 35.3, 35.71, 36.12, 36.54, 36.97, 37.4, 37.83, 38.27, 38.72, 39.17, 39.63, 40.09, 40.55, 41.03, 41.5, 41.99, 42.48, 42.97, 43.47, 43.98, 44.49, 45.01, 45.53, 46.06, 46.6, 47.14, 47.69, 48.24, 48.8, 49.37, 49.95, 50.53, 51.11, 51.71, 52.31, 52.92, 53.54, 54.16, 54.79, 55.43, 56.07, 56.72, 57.38, 58.05, 58.73, 59.41, 60.1, 60.8, 61.51, 62.23, 62.95, 63.68, 64.42, 65.17, 65.93, 66.7, 67.48, 68.26, 69.06, 69.86, 70.67, 71.49, 72.33, 73.17, 74.02, 74.88, 75.75, 76.63, 77.53, 78.43, 79.34, 80.26, 81.2, 82.14, 83.1, 84.07, 85.04, 86.03, 87.04, 88.05, 89.07, 90.11, 91.16, 92.22, 93.29, 94.38, 95.48, 96.59, 97.71, 98.85, 100.0))
+(set: $bdists to (a: 79.43, 79.99, 80.54, 81.1, 81.67, 82.24, 82.81, 83.39, 83.97, 84.55, 85.14, 85.74, 86.33, 86.94, 87.54, 88.15, 88.76, 89.38, 90.01, 90.63, 91.26, 91.9, 92.54, 93.19, 93.83, 94.49, 95.15, 95.81, 96.48, 97.15, 97.83, 98.51, 99.19, 99.88, 100.58, 101.28, 101.99, 102.7, 103.41, 104.13, 104.86, 105.59, 106.32, 107.07, 107.81, 108.56, 109.32, 110.08, 110.85, 111.62, 112.4, 113.18, 113.97, 114.76, 115.56, 116.37, 117.18, 117.99, 118.82, 119.64, 120.48, 121.32, 122.16, 123.01, 123.87, 124.73, 125.6, 126.48, 127.36, 128.24, 129.14, 130.04, 130.94, 131.86, 132.77, 133.7, 134.63, 135.57, 136.51, 137.46, 138.42, 139.39, 140.36, 141.34, 142.32, 143.31, 144.31, 145.32, 146.33, 147.35, 148.37, 149.41, 150.45, 151.5, 152.55, 153.61, 154.68, 155.76, 156.85, 157.94, 159.04, 160.15, 161.26, 162.39, 163.52, 164.66, 165.81, 166.96, 168.12, 169.29, 170.47, 171.66, 172.86, 174.06, 175.27, 176.5, 177.73, 178.96, 180.21, 181.47, 182.73, 184.0, 185.28, 186.58, 187.88, 189.18, 190.5, 191.83, 193.17, 194.51, 195.87, 197.23, 198.6, 199.99, 201.38, 202.78, 204.2, 205.62, 207.05, 208.49, 209.95, 211.41, 212.88, 214.37, 215.86, 217.36, 218.88, 220.4, 221.94, 223.48, 225.04, 226.61, 228.19, 229.78, 231.38, 232.99, 234.61, 236.25, 237.89, 239.55, 241.22, 242.9, 244.59, 246.3, 248.01, 249.74, 251.48, 253.23, 255.0, 256.77, 258.56, 260.36, 262.18, 264.0, 265.84, 267.69, 269.56, 271.44, 273.33, 275.23, 277.15, 279.08, 281.02, 282.98, 284.95, 286.94, 288.94, 290.95, 292.98, 295.02, 297.07, 299.14, 301.23, 303.33, 305.44, 307.57, 309.71, 311.87, 314.04, 316.23))
+(set: $odists to (a: 316.23, 319.91, 323.63, 327.4, 331.21, 335.06, 338.96, 342.91, 346.9, 350.93, 355.02, 359.15, 363.33, 367.56, 371.84, 376.16, 380.54, 384.97, 389.45, 393.98, 398.57, 403.21, 407.9, 412.65, 417.45, 422.31, 427.22, 432.19, 437.22, 442.31, 447.46, 452.67, 457.94, 463.26, 468.66, 474.11, 479.63, 485.21, 490.86, 496.57, 502.35, 508.19, 514.11, 520.09, 526.15, 532.27, 538.46, 544.73, 551.07, 557.48, 563.97, 570.53, 577.17, 583.89, 590.69, 597.56, 604.51, 611.55, 618.67, 625.87, 633.15, 640.52, 647.97, 655.52, 663.14, 670.86, 678.67, 686.57, 694.56, 702.64, 710.82, 719.09, 727.46, 735.93, 744.49, 753.16, 761.92, 770.79, 779.76, 788.83, 798.01, 807.3, 816.7, 826.2, 835.82, 845.54, 855.38, 865.34, 875.41, 885.6, 895.9, 906.33, 916.88, 927.55, 938.34, 949.26, 960.31, 971.49, 982.79, 994.23, 1005.8, 1017.51, 1029.35, 1041.33, 1053.45, 1065.71, 1078.11, 1090.66, 1103.35, 1116.19, 1129.18, 1142.32, 1155.62, 1169.07, 1182.67, 1196.44, 1210.36, 1224.45, 1238.7, 1253.11, 1267.7, 1282.45, 1297.37, 1312.47, 1327.75, 1343.2, 1358.83, 1374.65, 1390.64, 1406.83, 1423.2, 1439.76, 1456.52, 1473.47, 1490.62, 1507.97, 1525.52, 1543.27, 1561.23, 1579.4, 1597.78, 1616.38, 1635.19, 1654.22, 1673.47, 1692.95, 1712.65, 1732.58, 1752.74, 1773.14, 1793.78, 1814.65, 1835.77, 1857.14, 1878.75, 1900.62, 1922.74, 1945.11, 1967.75, 1990.65, 2013.82))
+(set: $gidists to (a: 31.62, 31.99, 32.36, 32.74, 33.12, 33.51, 33.9, 34.29, 34.69, 35.09, 35.5, 35.92, 36.33, 36.76, 37.18, 37.62, 38.05, 38.5, 38.95, 39.4, 39.86, 40.32, 40.79, 41.26, 41.74, 42.23, 42.72, 43.22, 43.72, 44.23, 44.75, 45.27, 45.79, 46.33, 46.87, 47.41, 47.96, 48.52, 49.09, 49.66, 50.23, 50.82, 51.41, 52.01, 52.61, 53.23, 53.85, 54.47, 55.11, 55.75, 56.4, 57.05, 57.72, 58.39, 59.07, 59.76, 60.45, 61.16, 61.87, 62.59, 63.32, 64.05, 64.8, 65.55, 66.31, 67.09, 67.87, 68.66, 69.46, 70.26, 71.08, 71.91, 72.75, 73.59, 74.45, 75.32, 76.19, 77.08, 77.98, 78.88, 79.8, 80.73, 81.67, 82.62, 83.58, 84.55, 85.54, 86.53, 87.54, 88.56, 89.59, 90.63, 91.69, 92.75, 93.83, 94.93, 96.03, 97.15, 98.28, 99.42, 100.58, 101.75, 102.93, 104.13, 105.34, 106.57, 107.81, 109.07, 110.34, 111.62, 112.92, 114.23, 115.56, 116.91, 118.27, 119.64, 121.04, 122.44, 123.87, 125.31, 126.77, 128.24, 129.74, 131.25, 132.77, 134.32, 135.88, 137.46, 139.06, 140.68, 142.32, 143.98, 145.65, 147.35, 149.06, 150.8, 152.55, 154.33, 156.12, 157.94, 159.78, 161.64, 163.52, 165.42, 167.35, 169.29, 171.26, 173.26, 175.27, 177.31, 179.38, 181.47, 183.58, 185.71, 187.88, 190.06, 192.27, 194.51, 196.77, 199.07, 201.38, 203.73, 206.1, 208.49, 210.92, 213.38, 215.86, 218.37, 220.91, 223.48, 226.08, 228.72, 231.38, 234.07, 236.79, 239.55, 242.34, 245.16, 248.01, 250.9, 253.82, 256.77, 259.76, 262.78, 265.84, 268.94, 272.07, 275.23, 278.43, 281.68, 284.95, 288.27, 291.62, 295.02, 298.45, 301.93, 305.44, 308.99, 312.59, 316.23))
+(set: $bluegidists to (a: 201.15, 203.25, 205.38, 207.53, 209.7, 211.9, 214.12, 216.36, 218.62, 220.91, 223.23, 225.56, 227.92, 230.31, 232.72, 235.16, 237.62, 240.11, 242.62, 245.16, 247.73, 250.32, 252.94, 255.59, 258.26, 260.97, 263.7, 266.46, 269.25, 272.07, 274.91, 277.79, 280.7, 283.64, 286.61, 289.61, 292.64, 295.7, 298.8, 301.93, 305.09, 308.28, 311.51, 314.77, 318.06, 321.39, 324.76, 328.16, 331.59, 335.06, 338.57, 342.11, 345.7, 349.31, 352.97, 356.67, 360.4, 364.17, 367.98, 371.84, 375.73, 379.66, 383.64, 387.65, 391.71, 395.81, 399.95, 404.14, 408.37, 412.65, 416.97, 421.33, 425.74, 430.2, 434.7, 439.25, 443.85, 448.5, 453.19, 457.94, 462.73, 467.57, 472.47, 477.41, 482.41, 487.46, 492.56, 497.72, 502.93, 508.19, 513.51, 518.89, 524.32, 529.81, 535.36, 540.96, 546.62, 552.35, 558.13, 563.97, 569.87, 575.84, 581.87, 587.96, 594.11, 600.33, 606.62, 612.97, 619.38, 625.87, 632.42, 639.04, 645.73, 652.49, 659.32, 666.22, 673.19, 680.24, 687.36, 694.56, 701.83, 709.18, 716.6, 724.1, 731.68, 739.34, 747.08, 754.9, 762.8, 770.79, 778.86, 787.01, 795.25, 803.57, 811.98, 820.48, 829.07, 837.75, 846.52, 855.38, 864.34, 873.39, 882.53, 891.77, 901.1, 910.53, 920.07, 929.7, 939.43, 949.26, 959.2, 969.24, 979.39, 989.64, 1000.0))
+(set: $bhdists to (a: 1005.8, 1017.51, 1029.35, 1041.33, 1053.45, 1065.71, 1078.11, 1090.66, 1103.35, 1116.19, 1129.18, 1142.32, 1155.62, 1169.07, 1182.67, 1196.44, 1210.36, 1224.45, 1238.7, 1253.11, 1267.7, 1282.45, 1297.37, 1312.47, 1327.75, 1343.2, 1358.83, 1374.65, 1390.64, 1406.83, 1423.2, 1439.76, 1456.52, 1473.47, 1490.62, 1507.97, 1525.52, 1543.27, 1561.23, 1579.4, 1597.78, 1616.38, 1635.19, 1654.22, 1673.47, 1692.95, 1712.65, 1732.58, 1752.74, 1773.14, 1793.78, 1814.65, 1835.77, 1857.14, 1878.75, 1900.62, 1922.74, 1945.11, 1967.75, 1990.65, 2013.82))
 
+(set: $dists to (dm:
+	&#39;an M-type star&#39;, $closedists,
+    &#39;a K-type star&#39;, $closedists,
+    &#39;a G-type star&#39;, $middledists,
+    &#39;an F-type star&#39;, $fardists,
+    &#39;an A-type star&#39;, $fardists,
+    &#39;a B-type star&#39;, $bdists,
+    &#39;an O-type star&#39;, $odists,
+    &#39;a brown dwarf&#39;, $closedists,
+    &#39;a white dwarf&#39;, $middledists,
+    &#39;a red giant star&#39;, $gidists,
+    &#39;a blue giant star&#39;, $bluegidists,
+    &#39;a neutron star&#39;, $odists,
+    &#39;a black hole&#39;, $bhdists,
+    &#39;a rogue planet&#39;, $closedists
+))
+
+
+(if: $class is &quot;scientist&quot;)[
 (set: $stars to (a: ))
 (for: each _i, ...(range: 0, 4))[
 (set: $stars to it + (a: &#39;an F-type star&#39;))]
@@ -320,7 +347,7 @@ Please select your occupation:
 (for: each _i, ...(range: 0, 5))[
 (set: $stars to it + (a: &#39;a brown dwarf&#39;))]
 (for: each _i, ...(range: 0, 4))[
-(set: $stars to it + (a: &#39;a white dwarf&#39;))]
+(set: $stars to it + (a: &#39;a white dwarf&#39;))]]
 
 (else:)[
 (set: $stars to (a: &#39;a B-type star&#39;))
@@ -624,25 +651,25 @@ Select your gameplay scenario...&lt;br&gt;
 []&lt;intro|
 (click: ?rebel)[(replace: ?whistle)[](replace: ?whistle1)[](replace: ?rogue)[](replace: ?rogue1)[](replace: ?intro)[(set: $scenario to &quot;rebel&quot;)There is little time left for humanity on Earth. The wealthy know this, and they have planned accordingly. And when the news breaks that the wealthy have spent the last two decades secretly building scores of ships capable of interstellar travel at near-lightspeed, enough for them all to escape, while leaving the rest of the world behind...Well, you were never going to sit still and watch it happen.&lt;br&gt;
 
-You talked to your friends, your neighbors, and strangers on the street. Through word of mouth, your opposition to this great injustice spread. You never meant to become a leader, but you found yourself marching outside one of the trillionaires&#39; interstellar arks, with 10,000 followers at your back. Your speech stirred the hearts of the protesters. You sparked their rage. You couldn&#39;t have stopped them from rushing the ship, even if you wanted to. And once you were all on board, and an army of police gathered outside, threatening to shoot, you knew there was only one way out. You took the captain&#39;s chair, ordered everyone into the cryo chambers, and started the launch sequence...&lt;br&gt;
+You talked to your friends, your neighbors, and strangers on the street. Through word of mouth, your opposition to this great injustice spread. You never saw yourself as anything more than a community organizer, but one day, you found yourself marching outside one of the trillionaires&#39; interstellar arks, with 10,000 followers at your back. Your speech stirred the hearts of the protesters. You sparked their rage. You couldn&#39;t have stopped them from rushing the ship, even if you wanted to. And once you were all on board, and an army of police had gathered outside, threatening to shoot, you knew there was only one way out. You took the captain&#39;s chair, ordered everyone into the cryo chambers, and started the launch sequence...&lt;br&gt;
 
 [[Continue..-&gt;Ship]]
 ]]
-(click: ?rogue)[(replace: ?whistle)[](replace: ?whistle1)[](replace: ?rebel)[](replace: ?rebel1)[](replace: ?intro)[(set: $scenario to &quot;rogue&quot;)There is little time left for humanity on Earth. The wealthy know this, and they have planned accordingly. Over the past 20 years, they have secretly built scores of ships capable of interstellar travel at near-lightspeed, enough for them all to escape, while leaving the rest of the world behind...&lt;br&gt;
+(click: ?rogue)[(replace: ?whistle)[](replace: ?whistle1)[](replace: ?rebel)[](replace: ?rebel1)[](replace: ?intro)[(set: $scenario to &quot;rogue&quot;)There is little time left for humanity on Earth. The wealthy know this, and they have planned accordingly. Over the past 20 years, they have secretly built scores of ships capable of interstellar travel at near-lightspeed, enough for them all to escape while leaving the rest of the world behind...&lt;br&gt;
 
-No one person has the power to overthrow the oligarchy, but that was always too lofty of a goal for you. So, you settle for the next best thing. You take a job helping prepare one of their interstellar arks. And when the time comes to launch, you stow away on board. You wait until all the billionaires and trillionaires are asleep in their cryo chambers and the launch sequence is initiated. Then, you rush to the cabin and hijack the ship. You easily overpower the unsuspecting navigator and shove them into another cryo chamber.&lt;br&gt;
+No one person has the power to overthrow the oligarchy, but that was always too lofty of a goal for you. So, you settle for the next best thing. You take a job helping prepare one of their interstellar arks. And when the time comes to launch, you stow away on board. You wait until all the billionaires and trillionaires are asleep in their cryo chambers and the launch sequence is initiated. Then, you rush to the cabin and hijack the ship. You easily overpower the unsuspecting pilot and shove them into another cryo chamber.&lt;br&gt;
 
 And just like that, this ship is under your control...&lt;br&gt;
 
 [[Continue..-&gt;Ship]]
 ]]
-(click: ?whistle)[(replace: ?rebel)[](replace: ?rebel1)[](replace: ?rogue)[](replace: ?rogue1)[](replace: ?intro)[(set: $scenario to &quot;whistleblower&quot;)There is little time left for humanity on Earth, however much the wealthy deny it. You spent a decade investigating them, chasing inconsistencies in their finances. And what you learned was terrifying. The wealthy secretly built a network of underground bunker-towns, where they planned to escape, to wait out the coming climate catastrophes while those on the surface suffer and die...&lt;br&gt;
+(click: ?whistle)[(replace: ?rebel)[](replace: ?rebel1)[](replace: ?rogue)[](replace: ?rogue1)[](replace: ?intro)[(set: $scenario to &quot;whistleblower&quot;)You were just one person among many whose testimony revealed that the wealthy were building a secret network of underground bunker-towns, where they planned to escape the very climate crisis whose existence they denied. The day the story broke, the world erupted into violence. Some of the wealthy were captured and brought to justice, but most escaped into their bunkers, hidden and heavily fortified.&lt;br&gt;
 
-Despite desperate attempts to slander and silence you, you managed to break the story, and the world erupted in violence. Some of the wealthy were captured and brought to justice. But most of them escaped into their bunkers, hidden and heavily fortified.&lt;br&gt;
+And then, unbelievably, the world continued to turn. A new aristocracy rose to power. And in the ensuing months, the journalist who led the investigation was assassinated, along with many of your fellow informants. You faced escalating attempts to slander and silence you, and you began to fear for your life, too.&lt;br&gt;
 
-And then, somehow, the world continued to turn. A new aristocracy replaced the old. Consumption and corruption continued, as did the climate crisis. Until, one day, a group of scientists arranged to meet with you, to tell you about an interstellar ark they were developing, capable of carrying ten thousand people at near-lightspeed. They just needed adequate funding. So, you turned to the wealthiest people you could stomach, and you asked for their help.&lt;br&gt;
+So when a group of scientists approached you and offered you a place on an interstellar ark they had developed, capable of carrying ten thousand people at near-lightspeed to a new world, it felt like you had no choice but to accept.&lt;br&gt;
 
-Now, the time has come for you to flee. You are joined by 2000 scientists and thousands of concerned citizens, as well as the 1000 wealthy benefactors who funded the ark&#39;s construction. You can only hope that those who remain on Earth will be inspired by your flight to take the heightening calamity on your homeworld more seriously...&lt;br&gt;
+Now, you&#39;ve boarded the ark alongside 2000 scientists, thousands of concerned citizens, and the 1000 wealthy benefactors who funded the ark&#39;s construction. And given your newfound fame, you shouldn&#39;t have been surprised when they elected you as their captain...&lt;br&gt;
 
 [[Continue..-&gt;Ship]]
 ]]
@@ -688,7 +715,8 @@ Your biological age is (print: (round: 100 * $age)/100) Earth years. (print: (ro
 (if: $nav_choices &lt; 1)[
 (if: $class is &quot;scientist&quot;)[
 (set: $this_star to (either: ...$stars))
-(set: $this_dist to (either: ...$dists))
+(set: $distset to $dists&#39;s $this_star)
+(set: $this_dist to (either: ...$distset))
 (set: $this_zone to (either: ...$habitablezones))
 (set: $this_planet to (either: ...$planets))
 (if: $this_star is &#39;a rogue planet&#39;)[(set: $visit to $this_star + &#39;, &#39; + (string: $this_dist) + &#39; light years away&#39;)]
@@ -699,7 +727,8 @@ Although the navigation systems on the $SHIPNAME are no longer functional, you a
 You manage to find $visit.&lt;br&gt;
 
 [[Begin travel-&gt;Activities]]]
-(else:)[(set: $this_star to (either: ...$stars))(set: $this_dist to (either: ...$dists))(set: $this_zone to (either: ...$habitablezones))(set: $this_planet to (either: ...$badplanets))
+(else:)[(set: $this_star to (either: ...$stars))(set: $distset to $dists&#39;s $this_star)
+(set: $this_dist to (either: ...$distset))(set: $this_zone to (either: ...$habitablezones))(set: $this_planet to (either: ...$badplanets))
 With the navigation systems no longer functional, you are only capable of traveling to a nearby star at random and hoping there is a suitable world there.&lt;br&gt;
 (if: $this_star is &#39;a rogue planet&#39;)[(set: $visit to $this_star + &#39;, &#39; + (string: $this_dist) + &#39; light years away&#39;)]
 (else:)[(set: $visit to $this_star + &#39; with &#39; + $this_planet + &#39; &#39; + $this_zone + &#39;, &#39; + (string: $this_dist) + &#39; light years away&#39;)]
@@ -709,7 +738,8 @@ Your destination is $this_star.&lt;br&gt;
 ]
 ]
 (else-if: $nav_choices is 1)[(set: $this_star to (either: ...$stars))
-(set: $this_dist to (either: ...$dists))
+(set: $distset to $dists&#39;s $this_star)
+(set: $this_dist to (either: ...$distset))
 (set: $this_zone to (either: ...$habitablezones))
 (set: $this_planet to (either: ...$planets))
 Scanning nearby systems for known exoplanet hosts...&lt;br&gt;
@@ -724,7 +754,8 @@ Your destination is $visit.&lt;br&gt;
 (set: $planettable to &#39;&lt;table style=&quot;width:100%&quot;&gt;&lt;tr&gt;&lt;th&gt;Option&lt;/th&gt;&lt;th&gt;Details&lt;/th&gt;&lt;/tr&gt;&#39;)
 (for: each _i, ...(range: 1, $nav_choices))[
 (set: $this_star to (either: ...$stars))
-(set: $this_dist to (either: ...$dists))
+(set: $distset to $dists&#39;s $this_star)
+(set: $this_dist to (either: ...$distset))
 (set: $this_zone to (either: ...$habitablezones))
 (set: $this_planet to (either: ...$planets))
 (if: $this_star is &#39;a rogue planet&#39;)[(set: $this_choice to $this_star + &#39;, &#39; + (string: $this_dist) + &#39; light years away&#39;)]
@@ -981,9 +1012,14 @@ $damaged_type</tw-passagedata><tw-passagedata pid="14" name="Activities" tags=""
 
 }
 &lt;div class=&quot;centered&quot;&gt;
-{The journey to the next world will take $travel_time years.&lt;br&gt;
+{
+(if: $travel_time &gt; 130)[The journey to the next world will take $travel_time years. Your only choice is to enter cryo sleep until you reach your destination.&lt;br&gt;
 
-(if: $class is &quot;cook&quot;)[How do you pass the time on your journey?&lt;br&gt;
+(link-replace: &quot;Continue&quot;)[(show: ?activity)]
+]
+The journey to the next world will take $travel_time years.&lt;br&gt;
+
+(else-if: $class is &quot;cook&quot;)[How do you pass the time on your journey?&lt;br&gt;
 
 (if: $time_for_activities is 1)[You have time for one activity:&lt;br&gt;]
 (else:)[You have time for $time_for_activities activities:&lt;br&gt;]
@@ -1626,8 +1662,8 @@ You were $age years old.&lt;br&gt;
 
 (if: &quot;Safe&quot; is in $at_tox)[(set: $rangethick to 2)(set: $rangethin to 2)(set: $rangecomf to 6)]
 (else-if: &quot;Earth-like&quot; is in $planet)[(set: $rangethick to 5)(set: $rangethin to 5)(set: $rangecomf to 10)]
-(else-if: (&quot;small&quot; is in $planet) or (&quot;sub-Earth&quot; is in $planet))[(set: $rangethick to 2)(set: $rangethin to 5)(set: $rangecomf to 3)]
-(else-if: (&quot;large&quot; is in $planet) or (&quot;super-Earth&quot; is in $planet))[(set: $rangethick to 5)(set: $rangethin to 2)(set: $rangecomf to 3)]
+(else-if: (&quot;small&quot; is in $planet) or (&quot;sub-Earth terrestrial&quot; is in $planet))[(set: $rangethick to 2)(set: $rangethin to 5)(set: $rangecomf to 3)]
+(else-if: (&quot;large&quot; is in $planet) or (&quot;super-Earth terrestrial&quot; is in $planet))[(set: $rangethick to 5)(set: $rangethin to 2)(set: $rangecomf to 3)]
 (else:)[(set: $rangethick to 2)(set: $rangethin to 2)(set: $rangecomf to 3)]
 
 (set: $possible_thick to (a: ))
@@ -1652,6 +1688,15 @@ You were $age years old.&lt;br&gt;
 (for: each _i, ...(range: 0, $vcold))[(set: $possible_temp to it + (a: &#39;Very cold&#39;))]
 (for: each _i, ...(range: 0, $ecold))[(set: $possible_temp to it + (a: &#39;Extremely cold&#39;))]
 (set: $temperature to (either: ...$possible_temp))
+
+(set: $gravs to (a:))
+(if: &quot;Earth-like&quot; is in $planet)[(set: $lowg to 0.6)(set: $hig to 1.4)]
+(else-if: &quot;super-Earth terrestrial&quot; is in $planet)[(set: $lowg to 0.9)(set: $hig to 4)]
+(else-if: &quot;sub-Earth terrestrial&quot; is in $planet)[(set: $lowg to 0.1)(set: $hig to 0.9)]
+(else-if: &quot;large terrestrial&quot; is in $planet)[(set: $lowg to 0.1)(set: $hig to 0.4)]
+(else-if: &quot;small terrestrial&quot; is in $planet)[(set: $lowg to 0.03)(set: $hig to 0.1)]
+(else:)[(set: $lowg to 0.5)(set: $hig to 1.5)]
+(set: $gravity to (random: (round: 100*$lowg), (round: 100*$hig)) / 100)
 
 
 (set: $possible_water to (a:))
@@ -1806,17 +1851,17 @@ You were $age years old.&lt;br&gt;
 
 
 (set: $safe_lands to (a: ))
-(if: $geo is &quot;Catastrophic&quot;)[
+(if: ($geo is &quot;Catastrophic&quot;) or ($gravity &gt; 2))[
 (for: each _i, ...(range: 0, 2))[(set: $safe_lands to it + (a: true))]
 (for: each _i, ...(range: 0, 6))[(set: $safe_lands to it + (a: false))]
 ]
-(else-if: &quot;Frequent extremely&quot; is in $weather)[
+(else-if: (&quot;Frequent extremely&quot; is in $weather) or ($gravity &gt; 1.5))[
 (for: each _i, ...(range: 0, 4))[(set: $safe_lands to it + (a: true))]
 (for: each _i, ...(range: 0, 4))[(set: $safe_lands to it + (a: false))]
 ]
-(else-if: $geo is &quot;Dangerous&quot;)[
-(for: each _i, ...(range: 0, 6))[(set: $safe_lands to it + (a: true))]
-(for: each _i, ...(range: 0, 2))[(set: $safe_lands to it + (a: false))]
+(else-if: ($geo is &quot;Dangerous&quot;) and ($gravity &gt; 0.75))[
+(for: each _i, ...(range: 0, 8))[(set: $safe_lands to it + (a: true))]
+(set: $safe_lands to it + (a: false))
 ]
 (else:)[(set: $safe_lands to it + (a: true))]
 (set: $safe_landing to (either: ...$safe_lands))
@@ -1854,6 +1899,8 @@ $star with $planet $zone, $dist light years away.&lt;br&gt;]
 Detecting...&lt;br&gt;
 (link-replace: &quot;Generate report&quot;)[(show: ?report1)]
 |report1)[Sensors indicate this is (text-color: &quot;SkyBlue&quot;)[$description].&lt;br&gt;
+
+(text-color: &quot;SkyBlue&quot;)[Surface gravity]: $gravity g.&lt;br&gt;
 
 (text-color: &quot;SkyBlue&quot;)[Atmosphere]: $atmos_thic and $at_tox.&lt;br&gt;
 
@@ -2081,6 +2128,15 @@ $SHIPNAME
 (set: $max_longevity to it / 10)
 ]
 
+(if: $gravity &lt; 0.2)[(set: $living_diff to it +1.5)(set: $mod_longevity to it * 0.2)]
+(else-if: $gravity &lt; 0.8)[(set: $living_diff to it + 1)]
+(else-if: $gravity &gt; 3.5)[(set: $living_diff to it + 6)
+(if: $system&#39;s &quot;storage&quot; &gt; 65)[(set: $mod_longevity to it * 0.1)]
+(else:)[(set: $max_longevity to (min: $max_longevity, 100))]]
+(else-if: $gravity &gt; 2.5)[(set: $living_diff to it + 5)]
+(else-if: $gravity &gt; 1.7)[(set: $living_diff to it + 2)]
+(else-if: $gravity &gt; 1.2)[(set: $living_diff to it + 1)]
+
 (if: $at_tox is &quot;Safe&quot;)[(set: $mod_longevity to it * 2)(set: $living_diff to it - 10)]
 (else:)[
 (if: $systems&#39;s &quot;storage&quot; &gt; 50)[(set: $mod_longevity to it * 0.5)(set: $living_diff to it + 1)]
@@ -2168,7 +2224,8 @@ $SHIPNAME
 (if: $anyawakes is true)[
 (for: each _key, ...(data-names: $awake_aging))[(if: $awake_aging&#39;s _key &lt; 90)[(set: $inhabitants&#39;s _key to it + 1)]]
 ]
-(set: $sumalive to $inhabitants&#39;s &quot;aristocrats&quot; + $inhabitants&#39;s &quot;artists&quot; + $inhabitants&#39;s &quot;businesspeople&quot; + $inhabitants&#39;s &quot;educators&quot; + $inhabitants&#39;s &quot;journalists&quot; + $inhabitants&#39;s &quot;laborers&quot; + $inhabitants&#39;s &quot;physicians&quot; + $inhabitants&#39;s &quot;police&quot; + $inhabitants&#39;s &quot;politicians&quot; + $inhabitants&#39;s &quot;scientists&quot;)
+(set: $sumalive to 0)
+(for: each _key, ...(data-names: $inhabitants))[(set: $sumalive to it + $inhabitants&#39;s _key)]
 
 (if: $sumalive is 1e4)[(set: $cultural_longevity_max to 1e6)(set: $living_diff to it - 3)]
 (else-if: $sumalive &gt; 9000)[(set: $cultural_longevity_max to 1e6)(set: $living_diff to it - 1)]
@@ -2380,7 +2437,7 @@ $SHIPNAME
 &lt;/table&gt;
 
 Inhabitants in cryo:&lt;br&gt;
-(for: each _key, ...(data-names: $inhabitants))[_key: (print: $inhabitants&#39;s _key) / (print: $inhabitants_initial&#39;s _key)&lt;br&gt;]</tw-passagedata><tw-passagedata pid="22" name="Epilogue" tags="" position="625,1525" size="100,100">&lt;div class=&quot;planet-section&quot;&gt;
+(for: each _key, ...(data-names: $inhabitants))[_key: (print: $inhabitants&#39;s _key) / (print: $inhabitants_initial&#39;s _key)&lt;br&gt;]</tw-passagedata><tw-passagedata pid="22" name="Old-Epilogue" tags="" position="625,1525" size="100,100">&lt;div class=&quot;planet-section&quot;&gt;
 {
 (set: $expansion_possible to false)
 
@@ -2390,6 +2447,15 @@ Inhabitants in cryo:&lt;br&gt;
 
 (if: &#39;crash&#39; is in $crash_or_land)[(set: $habitat to &#39; using makeshift scraps from the wrecked ruins of the &#39; + $SHIPNAME)]
 (else:)[(set: $habitat to &quot; using modules from the interstellar ark &quot; + $SHIPNAME)]
+
+(if: $gravity &gt; 3)[
+(if: $system&#39;s &quot;storage&quot; &gt; 65)[(set: $mobilwords to &quot;Fortunately, the interstellar ark contains advanced medication and mobility equipment to aid all other survivors. Nevertheless, the &quot;)]
+(else:)[(set: $mobilwords to &quot;The &quot;)]
+(set: $gravwords to &quot;The extreme surface gravity of this world is such that only the most athletic of the survivors have any hope of mobility. &quot; + $mobilwords + &quot;crushing surface gravity severely limits the survivors&#39; ability to thrive. &quot;)]
+(else-if: $gravity &gt; 1.5)[(set: $gravwords to &quot;The very high surface gravity of the world limits the mobility of all but the most athletic of survivors. &quot;)]
+(else-if: $gravity &gt; 0.75)[(set: $gravwords to &quot;The almost Earth-like surface gravity is a significant relief to the survivors, enabling easy mobility on the world. &quot;)]
+(else-if: $gravity &gt; 0.2)[(set: $gravwords to &quot;The low surface gravity on this world allows the survivors to move with great ease. However, the low gravity may prove to cause some long-term health problems for the survivors, including decreased bone density. &quot;)]
+(else:)[(set: $gravwords to &quot;The very low surface gravity on this world allows the survivors to do what would appear to be extreme athletic feats back on Earth. However, it will also cause long-term health problems for the survivors, including bone loss, muscle deterioration, and heart problems. &quot;)]
 
 (if: ($atmos_thic is &quot;Comfortable Pressure&quot;) and ($at_tox is &quot;Safe&quot;) and ($temperature is &quot;Temperate&quot;) and (&quot;covered entirely with&quot; is not in $description))[(set: $worldline to &quot;The chances of finding another world with a breathable atmosphere for humans was small, but it enables the survivors to have substantial freedom to wander the surface safely. &quot;)]
 (else:)[(set: $worldline to &quot;&quot;)]
@@ -2668,11 +2734,12 @@ Inhabitants in cryo:&lt;br&gt;
 (else-if: $pcount is 3)[(set: $plan to $plans&#39;s 1st + &quot;, &quot; + $plans&#39;s 2nd + &quot; and &quot; + $plans&#39;s 3rd)]
 (else:)[(set: $plan to $plans&#39;s 1st + &quot;, &quot; + $plans&#39;s 2nd + &quot;, &quot; + $plans&#39;s 3rd + &quot; and &quot; + $plans&#39;s 4th)]
 
-(if: $n_you_killed is 1)[(set: $numpass to &quot;a passenger&quot;)]
-(else:)[(set: $numpass to &quot; passengers&quot;)]
-
-
-
+(if: $n_you_kill is 0)[(set: $numpass to &quot;no one&quot;)(set: $sp to &quot;no one&quot;)]
+(if: $n_you_kill is 1)[(set: $numpass to &quot;a passenger&quot;)(set: $sp to &quot;a passenger&quot;)]
+(else:)[(set: $numpass to &quot; passengers&quot;)
+(if: $n_you_kill &lt; 100)[(set: $sp to &quot;multiple passengers&quot;)]
+(else:)[(set: $sp to &quot;so many passengers&quot;)]
+]
 
 (set: $mons to (a: &#39;a life-like statue&#39;, &#39;a bust displayed on a plinth&#39;, &#39;an obelisk&#39;, &#39;a pillar&#39;, &#39;a triumphal arch&#39;))
 (set: $bigmons to (a: &#39;a larger than life statue&#39;, &#39;a massive bust displayed on a large plinth&#39;, &#39;a titanic obelisk&#39;, &#39;a large pillar&#39;, &#39;a huge triumphal arch&#39;))
@@ -2700,6 +2767,8 @@ Inhabitants in cryo:&lt;br&gt;
 (else:)[(set: $livetosee to &quot;Though their time here is very short, they are determined to use it wisely to prepare for their future on another world.&quot;)]
 (set: $politicline to &quot;Given how short-lived their time on this planet will be, they immediately set about making plans for moving once again, including &quot; + $plan + &quot;. In the meantime, they &quot; + &quot;remain adamant on several issues to ensure that the mistakes that led to Earth&#39;s destruction are not repeated, either here or on any future worlds they visit. The society they build on this world has no borders and no laws, abolishing all state-level violence. They form strong, supportive communities that are built to last, even if they must leave this world one day soon. &quot; + $livetosee)]
 ]
+
+
 (else-if: $fascism &lt;= 0.5)[
 (if: $n_you_kill  &gt; 0)[(set: $remember_you to &quot;Most of the survivors celebrate you as a hero for taking action to ensure that their civilization will not repeat the mistakes of the old, though many question your actions in killing &quot; + $numpass + &quot;. &quot;)]
 (else:)[(set: $remember_you to &quot;The survivors build &quot; + $mon + &quot; to commemorate you and your heroism in ensuring they made it to a new world, where they could build something better. &quot;)]
@@ -2731,7 +2800,7 @@ Inhabitants in cryo:&lt;br&gt;
 ]
 
 
-(else-if: $fascism &lt;= 0.5)[
+(else-if: $fascism &lt;= 1.5)[
 (if: ($n_you_kill &gt; 0) and ($alive is true))[(set: $remember_you to &quot;The survivors put you on trial your actions in killing &quot; + $numpass + &quot; and &quot; + &quot;ultimately decide to imprison you for the rest of your life. There are some who argue you did what was necessary, but the survivors&#39; prevailing memory of you will be that of a complicated figure. &quot;)]
 (else-if: $n_you_kill &gt; 0)[(set: $remember_you to &quot;Your memory among the survivors is that of a complicated figure, as the majority believe you were wrong to kill &quot; + $numpass + &quot;, although some consider you a hero &quot; + &quot;for taking action to ensure that their new civilization will not repeat the mistakes of the old. Your supporters decide to build &quot; + $smallmon + &quot; in your &quot; + &quot;honor. &quot;)]
 (else:)[(set: $remember_you to &quot;The survivors build &quot; + $bigmon + &quot; to commemorate your heroism in ensuring they made it to this new world, enabling humankind to create a better future. &quot;)]
@@ -2847,6 +2916,8 @@ $geoline&lt;br&gt;
 
 (print: $atmoslines&#39;s $at_tox&#39;s $atmos_thic + $climatelines&#39;s $temperature + $weatherlines&#39;s $weather)&lt;br&gt;
 
+$gravwords&lt;br&gt;
+
 $bioline&lt;br&gt;
 
 $resline&lt;br&gt;
@@ -2895,7 +2966,17 @@ $worldline
 (set: $lifeline to $complexity&#39;s 1st)
 $lifeline
 
-</tw-passagedata><tw-passagedata pid="24" name="Test 6" tags="" position="1200,1300" size="100,100">
+</tw-passagedata><tw-passagedata pid="24" name="Test 6" tags="" position="1200,1300" size="100,100">(set: $planet to &quot;super-Earth terrestrial&quot;)
+(set: $gravs to (a:))
+(if: &quot;Earth-like&quot; is in $planet)[(set: $lowg to 0.6)(set: $hig to 1.4)]
+(else-if: &quot;super-Earth terrestrial&quot; is in $planet)[(set: $lowg to 0.9)(set: $hig to 4)]
+(else-if: &quot;sub-Earth terrestrial&quot; is in $planet)[(set: $lowg to 0.1)(set: $hig to 0.9)]
+(else-if: &quot;large terrestrial&quot; is in $planet)[(set: $lowg to 0.1)(set: $hig to 0.4)]
+(else-if: &quot;small terrestrial&quot; is in $planet)[(set: $lowg to 0.03)(set: $hig to 0.1)]
+(else:)[(set: $lowg to 0.5)(set: $hig to 1.5)]
+(set: $gravity to (random: (round: 100*$lowg), (round: 100*$hig)) / 100)
+$gravity, grav
+
 (set: $n_danger to 555)
 (set: $cryodivider to 5)
 (set: $ndead to (floor: $n_danger / $cryodivider))
@@ -2985,7 +3066,570 @@ lifeline?
 (else:)[(set: $bioline to $biointro + (either: ...$difflife) + $lifeline + $foodline + $dangerline)]
 
 $biointro, $lifeline, $foodline $dangerline
-bioline?</tw-passagedata></tw-storydata>
+bioline?</tw-passagedata><tw-passagedata pid="25" name="Epilogue" tags="" position="775,1525" size="100,100">&lt;div class=&quot;planet-section&quot;&gt;
+{
+(set: $expansion_possible to false)
+
+(set: $toxicline1 to &quot;The atmosphere of this world is impossible to breathe&quot;)
+(set: $toxicline2 to &quot;survivors cannot exist outside without masks&quot;)
+(set: $safeline to &quot;The chances of finding another world with a breathable atmosphere for humans was small, but it enables the survivors to have substantial freedom to wander the surface. &quot;)
+(set: $atmoslines to (dm: &quot;Toxic&quot;, (dm: &quot;Thick&quot;, $toxicline1 + &quot; and extremely high-pressure. The &quot; + $toxicline2 + &quot; and hard-shell suits. &quot;, &quot;Thin&quot;, $toxicline1 + &quot; and very thin, so the &quot; + $toxicline2 + &quot;. &quot;, &quot;Comfortable Pressure&quot;, $toxicline1 + &#39;, so &#39; + $toxicline2 + &#39;. &#39;), &quot;Safe&quot;, (dm: &quot;Thick&quot;, $safeline + &quot;However, the thickness of the atmosphere forces them to wear hard-shell suits outside. &quot;, &quot;Thin&quot;, $safeline + &quot;However, the thin atmosphere forces them to carry oxygen masks with them outside. &quot;, &quot;Comfortable Pressure&quot;, $safeline)))
+
+(if: &#39;crash&#39; is in $crash_or_land)[(set: $habitat to &#39; using makeshift scraps from the wrecked ruins of the &#39; + $SHIPNAME)]
+(else:)[(set: $habitat to &quot; using modules from the interstellar ark &quot; + $SHIPNAME)]
+
+(if: $gravity &gt; 3)[
+(if: $system&#39;s &quot;storage&quot; &gt; 65)[(set: $mobilwords to &quot;Fortunately, the interstellar ark contains advanced medication and mobility equipment to aid all other survivors. Nevertheless, the &quot;)]
+(else:)[(set: $mobilwords to &quot;The &quot;)]
+(set: $gravwords to &quot;The extreme surface gravity of this world is such that only the most athletic of the survivors have any hope of mobility. &quot; + $mobilwords + &quot;crushing surface gravity severely limits the survivors&#39; ability to thrive. &quot;)]
+(else-if: $gravity &gt; 1.5)[(set: $gravwords to &quot;The very high surface gravity of the world limits the mobility of all but the most athletic of survivors. &quot;)]
+(else-if: $gravity &gt; 0.75)[(set: $gravwords to &quot;The almost Earth-like surface gravity is a significant relief to the survivors, enabling easy mobility on the world. &quot;)]
+(else-if: $gravity &gt; 0.2)[(set: $gravwords to &quot;The low surface gravity on this world allows the survivors to move with great ease. However, the low gravity may prove to cause some long-term health problems for the survivors, including decreased bone density. &quot;)]
+(else:)[(set: $gravwords to &quot;The very low surface gravity on this world allows the survivors to do what would appear to be extreme athletic feats back on Earth. However, it will also cause long-term health problems for the survivors, including bone loss, muscle deterioration, and heart problems. &quot;)]
+
+(if: ($atmos_thic is &quot;Comfortable Pressure&quot;) and ($at_tox is &quot;Safe&quot;) and ($temperature is &quot;Temperate&quot;) and (&quot;covered entirely with&quot; is not in $description))[(set: $worldline to &quot;The chances of finding another world with a breathable atmosphere for humans was small, but it enables the survivors to have substantial freedom to wander the surface safely. &quot;)]
+(else:)[(set: $worldline to &quot;&quot;)]
+
+(set: $pastcivline to &quot;&quot;)
+(if: $past_civ is true)[
+(if: $longevity &gt;= 200)[
+(if: &quot;covered entirely with&quot; is in $description)[(set: $pastcivline to &quot;While exploring the area, the survivors find ruins of fascinating glass-and-coral-like structures on the ocean floor, which appear to have once housed a complex civilization. Walls, floors, and ceilings are adorned with striking patterns, which will likely take the survivors years upon years to understand. What do these markings mean? What happened to the people who lived here? What shape did their life take? The survivors will study these questions for generations to come. &quot;)]
+(else-if: &quot;sub-surface&quot; is in $description)[(set: $pastcivline to &quot;While exploring the area, the survivors find broken ruins of pyramidal icy structures, which point toward the previous inhabitance of a complex civilization. Did these structures serve as homes? Community centers? Fortifications? Something else entirely? What were the life-forms who lived here like, and what happened to them? The survivors will study these questions for generations to come. &quot;)]
+(else-if: &quot;ice caps&quot; is in $description)[(set: $pastcivline to &quot;The survivors find strange ruins, complex structures that must have been built by an intelligent civilization. There are markings deep inside ancient caverns, and artificial structures scattered across the surface in bizarre, mound-like clusters, housing the remnants of advanced technology. What do those cavern markings mean? Why were those structures built in clusters of mounds? What was the purpose of the technology within them? What life-forms lived here, and what happened to them? The survivors will study these questions for generations to come. &quot;)]
+(else-if: &quot;some rivers&quot; is in $description)[(set: $pastcivline to &quot;The survivors find bizarre, underground tunnels with complex structures built on electronic systems, and the remains of artificially constructed objects covered in intricate markings, indicating they past existence of an intelligent civilization. Who lived here, what did those markings mean, and what were those items used for? The survivors will study these questions for centuries. &quot;)]
+(else-if: &quot;covered entirely in&quot; is in $description)[(set: $pastcivline to &quot;The survivors find the ruins of mountainous cities made of ice, with fractal spires rising over huge domes. Ancient tools are frozen into the ice, alongside strange alien life-forms. Were these life forms the people who once built these cities? Where did they go? How did these life-forms come to be preserved in the ice? The survivors will study these questions for centuries. &quot;)]
+(else-if: &quot;barren&quot; is in $description)[(set: $pastcivline to &quot;The survivors find evidence of a past civilization, with underground tunnels outfitted with still-functional electronics, and the remains of complex machines that some survivors speculate may have been used for gathering water. Who lived here, and where did they go? What did their markings mean, and how did their machines work? The survivors will study these questions for centuries. &quot;)]
+(else-if: &quot;frigid&quot; is in $description)[(set: $pastcivline to &quot;The survivors find the ruins of gargantuan ice sculptures, or perhaps monuments, reaching hundreds of meters tall, carved in myriad curious shapes and marked with geometric patterns. Who made these monuments? Where did they go? What did those markings mean? The survivors will study these questions for centuries. &quot;)]
+(else-if: (&quot;warm&quot; is in $description) and ($bio_sig is true))[(set: $pastcivline to &quot;The survivors uncover ancient fossils preserved in a nearby bog. There are alien bodies, the remnants of what appear to be tools, and upon further examination, the rotting ruins of complex living structures. Who were these life forms? What were their lives like, here, and how did they die? The survivors will study these questions for generations to come. &quot;)]
+(else-if: (&quot;warm&quot; is in $description) and ($bio_sig is false))[(set: $pastcivline to &quot;The survivors find the remnants of tools buried deep in the nearby earth, and upon further examination, they excavate the ruins of complex structures. Who made these ancient buildings and tools? What happened to them? The survivors will study these questions for generations to come. &quot;)]
+(else-if: &quot;hot&quot; is in $description)[(set: $pastcivline to &quot;The survivors find the ruins of ancient stone buildings, now buried deep underwater and sand. It will take years to properly excavate these buildings, but they show signs of myriad functions, including communal gathering places, rituals or games, and burial. Who made these structures? What happened to them? What was their civilization like? The survivors will study these questions for centuries. &quot;)]
+(else-if: &quot;arid&quot; is in $description)[(set: $pastcivline to &quot;Nearby, the survivors find ruins of hollowed-out stone and mudbrick structures, not unlike their own. These buildings are arranged in complicated, concentric patterns, and appear to be decorated with myriad colors. Who made these structures? Where did they go? What did those markings mean? The survivors will study these questions for generations to come. &quot;)]
+(else-if: &quot;no water&quot; is in $description)[(set: $pastcivline to &quot;Nearby, the survivors find ruins of crumbling stone structures, though whether they were buildings or monuments is difficult to say in their state of disrepair. Who made these structures and why? Where did they go? The survivors will study these questions for generations to come. &quot;)]
+(else:)[(set: $pastcivline to &quot;All across the surface of the world, the survivors find ruins of ancient structures, some in large conical shapes, or cubic clusters like pyrite crystals, or giant crumbling domes. It will take decades, at least, to examine them all. Who lived here? What happened to them? What purpose did all of these structures serve? The survivors will study these questions for centuries. &quot;)]
+]
+(else-if: $longevity &gt;= 0)[
+(if: &quot;covered entirely with&quot; is in $description)[(set: $pastcivline to &quot;There are fascinating ruins of glass-and-coral-like structures on the ocean floor, which appear to have once housed a complex civilization. Unfortunately, these ruins would take many long years for the survivors to understand, and they do not have the time, means, or materials to study them. Who made these structures, and what happened to the people who lived here? What shape did their life take? The survivors will likely never know. &quot;)]
+(else-if: &#39;sub-surface&#39; is in $description)[(set: $pastcivline to &quot;The survivors spot nearby ruins of pyramidal icy structures, which point toward the previous inhabitance of a complex civilization. However, the survivors do not have the time or resources to investigate them. What was their purpose? Who lived here, and what happened to them? Their philosophers will wonder, but the survivors will never know for certain. &quot;)]
+(else-if: &quot;ice caps&quot; is in $description)[(set: $pastcivline to &quot;The survivors find artificial structures built on the surface in bizarre, mound-like clusters. Unfortunately, they do not have the time or resources to investigate them. What was the purpose of these structures? Who built them, and what happened to the builders? The survivors will wonder, but they will never know for certain. &quot;)]
+(else-if: &quot;some rivers&quot; is in $description)[(set: $pastcivline to &quot;The survivors find a network of underground tunnels with complex structures built on electronic systems, indicating they past existence of an intelligent civilization here. However, they do not have the means or time to explore these tunnels properly. Who built these tunnels, and what happened to them? The survivors will wonder, but they will never know. &quot;)]
+(else-if: &quot;covered entirely in&quot; is in $description)[(set: $pastcivline to &quot;The survivors spot the ruins of mountainous cities of ice structures, with fractal spires rising over huge domes. Unfortunately, they do not have the resources to explore them. Who built these cities? Where did they go? The survivors will likely never know. &quot;)]
+(else-if: &quot;barren&quot; is in $description)[(set: $pastcivline to &quot;The survivors find evidence of a past civilization here, with bizarre, underground tunnels containing electronic systems and complex machines dotting the surface. Unfortunately, they do not have the resources to investigate these ruins further. Who lived here, and what were these structures for? The survivors will wonder, but they will never know. &quot;)]
+(else-if: &quot;frigid&quot; is in $description)[(set: $pastcivline to &quot;The survivors find the ruins of gargantuan ice sculptures, or perhaps monuments, reaching hundreds of meters tall. Who made these monuments? Where did they go? What did those markings mean? Unfortunately, the survivors do not have the means or time to investigate, and they will never know for certain. &quot;)]
+(else-if: (&quot;warm&quot; is in $description) and ($bio_sig is true))[(set: $pastcivline to &quot;The survivors uncover the remnants of what appear to be tools preserved in a nearby bog. Unfortunately, they do not have the time or resources for a detailed investigation. Who lived here, and what happened to them? The survivors will wonder, but they will never know. &quot;)]
+(else-if: (&quot;warm&quot; is in $description) and ($bio_sig is false))[(set: $pastcivline to &quot;The survivors find the remains of some tools buried deep in the nearby earth, but they do not have the time or resources for a detailed investigation or excavation. Who lived here? What happened to them? The survivors will never know for certain. &quot;)]
+(else-if: &quot;hot&quot; is in $description)[(set: $pastcivline to &quot;The survivors find the ruins of ancient stone buildings, now buried deep under the sand. Unfortunately, they do not have the time or means to properly excavate the ruins, so they will never know who made these structures, or what happened to them, or what purpose the structures served. &quot;)]
+(else-if: &quot;arid&quot; is in $description)[(set: $pastcivline to &quot;Nearby, the survivors find ruins of hollowed-out stone and mudbrick structures, arranged in complicated, concentric patterns and decorated with intricate designs. However, they do not have the time or means to properly investigate the structures. Who made them? What did those markings mean? The survivors will wonder but never know. &quot;)]
+(else-if: &quot;no water&quot; is in $description)[(set: $pastcivline to &quot;Nearby, the survivors find ruins of crumbling stone structures, though whether they were buildings or monuments is difficult to say in their state of disrepair. The survivors, unfortunately, do not have the means or time to investigate them and find out. &quot;)]
+(else:)[(set: $pastcivline to &quot;There are ruins of ancient structures across the surface of the world, including conical shapes, cubes clustered like pyrite, and crumbling domes. It would take decades to investigate them, and the survivors do not have the resources or the time. Who lived here? What happened to them? What purpose did all of these structures serve? The survivors will wonder but never know. &quot;)]]
+]
+
+(set: $habitatline to &quot;&quot;)
+(if: $longevity &gt;= 1e3)[(set: $expansion_possible to true)
+(if: $potential_longevity &gt;= 1e4)[(set: $worldline to it + &quot;This world will be safe for your descendants for &quot; + $potential_longevity_words + &quot; That is more ideal than you could have hoped to find. &quot;)]
+(else:)[(set: $worldline to it + &quot;The descendants of your survivors will need to leave again one day, after this world becomes uninhabitable in &quot; + $potential_longevity_words + &quot; However, you have chosen a location that can be expected to host a stable society for many, many generations. &quot;)]
+
+(set: $weatherlines to (dm: &#39;Frequent extremely destructive storms&#39;, &quot;The survivors learn to build resilient infrastructure that can withstand this world&#39;s frequent deadly storms. &quot;, &#39;Seasonal extremely destructive storms&#39;, &quot;The survivors learn to employ creative architecture to withstand this world&#39;s storms. &quot;, &#39;Regular weather patterns&#39;, &quot;&quot;, &#39;Limited weather patterns&#39;, &quot;The lack of threatening storms allows the survivors great freedom and creativity in their architecture. &quot;))
+
+(if: &quot;covered entirely with&quot; is in $description)[
+(if: $bio_sig is true)[(set: $city_stuff to &quot;with organic materials to form a vast city in equilibrium with its reef-like ecosystem, lit by bioluminescent, invertebrate coral-like creatures with which the survivors build a symbiotic relationship. &quot;)]
+(else:)[(set: $city_stuff to &quot;into a vast underwater city of small domes connected by glass tunnels. &quot;)
+(set: $habitatline to &quot;The survivors build an underwater habitat&quot; + $habitat + &quot;, which they expand over the years &quot; +$city_stuff)
+]]
+(else-if: &#39;sub-surface&#39; is in $description)[(if: $bio_sig)[(set: $city_stuff to &quot;using algae-like materials to form bioluminescent, underwater domed habitats.&quot;)]
+(else:)[(set: $city_stuff to &quot;constructing a vast underwater city of thin spires connected by glass tunnels.&quot;)(set: $habitatline to&quot;The survivors build a habitat on the icy surface&quot; + $habitat + &quot;, before spending the next few years drilling deep through the ice, &quot; + $city_stuff)]]
+(else-if: &quot;ice caps&quot; is in $description)[(set: $norsou to (either: &quot;northern&quot;, &quot;southern&quot;))(set: $habitatline to&quot;The survivors land near the &quot; + $norsou + &quot; polar ice cap, creating an initial surface habitat&quot; + $habitat + &quot;, before moving to a network of dwellings that they carve into nearby rocky cliffs. &quot;)]
+(else-if: &quot;some rivers&quot; is in $description)[(set: $habitatline to&quot;The survivors choose a river valley on this mostly barren world to build their habitat,&quot; + $habitat + &quot;. Over the years, their society expands into myriad small villages along the river valley. &quot;)]
+(else-if: &quot;covered entirely in&quot; is in $description)[(set: $habitatline to&quot;The survivors build an insulated habitat&quot; + $habitat + &quot;, carving out an intricate network of tunnels and habitats directly into the ice over the ensuing years. &quot;)]
+(else-if: &quot;barren&quot; is in $description)[(set: $habitatline to&quot;The survivors build a habitat&quot; + $habitat + &quot; on this barren world, developing advanced moisture farming machinery to collect water vapor from the atmosphere through condensation. &quot;)]
+(else-if: &quot;frigid&quot; is in $description)[(set: $habitatline to&quot;The survivors build a village of insulated mobile tents along the shores of a freshwater lake, supported by materials taken from the interstellar ark &quot; + $SHIPNAME + &quot;. &quot;)]
+(else-if: &quot;warm&quot; is in $description)[(set: $rco to (either: &quot;an ocean&quot;, &quot;a river&quot;, &quot;a lake&quot;))(set: $habitatline to &quot;The survivors settle alongside the shore of &quot; + $rco + &quot;, building &quot;)
+(if: $bio_sig is true)[(set: $habitatline to it + &quot;resilient hut-like dwellings from woody organic materials to form a network of villages. &quot;)]
+(else:)[(set: $habitatline to it + &quot;villages from clusters of earthen huts ideal for ventilation in the tropical climate and supported by materials taken from the interstellar ark &quot; + $SHIPNAME + &quot;. &quot;)]
+]
+(else-if: &quot;hot&quot; is in $description)[(set: $habitatline to&quot;The survivors build villages of stilt dwellings that are resistant to flooding,&quot; + $habitat + &quot;. &quot;)]
+(else-if: &quot;arid&quot; is in $description)[(set: $habitatline to&quot;The survivors build initial habitats&quot; + $habitat + &quot;, before expanding into a city of dwellings made of mudbrick and stone. &quot;)]
+(else-if: &quot;no water&quot; is in $description)[(set: $habitatline to&quot;The survivors build a habitat&quot; + $habitat + &quot;. As this world has no water, their &quot; + &quot;entire water supply comes from storage on the &quot; + $SHIPNAME + &quot;, and thus their &quot; + &quot;society is forced to remain close to the ark. &quot;)]
+(else:)[(set: $hab_options to (a: &quot;build a habitat&quot; + $habitat + &quot;, expanding over the years to form vibrant cities reminiscent of Earth it$ &quot;, &quot;build a network of habitats&quot; + $habitat + &quot;, soon expanding into nearby caverns, carved cliff dwellings, and tent camps to form a scattered network of villages. &quot;))
+(if: $bio_sig is true)[(set: $hab_options to it + (a: &quot;build habitats&quot; + $habitat + &quot;, soon supplementing them with organic habitats that the survivors learn to grow from local flora. &quot;, &quot;find a fertile river valley in which to build habitats&quot; + $habitat + &quot;, expanding into a network of towns and villages with rich farmland. &quot; ))]
+(set: $habitatline to &quot;The survivors &quot; + (either: ...$hab_options))]
+]
+
+
+(else-if: $longevity &gt;= 200)[
+(set: $expansion_possible to true)
+(if: $cultural_longevity &gt; $potential_longevity)[(set: $worldline to it + &quot;The descendants of your survivors will need to leave again one day, after this world becomes uninhabitable in &quot; + $potential_longevity_words + &quot; However, your location will be stable for the near future. &quot;)]
+(else:)[(set: $worldline to it + &quot;This world will become uninhabitable in &quot; + $potential_longevity_words + &quot; However, the survivors will not be able to build a society to last that long. They may find some temporary stability here, but in a matter of centuries, humanity&#39;s migration will continue. &quot;)]
+(set: $weatherlines to (dm: &#39;Frequent extremely destructive storms&#39;, &quot;The survivors attempt to build resilient infrastructure to withstand this world&#39;s frequent deadly storms, but they require regular repairs and even their best work is occasionally wiped out, leading to frequent deaths.&quot;, &#39;Seasonal extremely destructive storms&#39;, &quot;The survivors attempt to employ creative architecture to withstand this world&#39;s storms, but they still withstand significant damage and destruction, leading to a seasonal cycle of deaths and injuries. &quot;, &#39;Regular weather patterns&#39;, &quot;&quot;, &#39;Limited weather patterns&#39;, &quot;The lack of threatening storms allows the survivors great freedom and creativity in their architecture. &quot;))
+
+(if: &quot;covered entirely with&quot; is in $description)[
+(if: $bio_sig is true)[(set: $city_stuff to &quot;with organic materials from a nearby reef-like ecosystem, lit by bioluminescent, invertebrate coral-like creatures. &quot;)]
+(else:)[(set: $city_stuff to &quot;with a few small underwater domes connected by glass tunnels. &quot;)]
+(set: $habitatline to&quot;The survivors build an underwater habitat&quot; + $habitat+ &quot;, which they supplement &quot; + $city_stuff)]
+(else-if: &#39;sub-surface&#39; is in $description)[(if: $bio_sig is true)[(set: $city_stuff to &quot;and using algae-like materials to form domed underwater habitats. &quot;)]
+(else:)[(set: $city_stuff to &quot;to construct a cluster of underwater habitats connected by tunnels.&quot;)]
+(set: $habitatline to&quot;The survivors build a habitat on the icy surface&quot; + $habitat+ &quot;, later drilling into the ice &quot; + $city_stuff)]
+(else-if: &quot;ice caps&quot; is in $description)[(set: $norsou to (either: &quot;northern&quot;, &quot;southern&quot;))(set: $habitatline to&quot;The survivors land near the &quot; + $norsou + &quot; polar ice cap, where they build a small habitat&quot; + $habitat+ &quot;, before moving to a small network of caves in nearby cliffs. &quot;)]
+(else-if: &quot;some rivers&quot; is in $description)[(set: $habitatline to&quot;The survivors choose a river valley on this mostly barren world to build their habitat,&quot; + $habitat+ &quot;. They soon build several small villages of earthen houses along the river valley. &quot;)]
+(else-if: &quot;covered entirely in&quot; is in $description)[(set: $habitatline to &quot;The survivors build an insulated habitat&quot; + $habitat+ &quot;, before carving out a small network of tunnels and habitats directly into the ice. &quot;)]
+(else-if: &quot;barren&quot; is in $description)[(set: $habitatline to&quot;The survivors build a habitat&quot; + $habitat+ &quot; on this barren world, developing makeshift vapor factories to collect water from the atmosphere through condensation. &quot;)]
+(else-if: &quot;frigid&quot; is in $description)[(set: $habitatline to&quot;The survivors build a small village of mobile tents along the shores of a freshwater lake, held together by materials taken from the interstellar ark &quot; + $SHIPNAME + &quot;. &quot;)]
+(else-if: &quot;warm&quot; is in $description)[(set: $rco to (either: &quot;an ocean&quot;, &quot;a river&quot;, &quot;a lake&quot;))(set: $habitatline to &quot;The survivors settle alongside the shore of &quot; + $rco + &quot;, building &quot;)
+(if: $bio_sig is true)[(set: $habitatline to it + &quot;a series of villages using huts from woody organic materials that require frequent upkeep. &quot;)]
+(else:)[(set: $habitatline to it + &quot;clusters of earthen huts that aid in ventilation in the tropical climate, held together by materials taken from the interstellar ark &quot; + $SHIPNAME + &quot;. &quot;)]]
+(else-if: &quot;hot&quot; is in $description)[(set: $habitatline to&quot;The survivors build villages of stilt dwellings to resist flooding,&quot; + $habitat+ &quot;. &quot;)]
+(else-if: &quot;arid&quot; is in $description)[(set: $habitatline to&quot;The survivors build a habitat&quot; + $habitat+ &quot;, before constructing a few more dwellings from mudbrick and stone. &quot;)]
+(else-if: &quot;no water&quot; is in $description)[(set: $habitatline to&quot;The survivors build a habitat&quot; + $habitat+ &quot;, which has stores that serves as the &quot; + &quot;only source of water on this barren world. &quot;)]
+(else:)[(set: $hab_options to (a: &quot;build a habitat&quot; + $habitat+ &quot;, soon expanding into towns and cities made in the image of those back on Earth. &quot;, &quot;build a network of habitats&quot; + $habitat+ &quot;, soon expanding into nearby cliff dwellings to form a scattered network of villages. &quot;))
+(if: $bio_sig is true)[(set: $hab_options to it + (a: &quot;build habitats&quot; + $habitat+ &quot;, supported by organic components grown from &quot; + &quot;local flora. &quot;, &quot;find a fertile river valley in which to build habitats&quot; + $habitat+ &quot;, &quot; + &quot;expanding farming villages in the surrounding land. &quot;)]
+(set: $habitatline to &quot;The survivors &quot; + (either: ...$hab_options))]
+]
+
+
+
+
+
+(else-if: $longevity &gt; 60)[
+(set: $expansion_possible to false)
+(if: $cultural_longevity &gt;= $potential_longevity)[(set: $worldline to it + &quot;This world will become uninhabitable in &quot; + $potential_longevity_words + &quot; Unfortunately, &quot; + &quot;there is little hope for this world to be anything more than a stopgap in the migration of humankind. &quot;)]
+(else:)[(set: $worldline to it + &quot;This world will become uninhabitable in &quot; + $potential_longevity_words + &quot; However, the survivors&quot; + &quot; are in no position to build a lasting society here. Unfortunately, there is little hope for this world to be anything more than a stopgap in the migration of humankind. &quot;)]
+(set: $weatherlines to (dm: &#39;Frequent extremely destructive storms&#39;, &quot;The infrastructure the survivors build is incapable of withstanding this world&#39;s frequent deadly storms, resulting in widespread destruction and death. &quot;, &#39;Seasonal extremely destructive storms&#39;, &quot;The infrastructure the survivors build is incapable of withstanding this world&#39;s seasonal deadly storms, leading to a seasonal pattern of death and destruction. &quot;, &#39;Regular weather patterns&#39;, &quot;&quot;, &#39;Limited weather patterns&#39;, &quot;The lack of threatening storms allows the survivors great freedom and creativity in their architecture. &quot;))
+
+(if: &quot;covered entirely with&quot; is in $description)[
+(if: $bio_sig is true)[(set: $city_stuff to &quot; and lit by bioluminescent, coral-like invertebrates found in the water&quot;)]
+(else:)[(set: $city_stuff to &quot;&quot;)]
+(set: $habitatline to&quot;The survivors build an underwater habitat&quot; + $habitat + $city_stuff + &quot;, but they are &quot; + &quot;incapable of expanding beyond this habitat. &quot;)]
+(else-if: &#39;sub-surface&#39; is in $description)[(set: $habitatline to&quot;The survivors build a habitat on the icy surface&quot; + $habitat + &quot;, later drilling into &quot; + &quot;the ice to extend their society with a small network of tunnels.&quot;)
+(set: $expansion_possible to true)]
+(else-if: &quot;ice caps&quot; is in $description)[(set: $norsou to (either: &quot;northern&quot;, &quot;southern&quot;))(set: $habitatline to&quot;The survivors land near the &quot; + $norsou + &quot; polar ice cap, where they build a small &quot; + &quot;habitat&quot; + $habitat + &quot;, but their size and location is severely constrained by their &quot; + &quot;limited access to water. &quot;)]
+(else-if: &quot;some rivers&quot; is in $description)[(set: $habitatline to&quot;The survivors build a small village in a river valley on this mostly barren world, with a cluster of earthen homes centered on a habitat built&quot; + $habitat + &quot;. &quot;)
+(set: $expansion_possible to true)]
+(else-if: &quot;covered entirely in&quot; is in $description)[(set: $habitatline to&quot;The survivors build an insulated habitat&quot; + $habitat + &quot;, but they are incapable of &quot; + &quot;expanding elsewhere on this icy world. &quot;)]
+(else-if: &quot;barren&quot; is in $description)[(set: $habitatline to&quot;The survivors build a habitat&quot; + $habitat + &quot; on this barren world, but water remains &quot; + &quot;a scarce resource, gathered only via makeshift machines to collect condensation. &quot;)]
+(else-if: &quot;frigid&quot; is in $description)[(set: $habitatline to&quot;The survivors build a small village of mobile tents along the shores of a freshwater &quot; + &quot;lake, haphazardly held together by materials taken from the interstellar ark &quot; + $SHIPNAME + &quot;. &quot;)]
+(else-if: &quot;warm&quot; is in $description)[(set: $rco to (either: &quot;an ocean&quot;, &quot;a river&quot;, &quot;a lake&quot;))(set: $habitatline to &quot;The survivors settle alongside the shore of &quot; + $rco + &quot;, building &quot;
+(if: $bio_sig is true)[(set: $habitatline to it +&quot;a village of slapdash huts from woody organic materials that require constant upkeep. &quot;)
+(set: $expansion_possible to true)]
+(else:)[(set: $habitatline to it +&quot;a cluster of earthen huts that aid in ventilation in the tropical climate, haphazardly held together by materials taken from the interstellar ark &quot; + $SHIPNAME + &quot;. &quot;)]]
+(else-if: &quot;hot&quot; is in $description)[(set: $habitatline to&quot;The survivors build a village of slapdash stilt dwellings to resist flooding &quot; + $habitat + &quot;. &quot;)]
+(else-if: &quot;arid&quot; is in $description)[(set: $habitatline to &quot;The survivors build a makeshift habitat&quot; + $habitat + &quot;, before moving into hastily &quot; + &quot;constructed dwellings from mudbrick and stone. &quot;)(set: $expansion_possible to true)]
+(else-if: &quot;no water&quot; is in $description)[(set: $habitatline to&quot;The survivors live clustered around their only source of water on this barren world, a makeshift habitat built&quot; + $habitat + &quot;. &quot;)]
+(else:)[(set: $expansion_possible to true)(set: $hab_options to (a: &quot;build a habitat&quot; + $habitat + &quot;, but soon over-extend themselves when attempting to&quot; + &quot; build towns and cities that mimic those back on Earth. &quot;, &quot;build a network of habitats&quot; + $habitat + &quot;, but these fail to last, and they are &quot; + &quot;forced to move into cliff dwellings they carve into the nearby landscape. &quot;))
+(if: $bio_sig is true)[(set: $hab_options to it + (a: &quot;build habitats&quot; + $habitat + &quot;. They also attempt to supplement the &quot; + &quot;structures with organic components grown from local flora, but these efforts are in vain. &quot;, &quot;find a fertile river valley in which to build habitats&quot; + $habitat + &quot;, but &quot; + &quot;these fail to last, and they are forced to move onto farms in the surrounding land. &quot;))]
+(set: $habitatline to &quot;The survivors &quot; + (either: ...$hab_options))]
+]
+
+(else-if: ($longevity &gt; 0) and ($sumalive &gt; 0))[(set: $expansion_possible to false)
+(if: $cultural_longevity &gt;= $potential_longevity)[(set: $worldline to it + &quot;There is little chance your survivors to last here for very long. All you can do is hope that they will find the means to identify and travel to another new world soon. &quot;)]
+(else:)[(set: $worldline to it + &quot;This world will become uninhabitable in &quot; + $potential_longevity_words + &quot; However, the survivors&quot; + &quot; are in no position to build even a temporary society here. All you can do is hope that they will find the means to identify and travel to another new world soon. &quot;)]
+
+(set: $weatherlines to (dm: &#39;Frequent extremely destructive storms&#39;, &quot;This world&#39;s deadly storms destroy almost everything the survivors attempt to build, killing many in the process. &quot;, &#39;Seasonal extremely destructive storms&#39;, &quot;This world&#39;s deadly storms destroy almost everything the survivors attempt to build, leading to a seasonal pattern of death and destruction. &quot;, &#39;Regular weather patterns&#39;, &quot;&quot;, &#39;Limited weather patterns&#39;, &quot;The lack of threatening storms allows the survivors some freedom and creativity in their architecture. &quot;))
+(if: &quot;covered entirely with&quot; is in $description)[(set: $habitatline to &quot;The survivors build a makeshift underwater habitat&quot; + $habitat + &quot;. &quot;)]
+(else-if: &#39;sub-surface&#39; is in $description)[(set: $habitatline to&quot;The survivors build a makeshift habitat on the icy surface&quot; + $habitat + &quot;.&quot;)]
+(else-if: &quot;ice caps&quot; is in $description)[(set: $norsou to (either: &quot;northern&quot;, &quot;southern&quot;))(set: $habitatline to&quot;The survivors land near the &quot; + $norsou + &quot; polar ice cap, where they build a small, &quot; + &quot;makeshift habitat&quot; + $habitat + &quot;. &quot;)]
+(else-if: &quot;some rivers&quot; is in $description)[(set: $habitatline to &quot;The survivors build a makeshift habitat built&quot; + $habitat + &quot; in a small river valley. &quot;)]
+(else-if: &quot;covered entirely in&quot; is in $description)[(set: $habitatline to&quot;The survivors build a makeshift insulated habitat&quot; + $habitat + &quot;. &quot;)]
+(else-if: &quot;barren&quot; is in $description)[(set: $habitatline to &quot;The survivors build a habitat&quot; + $habitat + &quot;, but they only have very limited access &quot; + &quot;to water through a makeshift machine to collect condensation. &quot;)]
+(else-if: &quot;frigid&quot; is in $description)[(set: $habitatline to &quot;The survivors pitch some haphazard tents along the shores of a freshwater lake. &quot;)]
+(else-if: &quot;warm&quot; is in $description)[(set: $rco to (either: &quot;an ocean&quot;, &quot;a river&quot;, &quot;a lake&quot;))(set: $habitatline to&quot;The survivors settle alongside the shore of &quot; + $rco + &quot;, building a few earthen huts &quot; + &quot;that require constant upkeep. &quot;)]
+(else-if: &quot;hot&quot; is in $description)[(set: $habitatline to&quot;The survivors build a few slapdash stilt dwellings to resist flooding, but the humid conditions cause substantial mold and wear that require constant upkeep. &quot;)]
+(else-if: &quot;arid&quot; is in $description)[(set: $habitatline to &quot;The survivors build a few ramshackle dwellings from mudbrick and stone. &quot;)]
+(else-if: &quot;no water&quot; is in $description)[(set: $habitatline to&quot;With no other source of water on this barren world, the survivors are forced to live &quot; + &quot;in a ramshackle habitat built&quot; + $habitat + &quot;. &quot;)]
+(else:) (set: $hab_options to (a: &quot;build a makeshift habitat&quot; + $habitat + &quot;, lacking the ability to expand beyond this. &quot;, &quot;move into a network of caves near the landing site. &quot;))
+(if: $bio_sig is true)[(set: $hab_options to it + (a: &quot;build a small habitat&quot; + $habitat + &quot;in what they believe to be a fertile &quot; + &quot;river valley, but they struggle to successfully grow crops. &quot;))]
+(set: $habitatline to &quot;The survivors &quot; + (either: ...$hab_options))
+]
+
+
+(else:)[(set: $expansion_possible to false)
+(set: $weatherlines to (dm: &#39;Frequent extremely destructive storms&#39;, &quot;&quot;, &#39;Seasonal extremely destructive storms&#39;, &quot;&quot;, &#39;Regular weather patterns&#39;, &quot;&quot;, &#39;Limited weather patterns&#39;, &quot;&quot;))
+(set: $worldline to it + &quot;Unfortunately, there are no survivors. Your mission to find a new world for humanity was a failure. &quot;)
+(set: $habitatline to &quot;&quot;)]
+
+
+
+(set: $climatelines to (dm: &#39;Extremely hot&#39;, &quot;The extreme heat makes it impossible for the survivors to exist outside without protective gear. &quot;, &#39;Very hot&#39;, &quot;High temperatures make it difficult for the survivors to exist outside for very long without protective gear. &quot;, &#39;Temperate&#39;, &quot;The climate is temperate, allowing the survivors more mobility outside. &quot;, &#39;Very cold&#39;, &quot;Cold temperatures make it difficult for the survivors to exist outside for very long without protective gear. &quot;, &#39;Extremely cold&#39;, &quot;The extreme cold makes it impossible for the survivors to exist outside without protective gear. &quot;))
+
+
+(if: $resources is &quot;Rich&quot;)[(set: $resline to &quot;There are rich natural resources on this world, more than enough to support the survivors in building a new society. &quot;)]
+(else-if: $resources is &quot;Sufficient&quot;)[(set: $resline to &quot;There are sufficient natural resources on this world to support the survivors in building a new society. &quot;)]
+(else-if: ($resources is &quot;Scarce&quot;) and ($systems&#39;s &quot;storage&quot; &gt; 50))[(set: $resline to &quot;The natural resources on this world are scarce, but fortunately you have sufficient resources stored on the &quot; + $SHIPNAME + &quot; to help support a new society. &quot;)]
+(else-if: ($resources is &quot;No&quot;) and ($systems&#39;s &quot;storage&quot; &gt; 50))[(set: $resline to &quot;There are no natural resources on this world capable of supporting a new civilization, but fortunately there are enough resources stored on the &quot; + $SHIPNAME + &quot; to support the &quot; + &quot;survivors for a long time. &quot;)]
+(else-if: $resource is &quot;Scarce&quot;)[(set: $resline to &quot;There are scarce natural resources on this world and insufficient resources remaining in storage on &quot; + $SHIPNAME + &quot;, making it very difficult for your survivors to establish a self-sufficient society. &quot;)]
+(else:)[(set: $resline to &quot;There are no natural resources on this world capable of supporting a new civilization, making it impossible for your survivors to establish a long-lasting, self-sufficient society. &quot;)]
+
+
+
+(if: ($geo is &quot;No&quot;) and (&quot;rings&quot; is in $visiting))[
+(if: &#39;gas giant&#39; is in $visiting)[(set: $host to &#39;gas giant&#39;)]
+(else:)[(set: $host to &#39;ice giant&#39;)]
+(set: $geoline to &quot;This world is geologically dead and thus produces no magnetic field, but it orbits a larger &quot; + $host + &quot; with an icy ring system. The &quot; + $host + &quot; provides a substantial protective magnetic &quot; + &quot;field, and gases from the rings refresh the atmosphere, preventing all the world&#39;s gases from&quot; + &quot; getting trapped in its rocks. &quot;)]
+(else-if: $geo is &quot;No&quot;)[(if: &quot;rogue&quot; is in $visiting)[(set: $solarwind to &quot;However, as a rogue planet far from any star, the survivors don&#39;t need to worry about a strong solar wind.&quot;)]
+(else:)[(set: $solarwind to &quot;This means the survivors will be unprotected from the solar wind.&quot;)]
+(set: $geoline to &quot;This world is geologically dead and thus produces no protective magnetic field. &quot; + $solarwind + &quot; Unfortunately, the lack of geologic activity on the planet has resulted in much of the &quot; + &quot;atmosphere being trapped in the world&#39;s rocks, decreasing the world&#39;s long-term habitability. &quot;)]
+(else-if: $geo is &quot;Some&quot;)[(set: $geoline to &quot;This world is geologically active, producing a magnetic field to protect the world against the solar wind and refreshing the atmosphere. &quot;)]
+(else-if: $geo is &quot;Dangerous&quot;)[(set: $geoline to &quot;This world is exceptionally geologically active. This produces a strong magnetic field that protects the world from solar winds, but it also creates occasionally dangerous surface conditions, with frequent earthquakes and volcanic eruptions. &quot;)]
+(else:)[(set: $geoline to &quot;This world is extremely geologically active, creating frequently deadly conditions on the surface. This world is likely to produce regular mass-extinction events.&quot;)]
+
+
+(if: $bio_sig is true)[(set: $biointro to &quot;This world hosts &quot;)]
+(else-if: &quot;No&quot; is not in $edible)[(set: $biointro to &quot;This world hosts some life that was not picked up on initial scanners, including &quot;)]
+(else-if: $systems&#39;s &quot;storage&quot; &gt; 50)[(set: $biointro to &quot;This world hosts no life. Fortunately, the interstellar ark &quot; + $SHIPNAME + &quot; holds &quot; + &quot;sufficient food storage and infrastructure to enable the survivors to sustainably grow &quot; + &quot;their own food. &quot;)]
+(else:)[(set: $biointro to &quot;This world hosts no life. Typically, natural food could be supplemented with food stores from the interstellar ark &quot; + $SHIPNAME + &quot;, but unfortunately, there are insufficient stored resources remaining for the survivors to begin growing their own food. &quot;)]
+
+
+
+(if: &quot;Rich&quot; is in $edible)[(set: $foodline to &quot;The world is rich in organisms that are edible to humans. &quot;)]
+(else-if: &quot;Sufficient&quot; is in $edible)[(set: $foodline to &quot;The world houses enough organisms that are edible to humans to support your survivors. &quot;)]
+(else-if: &quot;Scarce&quot; is in $edible)[(if: $systems&#39;s &quot;storage&quot; &gt; 50)[(set: $storageline to &quot;Fortunately, the interstellar ark &quot; + $SHIPNAME + &quot; holds sufficient food &quot; + &quot;storage and infrastructure to allow the survivors to sustainably grow their own food. &quot;)]
+(else-if: $class is &quot;farmer&quot;)[(set: $storageline to&quot;Fortunately, thanks to your background as a farmer, you have the ability to build the infrastructure required to enable the survivors to sustainably grow their own food. &quot;)]
+(else:)[(set: $storageline to&quot;Typically, natural food could be supplemented with food stores from the interstellar ark &quot; + $SHIPNAME + &quot;, but unfortunately, there are insufficient stored resources remaining for the survivors to begin growing their own food. &quot;)]
+(set: $foodline to &quot;There are scarce natural organisms on this world that are edible to humans. &quot; + $storageline)]
+(else:)[(set: $storageline to &quot;&quot;)(if: $systems&#39;s &quot;storage&quot; &gt; 80)[(set: $storageline to &quot;Fortunately, the interstellar ark &quot; + $SHIPNAME + &quot; holds sufficient food &quot; + &quot;storage and infrastructure to allow the survivors to sustainably grow their own food. &quot;)]
+(else-if: ($class is &quot;farmer&quot;) and ($systems&#39;s &quot;storage&quot; &gt; 25))[(set: $storageline to &quot;Fortunately, thanks to your background as a farmer, even with the meager food storage remaining on the interstellar ark &quot; + $SHIPNAME + &quot;, you are able to build the &quot; + &quot;infrastructure required to enable the survivors to sustainably grow their own food. &quot;)]
+(set: $foodline to &quot;There are no natural organisms on this world that are edible to humans. &quot; + $storageline)
+]
+
+
+(set: $difflifes to (a: ))
+(for: each _i, ...(range: 1, 4))[(set: $difflifes to it + (a: &quot;extremely alien and bizarre &quot;))]
+(for: each _i, ...(range: 1, 4))[(set: $difflifes to it + (a: &quot;very strange &quot;))]
+(set: $difflifes to it + (a: &quot;strange but chemically Earth-like &quot;))
+(set: $difflifes to it + (a: &quot;surprisingly similar to Earth&#39;s life&quot;))
+(set: $difflife to (either: ...$difflifes))
+
+(set: $mincomplex to (random: 1, 4))
+(if: (&quot;flora&quot; is in $danger_life) or (&quot;fauna&quot; is in $danger_life) or (&quot;funga&quot; is in $danger_life))[(set: $mincomplex to (random: 3, 4))]
+(set: $complexity to (a: &quot;single-celled organisms&quot;, &quot;microscopic multicellular organisms&quot;, &quot;complex organisms&quot;, &quot;mega&quot;))
+
+(if: (&#39;flora&#39; is in $danger_life) and (&#39;fauna&#39; is in $danger_life) and (&#39;funga&#39; is in $danger_life))[(set: $florfaun to &#39;flora, fauna, and funga&#39;)]
+(else-if: (&#39;flora&#39; is in $danger_life) and (&#39;fauna&#39; is in $danger_life))[(set: $florfaun to (either: &quot;flora and fauna&quot;, &quot;flora, fauna, and funga&quot;))]
+(else-if: (&#39;flora&#39; is in $danger_life) and (&#39;funga&#39; is in $danger_life))[(set: $florfaun to (either: &quot;flora and funga&quot;, &quot;flora, fauna, and funga&quot;))]
+(else-if: (&#39;fauna&#39; is in $danger_life) and (&#39;funga&#39; is in $danger_life))[(set: $florfaun to (either: &quot;fauna and funga&quot;, &quot;flora, fauna, and funga&quot;))]
+(else-if: &#39;flora&#39; is in $danger_life)[(set: $florfaun to (either: &quot;flora&quot;, &quot;flora and fauna&quot;, &quot;flora and funga&quot;, &quot;flora, fauna, and funga&quot;))]
+(else-if: &#39;fauna&#39; is in $danger_life)[(set: $florfaun to (either: &quot;fauna&quot;, &quot;flora and fauna&quot;, &quot;fauna and funga&quot;, &quot;flora, fauna, and funga&quot;))]
+(else-if: &#39;funga&#39; is in $danger_life)[(set: $florfaun to (either: &quot;funga&quot;, &quot;flora and funga&quot;, &quot;fauna and funga&quot;, &quot;flora, fauna, and funga&quot;))]
+(else:)[(set: $florfaun to (either: &quot;flora&quot;, &quot;fauna&quot;, &quot;funga&quot;, &quot;flora and fauna&quot;, &quot;flora and funga&quot;, &quot;fauna and funga&quot;, &quot;flora, fauna, and funga&quot;))]
+
+
+(set: $lifeline to &quot;&quot;)
+(if: $mincomplex is 1)[(set: $lifeline to $complexity&#39;s 1st)]
+(else-if: $mincomplex is 2)[(set: $lifeline to $complexity&#39;s 1st + &quot; and &quot; + $complexity&#39;s 2nd)]
+(else-if: $mincomplex is 3)[(set: $lifeline to $complexity&#39;s 1st + &quot;, &quot; + $complexity&#39;s 2nd + &quot;, and &quot; + $complexity&#39;s 3rd)]
+(else:)[(set: $lifeline to $complexity&#39;s 1st + &quot;, &quot; + $complexity&#39;s 2nd + &quot;, &quot; + $complexity&#39;s 3rd + &quot;, and &quot; + $complexity&#39;s 4th + $florfaun)]
+
+
+(set: $dangmicro to (a: &quot;microscopic creatures that are toxic if breathed in&quot;, &quot;microscopic creatures that corrode metal&quot;, &quot;microscopic creatures that cause brain infections&quot;))
+(set: $dangplants to (a: &quot;plants coated in deadly neurotoxins&quot;, &quot;plants coated in severe irritants&quot;, &quot;plants with sharp spines&quot;))
+(set: $dangfauna to (a: &quot;small carnivorous fauna that roam in packs&quot;, &quot;human-sized carnivorous fauna&quot;, &quot;tiny creatures with toxic bites and stings&quot;, &quot;venomous carnivorous fauna&quot;))
+(set: $dangfunga to (a: &quot;funga with poisonous spores&quot;, &quot;funga coated in neurotoxins&quot;, &quot;infectious funga&quot;))
+
+(if: (&quot;mega&quot; is in $lifeline) and (&quot;flora&quot; is in $lifeline))[(set: $dangplants to it + (a: &quot;carnivorous megaflora&quot;))]
+(if:  (&quot;mega&quot; is in $lifeline) and (&quot;fauna&quot; is in $lifeline))[
+(set: $dangfauna to it + (a: &quot;carnivorous megafauna&quot;, &quot;non-carnivorous megafauna capable of trampling humans and damaging buildings&quot;))]
+(if:  (&quot;mega&quot; is in $lifeline) and (&quot;funga&quot; is in $lifeline))[(set: $dangfunga to it + (a: &quot;parasitic megafauna&quot;))]
+
+
+(set: $dangers to (a: ))
+
+
+
+(if: &quot;No&quot; is in $danger_life)[(set: $dangerline to &quot;There is no life here that poses a serious threat to humans. &quot;)]
+(else:)[
+(if: &quot;micro&quot; is in $danger_life)[(set: $dangers to it + (a: (either: ...$dangmicro)))]
+(if: &quot;flora&quot; is in $danger_life)[(set: $dangers to it + (a: (either: ...$dangplants)))]
+(if: &quot;fauna&quot; is in $danger_life)[(set: $dangers to it + (a: (either: ...$dangfauna)))]
+(if: &quot;funga&quot; is in $danger_life)[(set: $dangers to it + (a: (either: ...$dangfunga)))]
+
+(set: $dl to $dangers&#39;s length)
+(if: $dl is 1)[(set: $dang to $dangers&#39;s 1st)]
+(else-if: $dl is 2)[(set: $dang to $dangers&#39;s 1st + &quot; and &quot; + $dangers&#39;s 2nd)]
+(else-if: $dl is 3)[(set: $dang to $dangers&#39;s 1st + &quot;, &quot; + $dangers&#39;s 2nd + &quot;, and &quot; + $dangers&#39;s 3rd)]
+(else:)[(set: $dang to $dangers&#39;s 1st + &quot;, &quot; + $dangers&#39;s 2nd + &quot;, &quot; + $dangers&#39;s 3rd + &#39;, and &#39; + $dangers&#39;s 4th)]
+
+(set: $dangerline to &quot;There is life on this planet that poses a serious threat to humans, such as &quot; + $dang + &quot;. &quot;)]
+
+
+(if: &quot;no life&quot; is in $biointro)[(set: $bioline to $biointro)]
+(else-if: &quot;surprisingly&quot; is in $difflife)[(set: $bioline to $biointro + $lifeline + &quot; that are &quot; + $difflife + &quot;. &quot; + $foodline + $dangerline)]
+(else:)[(set: $bioline to $biointro + $difflife + $lifeline + $foodline + $dangerline)]
+
+(set: $sumsys to 0)
+(for: each _key, ...(data-names: $systems))[(if: $systems&#39;s _key &lt; 80)[(set: $sumsys to it + 1)]]
+
+(set: $plans to (a: &quot;conducting surveys of nearby star systems&quot;))
+(set: $pcount to 1)
+(if: (&#39;crash&#39; is in $crash_or_land) or ($sumsys &gt; 0))[(set: $plans to it + (a: &quot;repairs and maintenance on the interstellar ark &quot; + $SHIPNAME))(set: $pcount to it + 1)]
+(if: (($resources is &quot;Scarce&quot;) or ($resources is &quot;No&quot;)) and ($systems&#39;s &quot;storage&quot; &lt;= 50))[(set: $plans to it + (a: &quot;recycling scarce resources&quot;))(set: $pcount to it + 1)]
+(if: ((&quot;Scarce&quot; is in $edible) or (&quot;No&quot; is in $edible)) and ($systems&#39;s &quot;storage&quot; &lt;= 50))[(set: $plans to it + (a: &quot;rationing food&quot;))(set: $pcount to it + 1)]
+
+(if: $pcount is 1)[(set: $plan to $plans&#39;s 1st)]
+(else-if: $pcount is 2)[(set: $plan to $plans&#39;s 1st + &quot; and &quot; + $plans&#39;s 2nd)]
+(else-if: $pcount is 3)[(set: $plan to $plans&#39;s 1st + &quot;, &quot; + $plans&#39;s 2nd + &quot; and &quot; + $plans&#39;s 3rd)]
+(else:)[(set: $plan to $plans&#39;s 1st + &quot;, &quot; + $plans&#39;s 2nd + &quot;, &quot; + $plans&#39;s 3rd + &quot; and &quot; + $plans&#39;s 4th)]
+
+(if: $n_you_kill is 0)[(set: $numpass to &quot;no one&quot;)(set: $sp to &quot;no one&quot;)]
+(if: $n_you_kill is 1)[(set: $numpass to &quot;a passenger&quot;)(set: $sp to &quot;a passenger&quot;)]
+(else:)[(set: $numpass to &quot; passengers&quot;)
+(if: $n_you_kill &lt; 100)[(set: $sp to &quot;multiple passengers&quot;)]
+(else:)[(set: $sp to &quot;so many passengers&quot;)]
+]
+
+
+
+(set: $mons to (a: &#39;a life-like statue&#39;, &#39;a bust displayed on a plinth&#39;, &#39;an obelisk&#39;, &#39;a pillar&#39;, &#39;a triumphal arch&#39;))
+(set: $bigmons to (a: &#39;a larger than life statue&#39;, &#39;a massive bust displayed on a large plinth&#39;, &#39;a titanic obelisk&#39;, &#39;a large pillar&#39;, &#39;a huge triumphal arch&#39;))
+(set: $smallmons to (a: &#39;a small statue&#39;, &#39;a small bust&#39;, &#39;a small obelisk&#39;))
+(set: $tombs to (a: &#39;a mausoleum&#39;, &#39;a recumbent stone effigy&#39;, &#39;a decorative sarcophagus&#39;, &#39;a memorial shrine&#39;, &#39;a headstone&#39;))
+(set: $bigtombs to (a: &#39;a massive mausoleum&#39;, &#39;a larger than life recumbent stone effigy&#39;, &#39;a huge, decorative sarcophagus&#39;, &#39;a massive memorial shrine&#39;, &#39;a gargantuan headstone&#39;))
+(set: $smalltombs to (a: &#39;a small stone effigy&#39;, &#39;a small memorial shrine&#39;, &#39;a headstone&#39;))
+
+(if: $alive is false)[(set: $mons to it + (a: $tombs))(set: $bigmons to it + (a: $bigtombs))(set: $smallmons to it + (a: $smalltombs))]
+
+(set: $mon to (either: ...$mons))
+(set: $bigmon to (either: ...$bigmons))
+(set: $smallmon to (either: ...$smallmons))
+
+
+(if: $fascism &lt;= 0)[
+(if: $n_you_kill  &gt; 0)[
+(set: $remember_yous to (a: &quot;The survivors celebrate you as a hero for taking action to ensure that their new civilization will not repeat the mistakes of the old. &quot;, &quot;Though not all of the survivors are in complete agreement with your actions in killing &quot; + $sp + &quot;, they all appreciate you for guiding them to create a new, better civilization than what they left behind. &quot;))]
+(else:)[(set: $remember_yous to (a: &quot;The survivors celebrate you as a hero for ensuring they made it to a new world, where they could build something better. &quot;, &quot;The survivors develop a rich oral history detailing your heroism in your leadership of &quot; + $SHIPNAME + &quot; from Earth to the new world. &quot;, &quot;The survivors develop an epic tale of you as a peaceful hero, tending to the future of humanity and guiding them across the stars. &quot;))]
+(if: $data&#39;s &quot;log&quot; &gt; 0)[(set: $remember_yous to it + (a: &quot;The survivors take your captain&#39;s log as a treasured historical document around which much of their new civilization&#39;s ethos is founded. &quot;))]
+(set: $remember_you to (either: ...$remember_yous))
+
+
+(set: $politicline to (either: &quot;The survivors have learned their lessons from the devastation wrought on Earth. They design a society that prohibits extractive practices and wealth accumulation, with resources shared equally among all people, including food, shelter, clothing, and healthcare. &quot;, &quot;The survivors build a decentralized society with personal property but no concept of private property or money. They guarantee free access to all basic needs. This ensures freedom and wellbeing for all people, with no requirement to work in order to survive or thrive. &quot;, &quot;The survivors build a nation the likes of which had not been seen on Earth for a very long time. There are no borders. There are no laws. There is no state-level violence. People on Earth might once have thought such lawlessness would lead to chaos, but strong communities founded on transformative justice create the conditions to prevent crime in the first place. &quot;))
+
+(if: $longevity &gt; 150)[(set: $politicline to it + (either: &quot;Although the culture comes to vary from community to community as the survivors&#39; civilization grows, they remain steadfast on their values. Of course, even without a systemic reason, there are still rare individuals who turn to violence, abuse, and attempted dominance over others. However, close-knit communities are better deterrents than police or militaries ever were, and those who cause too much harm are driven into exile. &quot;, &quot;Most people in this civilization spend part of their time working jobs required for survival. However, since they only have to work to support their society, not to drive profits, their workdays are much shorter than typical on Earth. This allows people to focus on whatever passions or occupations they please. As a society that values community and human life, the arts and sciences thrive. &quot;, &quot;The resultant civilization deeply values those who engage in the labor that upholds its infrastructure, as well as those who pursue arts and sciences. Instead of being pressured to create products in order to live comfortably, people are able to take the time to engage in their creations with a sense of freedom and care for their community. &quot;))]
+(else:)[
+(if: $longevity &gt; 50)[(set: $livetosee to &quot;Although most of this first generation of survivors will not live to see whether their civilization survives the coming exodus, they do everything in their power to ensure that their descendants will survive. &quot;)]
+(else:)[(set: $livetosee to &quot;&quot;)]
+(set: $politicline to &quot;Given how short-lived their time on this planet will be, they immediately set about making plans for moving once again, including &quot; + $plan + &quot;. In the meantime, &quot;)
+(set: $politicline to it + (either: &quot;they ensure that the mistakes that led to Earth&#39;s destruction are not repeated, either here or on any future worlds. The society they begin to build has no borders and no laws, and state-level violence is abolished. &quot;, &quot;they form strong, supportive, decentralized communities that are built to last, both here and on future new homeworlds. The central tenet of their society is a guarantee of free and equal access to all basic necessities. &quot;, &quot;they build the foundations of a new society with the abolition of private property and money. The type of wealth accumulation and resource extraction that destroyed Earth will not be allowed to occur again. &quot;))
+(set: $politicline to it + $livetosee)
+]
+]
+
+
+(else-if: $fascism &lt;= 0.5)[
+(if: $n_you_kill  &gt; 0)[(set: $remember_yous to (a: &quot;Most of the survivors celebrate you as a hero for taking action to ensure that their civilization will not repeat the mistakes of the old, though many question your actions in killing &quot; + $numpass + &quot;. &quot;, &quot;The majority of the survivors revere you for delivering them safely to a new world, though a small group question the necessity of your actions in killing &quot; + $numpass + &quot;. &quot;, &quot;Scholars will debate for a long time whether your actions in killing &quot; + $numpass + &quot; were necessary for the creation of a better society, but the majority of the survivors and their descendants come to view you as a heroic figure, verging on prophetic. &quot;))]
+(else:)[(set: $remember_yous to (a: &quot;The survivors build &quot; + $mon + &quot; to commemorate you and your heroism in ensuring they made it to a new world, where they could build something better. &quot;, &quot;The survivors record you in their histories as a unifying hero, and they name many locations on the new world after you. &quot;))]
+
+(set: $remember_you to (either: ...$remember_yous))
+
+(set: $politicline to &quot;The survivors work hard not to repeat the mistakes that led to the destruction of Earth. &quot;)
+
+(if: $longevity &gt; 150)[(set: $politicline to it + (either: &quot;They build a democratic society, with a rule of one person, one vote. Their government establishes strict laws that abolish prisons, prevent extractive practices, limit wealth accumulation, and ensure that basic food, shelter, healthcare, and clothing are free for all. &quot;, &quot;The survivors create tight-knit, democratic communities that focus on ensuring all basic needs are met, allowing them to spend most of the rest of their time and efforts on leisure and the arts. &quot;, &quot;They build a society with a universal basic income to ensure that all people are capable of surviving. They establish few other laws, with communities largely trusted to regulate themselves, encouraging restorative justice when possible, and exiling harmful community members when not. &quot; ))]
+(else:)[
+(if: $longevity &gt; 50)[(set: $livetosee to &quot;Although most of this first generation of survivors will not live to see whether their civilization survives the coming exodus, they do everything in their power to ensure that their descendants will survive. &quot;)]
+(else:)[(set: $livetosee to &quot;They are determined to prepare for their descendants to have a thriving, peaceful future on another world. &quot;)]
+
+(set: $politicline to &quot;Given how short-lived their time is on this world, they immediately set about making plans to move again, including &quot; + $plan + &quot;. In the meantime, &quot;)
+(set: $politicline to it + (either: &quot;they establish a democratic society, with a rule of one person, one vote. They enact strict laws to prevent wealth accumulation and keep food, shelter, healthcare, and clothing free. &quot;, &quot;the people form strong communities that guarantee basic needs for all, abolish prisons, and focus instead on systems of restorative justice when possible. &quot;))
+(set: $politicline to it + $livetosee)
+]
+]
+
+
+(else-if: $fascism &lt;= 1.5)[
+(if: ($n_you_kill &gt; 0) and ($alive is true))[(set: $remember_yous to (a: &quot;The survivors decide to put you on trial for your actions in killing &quot; + $numpass + &quot;. Ultimately, you are imprisoned for a time, before they decide to let you go free. Your legacy will be a conflicted one, but many of the survivors consider you a hero for taking action to ensure that their new civilization will not repeat the mistakes of the old. &quot;, &quot;The survivors suffer a deep conflict upon arrival over your actions in killing &quot; + $sp + &quot;. The factions nearly fall to violence, but those who find your actions justifiable ultimately outnumber those who stand against you. They may not all sing your praises, but even your enemies acknowledge your heroism in bringing them to a new world. &quot;))
+(if: $data&#39;s &quot;log&quot; &gt; 0)[(set: $remember_yous to it + (a: &quot;The survivors are conflicted at first over your murder of &quot; + $sp + &quot;. However, a great many of the survivors advocate for you and the necessity of ensuring the mistakes of humankind on Earth would not be perpetuated. Many of them refer to the details in your captain&#39;s log as evidence in your favor. &quot;))]
+]
+(else-if: $n_you_kill &gt; 0)[(set: $remember_yous to (a: &quot;Your memory among the survivors is a source of conflict, as many condemn your actions in killing &quot; + $numpass + &quot;, while others consider you a hero for taking action to &quot; + &quot;ensure that their new civilization will not repeat the mistakes of the old. Your supporters build &quot; + $smallmon + &quot; in your honor. &quot;, &quot;Despite your death, the survivors experience a deep rift over whether you were right to kill &quot; + $sp + &quot;. Most revere your actions, but some argue you should be presented as a complicated and flawed figure. &quot;))]
+(else:)[(set: $remember_yous to (a: &quot;The survivors build &quot; + $bigmon + &quot; to commemorate you and your heroism in ensuring they made it to this new world, enabling them to create a better future. &quot;, &quot;The survivors come to revere you as a prophet of sorts, delivering them from the ruins of Earth to a new world with a brighter future. &quot;))
+(if: $data&#39;s &quot;log&quot; &gt; 0)[(set: $remember_yous to it + (a: &quot;The survivors come to view you as a prophetic figure who delivered them from the ruins of Earth, and they read copies of your captain&#39;s log to their children as an almost holy text. &quot;))]
+]
+(set: $remember_you to (either: ...$remember_yous))
+
+(set: $politicline to &quot;The survivors work to create a better society than they had on Earth. &quot;)
+
+(if: $longevity &gt; 150)[(set: $politicline to it + (either: &quot;They build a direct democracy that guarantees a universal basic income to all people. Their government establishes strong regulatory laws to protect workers&#39; rights and prevent extraordinary wealth accumulation. Nevertheless, persistent inequality and imbalance of power leads to the rise of occasional violent crimes. And over time, those with more power begin to forget the lessons learned on Earth, responding with more socially restrictive laws in fallacious attempts to prevent further crime. &quot;, &quot;They write a new constitution guaranteeing a universal basic income and basic needs for all people. Nevetheless, some underlying inequality persists, which leads to civil unrest and, eventually, insurrection. Violence, fortunately, remains limited, and two new nations are born, each more progressive than the old. &quot;, &quot;They build a democratic nation that guarantees equal rights and a basic income for all its citizens. Unfortunately, even with the best of intentions, democracy is difficult in practice when people do not agree on what is right. Minor disagreements among self-righteous citizens leads to political infighting, and slow, ineffective decision-making. Nevertheless, this new world remains far more peaceful and progressive than the old nations of Earth. &quot;))]
+(else:)[
+(if: $longevity &gt; 50)[(set: $livetosee to &quot;Still, although most of this first generation of survivors will not live to see whether their civilization survives the coming exodus, they work to create a better society than they had on Earth. &quot;)(set: $new_nations to &quot;eventually, outright insurrection, with a group of citizens forming their own new nation with all forms of money abolished. &quot;)]
+(else:)[(set: $livetosee to &quot;Still, the survivors are determined to use their short time here to build a better future for their descendants. &quot;)(set: $new_nations to &quot;the rise of fractious political parties, some of which are much less progressive than others. &quot;)]
+
+(set: $politicline to it + &quot;Given how short-lived their time is on this world, they set about making plans to move to a new world again, including &quot; + $plan + &quot;. In the meantime, &quot;)
+(set: $politicline to it + (either: &quot;they establish a direct democracy with a universal basic income, ensuring all people have the right to basic necessities. They enact regulatory laws to protect workers&#39; rights. Nevertheless, persistent inequality leads to &quot; + $new_nations + $livetosee, &quot;they write a new constitution to preside over their short-term future, focusing on equal rights for all and a universal basic income. However, a persistent imbalance of power and wealth leads to violent crime, civil unrest, and &quot; + $new_nations + $livetosee))]
+]
+
+
+(else-if: $fascism &lt;= 3)[
+(if: ($n_you_kill &gt; 0) and ($alive is true))[(set: $remember_yous to (a: &quot;The survivors put you on trial your actions in killing &quot; + $numpass + &quot; and &quot; + &quot;ultimately decide to imprison you for the rest of your life. There are some who argue you did what was necessary, but the survivors&#39; prevailing memory of you will be that of a complicated figure. &quot;, &quot;Upon your arrival, the majority of the survivors are horrified to learn that you killed &quot; + $sp + &quot;. Some of the survivors argue that your actions were warranted and that you ought to be vaunted as a hero, and violence nearly breaks out between the two factions. Ultimately, to maintain peace your supporters decide to branch off to form a neighboring society. &quot;, &quot;The survivors argue extensively about whether you had a right to kill &quot; + $sp + &quot; en route. The majority of them believe you did not, and you are given a lengthy prison sentence. Their stories will record you as a morally gray leader, like so many others in history. &quot;))]
+(else-if: $n_you_kill &gt; 0)[(set: $remember_yous to (a: &quot;Your memory among the survivors is that of a complicated figure, as the majority believe you were wrong to kill &quot; + $numpass + &quot;, although some consider you a hero &quot; + &quot;for taking action to ensure that their new civilization will not repeat the mistakes of the old. Your supporters decide to build &quot; + $smallmon + &quot; in your &quot; + &quot;honor. &quot;, &quot;Although some of the survivors come to worship you as a heroic prophet or saint-like figure, most believe you were wrong to kill &quot; + $sp + &quot; on &quot; + $SHIPNAME + &quot;. Your supporters come to use your image as a symbol of protest and revolution. &quot;))]
+(else:)[(set: $remember_yous to (a: &quot;The survivors build &quot; + $bigmon + &quot; to commemorate your heroism in ensuring they made it to this new world, enabling humankind to create a better future. &quot;, &quot;The survivors swiftly come to view you as a heroic prophet or saint-like figure, building &quot; + $mon + &quot; in your honor in all governmental gathering places. &quot;))
+(if: $data&#39;s &quot;log&quot; &gt; 0)[(set: $remember_yous to it + (a: &quot;The survivors build &quot; + $bigmon + &quot; as a monument to your heroism in guiding them here. It is engraved with popular passages from your captain&#39;s log. &quot;))]]
+
+(set: $remember_you to (either: ...$remember_yous))
+
+
+(set: $politicline to &quot;The survivors work to create a better society than they had on Earth, but their beliefs remain misguided. &quot;)
+
+(if: $longevity &gt; 150)[(set: $politicline to it + (either: &quot;They establish a representative democracy that guarantees some civil rights. However, they fail to agree to guarantee a right to basic needs, enabling the inequalities and worker exploitation that destroyed Earth to persist in the new world. Violence and civil unrest are inevitable, and the society fractures into a number of competing nations. &quot;, &quot;They build a representative democracy with the right to basic necessities enshrined in their new constitution. Nevertheless, persistent wealth inequalities lead to crime and unrest, and those in power quickly turn to more oppressive laws to protect their wealth and power. It seems it is only a matter of time before the people of this world follow in the destructive footsteps of their ancestors from Earth. &quot;, &quot;They write a new constitution with laws that provide a universal basic income, highly progressive taxes, and the right to sufficient food, clothing, shelter, and healthcare. However, the wealthy and powerful immediately slowly manage to overturn these laws, replacing them with laws that protect property just as much as life. Before long, socially regressive laws follow in a vain attempt to enforce unity. &quot;))]
+(else:)[(if: $longevity &gt; 50)[(set: $new_nations to &quot;The society rapidly disintegrates into competing microstates, many of which form socially regressive laws in a vain attempt at forced unity. &quot;)(set: $livetosee to &quot;Although the first generation of survivors do their best to hold this fractious society together, it is only a matter of time before the people of this world follow in the destructive footsteps of their ancestors from Earth. &quot;)]
+(else:)[(set: $new_nations to &quot;The society soon fractures into rival political parties, most of which work to protect property and power rather than people. &quot;)(set: $livetosee to &quot;The people of this world fight to hold their fractious society together, even as they follow in the destructive footsteps of their ancestors from Earth. &quot;)]
+
+(set: $politicline to it + &quot;Given how short-lived their time is on this world, they set about making plans to move to a new world again, including &quot; + $plan + &quot;. In the meantime, &quot;)
+(set: $politicline to it + (either: &quot;they establish a representative democracy that guarantees some civil rights, but fails to guarantee basic necessities to all of its people. &quot; + $new_nations + $livetosee, &quot;they write a new constitution that attempts to enshrine civil rights for all but fails to abolish wealth inequality. &quot; + $new_nations + $livetosee))
+]
+]
+
+
+(else-if: $fascism &lt;= 6)[
+(if: ($scenario is &quot;rogue&quot;) and ($n_you_kill &gt; 0) and ($alive is true))[(set: $remember_yous to (a: &quot;The survivors put you on trial for your actions in killing &quot; + $numpass + &quot; and you are sentenced to death. After a series of appeals, your sentence is commuted to a life sentence. However, the history books will record you as an outlaw and murderer who hijacked an interstellar ark, even if you helped guide humanity to a new world. &quot;, &quot;The majority of the survivors are furious that you killed &quot; + $sp + &quot; and call for you to be executed, or at least sentenced to prison. A small number of people who support your actions and view you as a hero manage to use the lack of proper bureaucracy to prevent your death or imprisonment, although you are banned from almost all public spaces. &quot;, &quot;The survivors immediately put you on trial for your actions in killing &quot; + $numpass + &quot; on &quot; + $SHIPNAME + &quot;, and you are sentenced to life in prison. Nevertheless, a small but substantial minority of passengers believe you did the right thing. They use you as a symbol for political resistance against the majority, and though the history books may record you as a villain, your supporters will tell their children stories of your heroism. &quot;))]
+(else-if: ($scenario is &quot;rogue&quot;) and ($alive is true))[(set: $remember_yous to (a: &quot;The survivors put you on trial for hijacking their interstellar ark. You are ultimately acquitted of any wrongdoing and allowed to go free, thanks to your success in finding a new planet to call home. Nevertheless, your legacy in the public eye will be a complicated one. &quot;, &quot;The survivors nearly fall to violence as factions form upon arrival, with some wanting you arrested for hijacking &quot; + $SHIPNAME + &quot; while others are simply pleased you have brought them to a new world. The story is recorded in the history books as an act of reckless violence, but most popular literature romanticizes you as something of a hero. &quot;))]
+(else-if: ($n_you_kill &gt; 0) and ($alive is false))[(set: $remember_yous to (a: &quot;Your memory is largely disparaged among the survivors, the majority of whom believe you were a pirate, and that you were wrong to kill &quot; + $numpass + &quot;, although some &quot; + &quot;consider you a hero for taking action to ensure that their new civilization will not repeat all of the mistakes of the old. &quot;))
+(if: $data&#39;s &quot;log&quot; &gt; 0)[(set: $remember_yous to it + (a: &quot;The survivors largely disparage your memory, with their history books recording you as a murderer and a hijacker. However, copies of your captain&#39;s log circulate among the population, at first simply as a piece of sensationalized literature. Soon, however, your log earns your memory a number of supporters, who argue that you were right. And before long, an underground movement begins to grow, willing to carry on fighting for your vision of a better world. &quot;))]]
+(else-if: ($n_you_kill &gt; 0) and ($alive is true))[(set: $remember_yous to (a: &quot;The survivors put you on trial your actions in killing &quot; + $numpass + &quot; and ultimately decide to imprison you for the rest of your life. You will be remembered, at best, as a complicated figure. &quot;, &quot;After a lengthy trial, the survivors decide to spare you any severe punishment for your actions in killing &quot; + $numpass + &quot;. However, you are banned from any governmental role, making you a largely unpopular figure. &quot;))]
+(else-if: $n_you_kill &gt; 0)[(set: $remember_yous to (a: &quot;The majority of the survivors remember you as a pirate and a murderer, although some remember you more fondly as a complicated figure who was also a hero for bringing humanity to a new world. &quot;))
+(if: $data&#39;s &quot;log&quot; &gt; 0)[(set: $remember_yous to it + (a: &quot;The survivors largely remember you as a cold-hearted murderer. However, a small faction finds your captain&#39;s log to be a critical piece of literature, providing ample motivation for your actions. Your logs are read as a valuable text on dissidence and rebellion. &quot;))]]
+(else:)[(set: $remember_yous to (a: &quot;The survivors build &quot; + $bigmon + &quot; to commemorate your heroism in ensuring they made it to this new world, enabling humankind to survive. &quot;, &quot;The survivors build &quot; + $bigmon + &quot; as a monument to you for guiding them to a new world. They swiftly develop a number of rules around how people are allowed to interact with the monument, so as to ensure you are respected. Many survivors ultimately come to worship you as something of a religious savior. &quot;))]
+(set: $remember_you to (either: ...$remember_yous))
+
+
+(set: $politicline to &quot;The survivors build a society that perpetuates many of the worst mistakes of human civilizations on Earth. &quot;)
+
+(if: $longevity &gt; 150)[(set: $politicline to it + (either: &quot;They enact some legal protections against fascism, but their resultant government is democratic only in name. The wealthy move quickly to cement their power, forming extractive companies that exploit their workers and damage the new world&#39;s ecosystem. They install cameras in all public spaces as a matter of &#39;&#39;safety&#39;&#39; and pass laws to allow bribery through corporate contributions to politicians. &quot;, &quot;They build a nominally democratic oligarchy that uses inequitably applied laws to keep the laborers from challenging the wealthy for power. When civil unrest rises, almost all forms of protest are outlawed and dissident leaders are imprisoned for violent speech. The downtrodden survivors can only hope their descendants will continue the struggle for freedom and, one day, build a better world. &quot;, &quot;They enshrine equal rights for all regardless of all forms of identity, and they build a republic with checks and balances between the different branches of government. However, systemic wealth inequality persists, and when dissatisfied workers begin to protest, the state responds with violence and repression. The survivors swiftly fall into a fascist surveillance state with all political organizations outside the nation&#39;s leadership outlawed. &quot;))]
+(else:)[
+(if: $longevity &gt; 50)[(set: $livetosee to &quot;on this world or the next. &quot;)]
+(else:)[(set: $livetosee to &quot;on the next world. &quot;)]
+(set: $politicline to &quot;Given how short their time is on this world, they set about making plans to move to a new world, including &quot; + $plan + &quot;. In the meantime, &quot;)
+
+(set: $politicline to it + (either: &quot;the wealthy cement their power with an oligarchy  that inequitably applies laws to oppress the lower classes, allowing companies to exploit their workers and damage the ecosystem. The downtrodden survivors can only hope their descendants will continue the struggle for freedom &quot; + $livetosee, &quot;they establish a representative democracy that repeats most of the mistakes made on Earth, with the wealthy and powerful clinging to leadership through mass surveillance and state violence. The downtrodden survivors can only hope their descendants will continue the struggle for freedom &quot; + $livetosee))
+]
+]
+
+
+(else-if: $fascism &lt;= 10)[(if: ($n_you_kill &gt; 0) and ($alive is true) and ($scenario is &quot;rogue&quot;))[(set: $remember_yous to (a: &quot;The survivors put you on trial for your actions in killing &quot; + $numpass + &quot; and you &quot; + &quot;are sentenced to death. The history books will record you as an outlaw and murderer who hijacked an interstellar ark. &quot;, &quot;The survivors are outraged at your theft of &quot; + $SHIPNAME + &quot; and murder of &quot; + $sp + &quot;. They have you arrested, but the first night of your imprisonment the guards attack and kill you. Their histories will record you as a common villain. &quot;))]
+(else-if: ($n_you_kill &gt; 0) and ($scenario is &quot;rogue&quot;))[(set: $remember_yous to (a: &quot;Your memory is disparaged among the survivors, who call you and outlaw and a murderer for hijacking the interstellar ark and killing &quot; + $numpass + &quot;. &quot;, &quot;The survivors despise you for stealing the ark and killing &quot; + $sp + &quot;, developing you into a boogeyman figure that they use to scare children into behaving. &quot;))]
+(else-if: ($scenario is &quot;rogue&quot;) and ($alive is true))[(set: $remember_yous to (a: &quot;The survivors put you on trial for hijacking their interstellar ark. You are ultimately given a lengthy prison sentence and stripped of any future ability to vote or serve the new government. &quot;, &quot;The majority of the survivors despise you for hijacking &quot; + $SHIPNAME + &quot;. Many call for you to be arrested, and still others begin forming mobs to carry out their own justice, insisting that you can&#39;t be trusted as a member of society. Ultimately, you are placed under house arrest, as much for your own safety as anything else. &quot;))]
+(else-if: $scenario is &quot;rogue&quot;)[(set: $remember_yous to (a: &quot;The survivors are conflicted on whether to remember you more as a hero who ensured they made it to this new world, or as a pirate. Ultimately, a group of your supporters build a &quot; + $smallmon + &quot; in your honor. &quot;, &quot;Many of the survivors remember you as a villainous pirate who stole their ark, but there is a counter-culture movement who views you as something of an antihero. Followers of this movement tell stories that deeply sensationalize and mischaracterize you and your actions. &quot;))]
+(else-if: ($n_you_kill &gt; 0) and ($alive is true))[(set: $remember_yous to (a: &quot;The survivors put you on trial your actions in killing &quot; + $numpass + &quot; and ultimately decide to imprison you for the rest of your life. You will be remembered in this society as an outlaw and murderer. &quot;, &quot;The survivors immediately put you on trial for killing &quot; + $numpass + &quot;, seeking the death penalty. You are defended by a select few among them, who view your actions in guiding them all here as more important. Ultimately, you are found guilty, and expelled from the new settlement. &quot;))
+(if: $data&#39;s &quot;log&quot; &gt; 0)[(set: $remember_yous to it + (a: &quot;The survivors immediately put you on trial for killing &quot; + $numpass + &quot;, seeking the death penalty. You are defended by a select few among them, who refer to your captain&#39;s logs as evidence that your actions were warranted. Ultimately, you are found not guilty, though you remain a deeply unpopular public figure. &quot;))]]
+(else-if: $alive is true)[(set: $remember_yous to (a: &quot;The survivors are conflicted on your legacy, with some viewing you as a savior of sorts, while others question the decisions you made. &quot;, &quot;The survivors begin to worship you as a prophetic figure, building &quot; + $bigmon + &quot; and making it a requirement for all citizens to pray at the monument daily. &quot;))]
+(else-if: ($n_you_kill &gt; 0) and ($alive is false))[(set: $remember_yous to (a: &quot;The majority of the survivors remember you as a horrific murderer, although a few will come to remember you as a complicated figure who was also responsible for bringing humanity to a new world. &quot;))]
+(else:)[(set: $remember_yous to (a: &quot;The survivors build &quot; + $bigtomb + &quot; to commemorate your heroism in ensuring they made it to this new world, ensuring their survival. &quot;, &quot;The survivors tell stories about you, developing you into a folk hero who led humankind across the stars. However, they care more about characterizing you in ways that match the goals and values of their new civilization than they do about factual accuracy. &quot;))]
+(set: $remember_you to (either: ...$remember_yous))
+
+(set: $politicline to &quot;The survivors form a society in the image of the destructive empires that ruined Earth. &quot;)
+(if: $expansion_possible is true)[(set: $bonusline to &quot;Some of the survivors attempt to run away, forming their own short-lived enclaves that are soon conquered by the growing empire. &quot;)]
+(else:)[(set: $bonusline to &quot;&quot;)]
+(if: $longevity &gt; 150)[(set: $politicline to it + (either: &quot;They create a representative democracy with a bicameral legislature, with one of the legislative houses elected by the general population and the other appointed by wealthy oligarchs. The resultant government enacts repressive laws to keep the wealthy in power and the poor oppressed. Dissent is met with violence, and myriad private prisons are built to hold political prisoners and provide forced labor. Within a decade, one tenth of the population is held in these prisons. &quot;, &quot;They quickly establish an oligarchy obsessed with expansion above all else. Workers are exploited for profit and all resistance is met with state violence. &quot; + $bonusline + &quot; The downtrodden survivors can only hope to sow the seeds of a revolution that their descendants may one day lead. &quot;))]
+(else:)[
+(if: $longevity &gt; 50)[(set: $livetosee to &quot;on this world or the next. &quot;)]
+(else:)[(set: $livetosee to &quot;on the next world. &quot;)]
+(set: $politicline to it + &quot;Given their short time on this world, they set about making plans to move to another new world, including &quot; + $plan + &quot;In the meantime, &quot;)
+(set: $politicline to it + (either: &quot;they enact a representative democracy with a bicameral legislature, with the upper house appointed by the wealthiest survivors. The resultant government enacts strict, repressive laws to maintain this social order. The survivors can only hope that their descendants will one day rebel &quot; + $livetosee, &quot;they establish a democracy in name only, led by a council of the wealthiest survivors. They wield their power and wealth to control the populace, exploiting laborers and criminalizing all resistance. The downtrodden survivors can only hope to sow the seeds of a revolution &quot; + $livetosee, &quot;the wealthy establish martial law, conscripting the majority of the survivors into hard labor for little pay, enacting strict curfews, and outlawing all dissent. They build private prisons to hold the myriad new criminals to exploit for slave labor. The downtrodden survivors can only hope to sow the seeds of a revolution &quot; + $livetosee))
+]
+]
+
+
+
+(else-if: $fascism &lt;= 20)[
+(if: $inhabitants&#39;s &quot;police&quot; &gt; 0)[(set: $policewords to &quot;as the police stand by, watching. &quot;)(set: $policewords2 &quot;The police&quot;)]
+(else:)[(set: $policewords to &quot;. &quot;)(set: $policewords2 &quot;The mob&quot;)]
+(if: ($n_you_kill &gt; 0) and ($alive is true) and ($scenario is &quot;rogue&quot;))[(set: $remember_yous to (a: &quot;The survivors have you arrested and brought before a tribunal for your actions in killing &quot; + $numpass + &quot;, and they sentence you to death. The history books will &quot; + &quot;record you as an outlaw, murderer, and hijacker. &quot;, &quot;The survivors are outraged that you hijacked their ark and killed &quot; + $sp + &quot;. Before they can be stopped, a small mob attacks and murders you&quot; + $policewords))]
+(else-if: ($n_you_kill &gt; 0) and ($alive is true))[(set: $remember_yous to (a: &quot;The survivors put on a sham trial for your actions in killing &quot; + $numpass + &quot;, and &quot; + &quot;you are ultimately sentenced to death. You will be remembered in this society as an outlaw and a murderer. &quot;, &quot;The survivors decide to put you on trial for killing &quot; + $sp + &quot;. No one is willing to support you in the trial, and you are ultimately sentenced to death. &quot;))]
+(else-if: ($n_you_kill &gt; 0) and ($alive is false))[(set: $remember_yous to (a: &quot;You are recorded in the history books as a foolish and evil character, an outlaw and a murder who attempted but failed to derail the survivors&#39; mission. &quot;))]
+(else-if: ($scenario is &quot;rogue&quot;) and ($alive is true))[(set: $remember_yous to (a: &quot;The survivors put you on trial for hijacking their interstellar ark. You are sentenced to life imprisonment, though many of the survivors call for your head. You are ultimately murdered by prison guards, with your death reported as a suicide. All attempted investigations into the circumstances are curtailed. &quot;))]
+(else-if: $scenario is &quot;rogue&quot;)[(set: $remember_yous to (a: &quot;You are recorded in the history books as a foolish character, an outlaw who attempted but failed to derail the survivors&#39; mission. &quot;, &quot;The survivors remember you as an arrogant scoundrel, one who selfishly hijacked their ark in order to get yourself safely off Earth, too. Nevertheless, a small number of survivors come to tell stories of you as a roguish antihero, a flawed but lovable pirate who met a tragic end while doing &quot; + $p2 + &quot; best to save humanity. &quot;))]
+(else-if: $alive is true)[(set: $remember_yous to (a: &quot;The survivors decide to interrogate you upon arrival to better understand all the decisions you made in coming here. You are ultimately recorded in the history books as a rather selfish character who only wanted to save yourself. &quot;))]
+(else:)[(if: $data&#39;s &quot;log&quot; &gt; 0)[(set: $remember_yous to (a: &quot;The survivors read your captain&#39;s logs to better understand your decisions in coming here. They soon come to worship you as a religious messiah, treating your logs as holy texts. &quot;))]
+(else:)[(set: $remember_yous to (a: &quot;The survivors build &quot; + $bigmon + &quot; to commemorate your heroism in ensuring their survival and the continuation of humanity. You will be remembered as a nationalist hero, with most tales of your life highly fictionalized to fit the survivors&#39; values. &quot;))]]
+(set: $remember_you to (either: ...$remember_yous))
+
+(set: $politicline to (either: &quot;The survivors establish a fascist surveillance state to preserve the power of the aristocracy. &quot;, &quot;The wealthiest of the survivors establish an authoritarian capitalist state to preserve their power.&quot;))
+(if: &quot;underwater&quot; is in $habitatline)[(set: $unit to &quot;amphibious robotic&quot;)]
+(else:)[(set: $unit to &quot;robotic canine&quot;)]
+(if: $cultural_longevity is $longevity)[(set: $politicline to it + (either: &quot;The ruling class establishes a legislature and judiciary that are both appointed by a president, with no functional checks to the executive power. The president is advised by a cabinet of the wealthy, and as long as the aristocracy&#39;s wealth and power is respected, they are happy to fund and arm the dictatorship. The people are guaranteed no civil rights, and opposition speech is outlawed. &quot;, &quot;The ruling class elects a president to a life-long term in power, with no elections until the president&#39;s death or voluntary resignation. Surveillance cameras are installed in every public and private structure, with &quot; + $unit + &quot; units patrolling public spaces at all times. Workers live in fear of arbitrary arrest, with frequent disappearances and rumors of slave camps. &quot;))
+(set: $politicline to it + &quot;The downtrodden survivors can only hope their descendants will live to overthrow this fascist power and build something new. &quot;)
+]
+(else:)[(set: $politicline to it + &quot;Given how briefly their stay on this world will be, they set about making plans to move to another world, including &quot; + $plan + &quot;In the meantime, &quot;)
+(set: $politicline to it + (either: &quot;the ruling class establishes a legislature and judiciary that are both appointed by a puppet president to carry out the whims of the aristocracy. All dissent is met with violent repression and arbitrary arrest. &quot;, &quot;the ruling class establishes martial law and installs surveillance cameras and deploys armed &quot; + $unit + &quot; units to patrol public and private spaces. All dissenting speech is treated as violent terrorism and met with forced labor or death. &quot;))
+(set: $politicline to it + &quot;The downtrodden survivors can only hope that their fascist government will eat itself alive, and rebellion will follow soon. &quot;)]
+]
+
+
+
+(else:)[
+(if: ($n_you_kill &gt; 0) and ($alive is true) and ($scenario is &quot;rogue&quot;))[(set: $remember_yous to (a: &quot;Upon waking from their cryo sleep, the survivors immediately kidnap and murder you. Their history books will record you as an outlaw, murderer, and hijacker. &quot;))]
+(else-if: ($n_you_kill &gt; 0) and ($alive is true))[(set: $remember_yous to (a: &quot;The survivors have you arrested for killing &quot; + $numpass + &quot; and sentenced to death &quot; + &quot;in a sham tribunal. You will be remembered in this society as an outlaw and a murderer. &quot;))]
+(else-if: $n_you_kill &gt; 0)[(set: $remember_yous to (a: &quot;You are recorded in the history books as a foolish and evil stock character, a pantomime villain who decided to go on a killing spree for no reason. &quot;))]
+(else-if: ($scenario is &quot;rogue&quot;) and ($alive is true))[(set: $remember_yous to (a: &quot;The survivors put you on trial for hijacking their interstellar ark, and you are sentenced to death for the crimes of piracy and endangering the future of humankind. The survivors go on to expunge you from their recorded history altogether. &quot;))]
+(else-if: $scenario is &quot;rogue&quot;)[(set: $remember_yous to (a: &quot;You are recorded in the history books as a foolish stock character, a pantomime villain planted by the survivors&#39; rivals back on Earth, who failed in your mission to stop their escape. &quot;))]
+(else-if: $alive is true)[(set: $remember_yous to (a: &quot;The survivors celebrate you for your actions in bringing them to a new world, building you &quot; + $mon + &quot; and naming many of their children after you. &quot;))]
+(else:)[(set: $remember_yous to (a: &quot;The survivors build &quot; + $bigtomb + &quot; to commemorate the part you played in ensuring their survival. &quot;, &quot;The survivors immediately form a strict religion with you as their messiah, having rescued them from Earth and brought them to a new paradise. &quot;))]
+(set: $remember_you to (either: ...$remember_yous))
+
+(set: $politicline to &quot;Within days of landing, the wealthy and powerful establish an absolute dictatorship under the leadership of a dangerous demagogue. They attempt to consolidate their power through the immediate violent suppression of all dissenters. However, the aristocracy are not in complete agreement over their preferred demagogue, and their society swiftly fractures into warring factions, many of which commit heinous crimes against humanity in their determination to take power in this new world. The working class are treated as little more than bargaining chips. The voyagers to this world must lead a revolution if they are to have any hope of surviving long enough to build a better future than what faced them back on Earth. &quot;)
+]
+
+
+(if: $fascism &lt; 3)[(set: $name_key to &quot;good&quot;)]
+(else:)[(set: $name_key to &quot;fasc&quot;)]
+
+(set: $name_dict to (dm: &#39;covered entirely with&#39;,
+(dm: &#39;good&#39;, (a: &#39;Deepwater&#39;, &#39;Lapis&#39;, &#39;Aguazul&#39;), &#39;fasc&#39;, (a: &#39;Neptunus&#39;, &#39;Columbus&#39;, &#39;Atlantis II&#39;)),
+&#39;some rivers&#39;, (dm: &#39;good&#39;, (a: &#39;Sedimentis&#39;, &#39;Kaolinia&#39;, &#39;Ceramica&#39;), &#39;fasc&#39;, (a: &#39;New Mars&#39;, &#39;Promiseland&#39;, &#39;New Australis&#39;)),
+&#39;ice caps&#39;, (dm: &#39;good&#39;, (a: &#39;Rime&#39;, &#39;Glisten&#39;, &#39;Frostland&#39;), &#39;fasc&#39;, (a: &#39;Northwind&#39;, &#39;Aquilo&#39;, &#39;Europius&#39;)),
+&#39;covered entirely in&#39;, (dm: &#39;good&#39;, (a: &#39;Crystalia&#39;, &#39;Diamond&#39;, &#39;Niveous&#39;), &#39;fasc&#39;, (a: &#39;Hudsonland&#39;, &#39;Vikingland&#39;, &#39;New Scandinavia&#39;)),
+&#39;in the atmosphere&#39;, (dm: &#39;good&#39;, (a: &#39;Vaporia&#39;, &#39;Fogland&#39;, &#39;Droughtia&#39;), &#39;fasc&#39;, (a: &quot;da Gama&#39;s Hope&quot;, &#39;Aura&#39;, &#39;Zephyrus&#39;)),
+&#39;sub-surface&#39;, (dm: &#39;good&#39;, (a: &#39;Hailstone&#39;, &#39;Submaria&#39;, &#39;Underworld&#39;), &#39;fasc&#39;, (a: &#39;Aegir&#39;, &#39;New Europe&#39;, &quot;Magellan&#39;s Hope&quot;)),
+&#39;massive glaciers&#39;, (dm: &#39;good&#39;, (a: &#39;Glacia&#39;, &#39;Floeland&#39;, &#39;Coldwater&#39;), &#39;fasc&#39;, (a: &#39;New Canada&#39;, &#39;Arcticus&#39;, &#39;Hyperborea&#39;)),
+&#39;hot&#39;, (dm: &#39;good&#39;, (a: &#39;Humida&#39;, &#39;Cloudscape&#39;, &#39;Fringe&#39;), &#39;fasc&#39;, (a: &#39;Hades&#39;, &#39;New Caribbea&#39;, &#39;New Pacifica&#39;)),
+&#39;arid&#39;, (dm: &#39;good&#39;, (a: &#39;Barchania&#39;, &#39;Erodia&#39;, &#39;Calcia&#39;), &#39;fasc&#39;, (a: &#39;New Arabia&#39;, &#39;Reward&#39;, &#39;Vulcanus&#39;)),
+&#39;warm&#39;, (dm: &#39;good&#39;, (a: &#39;Tropic&#39;, &#39;Reservoir&#39;, &#39;Dulcia&#39;), &#39;fasc&#39;, (a: &#39;New Rome&#39;, &#39;Terra Calida&#39;, &#39;Halcyon&#39;)),
+&#39;Earth-like&#39;, (dm: &#39;good&#39;, (a: &#39;New Earth&#39;, &#39;Liberty&#39;, &#39;Sovereign&#39;), &#39;fasc&#39;, (a: &#39;Eden&#39;, &#39;Arcadia&#39;, &#39;The Garden&#39;)),
+&#39;no water&#39;, (dm: &#39;good&#39;, (a: &#39;Saltland&#39;, &#39;Silicania&#39;, &#39;Patina&#39;), &#39;fasc&#39;, (a: &#39;Desolus&#39;, &#39;New Pluto&#39;, &#39;Richland&#39;))
+))
+
+
+(for: each _key, ...(data-names: $name_dict))[(if: _key is in $description)[(set: $pickmap to $name_dict&#39;s _key)
+(if: ($bio_sig is true) and ($resources is &quot;Rich&quot;))[(set: $pickmap&#39;s &quot;fasc&quot; to it + (a: &#39;The Prize&#39;, &#39;Heaven&#39;))(set: $pickmap&#39;s &quot;good&quot; to it + (a: &#39;Lushland&#39;))]
+(if: $fascism &gt; 6)[(set: $pickmap&#39;s &quot;fasc&quot; to it + (a: &#39;The Colony&#39;, &quot;Dominion&quot;))]
+(if: (($fascism &lt;= 0) and ($scenario is &quot;rogue&quot;)) or (($fascism &lt; 3) and ($alive is false)))[(set: $pickmap&#39;s &quot;good&quot; to it + (a: $USERNAME + &quot;, in your honor&quot;))]
+(if: &quot;moon&quot; is in $planet)[(set: $pickmap&#39;s $name_key to it + (a: (either: &quot;Satellia&quot;, &quot;Luna 2&quot;, &quot;Theia&quot;)))(set: $pickmap&#39;s &quot;fasc&quot; to it + (a: (either: &quot;Ancillaria&quot;)))]
+(if: &quot;Earth-like&quot; is in $planet)[(set: $pickmap&#39;s $name_key to it + (a: &quot;New Earth&quot;))]
+(else-if: &quot;super-Earth terrestrial&quot; is in $planet)[(set: $pickmap&#39;s $name_key to it + (a: &quot;Titansland&quot;))]
+(else-if: &quot;sub-Earth terrestrial&quot; is in $planet)[(set: $pickmap&#39;s &quot;fasc&quot; to it + (a: &quot;Parvus&quot;))]
+(else-if: (&quot;large&quot; is in $planet) and (&quot;ice&quot; is in $planet) and (&quot;rings&quot; is not in $planet))[(set: $pickmap&#39;s &quot;fasc&quot; to it + (a: &quot;Aquilo&#39;s Fist&quot;))]
+(else-if: (&quot;small&quot; is in $planet) and (&quot;ice&quot; is in $planet) and (&quot;rings&quot; is not in $planet))[(set: $pickmap&#39;s $name_key to it + (a: &quot;Glisten&#39;s Eye&quot;))]
+(else-if: (&quot;large&quot; is in $planet) and (&quot;ice&quot; is in $planet) and (&quot;rings&quot; is in $planet))[(set: $pickmap&#39;s $name_key to it + (a: &quot;Frostring&quot;))]
+(else-if: (&quot;small&quot; is in $planet) and (&quot;ice&quot; is in $planet) and (&quot;rings&quot; is in $planet))[(set: $pickmap&#39;s $name_key to it + (a: &quot;The Pupil&quot;))]
+(else-if: (&quot;large&quot; is in $planet) and (&quot;inhospitable&quot; is in $planet))[(set: $pickmap&#39;s $name_key to it + (a: &quot;Earthtwin&quot;, &quot;Sister&quot;))]
+(else-if: (&quot;small&quot; is in $planet) and (&quot;inhospitable&quot; is in $planet))[(set: $pickmap&#39;s &quot;fasc&quot; to it + (a: &quot;Fructa&quot;))(set: $pickmap&#39;s $name_key to it + (a: &quot;Sisterland, Brotherland&quot;))]
+(else-if: (&quot;large&quot; is in $planet) and (&quot;gas&quot; is in $planet) and (&quot;rings&quot; is in $planet))[(set: $pickmap&#39;s &quot;fasc&quot; to it + (a: &quot;Jupiter&#39;s Ring&quot;))]
+(else-if: (&quot;small&quot; is in $planet) and (&quot;gas&quot; is in $planet) and (&quot;rings&quot; is in $planet))[(set: $pickmap&#39;s &quot;fasc&quot; to it + (a: &quot;Ringmoon&quot;))]
+(else-if: (&quot;large&quot; is in $planet) and (&quot;gas&quot; is in $planet))[(set: $pickmap&#39;s &quot;fasc&quot; to it + (a: &quot;Jupiter&#39;s Fist&quot;, &quot;Giant&#39;s Fist&quot;))]
+(else-if: (&quot;small&quot; is in $planet) and (&quot;gas&quot; is in $planet))[(set: $pickmap&#39;s &quot;fasc&quot; to it + (a: &quot;Saturn&#39;s Eye&quot;, &quot;Giant&#39;s Eye&quot;))]
+
+(set: $planet_name to (either: ...$pickmap&#39;s $name_key))
+]]
+
+}
+{(live: 1.5s)[(stop:)(transition: &quot;dissolve&quot;)[&lt;div class=&quot;text-overlay&quot;&gt;
+$geoline&lt;br&gt;
+
+(print: $atmoslines&#39;s $at_tox&#39;s $atmos_thic + $climatelines&#39;s $temperature + $weatherlines&#39;s $weather)&lt;br&gt;
+
+$gravwords&lt;br&gt;
+
+$bioline&lt;br&gt;
+
+$resline&lt;br&gt;
+
+$habitatline&lt;br&gt;
+$worldline&lt;br&gt;
+$remember_you&lt;br&gt;
+
+$politicline&lt;br&gt;
+(if: $past_civ is true)[$pastcivline&lt;br&gt;]
+
+The survivors decide to name the world $planet_name.&lt;br&gt;
+
+[[Credits]]
+&lt;/div&gt;]]}
+&lt;/div&gt;
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
